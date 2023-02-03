@@ -1,3 +1,4 @@
+Package: psi.aims.website
 Depends:
     quarto,
     knitr,
