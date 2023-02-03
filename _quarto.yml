@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "psi-aims-website"
+  title: "PSI AIMS SIG Website"
   navbar:
     left:
       - href: index.qmd
