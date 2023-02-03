@@ -11,6 +11,6 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Warning: One or more parsing issues, call `problems()` on your data frame for details,\ne.g.:\n  dat <- vroom(...)\n  problems(dat)\n\n\n\nGroup members and affiliations.\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\nNA\n\n\nAndy Nicholls\nGSK\nR Validation Hub Chair\n\n\nChristina Fillmore\nGSK\nNA\n\n\nMatthew Neilson\nPhastar\nNA\n\n\nMin-Hua Jen\nEli-Lilly\nNA\n\n\nMichael Cartwright\nParexel\nNA\n\n\nChris Toffis\nVeristat\nNA\n\n\nMark Bynens\nJnJ\nNA\n\n\nJules Hernandez-Sanchez\nRoche\nNA\n\n\nDaniel Leibovitz\nIncyte\nNA\n\n\nMarie-Laure\nCasadebaig\nIncyte,\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\nNA"
+    "text": "Group members and affiliations.\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\nR Validation Hub Chair\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nVeristat\n\n\n\nMark Bynens\nJnJ\n\n\n\nJules Hernandez-Sanchez\nRoche\n\n\n\nDaniel Leibovitz\nIncyte\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim"
   }
 ]
