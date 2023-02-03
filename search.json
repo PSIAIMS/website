@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Warning: One or more parsing issues, call `problems()` on your data frame for details,\ne.g.:\n  dat <- vroom(...)\n  problems(dat)\n\n\n\nGroup members and affiliations.\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\nNA\n\n\nAndy Nicholls\nGSK\nR Validation Hub Chair\n\n\nChristina Fillmore\nGSK\nNA\n\n\nMatthew Neilson\nPhastar\nNA\n\n\nMin-Hua Jen\nEli-Lilly\nNA\n\n\nMichael Cartwright\nParexel\nNA\n\n\nChris Toffis\nVeristat\nNA\n\n\nMark Bynens\nJnJ\nNA\n\n\nJules Hernandez-Sanchez\nRoche\nNA\n\n\nDaniel Leibovitz\nIncyte\nNA\n\n\nMarie-Laure\nCasadebaig\nIncyte,\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\nNA"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
+    "section": "",
+    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community."
+  }
+]
