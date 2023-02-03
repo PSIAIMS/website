@@ -1,0 +1,4 @@
+Depends:
+    quarto,
+    knitr,
+    tidyverse

@@ -1,0 +1,11 @@
+---
+title: "About"
+---
+
+```{r}
+#| echo: false
+readr::read_csv("assets/members.csv", col_types = "ccc") |>
+    knitr::kable(
+        caption = "Group members and affiliations."
+    )
+```
