@@ -2,6 +2,8 @@
 title: "About"
 ---
 
+{{< fa screwdriver-wrench >}} *Work in Progress!*
+
 ```{r}
 #| echo: false
 options(knitr.kable.NA = '')
@@ -10,3 +12,7 @@ readr::read_csv("assets/members.csv", col_types = "ccc") |>
         caption = "Group members and affiliations."
     )
 ```
+
+## Links to other PIS SIGs
+
+...

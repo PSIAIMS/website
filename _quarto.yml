@@ -8,12 +8,12 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - why-r.qmd
+      - 02R-tist.qmd
+      - rinpharma.qmd
 
 format:
   html:
-    theme: sandstone
+    theme: theme.scss
     css: styles.css
     toc: true
-
-
-
