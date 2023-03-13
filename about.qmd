@@ -13,6 +13,6 @@ readr::read_csv("assets/members.csv", col_types = "ccc") |>
     )
 ```
 
-## Links to other PIS SIGs
+## Links to other PSI SIGs
 
 ...
