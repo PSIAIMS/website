@@ -2,6 +2,4 @@
 title: "R Collaborations"
 ---
 
-{{< fa screwdriver-wrench >}} *Work in Progress!*
-
-<iframe src="https://ppdcentral-my.sharepoint.com/personal/martin_brown_ppd_com/_layouts/15/Doc.aspx?sourcedoc={f0050c02-3e90-459c-9d9c-d4b94bdc0cae}&amp;action=embedview&amp;wdAr=1.4137822529893014" width="1000px" height="600px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<iframe src="https://onedrive.live.com/embed?resid=157E9508A62B98BF%2130632&amp;authkey=!ACGzvrmRlpPJdzY&amp;em=2&amp;wdAr=1.4137822529893014" width="1200px" height="800px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
