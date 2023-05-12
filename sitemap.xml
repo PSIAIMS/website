@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/PSIAIMS/website/rcollaborations.html</loc>
+    <lastmod>2023-05-12T11:10:25.509Z</lastmod>
+  </url>
+  <url>
     <loc>https://github.com/PSIAIMS/website/index.html</loc>
-    <lastmod>2023-05-12T10:57:09.407Z</lastmod>
+    <lastmod>2023-05-12T11:10:26.173Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/PSIAIMS/website/about.html</loc>
-    <lastmod>2023-05-12T10:57:11.887Z</lastmod>
+    <lastmod>2023-05-12T11:10:27.721Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/PSIAIMS/website/rinpharma.html</loc>
-    <lastmod>2023-05-12T10:57:12.215Z</lastmod>
+    <lastmod>2023-05-12T11:10:28.025Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/PSIAIMS/website/why-r.html</loc>
-    <lastmod>2023-05-12T10:57:12.555Z</lastmod>
+    <lastmod>2023-05-12T11:10:28.317Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/PSIAIMS/website/02R-tist.html</loc>
-    <lastmod>2023-05-12T10:57:12.899Z</lastmod>
+    <lastmod>2023-05-12T11:10:28.605Z</lastmod>
   </url>
 </urlset>
