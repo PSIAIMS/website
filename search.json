@@ -1,24 +1,17 @@
 [
   {
-    "objectID": "why-r.html",
-    "href": "why-r.html",
-    "title": "Why R?",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
     "section": "",
-    "text": "Work in Progress!"
-  },
-  {
-    "objectID": "rinpharma.html",
-    "href": "rinpharma.html",
-    "title": "Mapping R in Pharma",
-    "section": "",
-    "text": "Work in Progress!"
+    "text": "Work in Progress!\nThe Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Work in Progress!"
+    "text": "Work in Progress!\nGroup members and affiliations.\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nVeristat\n\n\n\nMark Bynens\nJnJ\n\n\n\nJules Hernandez-Sanchez\nRoche\n\n\n\nDaniel Leibovitz\nindependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim"
   },
   {
     "objectID": "about.html#links-to-other-psi-sigs",
@@ -28,11 +21,18 @@
     "text": "Links to other PSI SIGs\n…"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PSI AIMS Special Interest Group",
+    "objectID": "rinpharma.html",
+    "href": "rinpharma.html",
+    "title": "R Collaborations",
     "section": "",
-    "text": "Work in Progress!\nThe Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community."
+    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+  },
+  {
+    "objectID": "why-r.html",
+    "href": "why-r.html",
+    "title": "Why R?",
+    "section": "",
+    "text": "Work in Progress!"
   },
   {
     "objectID": "02R-tist.html",
