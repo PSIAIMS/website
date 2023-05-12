@@ -10,7 +10,7 @@ website:
       - about.qmd
       - why-r.qmd
       - 02R-tist.qmd
-      - rinpharma.qmd
+      - rcollaborations.qmd
 
 format:
   html:
