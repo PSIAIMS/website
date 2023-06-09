@@ -4,24 +4,23 @@ title: "About"
 ## Background
 With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward.  Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on "Patients First” and getting medications to market as quickly and safely as possible. 
 
-## Aim:
+## Aim
 To support and contribute to researching the use of R within the industry. 
 
-## Current Goals:
-•	Supporting and influencing the working groups and collaborations that are happening within the industry
-•	Identifying the key topics and areas of interest which require promotion, future research and development
-•	Sharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source)
-•	Understanding what our adoption of the PSI digital strategy looks like
-•	Ensuring the industry stays up to date with technological advancement
-•	Looking to bring a statistical presence to discussions on R
+## Current Goals
+
+-   Supporting and influencing the working groups and collaborations that are happening within the industry
+-   Identifying the key topics and areas of interest which require promotion, future research and development
+-   Sharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source)
+-   Understanding what our adoption of the PSI digital strategy looks like
+-   Ensuring the industry stays up to date with technological advancement
+-   Looking to bring a statistical presence to discussions on R
 
 ## Members and Affiliations
 
 ```{r}
-
 #| echo: false
 options(knitr.kable.NA = '')
 readr::read_csv("assets/members.csv", col_types = "ccc") |>
-    knitr::kable(
-    )
+    knitr::kable()
 ```
