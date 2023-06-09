@@ -38,22 +38,22 @@
     "objectID": "about.html#aim",
     "href": "about.html#aim",
     "title": "About",
-    "section": "Aim:",
-    "text": "Aim:\nTo support and contribute to researching the use of R within the industry."
+    "section": "Aim",
+    "text": "Aim\nTo support and contribute to researching the use of R within the industry."
   },
   {
     "objectID": "about.html#current-goals",
     "href": "about.html#current-goals",
     "title": "About",
-    "section": "Current Goals:",
-    "text": "Current Goals:\n• Supporting and influencing the working groups and collaborations that are happening within the industry • Identifying the key topics and areas of interest which require promotion, future research and development • Sharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source) • Understanding what our adoption of the PSI digital strategy looks like • Ensuring the industry stays up to date with technological advancement • Looking to bring a statistical presence to discussions on R"
+    "section": "Current Goals",
+    "text": "Current Goals\n\nSupporting and influencing the working groups and collaborations that are happening within the industry\nIdentifying the key topics and areas of interest which require promotion, future research and development\nSharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source)\nUnderstanding what our adoption of the PSI digital strategy looks like\nEnsuring the industry stays up to date with technological advancement\nLooking to bring a statistical presence to discussions on R"
   },
   {
     "objectID": "about.html#members-and-affiliations",
     "href": "about.html#members-and-affiliations",
     "title": "About",
     "section": "Members and Affiliations",
-    "text": "Members and Affiliations\n\n#| echo: false\noptions(knitr.kable.NA = '')\nreadr::read_csv(\"assets/members.csv\", col_types = \"ccc\") |&gt;\n    knitr::kable(\n    )\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nVeristat\n\n\n\nMark Bynens\nJnJ\n\n\n\nJules Hernandez-Sanchez\nRoche\n\n\n\nDaniel Leibovitz\nindependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim"
+    "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nVeristat\n\n\n\nMark Bynens\nJnJ\n\n\n\nJules Hernandez-Sanchez\nRoche\n\n\n\nDaniel Leibovitz\nindependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim"
   },
   {
     "objectID": "02R-tist.html",
