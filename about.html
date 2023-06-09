@@ -147,7 +147,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#aim" id="toc-aim" class="nav-link" data-scroll-target="#aim">Aim:</a></li>
+  <li><a href="#current-goals" id="toc-current-goals" class="nav-link" data-scroll-target="#current-goals">Current Goals:</a></li>
+  <li><a href="#members-and-affiliations" id="toc-members-and-affiliations" class="nav-link" data-scroll-target="#members-and-affiliations">Members and Affiliations</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -169,17 +178,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>##Background With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible.</p>
-<p>##Aim: To support and contribute to researching the use of R within the industry.</p>
-<p>##Current Goals: • Supporting and influencing the working groups and collaborations that are happening within the industry • Identifying the key topics and areas of interest which require promotion, future research and development • Sharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source) • Understanding what our adoption of the PSI digital strategy looks like • Ensuring the industry stays up to date with technological advancement • Looking to bring a statistical presence to discussions on R</p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible.</p>
+</section>
+<section id="aim" class="level2">
+<h2 class="anchored" data-anchor-id="aim">Aim:</h2>
+<p>To support and contribute to researching the use of R within the industry.</p>
+</section>
+<section id="current-goals" class="level2">
+<h2 class="anchored" data-anchor-id="current-goals">Current Goals:</h2>
+<p>• Supporting and influencing the working groups and collaborations that are happening within the industry • Identifying the key topics and areas of interest which require promotion, future research and development • Sharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source) • Understanding what our adoption of the PSI digital strategy looks like • Ensuring the industry stays up to date with technological advancement • Looking to bring a statistical presence to discussions on R</p>
+</section>
+<section id="members-and-affiliations" class="level2">
+<h2 class="anchored" data-anchor-id="members-and-affiliations">Members and Affiliations</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">##Members and Affiliations</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">knitr.kable.NA =</span> <span class="st">''</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"assets/members.csv"</span>, <span class="at">col_types =</span> <span class="st">"ccc"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">knitr.kable.NA =</span> <span class="st">''</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"assets/members.csv"</span>, <span class="at">col_types =</span> <span class="st">"ccc"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <thead>
@@ -261,6 +279,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
