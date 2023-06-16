@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "rcollaborations.html",
-    "href": "rcollaborations.html",
+    "objectID": "rinpharma.html",
+    "href": "rinpharma.html",
     "title": "R Collaborations",
     "section": "",
-    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
   },
   {
     "objectID": "index.html",
@@ -12,13 +12,6 @@
     "title": "PSI AIMS Special Interest Group",
     "section": "",
     "text": "Work in Progress!\nThe Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community."
-  },
-  {
-    "objectID": "rinpharma.html",
-    "href": "rinpharma.html",
-    "title": "R Collaborations",
-    "section": "",
-    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
   },
   {
     "objectID": "about.html",
@@ -61,6 +54,13 @@
     "title": "Zero to R-tist",
     "section": "",
     "text": "Work in Progress!"
+  },
+  {
+    "objectID": "rcollaborations.html",
+    "href": "rcollaborations.html",
+    "title": "R Collaborations",
+    "section": "",
+    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
   },
   {
     "objectID": "why-r.html",
