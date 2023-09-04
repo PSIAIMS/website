@@ -6,4 +6,5 @@ editor: visual
 This is a test 
 
 ::: hex
+::: hex
 :::
