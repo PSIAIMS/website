@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "rcollaborations.html",
+    "href": "rcollaborations.html",
+    "title": "R Collaborations",
+    "section": "",
+    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+  },
+  {
+    "objectID": "02R-tist.html",
+    "href": "02R-tist.html",
+    "title": "Zero to R-tist",
+    "section": "",
+    "text": "Work in Progress!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "PSI AIMS Special Interest Group",
@@ -12,6 +26,13 @@
     "title": "Why R?",
     "section": "",
     "text": "Work in Progress!"
+  },
+  {
+    "objectID": "test-page.html",
+    "href": "test-page.html",
+    "title": "test",
+    "section": "",
+    "text": "This is a test\n::: hex ::: hex :::"
   },
   {
     "objectID": "about.html",
@@ -49,31 +70,10 @@
     "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD Part of Thermo Fisher Scientific\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nVeristat\n\n\n\nMark Bynens\nJnJ\n\n\n\nJules Hernandez-Sanchez\nRoche\n\n\n\nDaniel Leibovitz\nIndependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\n\n\n\nCamilo Rojas Cifuentes\nJanssen\n\n\n\nIrene Vassallo\nIncyte"
   },
   {
-    "objectID": "02R-tist.html",
-    "href": "02R-tist.html",
-    "title": "Zero to R-tist",
-    "section": "",
-    "text": "Work in Progress!"
-  },
-  {
-    "objectID": "rcollaborations.html",
-    "href": "rcollaborations.html",
-    "title": "R Collaborations",
-    "section": "",
-    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
-  },
-  {
     "objectID": "rinpharma.html",
     "href": "rinpharma.html",
     "title": "R Collaborations",
     "section": "",
     "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
-  },
-  {
-    "objectID": "test-page.html",
-    "href": "test-page.html",
-    "title": "test",
-    "section": "",
-    "text": "This is a test"
   }
 ]
