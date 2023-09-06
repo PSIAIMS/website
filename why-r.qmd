@@ -1,6 +1,30 @@
 ---
 title: "Why R?"
+output:
+    toc: true
+    number_sections: true
 ---
 
-{{< fa screwdriver-wrench >}} *Work in Progress!*
+SAS has been a long standing pharmaceutical industry standard for GXP work, so it's understandable that proposing to change to alternative software, would be met with resistance and trepidation. However, it's important to ask yourself "Why R?", why is there a shift by companies to start to use R alongside SAS (or even replacing SAS)? Some key justification are provided below, which could be used to persuade reluctant adopters that there truly is a business case for R adoption (and for open source collaboration in general).
 
+**Open-source software**
+
+**R ecosystem synergies resulting in resource efficiencies and cost savings**
+
+**Enhanced graphics capability**
+
+**Supports advance analytics**
+
+**Larger community support**
+
+**Industry trend**
+
+**Talent attraction and retention**
+
+**Increased opportunities for cross-pharma standardization**
+
+**Learning new skills at par with industry**
+
+**Reduced burden of maintaining internal macros**
+
+**Freedom to blend multi-language code usage**

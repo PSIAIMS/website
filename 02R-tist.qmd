@@ -2,5 +2,52 @@
 title: "Zero to R-tist"
 ---
 
-{{< fa screwdriver-wrench >}} *Work in Progress!*
+Substantial free training is available for R. A few links to get you started are provided below
 
+-   R Studio Starting Links
+
+    -   [RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)
+
+    -   [RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)
+
+    -   [RStudio Education (Experts)](https://education.rstudio.com/learn/expert/)
+
+    -   [RStudio Webinars - RStudio](https://www.rstudio.com/resources/webinars/)
+
+-   [R Studio Cheat sheets](https://rstudio.com/resources/cheatsheets/)
+
+-   eBooks
+
+    -   [Advanced R - Hadley Wickham](https://adv-r.hadley.nz/)
+
+    -   [R Packages - Hadley Wickham](http://r-pkgs.had.co.nz/)
+
+    -   [R for Data Science - Garrett Grolemund, Hadley Wickham.](https://r4ds.had.co.nz/)
+
+    -   [bookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie](https://bookdown.org/yihui/bookdown/)
+
+    -   [Efficicient R Programming - Colin Gillespie, Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)
+
+    -   [Bookdown](https://bookdown.org/)
+
+-   Blogs/ Videos
+
+    -   [R-bloggers](https://www.r-bloggers.com/)
+
+    -   [RStudio](https://www.rstudio.com/blog/)
+
+    -   [R Views](https://rviews.rstudio.com/)
+
+    -   [YouTube](https://www.youtube.com/results?search_query=R+language)
+
+-   Guided Learning (NOTE: this is a range of free and paying courses)
+
+    -   [posit](Learn%20R%20&%20Python%20for%20Data%20Science%20with%20Posit%20Academy)
+
+    -   [edx courses](https://www.edx.org/learn/r-programming)
+
+    -   [datacamp](https://www.datacamp.com/)
+
+    -   [coursera](https://www.coursera.org/learn/r-programming)
+
+    -   [MOOC](https://www.mooc-list.com/tags/r-programming)
