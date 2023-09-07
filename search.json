@@ -11,7 +11,7 @@
     "href": "02R-tist.html",
     "title": "Zero to R-tist",
     "section": "",
-    "text": "Work in Progress!"
+    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nBookdown\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
   },
   {
     "objectID": "index.html",
@@ -25,7 +25,7 @@
     "href": "why-r.html",
     "title": "Why R?",
     "section": "",
-    "text": "Work in Progress!"
+    "text": "SAS has been a long standing pharmaceutical industry standard for GXP work, so it’s understandable that proposing to change to alternative software, would be met with resistance and trepidation. However, it’s important to ask yourself “Why R?”, why is there a shift by companies to start to use R alongside SAS (or even replacing SAS)? Some key justification are provided below, which could be used to persuade reluctant adopters that there truly is a business case for R adoption (and for open source collaboration in general).\nOpen-source software\nR ecosystem synergies resulting in resource efficiencies and cost savings\nEnhanced graphics capability\nSupports advanced analytics\nLarger community support\nIndustry trend\nTalent attraction and retention\nIncreased opportunities for cross-pharma standardization\nLearning new skills at par with industry\nReduced burden of maintaining internal macros\nFreedom to blend multi-language code usage"
   },
   {
     "objectID": "test-page.html",
