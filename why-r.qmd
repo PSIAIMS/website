@@ -1,30 +1,163 @@
 ---
 title: "Why R?"
-output:
-    toc: true
-    number_sections: true
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+#This function allows a header paragraph before the TOC
+#reference: https://gist.github.com/gadenbuie/c83e078bf8c81b035e32c3fc0cf04ee8
+
+#' Render Table of Contents
+#' 
+#' A simple function to extract headers from an RMarkdown or Markdown document
+#' and build a table of contents. Returns a markdown list with links to the 
+#' headers using 
+#' [pandoc header identifiers](http://pandoc.org/MANUAL.html#header-identifiers).
+#' 
+#' WARNING: This function only works with hash-tag headers.
+#' 
+#' Because this function returns only the markdown list, the header for the
+#' Table of Contents itself must be manually included in the text. Use
+#' `toc_header_name` to exclude the table of contents header from the TOC, or
+#' set to `NULL` for it to be included.
+#' 
+#' @section Usage:
+#' Just drop in a chunk where you want the toc to appear (set `echo=FALSE`):
+#' 
+#'     # Table of Contents
+#' 
+#'     ```{r echo=FALSE}
+#'     render_toc("/path/to/the/file.Rmd")
+#'     ```
+#' 
+#' @param filename Name of RMarkdown or Markdown document
+#' @param toc_header_name The table of contents header name. If specified, any
+#'   header with this format will not be included in the TOC. Set to `NULL` to
+#'   include the TOC itself in the TOC (but why?).
+#' @param base_level Starting level of the lowest header level. Any headers 
+#'   prior to the first header at the base_level are dropped silently.
+#' @param toc_depth Maximum depth for TOC, relative to base_level. Default is
+#'   `toc_depth = 3`, which results in a TOC of at most 3 levels.
+render_toc <- function(
+  filename, 
+  toc_header_name = "Table of Contents",
+  base_level = NULL,
+  toc_depth = 3
+) {
+  x <- readLines(filename, warn = FALSE)
+  x <- paste(x, collapse = "\n")
+  x <- paste0("\n", x, "\n")
+  for (i in 5:3) {
+    regex_code_fence <- paste0("\n[`]{", i, "}.+?[`]{", i, "}\n")
+    x <- gsub(regex_code_fence, "", x)
+  }
+  x <- strsplit(x, "\n")[[1]]
+  x <- x[grepl("^#+", x)]
+  if (!is.null(toc_header_name)) 
+    x <- x[!grepl(paste0("^#+ ", toc_header_name), x)]
+  if (is.null(base_level))
+    base_level <- min(sapply(gsub("(#+).+", "\\1", x), nchar))
+  start_at_base_level <- FALSE
+  x <- sapply(x, function(h) {
+    level <- nchar(gsub("(#+).+", "\\1", h)) - base_level
+    if (level < 0) {
+      stop("Cannot have negative header levels. Problematic header \"", h, '" ',
+           "was considered level ", level, ". Please adjust `base_level`.")
+    }
+    if (level > toc_depth - 1) return("")
+    if (!start_at_base_level && level == 0) start_at_base_level <<- TRUE
+    if (!start_at_base_level) return("")
+    if (grepl("\\{#.+\\}(\\s+)?$", h)) {
+      # has special header slug
+      header_text <- gsub("#+ (.+)\\s+?\\{.+$", "\\1", h)
+      header_slug <- gsub(".+\\{\\s?#([-_.a-zA-Z]+).+", "\\1", h)
+    } else {
+      header_text <- gsub("#+\\s+?", "", h)
+      header_text <- gsub("\\s+?\\{.+\\}\\s*$", "", header_text) # strip { .tabset ... }
+      header_text <- gsub("^[^[:alpha:]]*\\s*", "", header_text) # remove up to first alpha char
+      header_slug <- paste(strsplit(header_text, " ")[[1]], collapse="-")
+      header_slug <- tolower(header_slug)
+    }
+    paste0(strrep(" ", level * 4), "- [", header_text, "](#", header_slug, ")")
+  })
+  x <- x[x != ""]
+  knitr::asis_output(paste(x, collapse = "\n"))
+}
+
+```
 
 SAS has been a long standing pharmaceutical industry standard for GXP work, so it's understandable that proposing to change to alternative software, would be met with resistance and trepidation. However, it's important to ask yourself "Why R?", why is there a shift by companies to start to use R alongside SAS (or even replacing SAS)? Some key justification are provided below, which could be used to persuade reluctant adopters that there truly is a business case for R adoption (and for open source collaboration in general).
 
-**Open-source software**
+```{r toc, echo=FALSE}
+render_toc("why-r.qmd")
+```
 
-**R ecosystem synergies resulting in resource efficiencies and cost savings**
+# Why open-source software?
 
-**Enhanced graphics capability**
+Open-source is a positive shift in mindset incorporating the following traits:
 
-**Supports advance analytics**
+-   Adapt to survive
+-   Use-and-improve
+-   Challenge the status quo
+-   Continuous feedback
+-   Self-service learning
+-   Collaborate
 
-**Larger community support**
+# R ecosystem synergies result in resource efficiencies and cost savings
 
-**Industry trend**
+R and python ecosystems are ideal for analytic engineering:
 
-**Talent attraction and retention**
+-   Modular, build-and-extend model
+-   Fully integrated help documentation with further user-guide capabilities via quarto (markdown)
+-   Standardised test frameworks
+-   Continuous arrival of new methods and tools being written
+-   Interoperability between R python and the wider Data Science ecosystem (multi-language code usage)
+-   No purchase costs
 
-**Increased opportunities for cross-pharma standardization**
+Collaboration allows for a larger pool of available talent to achieve more together:
 
-**Learning new skills at par with industry**
+-   Reduces duplication of work being conducted within each company
+-   Easy re-use of code
+-   Engineering efficiencies (built in documentation/test frameworks/re-use of code & tools)
 
-**Reduced burden of maintaining internal macros**
+# Enhanced graphics & reporting capabilities
 
-**Freedom to blend multi-language code usage**
+The following are just a few of the Enhanced graphics & reporting capabilities offered when using open-source software
+
+-   Brilliant graphics and interactive graphics
+-   Interactive story-telling capabilities through Shiny
+-   Dynamic/automated reporting through quarto (rmarkdown)
+-   Metadata efficiencies
+-   Supports advanced analytics
+
+# Larger community support
+
+-   R community user support is larger than any purchased software company could provide
+-   A wealth of information, help and advice available for free online
+
+# Industry trend
+
+Substantial work ongoing to support the use of R within pharma. This is highlighted by the number of cross industry working groups addressing each of the areas of previous concern
+
+-   [pharmaverse](https://pharmaverse.org/e2eclinical/)
+-   [R Submissions working group](https://rconsortium.github.io/submissions-wg/)
+-   [RTRS working group](https://rconsortium.github.io/rtrs-wg/)
+-   [R Validation Hub](https://www.pharmar.org/)
+-   [CAMIS](https://psiaims.github.io/CAMIS/)
+
+# Talent attraction and retention
+
+The pharmaceutical industry has always struggled to bring in enough experienced SAS programmers and statisticians. Open source languages and tools will lead to a bigger pool of available talent to work in the pharmaceutical industry. New starters (Uni leavers) will know R and data science tools already. Talent from other academic and industry fields may want to transition into pharma increasing our talent pool.
+Learning from each other enables the industry to move adapt quicker and embrace new technilogy quicker which leads to more efficiencies and cost savings
+
+# Increased opportunities for cross-pharma standardization/Reduced burden for individual companies
+
+Currently each company writes their own specific processes, SAS macros and tools. This time is "Non-billable time", at a cost to the company. [pharmaverse](https://pharmaverse.org/e2eclinical/) are providing open source industry wide standard macros for SDTM, ADaM, TFLs and tools. Moving to open source languages and tools would have the following benefits:
+
+-   Reduced cost, burden and duplication of effort for individual companies - increased efficiencies
+-   Package/macro support and documentation thorough and complete
+-   Transferable knowledge when people move companies as staff are familiar with open source macros and do not have to re-learn individual company macros and tools 
+-   Standardized SDTM, AdAM & TFLs means less project specific bespoke programming for common analyses / endpoints
+-   From limited static approach per company to multiple innovative collaborative approaches 
+-   Modular building of packages/macros enables quick adoption of new more efficient methods
