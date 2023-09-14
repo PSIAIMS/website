@@ -6,12 +6,10 @@ author:
     url: https://psiaims.github.io/website/
 
 date: 9-14-2023
-categories: [Quarto, R] # self-defined categories
-citation: 
-  url: https://psiaims.github.io/website/posts/test/ 
+categories: [Regulatory, FDA] # self-defined categories
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
 Check out the following exciting webinar on R and FDA submissions:
 
-[https://www.youtube.com/watch?v=t33dS17QHuA]
+{{< video https://www.youtube.com/watch?v=t33dS17QHuA >}}
