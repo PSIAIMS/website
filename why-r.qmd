@@ -1,7 +1,5 @@
 ---
 title: "Why R?"
-output:
-    toc: true
 ---
 
 
