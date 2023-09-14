@@ -18,7 +18,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "Author\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -65,9 +65,9 @@
   {
     "objectID": "posts/test/index.html",
     "href": "posts/test/index.html",
-    "title": "PSI AIMS SIG Website",
+    "title": "R and FDA Submission",
     "section": "",
-    "text": "Check out the following exciting webinar on R and FDA submissions:\n[https://www.youtube.com/watch?v=t33dS17QHuA]"
+    "text": "Check out the following exciting webinar on R and FDA submissions:\n[https://www.youtube.com/watch?v=t33dS17QHuA]\n\n\n\nCitationBibTeX citation:@online{brown2023,\n  author = {Brown, Martin},\n  title = {R and {FDA} {Submission}},\n  date = {2023-09-14},\n  url = {https://psiaims.github.io/website/posts/test/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nBrown, Martin. 2023. “R and FDA Submission.” September 14,\n2023. https://psiaims.github.io/website/posts/test/."
   },
   {
     "objectID": "rcollaborations.html",
