@@ -11,6 +11,7 @@ website:
       - why-r.qmd
       - 02R-tist.qmd
       - rcollaborations.qmd
+      - news.qmd
 
 format:
   html:
