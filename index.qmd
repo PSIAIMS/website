@@ -2,8 +2,54 @@
 title: "PSI AIMS Special Interest Group"
 ---
 
-{{< fa screwdriver-wrench >}} *Work in Progress!*
+![](images/AIMS%20Logo.png){fig-alt="AIMS logo, a computer with PSI and R logos" width="70"}
 
 The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.
 
-![](images/AIMS%20Logo.png){fig-alt="AIMS logo, a computer with PSI and R logos" width="700"}
+::: {style="display: flex;"}
+::: long-hex
+### R Adoption and Traning
+
+-   [Why R for your business?](https://psiaims.github.io/website/why-r.html)
+
+-   [Training](https://psiaims.github.io/website/02R-tist.htm)
+:::
+
+::: long-hex
+### System
+
+-   Package Management
+
+    -   [renv](https://rstudio.github.io/renv/articles/renv.html)
+    -   [Posit Package Manager](https://posit.co/products/enterprise/package-manager/)
+    -   [Viya](https://www.sas.com/en_gb/software/viya.html)
+
+-   [Package validation](https://www.pharmar.org/)
+
+-   [Submission](https://rconsortium.github.io/r-submission-site/)
+:::
+
+::: long-hex
+### Design and Reporting
+-   [SDTM, ADaM & TFLs](https://pharmaverse.org/e2eclinical/)
+
+-   [Displays](https://rconsortium.github.io/rtrs-wg/)
+
+-   [Statistical Methods](https://psiaims.github.io/CAMIS/)
+
+:::
+
+::: long-hex 
+### Tools
+-   [Quarto](https://quarto.org)
+-   [Git](https://docs.github.com/en/get-started/quickstart/hello-world)
+
+:::
+
+::: long-hex 
+### Other
+-   [Collaborations](https://psiaims.github.io/website/rcollaborations.html)
+:::
+
+
+:::
