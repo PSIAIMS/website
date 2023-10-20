@@ -8,7 +8,7 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 
 ::: {style="display: flex;"}
 ::: long-hex
-### R Adoption and Traning
+### R Adoption and Training
 
 -   [Why R for your business?](https://psiaims.github.io/website/why-r.html)
 
