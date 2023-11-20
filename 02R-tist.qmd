@@ -32,7 +32,6 @@ Substantial free training is available for R. A few links to get you started are
 
     -   [Tidyverse Style Guide](https://style.tidyverse.org/)
 
-    -   [Best Coding Practices](https://bookdown.org/content/d1e53ac9-28ce-472f-bc2c-f499f18264a3/)
     -   [rOpenSci Package development](https://devguide.ropensci.org/building.html)
     
     -   [R Packages (2e)](https://r-pkgs.org)
