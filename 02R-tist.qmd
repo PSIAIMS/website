@@ -28,7 +28,13 @@ Substantial free training is available for R. A few links to get you started are
 
     -   [Efficicient R Programming - Colin Gillespie, Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)
 
-    -   [Bookdown](https://bookdown.org/)
+    -   [quarto](https://quarto.org)
+
+    -   [Tidyverse Style Guide](https://style.tidyverse.org/)
+
+    -   [rOpenSci Package development](https://devguide.ropensci.org/building.html)
+    
+    -   [R Packages (2e)](https://r-pkgs.org)
 
 -   Blogs/ Videos
 

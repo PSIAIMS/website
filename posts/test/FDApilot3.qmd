@@ -1,0 +1,17 @@
+---
+title: "FDA Pilot 3 submission"
+description: "R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway"
+author:
+  - name: Lyn Taylor
+    url: https://psiaims.github.io/website/
+
+date: 28-08-2023
+categories: [Regulatory, FDA] # self-defined categories
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission *pilot 3* package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: <https://github.com/RConsortium/submissions-pilot3-adam-to-fda> 
+
+The *pilot 3* test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from *pilot 3* and tables, listings, figures (TLFs) from *pilot 1*, analysis data reviewer's guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the *pilot 3* team here: <https://rconsortium.github.io/submissions-pilot3-adam/main/index.html>.
+
+See [here](https://www.r-consortium.org/announcement/2023/09/11/first-publicly-available-r-based-submission-package-submitted-to-fda-pilot-3) for more information about pilot 1, 2, 3 and the future plans for pilot 4.

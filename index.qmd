@@ -31,11 +31,11 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 
 ::: long-hex
 ### Design and Reporting
--   [SDTM, ADaM & TFLs](https://pharmaverse.org/e2eclinical/)
+-   [SDTM, ADaM   & TFLs](https://pharmaverse.org/e2eclinical/)
 
 -   [Displays](https://rconsortium.github.io/rtrs-wg/)
 
--   [Statistical Methods](https://psiaims.github.io/CAMIS/)
+-   [Statistical Methods (CAMIS)](https://psiaims.github.io/CAMIS/)
 
 :::
 
@@ -49,6 +49,7 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 ::: long-hex 
 ### Other
 -   [Collaborations](https://psiaims.github.io/website/rcollaborations.html)
+-   [PHUSE R for Submissions](https://sway.office.com/PdIb3DFE9uLJtrRP?ref=Link&loc=play)
 :::
 
 
