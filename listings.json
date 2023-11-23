@@ -2,6 +2,8 @@
   {
     "listing": "/news.html",
     "items": [
+      "/posts/test/FDApilot3.html",
+      "/posts/test/CAMIS2023.html",
       "/posts/test/index.html"
     ]
   }
