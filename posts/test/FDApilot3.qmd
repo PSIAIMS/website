@@ -5,7 +5,7 @@ author:
   - name: Lyn Taylor
     url: https://psiaims.github.io/website/
 
-date: 28-08-2023
+date: 08-28-2023
 categories: [Regulatory, FDA] # self-defined categories
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
