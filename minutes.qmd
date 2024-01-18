@@ -6,5 +6,5 @@ listing:
   type: table
   fields: [date, title]
   feed: true
-  page-layout: full
+page-layout: full
 ---
