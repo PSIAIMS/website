@@ -7,5 +7,5 @@ listing:
   fields: [date, title]
   feed: true
   page-layout: full
-  sidebar-width: 0px
+  sidebar-width: 1px
 ---
