@@ -1,6 +1,6 @@
 ---
 title: "Meeting Minutes"
-listing: 
+table: 
   contents: minutes # all Quarto docs in the `minutes` directory will be included on your listing page
   sort: "date desc" # can also sort on more than one field
   feed: true
