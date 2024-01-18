@@ -1,0 +1,26 @@
+---
+title: "Minutes 2024-01-19"
+date: 2024-01-19
+---
+
+::: {.callout-tip collapse="true"}
+## View Attendee List
+
+- Martin Brown
+- Lyn Taylor
+
+:::
+
+## Admin / 2024 Goals
+
+## PSI Conference / 2024 events
+
+## R Training Open Source
+
+## Clinical Flow Chart Diagram for R
+
+## Data Science Collaboration
+
+## R Industry Working Groups feedback
+
+
