@@ -12,9 +12,12 @@ website:
       - 02R-tist.qmd
       - rcollaborations.qmd
       - news.qmd
+      - text: "Meeting Minutes"
+        href: minutes.qmd
 
 format:
   html:
     theme: theme.scss
     css: styles.css
     toc: true
+    page-layout: full
