@@ -28,11 +28,67 @@
     "text": "Check out the following exciting webinar on R and FDA submissions:"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PSI AIMS Special Interest Group",
+    "objectID": "minutes/2024-01-19/index.html",
+    "href": "minutes/2024-01-19/index.html",
+    "title": "Minutes 2024-01-19",
     "section": "",
-    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\nR Adoption and Training\n\nWhy R for your business?\nTraining\n\n\n\nSystem\n\nPackage Management\n\nrenv\nPosit Package Manager\nViya\n\nPackage validation\nSubmission\n\n\n\nDesign and Reporting\n\nSDTM, ADaM & TFLs\nDisplays\nStatistical Methods (CAMIS)\n\n\n\nTools\n\nQuarto\nGit\n\n\n\nOther\n\nCollaborations\nPHUSE R for Submissions"
+    "text": "View Attendee List\n\n\n\n\n\n\nMartin Brown\nLyn Taylor"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#admin-2024-goals",
+    "href": "minutes/2024-01-19/index.html#admin-2024-goals",
+    "title": "Minutes 2024-01-19",
+    "section": "Admin / 2024 Goals",
+    "text": "Admin / 2024 Goals"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#psi-conference-2024-events",
+    "href": "minutes/2024-01-19/index.html#psi-conference-2024-events",
+    "title": "Minutes 2024-01-19",
+    "section": "PSI Conference / 2024 events",
+    "text": "PSI Conference / 2024 events"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#r-training-open-source",
+    "href": "minutes/2024-01-19/index.html#r-training-open-source",
+    "title": "Minutes 2024-01-19",
+    "section": "R Training Open Source",
+    "text": "R Training Open Source"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#clinical-flow-chart-diagram-for-r",
+    "href": "minutes/2024-01-19/index.html#clinical-flow-chart-diagram-for-r",
+    "title": "Minutes 2024-01-19",
+    "section": "Clinical Flow Chart Diagram for R",
+    "text": "Clinical Flow Chart Diagram for R"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#data-science-collaboration",
+    "href": "minutes/2024-01-19/index.html#data-science-collaboration",
+    "title": "Minutes 2024-01-19",
+    "section": "Data Science Collaboration",
+    "text": "Data Science Collaboration"
+  },
+  {
+    "objectID": "minutes/2024-01-19/index.html#r-industry-working-groups-feedback",
+    "href": "minutes/2024-01-19/index.html#r-industry-working-groups-feedback",
+    "title": "Minutes 2024-01-19",
+    "section": "R Industry Working Groups feedback",
+    "text": "R Industry Working Groups feedback"
+  },
+  {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "02R-tist.html",
+    "href": "02R-tist.html",
+    "title": "Zero to R-tist",
+    "section": "",
+    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
   },
   {
     "objectID": "about.html",
@@ -70,18 +126,11 @@
     "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD Part of Thermo Fisher Scientific\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nCytel\n\n\n\nMark Bynens\nJnJ\n\n\n\nAlexandra Lauer\nBoehringer-Ingelheim\n\n\n\nDaniel Leibovitz\nIndependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\n\n\n\nCamilo Rojas Cifuentes\nJanssen\n\n\n\nIrene Vassallo\nIncyte"
   },
   {
-    "objectID": "02R-tist.html",
-    "href": "02R-tist.html",
-    "title": "Zero to R-tist",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
     "section": "",
-    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
-  },
-  {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
-    "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
+    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\nR Adoption and Training\n\nWhy R for your business?\nTraining\n\n\n\nSystem\n\nPackage Management\n\nrenv\nPosit Package Manager\nViya\n\nPackage validation\nSubmission\n\n\n\nDesign and Reporting\n\nSDTM, ADaM & TFLs\nDisplays\nStatistical Methods (CAMIS)\n\n\n\nTools\n\nQuarto\nGit\n\n\n\nOther\n\nCollaborations\nPHUSE R for Submissions"
   },
   {
     "objectID": "rcollaborations.html",
@@ -109,6 +158,6 @@
     "href": "minutes.html",
     "title": "Meeting Minutes",
     "section": "",
-    "text": "No matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
