@@ -19,11 +19,7 @@ date: 2024-01-19
 
 ## Admin / 2024 Goals
 
-Couple of meetings back Martin mentioned interest from someone in the US to join AIMS.
-
-Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation.
-
-So provided some information particularly relevant to US industry groups.
+Couple of meetings back Martin mentioned interest from someone in the US to join AIMS. Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation. So provided some information particularly relevant to US industry groups.
 
 Minutes now to be included on website and not sent out in a word document.
 
@@ -36,16 +32,16 @@ Martin outlined some potential areas for goals in 2024:
 
 ## PSI Conference / 2024 events
 
-Discussed PSI conference abstract rejectionnotes
+Discussed PSI conference abstract rejection notes
 
 General feeling from committee that R validation has been done?
 
 Set out problem/landscape more and then response to that in session
 
 Will look to meet with Adam Crisp and discuss conference issues
-  * PSI conference more set to individuals now?
-  * Conference is a good opportunity to get together as a SIG
-  * Pressure to reduce travel so focus on 1 conference where attendance based on presenting
+* PSI conference more set to individuals now?
+* Conference is a good opportunity to get together as a SIG
+* Pressure to reduce travel so focus on 1 conference where attendance based on presenting
 
 Possible to do decent workshops online if effort put in
 
@@ -54,9 +50,9 @@ GitHUB workshop plans - September - 4 x 1 hour
 Alex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave
 
 Novo Nordisk - dont have any elements written down
-  * Can we get their information as a blog?
-  * Information all in separate webinars
-  * Better to get understanding from quicker mediums like blogs.
+* Can we get their information as a blog?
+* Information all in separate webinars
+* Better to get understanding from quicker mediums like blogs.
 
 Speak to Florian about raw data pilot and get more information on that?
 
@@ -75,8 +71,8 @@ Leveraging shiny apps for remote training - blog about it
 CAMIS - Wilcoxon signed rank test
 
 Gap - Look at from a statistician point of view
-  * Sample size
-  * Subgroup analysis
+* Sample size
+* Subgroup analysis
 
 Pharma statistics packages
 
