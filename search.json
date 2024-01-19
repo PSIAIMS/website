@@ -39,42 +39,42 @@
     "href": "minutes/2024-01-19/index.html#admin-2024-goals",
     "title": "Minutes 2024-01-19",
     "section": "Admin / 2024 Goals",
-    "text": "Admin / 2024 Goals\nCouple of meetings back Martin mentioned interest from someone in the US to join AIMS. Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation. So provided some information particularly relevant to US industry groups.\nMinutes now to be included on website and not sent out in a word document.\nMartin outlined some potential areas for goals in 2024: - Website release/communication - Events - R training open source release - Clinical flow chart diagram for R (from data to output) - Data science collaboration on using R with AI/ML"
+    "text": "Admin / 2024 Goals\nCouple of meetings back Martin mentioned interest from someone in the US to join AIMS.\nUpon further communication, found that she had moved from academia to industry and was just interested in finding orientation.\nSo provided some information particularly relevant to US industry groups.\nMinutes now to be included on website and not sent out in a word document.\nMartin outlined some potential areas for goals in 2024: * Website release/communication * Events * R training open source release * Clinical flow chart diagram for R (from data to output) * Data science collaboration on using R with AI/ML"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#psi-conference-2024-events",
     "href": "minutes/2024-01-19/index.html#psi-conference-2024-events",
     "title": "Minutes 2024-01-19",
     "section": "PSI Conference / 2024 events",
-    "text": "PSI Conference / 2024 events\nDiscussed PSI conference abstract rejectionnotes General feeling from committee that R validation has been done? Set out problem/landscape more and then response to that in session\nWill look to meet with Adam Crisp and discuss conference issues - PSI conference more set to individuals now? - Conference is a good opportunity to get together as a SIG - Pressure to reduce travel so focus on 1 conference where attendance based on presenting\nPossible to do decent workshops online if effort put in GitHUB workshop plans - September - 4 x 1 hour Alex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave\nNovo Nordisk - dont have any elements written down - Can we get their information as a blog? - Information all in separate webinars - Better to get understanding from quicker mediums like blogs.\nSpeak to Florian about raw data pilot and get more information on that?"
+    "text": "PSI Conference / 2024 events\nDiscussed PSI conference abstract rejectionnotes\nGeneral feeling from committee that R validation has been done?\nSet out problem/landscape more and then response to that in session\nWill look to meet with Adam Crisp and discuss conference issues * PSI conference more set to individuals now? * Conference is a good opportunity to get together as a SIG * Pressure to reduce travel so focus on 1 conference where attendance based on presenting\nPossible to do decent workshops online if effort put in\nGitHUB workshop plans - September - 4 x 1 hour\nAlex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave\nNovo Nordisk - dont have any elements written down * Can we get their information as a blog? * Information all in separate webinars * Better to get understanding from quicker mediums like blogs.\nSpeak to Florian about raw data pilot and get more information on that?"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#r-training-open-source",
     "href": "minutes/2024-01-19/index.html#r-training-open-source",
     "title": "Minutes 2024-01-19",
     "section": "R Training Open Source",
-    "text": "R Training Open Source\nAndy - Training material shared with Mike Smith and R consortium Get done by February - take a look and reassess once released"
+    "text": "R Training Open Source\nAndy - Training material shared with Mike Smith and R consortium\nGet done by February - take a look and reassess once released"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#poster-ideas-clinical-flow-chart-diagram-for-r",
     "href": "minutes/2024-01-19/index.html#poster-ideas-clinical-flow-chart-diagram-for-r",
     "title": "Minutes 2024-01-19",
     "section": "Poster Ideas / Clinical Flow Chart Diagram for R",
-    "text": "Poster Ideas / Clinical Flow Chart Diagram for R\nWhat makes good online training? Programming element Leveraging shiny apps for remote training - blog about it CAMIS - Wilcoxon signed rank test\nGap - Look at from a statistician point of view Sample size Subgroup analysis Pharma statistics packages\nSimplifying pharmaverse - cannot simplify? People only agree on admiral"
+    "text": "Poster Ideas / Clinical Flow Chart Diagram for R\nWhat makes good online training? Programming element\nLeveraging shiny apps for remote training - blog about it\nCAMIS - Wilcoxon signed rank test\nGap - Look at from a statistician point of view * Sample size * Subgroup analysis\nPharma statistics packages\nSimplifying pharmaverse - cannot simplify? People only agree on admiral"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#data-science-collaboration",
     "href": "minutes/2024-01-19/index.html#data-science-collaboration",
     "title": "Minutes 2024-01-19",
     "section": "Data Science Collaboration",
-    "text": "Data Science Collaboration\nReaching out to data science SIG as a first step Potentially too much effort to push an idea forward See where they are, what there focus is currently"
+    "text": "Data Science Collaboration\nReaching out to data science SIG as a first step\nPotentially too much effort to push an idea forward\nSee where they are, what there focus is currently"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#r-industry-working-groups-feedback",
     "href": "minutes/2024-01-19/index.html#r-industry-working-groups-feedback",
     "title": "Minutes 2024-01-19",
     "section": "R Industry Working Groups feedback",
-    "text": "R Industry Working Groups feedback\nCAMIS (Lyn) - good recent progress - new people, new content, enthusiasm exponentially growing Busy! Expanded leadership with Harshal and Chi\nCan we get someone to either join R validation Hub or someone from there to join AIMS? Or just ask them for updates? Important to keep relationship Set up quarterly updates? Lyn reached out to Juliane and Doug\nPharmaverse (Christina) Looking to make Admiral more stable and preparing for conferences. RTRS (Christina) bookdown more stabilised - making more organic Openstatsware updates from Kevin and website Submissions working group updates from website\nAny other active working groups - none that we know of."
+    "text": "R Industry Working Groups feedback\nCAMIS (Lyn) - good recent progress - new people, new content, enthusiasm exponentially growing\nBusy!\nExpanded leadership with Harshal and Chi\nCan we get someone to either join R validation Hub or someone from there to join AIMS?\nOr just ask them for updates? Important to keep relationship\nSet up quarterly updates? Lyn reached out to Juliane and Doug\nPharmaverse (Christina) Looking to make Admiral more stable and preparing for conferences.\nRTRS (Christina) bookdown more stabilised - making more organic\nOpenstatsware updates from Kevin and website\nSubmissions working group updates from website\nAny other active working groups - none that we know of."
   },
   {
     "objectID": "news.html",
