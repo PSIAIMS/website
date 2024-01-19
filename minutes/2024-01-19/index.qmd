@@ -24,6 +24,7 @@ Couple of meetings back Martin mentioned interest from someone in the US to join
 Minutes now to be included on website and not sent out in a word document.
 
 Martin outlined some potential areas for goals in 2024:
+
 * Website release/communication
 * Events
 * R training open source release
@@ -39,6 +40,7 @@ General feeling from committee that R validation has been done?
 Set out problem/landscape more and then response to that in session
 
 Will look to meet with Adam Crisp and discuss conference issues
+
 * PSI conference more set to individuals now?
 * Conference is a good opportunity to get together as a SIG
 * Pressure to reduce travel so focus on 1 conference where attendance based on presenting
@@ -50,6 +52,7 @@ GitHUB workshop plans - September - 4 x 1 hour
 Alex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave
 
 Novo Nordisk - dont have any elements written down
+
 * Can we get their information as a blog?
 * Information all in separate webinars
 * Better to get understanding from quicker mediums like blogs.
@@ -66,17 +69,18 @@ Get done by February - take a look and reassess once released
 
 What makes good online training? Programming element
 
-Leveraging shiny apps for remote training - blog about it
+Leveraging shiny apps for remote training - blog about it?
 
 CAMIS - Wilcoxon signed rank test
 
 Gap - Look at from a statistician point of view
+
 * Sample size
 * Subgroup analysis
 
 Pharma statistics packages
 
-Simplifying pharmaverse - cannot simplify? People only agree on admiral
+Simplifying pharmaverse - cannot simplify? 
 
 ## Data Science Collaboration
 
