@@ -39,14 +39,14 @@
     "href": "minutes/2024-01-19/index.html#admin-2024-goals",
     "title": "Minutes 2024-01-19",
     "section": "Admin / 2024 Goals",
-    "text": "Admin / 2024 Goals\nCouple of meetings back Martin mentioned interest from someone in the US to join AIMS. Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation. So provided some information particularly relevant to US industry groups.\nMinutes now to be included on website and not sent out in a word document.\nMartin outlined some potential areas for goals in 2024: * Website release/communication * Events * R training open source release * Clinical flow chart diagram for R (from data to output) * Data science collaboration on using R with AI/ML"
+    "text": "Admin / 2024 Goals\nCouple of meetings back Martin mentioned interest from someone in the US to join AIMS. Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation. So provided some information particularly relevant to US industry groups.\nMinutes now to be included on website and not sent out in a word document.\nMartin outlined some potential areas for goals in 2024:\n\nWebsite release/communication\nEvents\nR training open source release\nClinical flow chart diagram for R (from data to output)\nData science collaboration on using R with AI/ML"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#psi-conference-2024-events",
     "href": "minutes/2024-01-19/index.html#psi-conference-2024-events",
     "title": "Minutes 2024-01-19",
     "section": "PSI Conference / 2024 events",
-    "text": "PSI Conference / 2024 events\nDiscussed PSI conference abstract rejection notes\nGeneral feeling from committee that R validation has been done?\nSet out problem/landscape more and then response to that in session\nWill look to meet with Adam Crisp and discuss conference issues * PSI conference more set to individuals now? * Conference is a good opportunity to get together as a SIG * Pressure to reduce travel so focus on 1 conference where attendance based on presenting\nPossible to do decent workshops online if effort put in\nGitHUB workshop plans - September - 4 x 1 hour\nAlex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave\nNovo Nordisk - dont have any elements written down * Can we get their information as a blog? * Information all in separate webinars * Better to get understanding from quicker mediums like blogs.\nSpeak to Florian about raw data pilot and get more information on that?"
+    "text": "PSI Conference / 2024 events\nDiscussed PSI conference abstract rejection notes\nGeneral feeling from committee that R validation has been done?\nSet out problem/landscape more and then response to that in session\nWill look to meet with Adam Crisp and discuss conference issues\n\nPSI conference more set to individuals now?\nConference is a good opportunity to get together as a SIG\nPressure to reduce travel so focus on 1 conference where attendance based on presenting\n\nPossible to do decent workshops online if effort put in\nGitHUB workshop plans - September - 4 x 1 hour\nAlex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave\nNovo Nordisk - dont have any elements written down\n\nCan we get their information as a blog?\nInformation all in separate webinars\nBetter to get understanding from quicker mediums like blogs.\n\nSpeak to Florian about raw data pilot and get more information on that?"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#r-training-open-source",
@@ -60,7 +60,7 @@
     "href": "minutes/2024-01-19/index.html#poster-ideas-clinical-flow-chart-diagram-for-r",
     "title": "Minutes 2024-01-19",
     "section": "Poster Ideas / Clinical Flow Chart Diagram for R",
-    "text": "Poster Ideas / Clinical Flow Chart Diagram for R\nWhat makes good online training? Programming element\nLeveraging shiny apps for remote training - blog about it\nCAMIS - Wilcoxon signed rank test\nGap - Look at from a statistician point of view * Sample size * Subgroup analysis\nPharma statistics packages\nSimplifying pharmaverse - cannot simplify? People only agree on admiral"
+    "text": "Poster Ideas / Clinical Flow Chart Diagram for R\nWhat makes good online training? Programming element\nLeveraging shiny apps for remote training - blog about it?\nCAMIS - Wilcoxon signed rank test\nGap - Look at from a statistician point of view\n\nSample size\nSubgroup analysis\n\nPharma statistics packages\nSimplifying pharmaverse - cannot simplify?"
   },
   {
     "objectID": "minutes/2024-01-19/index.html#data-science-collaboration",
