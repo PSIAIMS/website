@@ -8,19 +8,88 @@ date: 2024-01-19
 
 - Martin Brown
 - Lyn Taylor
-
+- Chris Toffis
+- Michael Cartwright
+- Christina Fillmore
+- Matthew Neilson
+- Camilo Rojas Cifuentes
+- Irene Vassallo
+- Alexandra Lauer
 :::
 
 ## Admin / 2024 Goals
 
+Couple of meetings back Martin mentioned interest from someone in the US to join AIMS.
+Upon further communication, found that she had moved from academia to industry and was just interested in finding orientation.
+So provided some information particularly relevant to US industry groups.
+
+Minutes now to be included on website and not sent out in a word document.
+
+Martin outlined some potential areas for goals in 2024:
+- Website release/communication
+- Events
+- R training open source release
+- Clinical flow chart diagram for R (from data to output)
+- Data science collaboration on using R with AI/ML
+
 ## PSI Conference / 2024 events
+
+Discussed PSI conference abstract rejectionnotes
+General feeling from committee that R validation has been done?
+Set out problem/landscape more and then response to that in session
+
+Will look to meet with Adam Crisp and discuss conference issues
+  - PSI conference more set to individuals now?
+  - Conference is a good opportunity to get together as a SIG
+  - Pressure to reduce travel so focus on 1 conference where attendance based on presenting
+
+Possible to do decent workshops online if effort put in
+GitHUB workshop plans - September - 4 x 1 hour
+Alex not able to present (Kevin could potentially instead?), Irene to help with prep before maternity leave
+
+Novo Nordisk - dont have any elements written down
+  - Can we get their information as a blog?
+  - Information all in separate webinars
+  - Better to get understanding from quicker mediums like blogs.
+
+Speak to Florian about raw data pilot and get more information on that?
 
 ## R Training Open Source
 
-## Clinical Flow Chart Diagram for R
+Andy - Training material shared with Mike Smith and R consortium
+Get done by February - take a look and reassess once released
+
+## Poster Ideas / Clinical Flow Chart Diagram for R
+
+What makes good online training? Programming element
+Leveraging shiny apps for remote training - blog about it
+CAMIS - Wilcoxon signed rank test
+
+Gap - Look at from a statistician point of view
+  Sample size
+  Subgroup analysis
+Pharma statistics packages
+
+Simplifying pharmaverse - cannot simplify? People only agree on admiral
 
 ## Data Science Collaboration
 
+Reaching out to data science SIG as a first step
+Potentially too much effort to push an idea forward
+See where they are, what there focus is currently
+
 ## R Industry Working Groups feedback
+CAMIS (Lyn) - good recent progress - new people, new content, enthusiasm exponentially growing
+Busy!
+Expanded leadership with Harshal and Chi
 
+Can we get someone to either join R validation Hub or someone from there to join AIMS?
+Or just ask them for updates? Important to keep relationship
+Set up quarterly updates? Lyn reached out to Juliane and Doug
 
+Pharmaverse (Christina) Looking to make Admiral more stable and preparing for conferences.
+RTRS (Christina) bookdown more stabilised - making more organic
+Openstatsware updates from Kevin and website
+Submissions working group updates from website
+
+Any other active working groups - none that we know of.
