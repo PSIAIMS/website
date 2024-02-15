@@ -1,16 +1,16 @@
 [
   {
+    "listing": "/minutes.html",
+    "items": [
+      "/minutes/2024-01-19/index.html"
+    ]
+  },
+  {
     "listing": "/news.html",
     "items": [
       "/posts/test/CAMIS2023.html",
       "/posts/test/index.html",
       "/posts/test/FDApilot3.html"
-    ]
-  },
-  {
-    "listing": "/minutes.html",
-    "items": [
-      "/minutes/2024-01-19/index.html"
     ]
   }
 ]

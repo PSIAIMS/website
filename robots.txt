@@ -1,1 +1,1 @@
-Sitemap: https://github.com/PSIAIMS/website/sitemap.xml
+Sitemap: https://PSIAIMS.github.io/website/sitemap.xml
