@@ -2,9 +2,12 @@
 title: "PSI AIMS Special Interest Group"
 ---
 
-![](images/AIMS%20Logo.png){fig-alt="AIMS logo, a computer with PSI and R logos" width="70"}
-
-The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups (CSRMLW and RTRS), R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.
+<div>
+    <img src=images/AIMS%20Logo.png style="float: left; width: 50%; padding-right: 20px;" alt="AIMS logo, a computer with PSI and R logos">
+    <p style="float: right; width: 50%;">
+        The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.
+    </p>
+</div>
 
 ::: {style="display: flex;"}
 ::: long-hex
