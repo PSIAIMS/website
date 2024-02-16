@@ -1,6 +1,6 @@
 ---
 title: "PSI AIMS Special Interest Group"
-image: `images/AIMS Logo.png`
+image: images/AIMSLogo.png
 about:
     template: trestles
     image-width: 10em
