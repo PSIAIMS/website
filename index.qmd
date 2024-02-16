@@ -1,15 +1,17 @@
 ---
 title: "PSI AIMS Special Interest Group"
+image: images/AIMS%20Logo.png
 about:
     template: trestles
+    image-width: 10em
+    image-shape: rectangle
+    image-alt: AIMS logo, a computer with PSI and R logos
     links:
         - icon: github
           text: Github
           url: https://github.com/PSIAIMS
         - text: "{{< fa envelope >}} Email"
           url: mailto:martin.brown@ppd.com
-image: images/AIMS%20Logo.png
-
 ---
 
 The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.
@@ -56,12 +58,5 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 -   [Git](https://docs.github.com/en/get-started/quickstart/hello-world)
 
 :::
-
-::: long-hex 
-### Other
--   [Collaborations](https://psiaims.github.io/website/rcollaborations.html)
--   [PHUSE R for Submissions](https://sway.office.com/PdIb3DFE9uLJtrRP?ref=Link&loc=play)
-:::
-
 
 :::
