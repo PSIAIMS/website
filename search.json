@@ -11,7 +11,7 @@
     "href": "minutes.html",
     "title": "Meeting Minutes",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nFeb 16, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nFeb 16, 2024\n\n\nMinutes 2024-02-16\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/test/index.html",
@@ -142,44 +142,44 @@
   {
     "objectID": "minutes/2024-02-16/index.html",
     "href": "minutes/2024-02-16/index.html",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "",
     "text": "View Attendee List\n\n\n\n\n\n\nMartin Brown\nChristina Fillmore\nAlexandra Lauer\nMatthew Neilson\nIrene Vassallo"
   },
   {
     "objectID": "minutes/2024-02-16/index.html#admin",
     "href": "minutes/2024-02-16/index.html#admin",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "Admin",
     "text": "Admin\nLyn has left AIMS to fully concentrate on leading CAMIS."
   },
   {
     "objectID": "minutes/2024-02-16/index.html#psi-and-2024-events",
     "href": "minutes/2024-02-16/index.html#psi-and-2024-events",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "PSI and 2024 events",
-    "text": "PSI and 2024 events\nEnd of year 2023 achievements, highlights and updates are to be sent to Adam Crisp by Friday 1st March. Awareness of requirement for SIGs to be active year to year to not be considered closed.\nESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.\nFed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn’t heard anything about (https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions—is-it-really-a-free-for-all). Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.\n\nGitHUB workshop\nChristina and Alex to run it - will look to select dates. Details to be worked out (2 x 1-1.5 sessions with session 1 initial set up and drop-in)\n\n\nNovo Nordisk FDA submission\nVideo summary can be found at: https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/ Add to the website in the news section."
+    "text": "PSI and 2024 events\nEnd of year 2023 achievements, highlights and updates are to be sent to Adam Crisp by Friday 1st March. Awareness of requirement for SIGs to be active year to year to not be considered closed.\nESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.\nFed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn’t heard anything about ([https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions—is-it-really-a-free-for-all]). Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.\n\nGitHUB workshop\nChristina and Alex to run it - will look to select dates. Details to be worked out (2 x 1-1.5 sessions with session 1 all about initial set up with drop-in afterwards?)\n\n\nNovo Nordisk FDA submission\nVideo summary from Appsilon blog can be found at: [https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/] Add to the website in the news section."
   },
   {
     "objectID": "minutes/2024-02-16/index.html#r-training-open-source",
     "href": "minutes/2024-02-16/index.html#r-training-open-source",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "R Training Open Source",
     "text": "R Training Open Source\nAndy focused on the current training session and then will look to release by April."
   },
   {
     "objectID": "minutes/2024-02-16/index.html#focus",
     "href": "minutes/2024-02-16/index.html#focus",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "2024 Focus",
     "text": "2024 Focus\nStatistics focus What are the gaps? Can we pull particular package names from CAMIS or just carry on linking to CAMIS website?\nWill look to bring together the materials from the simulation course and work out what is the best way to advertise them. Matt to send them through.\nMentioned the idea of supporting particular groups - pointing them in the right direction of R material and links. Christina made the points:\n\nWhat are the problems people are facing? What support do they require?\nThey are more likely to be comfortable and already set specifically in those different areas.\n\nSo let us look to reach out to the contacts and potentially they could contribute to our website in different ways.\n\nHTA\n\nData science\nBiomarkers\nVisualisation\nDSMB (Michael)\nRegulatory (Florian)\nBayesian borrowing"
   },
   {
     "objectID": "minutes/2024-02-16/index.html#website",
     "href": "minutes/2024-02-16/index.html#website",
-    "title": "Minutes 2024-01-19",
+    "title": "Minutes 2024-02-16",
     "section": "Website",
-    "text": "Website\nTalked about problems with AIMS logo not showing on homepage - issue to do with space in filename. Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes: https://www.w3schools.com/howto/howto_js_collapsible.asp"
+    "text": "Website\nTalked about problems with AIMS logo not showing on homepage - issue to do with space in filename. Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes: [https://www.w3schools.com/howto/howto_js_collapsible.asp]"
   },
   {
     "objectID": "posts/test/CAMIS2023.html",
