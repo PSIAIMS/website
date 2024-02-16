@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-16">
 
-<title>PSI AIMS SIG Website - News</title>
+<title>PSI AIMS SIG Website - Minutes 2024-01-19</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,67 +67,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -138,7 +79,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">PSI AIMS SIG Website</span>
     </a>
   </div>
@@ -149,31 +90,31 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./why-r.html"> 
+    <a class="nav-link" href="../../why-r.html"> 
 <span class="menu-text">Why R?</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./02R-tist.html"> 
+    <a class="nav-link" href="../../02R-tist.html"> 
 <span class="menu-text">Zero to R-tist</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rcollaborations.html"> 
+    <a class="nav-link" href="../../rcollaborations.html"> 
 <span class="menu-text">R Collaborations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./news.html" aria-current="page"> 
+    <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./minutes.html"> 
+    <a class="nav-link" href="../../minutes.html"> 
 <span class="menu-text">Meeting Minutes</span></a>
   </li>  
 </ul>
@@ -188,14 +129,28 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="CAMIS">CAMIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Comparison of Software">Comparison of Software <span class="quarto-category-count">(1)</span></div><div class="category" data-category="FDA">FDA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Regulatory">Regulatory <span class="quarto-category-count">(2)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#admin" id="toc-admin" class="nav-link active" data-scroll-target="#admin">Admin</a></li>
+  <li><a href="#psi-and-2024-events" id="toc-psi-and-2024-events" class="nav-link" data-scroll-target="#psi-and-2024-events">PSI and 2024 events</a>
+  <ul class="collapse">
+  <li><a href="#github-workshop" id="toc-github-workshop" class="nav-link" data-scroll-target="#github-workshop">GitHUB workshop</a></li>
+  <li><a href="#novo-nordisk-fda-submission" id="toc-novo-nordisk-fda-submission" class="nav-link" data-scroll-target="#novo-nordisk-fda-submission">Novo Nordisk FDA submission</a></li>
+  </ul></li>
+  <li><a href="#r-training-open-source" id="toc-r-training-open-source" class="nav-link" data-scroll-target="#r-training-open-source">R Training Open Source</a></li>
+  <li><a href="#focus" id="toc-focus" class="nav-link" data-scroll-target="#focus">2024 Focus</a></li>
+  <li><a href="#website" id="toc-website" class="nav-link" data-scroll-target="#website">Website</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">News</h1>
+<h1 class="title">Minutes 2024-01-19</h1>
 </div>
 
 
@@ -203,6 +158,12 @@ window.Quarto = {
 <div class="quarto-title-meta column-page-left">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 16, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -212,65 +173,79 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Date
-</th>
-<th>
-Title
-</th>
-<th>
-Author
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="CAMIS,Comparison of Software" data-listing-date-sort="1700438400000" data-listing-file-modified-sort="1708083591543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301" data-listing-title-sort="2023: A Year of Progress for PHUSE CAMIS Working Group" data-listing-filename-sort="CAMIS2023.qmd">
-<td>
-<span class="listing-date">Nov 20, 2023</span>
-</td>
-<td>
-<a href="./posts/test/CAMIS2023.html" class="title listing-title">2023: A Year of Progress for PHUSE CAMIS Working Group</a>
-</td>
-<td>
-<span class="listing-author">Lyn Taylor</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Regulatory,FDA" data-listing-date-sort="1694649600000" data-listing-file-modified-sort="1708083591543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14" data-listing-title-sort="R and FDA Submission" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Sep 14, 2023</span>
-</td>
-<td>
-<a href="./posts/test/index.html" class="title listing-title">R and FDA Submission</a>
-</td>
-<td>
-<span class="listing-author">Martin Brown</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Regulatory,FDA" data-listing-date-sort="1693180800000" data-listing-file-modified-sort="1708083591543" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="197" data-listing-title-sort="FDA Pilot 3 submission" data-listing-filename-sort="FDApilot3.qmd">
-<td>
-<span class="listing-date">Aug 28, 2023</span>
-</td>
-<td>
-<a href="./posts/test/FDApilot3.html" class="title listing-title">FDA Pilot 3 submission</a>
-</td>
-<td>
-<span class="listing-author">Lyn Taylor</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</div></main> <!-- /main -->
+<div class="callout-title-container flex-fill">
+View Attendee List
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Martin Brown</li>
+<li>Christina Fillmore</li>
+<li>Alexandra Lauer</li>
+<li>Matthew Neilson</li>
+<li>Irene Vassallo</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="admin" class="level2">
+<h2 class="anchored" data-anchor-id="admin">Admin</h2>
+<p>Lyn has left AIMS to fully concentrate on leading CAMIS.</p>
+</section>
+<section id="psi-and-2024-events" class="level2">
+<h2 class="anchored" data-anchor-id="psi-and-2024-events">PSI and 2024 events</h2>
+<p>End of year 2023 achievements, highlights and updates are to be sent to Adam Crisp by Friday 1st March. Awareness of requirement for SIGs to be active year to year to not be considered closed.</p>
+<p>ESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.</p>
+<p>Fed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn’t heard anything about (https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions—is-it-really-a-free-for-all). Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.</p>
+<section id="github-workshop" class="level3">
+<h3 class="anchored" data-anchor-id="github-workshop">GitHUB workshop</h3>
+<p>Christina and Alex to run it - will look to select dates. Details to be worked out (2 x 1-1.5 sessions with session 1 initial set up and drop-in)</p>
+</section>
+<section id="novo-nordisk-fda-submission" class="level3">
+<h3 class="anchored" data-anchor-id="novo-nordisk-fda-submission">Novo Nordisk FDA submission</h3>
+<p>Video summary can be found at: https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/ Add to the website in the news section.</p>
+</section>
+</section>
+<section id="r-training-open-source" class="level2">
+<h2 class="anchored" data-anchor-id="r-training-open-source">R Training Open Source</h2>
+<p>Andy focused on the current training session and then will look to release by April.</p>
+</section>
+<section id="focus" class="level2">
+<h2 class="anchored" data-anchor-id="focus">2024 Focus</h2>
+<p>Statistics focus What are the gaps? Can we pull particular package names from CAMIS or just carry on linking to CAMIS website?</p>
+<p>Will look to bring together the materials from the simulation course and work out what is the best way to advertise them. Matt to send them through.</p>
+<p>Mentioned the idea of supporting particular groups - pointing them in the right direction of R material and links. Christina made the points:</p>
+<ul>
+<li>What are the problems people are facing? What support do they require?</li>
+<li>They are more likely to be comfortable and already set specifically in those different areas.</li>
+</ul>
+<p>So let us look to reach out to the contacts and potentially they could contribute to our website in different ways.</p>
+<ul>
+<li>HTA<br>
+</li>
+<li>Data science</li>
+<li>Biomarkers</li>
+<li>Visualisation</li>
+<li>DSMB (Michael)</li>
+<li>Regulatory (Florian)</li>
+<li>Bayesian borrowing</li>
+</ul>
+</section>
+<section id="website" class="level2">
+<h2 class="anchored" data-anchor-id="website">Website</h2>
+<p>Talked about problems with AIMS logo not showing on homepage - issue to do with space in filename. Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes: https://www.w3schools.com/howto/howto_js_collapsible.asp</p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -10,7 +10,91 @@
 <atom:link href="https://PSIAIMS.github.io/website/minutes.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.4.550</generator>
-<lastBuildDate>Fri, 19 Jan 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 16 Feb 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Minutes 2024-01-19</title>
+  <link>https://PSIAIMS.github.io/website/minutes/2024-02-16/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+View Attendee List
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Martin Brown</li>
+<li>Christina Fillmore</li>
+<li>Alexandra Lauer</li>
+<li>Matthew Neilson</li>
+<li>Irene Vassallo</li>
+</ul>
+</div>
+</div>
+</div>
+<section id="admin" class="level2">
+<h2 class="anchored" data-anchor-id="admin">Admin</h2>
+<p>Lyn has left AIMS to fully concentrate on leading CAMIS.</p>
+</section>
+<section id="psi-and-2024-events" class="level2">
+<h2 class="anchored" data-anchor-id="psi-and-2024-events">PSI and 2024 events</h2>
+<p>End of year 2023 achievements, highlights and updates are to be sent to Adam Crisp by Friday 1st March. Awareness of requirement for SIGs to be active year to year to not be considered closed.</p>
+<p>ESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.</p>
+<p>Fed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn’t heard anything about (https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions—is-it-really-a-free-for-all). Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.</p>
+<section id="github-workshop" class="level3">
+<h3 class="anchored" data-anchor-id="github-workshop">GitHUB workshop</h3>
+<p>Christina and Alex to run it - will look to select dates. Details to be worked out (2 x 1-1.5 sessions with session 1 initial set up and drop-in)</p>
+</section>
+<section id="novo-nordisk-fda-submission" class="level3">
+<h3 class="anchored" data-anchor-id="novo-nordisk-fda-submission">Novo Nordisk FDA submission</h3>
+<p>Video summary can be found at: https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/ Add to the website in the news section.</p>
+</section>
+</section>
+<section id="r-training-open-source" class="level2">
+<h2 class="anchored" data-anchor-id="r-training-open-source">R Training Open Source</h2>
+<p>Andy focused on the current training session and then will look to release by April.</p>
+</section>
+<section id="focus" class="level2">
+<h2 class="anchored" data-anchor-id="focus">2024 Focus</h2>
+<p>Statistics focus What are the gaps? Can we pull particular package names from CAMIS or just carry on linking to CAMIS website?</p>
+<p>Will look to bring together the materials from the simulation course and work out what is the best way to advertise them. Matt to send them through.</p>
+<p>Mentioned the idea of supporting particular groups - pointing them in the right direction of R material and links. Christina made the points:</p>
+<ul>
+<li>What are the problems people are facing? What support do they require?</li>
+<li>They are more likely to be comfortable and already set specifically in those different areas.</li>
+</ul>
+<p>So let us look to reach out to the contacts and potentially they could contribute to our website in different ways.</p>
+<ul>
+<li>HTA<br>
+</li>
+<li>Data science</li>
+<li>Biomarkers</li>
+<li>Visualisation</li>
+<li>DSMB (Michael)</li>
+<li>Regulatory (Florian)</li>
+<li>Bayesian borrowing</li>
+</ul>
+</section>
+<section id="website" class="level2">
+<h2 class="anchored" data-anchor-id="website">Website</h2>
+<p>Talked about problems with AIMS logo not showing on homepage - issue to do with space in filename. Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes: https://www.w3schools.com/howto/howto_js_collapsible.asp</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://PSIAIMS.github.io/website/minutes/2024-02-16/</guid>
+  <pubDate>Fri, 16 Feb 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Minutes 2024-01-19</title>
   <link>https://PSIAIMS.github.io/website/minutes/2024-01-19/</link>
