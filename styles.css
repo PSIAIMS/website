@@ -6,6 +6,7 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 100px;
+    box-shadow: 0px 0px 0px 5px #000000;
 }
 
 .hex2{
@@ -15,6 +16,7 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 100px;
+    box-shadow: 0px 0px 0px 5px #000000;
 }
 
 .hex3{
@@ -24,6 +26,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
+    top: 20px;
+    box-shadow: 0px 0px 0px 5px #000000;
 }
 
 .hex4{
@@ -33,6 +37,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
+    top: 20px;
+    box-shadow: 0px 0px 0px 5px #000000;
 }
 
 .hex5{
@@ -42,6 +48,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
+    top: 20px;
+    box-shadow: 0px 0px 0px 5px #000000;
 }
 
 
