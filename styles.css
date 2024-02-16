@@ -5,7 +5,7 @@
     background-color:#BC8F00;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 50px;
+    left: 100px;
 }
 
 .hex2{
@@ -14,30 +14,37 @@
     background-color:#0070C0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 50px;
+    left: 100px;
 }
 
-.hex1 a {
-    color: white;
+.hex3{
+    width:200px;
+    height:200px;
+    background-color:#7030A0;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    position: relative;
+    left: 0px;
 }
 
-.hex1 h3 {
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    color:#b7ebff;
+.hex4{
+    width:200px;
+    height:200px;
+    background-color:#FFFFFF;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    position: relative;
+    left: 0px;
 }
 
-.hex2 a {
-    color: white;
+.hex5{
+    width:200px;
+    height:200px;
+    background-color:#7030A0;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    position: relative;
+    left: 0px;
 }
 
-.hex2 h3 {
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
-    color:#b7ebff;
-}
+
 
 
 .long-hex{
