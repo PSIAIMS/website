@@ -4,7 +4,8 @@
     height:200px;
     background-color:#BC8F00;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    margin: 30px;
+    position: relative;
+    left: 50px;
 }
 
 .hex2{
@@ -12,7 +13,8 @@
     height:200px;
     background-color:#0070C0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    margin: 30px;
+    position: relative;
+    left: 50px;
 }
 
 .hex1 a {
