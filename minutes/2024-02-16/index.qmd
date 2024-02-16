@@ -1,0 +1,74 @@
+---
+title: "Minutes 2024-01-19"
+date: 2024-02-16
+---
+
+::: {.callout-tip collapse="true"}
+## View Attendee List
+
+- Martin Brown
+- Christina Fillmore
+- Alexandra Lauer
+- Matthew Neilson
+- Irene Vassallo
+
+:::
+
+## Admin
+
+Lyn has left AIMS to fully concentrate on leading CAMIS.
+
+## PSI and 2024 events
+
+End of year 2023 achievements, highlights and updates are to be sent to Adam Crisp by Friday 1st March.
+Awareness of requirement for SIGs to be active year to year to not be considered closed.
+
+ESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.
+
+Fed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn't heard anything about (https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all).
+Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.
+
+### GitHUB workshop
+
+Christina and Alex to run it - will look to select dates.
+Details to be worked out (2 x 1-1.5 sessions with session 1 initial set up and drop-in)
+
+### Novo Nordisk FDA submission
+
+Video summary can be found at:
+https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/
+Add to the website in the news section.
+
+## R Training Open Source
+
+Andy focused on the current training session and then will look to release by April.
+
+## 2024 Focus
+
+Statistics focus
+What are the gaps? Can we pull particular package names from CAMIS or just carry on linking to CAMIS website?
+
+Will look to bring together the materials from the simulation course and work out what is the best way to advertise them.
+Matt to send them through.
+
+Mentioned the idea of supporting particular groups - pointing them in the right direction of R material and links.
+Christina made the points:
+
+* What are the problems people are facing? What support do they require?
+* They are more likely to be comfortable and already set specifically in those different areas.
+
+So let us look to reach out to the contacts and potentially they could contribute to our website in different ways.
+
+* HTA		
+* Data science
+*	Biomarkers
+*	Visualisation
+* DSMB (Michael)
+* Regulatory (Florian)
+* Bayesian borrowing
+
+## Website
+
+Talked about problems with AIMS logo not showing on homepage - issue to do with space in filename.
+Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes:
+https://www.w3schools.com/howto/howto_js_collapsible.asp
