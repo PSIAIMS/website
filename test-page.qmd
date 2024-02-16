@@ -5,10 +5,16 @@ editor: visual
 
 This is a test 
 
-::: hex
-https://psiaims.github.io/website/test-page
-::: 
+::: {style="display: flex;"}
+::: hex1
+### R Adoption and Training
 
-::: hex
-https://psiaims.github.io/website/test-page
-::: 
+
+:::
+
+::: hex2
+### System
+
+:::
+
+:::
