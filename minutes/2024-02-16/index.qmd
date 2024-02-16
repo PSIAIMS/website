@@ -1,5 +1,5 @@
 ---
-title: "Minutes 2024-01-19"
+title: "Minutes 2024-02-16"
 date: 2024-02-16
 ---
 
@@ -25,18 +25,18 @@ Awareness of requirement for SIGs to be active year to year to not be considered
 
 ESIG leaders’ meeting planned for Monday 25th March - looking to ask about digital strategy update.
 
-Fed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn't heard anything about (https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all).
+Fed back about PSI Webinar: Open Source Software - is it really a free-for-all? that the SIG hadn't heard anything about ([https://psiweb.org/events/event-item/2024/04/17/default-calendar/psi-webinar-open-source-solutions---is-it-really-a-free-for-all]).
 Will look to speak to Adam about this (training group comms) and SIG plans / future conferences.
 
 ### GitHUB workshop
 
 Christina and Alex to run it - will look to select dates.
-Details to be worked out (2 x 1-1.5 sessions with session 1 initial set up and drop-in)
+Details to be worked out (2 x 1-1.5 sessions with session 1 all about initial set up with drop-in afterwards?)
 
 ### Novo Nordisk FDA submission
 
-Video summary can be found at:
-https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/
+Video summary from Appsilon blog can be found at:
+[https://appsilon.com/first-r-based-submission-to-fda-by-novo-nordisk/]
 Add to the website in the news section.
 
 ## R Training Open Source
@@ -71,4 +71,4 @@ So let us look to reach out to the contacts and potentially they could contribut
 
 Talked about problems with AIMS logo not showing on homepage - issue to do with space in filename.
 Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes:
-https://www.w3schools.com/howto/howto_js_collapsible.asp
+[https://www.w3schools.com/howto/howto_js_collapsible.asp]
