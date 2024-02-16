@@ -13,6 +13,28 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
+.hex1 a {
+    color: white;
+}
+
+.hex1 h3 {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:#b7ebff;
+}
+
+.hex2 a {
+    color: white;
+}
+
+.hex2 h3 {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:#b7ebff;
+}
+
 
 .long-hex{
  width: 200px;
