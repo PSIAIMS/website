@@ -1,78 +1,59 @@
 /* css styles */
-.hex1:before{
+.hex1{
     width:200px;
     height:200px;
     background-color:#BC8F00;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: absolute;
-    top: -5px;
-    left: 95px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px #000000;
+    position: relative;
+    left: 100px;
+    box-shadow: 0px 0px 0px 15px #000000;
     margin: 0px 0px;
 }
 
-.hex2:before{
+.hex2{
     width:200px;
     height:200px;
     background-color:#0070C0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: absolute;
-    top: -5px;
-    left: 95px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px #000000;
+    position: relative;
+    left: 100px;
+    box-shadow: 0px 0px 0px 15px #000000;
     margin: 0px 0px;
 }
 
-.hex3:before{
+.hex3{
     width:200px;
     height:200px;
     background-color:#7030A0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px #000000;
+    position: relative;
+    left: 0px;
+    box-shadow: 0px 0px 0px 15px #000000;
     margin: -50px 0px;
 }
 
-.hex4:before{
+.hex4{
     width:200px;
     height:200px;
     background-color:#FFFFFF;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px #000000;
+    position: relative;
+    left: 0px;
+    box-shadow: 0px 0px 0px 15px #000000;
     margin: -50px 0px;
 }
 
-.hex5:before{
+.hex5{
     width:200px;
     height:200px;
     background-color:#7030A0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px #000000;
+    position: relative;
+    left: 0px;
+    box-shadow: 0px 0px 0px 15px #000000;
     margin: -50px 0px;
 }
+
 
 
 
