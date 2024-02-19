@@ -1,5 +1,5 @@
 /* css styles */
-.hex1{
+.hex1:after{
     width:200px;
     height:200px;
     background-color:#BC8F00;
@@ -11,7 +11,7 @@
     margin: 0px 0px;
 }
 
-.hex2{
+.hex2:after{
     width:200px;
     height:200px;
     background-color:#0070C0;
@@ -23,7 +23,7 @@
     margin: 0px 0px;
 }
 
-.hex3{
+.hex3:after{
     width:200px;
     height:200px;
     background-color:#7030A0;
@@ -35,7 +35,7 @@
     margin: -50px 0px;
 }
 
-.hex4{
+.hex4:after{
     width:200px;
     height:200px;
     background-color:#FFFFFF;
@@ -47,7 +47,7 @@
     margin: -50px 0px;
 }
 
-.hex5{
+.hex5:after{
     width:200px;
     height:200px;
     background-color:#7030A0;
