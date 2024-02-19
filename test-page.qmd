@@ -6,27 +6,11 @@ editor: visual
 This is a test 
 
 ::: {style="display: flex;"}
-::: hex1
+::: hex1:before
 
 :::
 
-::: hex2
-
-:::
-
-:::
-
-::: {style="display: flex;"}
-
-::: hex3
-
-:::
-
-::: hex4
-
-:::
-
-::: hex5
+::: hex2:before
 
 :::
 
@@ -34,11 +18,27 @@ This is a test
 
 ::: {style="display: flex;"}
 
-::: hex2
+::: hex3:before
 
 :::
 
-::: hex1
+::: hex4:before
+
+:::
+
+::: hex5:before
+
+:::
+
+:::
+
+::: {style="display: flex;"}
+
+::: hex2:before
+
+:::
+
+::: hex1:before
 
 :::
 
