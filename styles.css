@@ -1,61 +1,76 @@
 /* css styles */
-.hex1:after{
+.hex1:before{
     width:200px;
     height:200px;
     background-color:#BC8F00;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: relative;
-    left: 100px;
-    border: 10px solid black; /* Replace 10px with the thickness you want. */
-    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: 95px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px #000000;
     margin: 0px 0px;
 }
 
-.hex2:after{
+.hex2:before{
     width:200px;
     height:200px;
     background-color:#0070C0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: relative;
-    left: 100px;
-    border: 10px solid black; /* Replace 10px with the thickness you want. */
-    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: 95px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px #000000;
     margin: 0px 0px;
 }
 
-.hex3:after{
+.hex3:before{
     width:200px;
     height:200px;
     background-color:#7030A0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: relative;
-    left: 0px;
-    border: 10px solid black; /* Replace 10px with the thickness you want. */
-    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px #000000;
     margin: -50px 0px;
 }
 
-.hex4:after{
+.hex4:before{
     width:200px;
     height:200px;
     background-color:#FFFFFF;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: relative;
-    left: 0px;
-    border: 10px solid black; /* Replace 10px with the thickness you want. */
-    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px #000000;
     margin: -50px 0px;
 }
 
-.hex5:after{
+.hex5:before{
     width:200px;
     height:200px;
     background-color:#7030A0;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    position: relative;
-    left: 0px;
-    border: 10px solid black; /* Replace 10px with the thickness you want. */
-    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 5px #000000;
     margin: -50px 0px;
 }
 
