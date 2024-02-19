@@ -10,6 +10,18 @@
     margin: 0px 0px;
 }
 
+.hex1::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  background-color: #000000;
+  z-index: -1;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
 .hex2{
     width:200px;
     height:200px;
