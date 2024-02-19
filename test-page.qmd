@@ -14,27 +14,15 @@ This is a test
 
 :::
 
+:::
+
+::: {style="display: flex;"}
+
 ::: hex3
 
 :::
 
 ::: hex4
-
-:::
-
-::: hex5
-
-:::
-
-:::
-
-::: {style="display: flex;"}
-
-::: hex2
-
-:::
-
-::: hex1
 
 :::
 
