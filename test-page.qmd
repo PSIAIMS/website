@@ -26,4 +26,20 @@ This is a test
 
 :::
 
+::: hex5
+
+:::
+
+:::
+
+::: {style="display: flex;"}
+
+::: hex2
+
+:::
+
+::: hex1
+
+:::
+
 :::
