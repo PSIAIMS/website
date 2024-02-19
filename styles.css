@@ -6,7 +6,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 100px;
-    box-shadow: 0px 0px 0px 15px #000000;
+    border: 10px solid black; /* Replace 10px with the thickness you want. */
+    box-sizing: border-box;
     margin: 0px 0px;
 }
 
@@ -17,7 +18,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 100px;
-    box-shadow: 0px 0px 0px 15px #000000;
+    border: 10px solid black; /* Replace 10px with the thickness you want. */
+    box-sizing: border-box;
     margin: 0px 0px;
 }
 
@@ -28,7 +30,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 15px #000000;
+    border: 10px solid black; /* Replace 10px with the thickness you want. */
+    box-sizing: border-box;
     margin: -50px 0px;
 }
 
@@ -39,7 +42,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 15px #000000;
+    border: 10px solid black; /* Replace 10px with the thickness you want. */
+    box-sizing: border-box;
     margin: -50px 0px;
 }
 
@@ -50,7 +54,8 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 15px #000000;
+    border: 10px solid black; /* Replace 10px with the thickness you want. */
+    box-sizing: border-box;
     margin: -50px 0px;
 }
 
