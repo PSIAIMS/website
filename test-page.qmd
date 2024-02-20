@@ -34,11 +34,11 @@ This is a test, yes
 
 ::: {style="display: flex;"}
 
-::: hex2
+::: hex6
 
 :::
 
-::: hex1
+::: hex7
 
 :::
 
