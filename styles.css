@@ -1,7 +1,7 @@
 /* css styles */
 .hex1{
-    width:232px;
-    height:232px;
+    width:230px;
+    height:230px;
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
@@ -16,10 +16,21 @@
   z-index: -1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
-  width: 222px;
-  height: 222px;
+  width: 220px;
+  height: 220px;
   background-color: #BC8F00;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+.hex1::after {
+  content: '';
+  position: absolute;
+  z-index:2;
+  top: 5px; /* adjust values to fit your need */
+  left: -5px; /* adjust values to fit your need */
+  width: 10px; /* adjust values to fit your need */
+  height: 220px; /* adjust values to fit your need */
+  background-color: #000000;
 }
 
 .hex2{
@@ -30,7 +41,7 @@
     position: relative;
     left: 100px;
     margin: 0px 0px;
-    margin-left: -2.5px;
+    margin-left: -10px;
     z-index: 1;
 }
 
@@ -38,10 +49,10 @@
   content: '';
   position: absolute;
   z-index: -1;
-  top: 2.5px; /* Half the width of the border */
-  left: 2.5px; /* Half the width of the border */
-  width: 227px;
-  height: 227px;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
   background-color: #0070C0;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
