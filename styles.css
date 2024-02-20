@@ -14,60 +14,105 @@
   content: '';
   position: absolute;
   z-index: -1;
-  top: 15px; /* Half the width of the border */
-  left: 15px; /* Half the width of the border */
-  width: 200px;
-  height: 200px;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
   background-color: #BC8F00;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
 .hex2{
-    width:200px;
-    height:200px;
-    background-color:#0070C0;
+    width:230px;
+    height:230px;
+    background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 100px;
-    box-shadow: 0px 0px 0px 30px #000000;
     margin: 0px 0px;
+    z-index: 1;
+}
+
+.hex2::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
+  background-color: #0070C0;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
 .hex3{
-    width:200px;
-    height:200px;
-    background-color:#7030A0;
+    width:230px;
+    height:230px;
+    background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 30px #000000;
     margin: -50px 0px;
+    z-index: 1;
+}
+
+.hex3::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
+  background-color: #7030A0;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
 .hex4{
-    width:200px;
-    height:200px;
-    background-color:#FFFFFF;
+    width:230px;
+    height:230px;
+    background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 30px #000000;
     margin: -50px 0px;
+    z-index: 1;
+}
+
+.hex4::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
+  background-color: #FFFFFF;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
 .hex5{
-    width:200px;
-    height:200px;
-    background-color:#7030A0;
+    width:230px;
+    height:230px;
+    background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    box-shadow: 0px 0px 0px 30px #000000;
     margin: -50px 0px;
+    z-index: 1;
 }
 
-
-
+.hex5::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 5px; /* Half the width of the border */
+  left: 5px; /* Half the width of the border */
+  width: 220px;
+  height: 220px;
+  background-color: #7030A0;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
 
 
 .long-hex{
