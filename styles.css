@@ -65,7 +65,7 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 0px;
+    left: 5px;
     margin: -50px 0px;
     z-index: 1;
 }
@@ -88,7 +88,7 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 115px;
+    left: 50px;
     margin: -50px 0px;
     z-index: 1;
 }
@@ -111,7 +111,7 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 230px;
+    left: 100px;
     margin: -50px 0px;
     z-index: 1;
 }
