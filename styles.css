@@ -65,8 +65,8 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 5px;
-    margin: -60px 0px;
+    left: 7px;
+    margin: -58px 0px;
     z-index: 1;
 }
 
@@ -88,8 +88,8 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 10px;
-    margin: -60px 0px;
+    left: 5px;
+    margin: -58px 0px;
     z-index: 1;
 }
 
@@ -111,8 +111,8 @@
     background-color:#000000;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
-    left: 20px;
-    margin: -60px 0px;
+    left: 10px;
+    margin: -58px 0px;
     z-index: 1;
 }
 
