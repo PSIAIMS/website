@@ -66,7 +66,7 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    top: 200px;
+    top: -10px;
     margin-top: -140px;
     margin: -50px 0px;
     z-index: 1;
@@ -91,7 +91,7 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 115px;
-    top: 200px;
+    top: -10px;
     margin: -50px 0px;
     z-index: 1;
 }
@@ -115,7 +115,7 @@
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 0px;
-    top: 200px
+    top: -10px
     margin: -50px 0px;
     z-index: 1;
 }
