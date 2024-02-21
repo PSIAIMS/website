@@ -7,11 +7,11 @@ This is a test, yes
 
 ::: {style="display: flex;"}
 ::: hex1
-
+ [Collaboration](https://psiaims.github.io/website/rcollaborations.html){.white-color}
 :::
 
 ::: hex2
-
+ [News](https://psiaims.github.io/website/news.html){.white-color}
 :::
 
 :::
@@ -19,17 +19,17 @@ This is a test, yes
 ::: {style="display: flex;"}
 
 ::: hex3
-
+ [Why R?](https://psiaims.github.io/website/why-r.html){.white-color}
 :::
 
 ::: hex4
 
-<a href="https://cran.r-project.org/"><img src="images/RLogo.png" width="150px" /></a>
+<a href="https://cran.r-project.org/"><img src="images/RLogo.png" /></a>
 
 :::
 
 ::: hex5
-
+ [Resources](https://psiaims.github.io/website/02R-tist.html){.white-color}
 :::
 
 :::
@@ -37,11 +37,11 @@ This is a test, yes
 ::: {style="display: flex;"}
 
 ::: hex6
-
+ [Statistics](https://psiaims.github.io/CAMIS/){.white-color}
 :::
 
 ::: hex7
-
+ [PSI and Pharma](https://www.psiweb.org/){.white-color}
 :::
 
 :::
