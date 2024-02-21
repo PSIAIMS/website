@@ -2,13 +2,13 @@
 a.white-color {
     color: white;
     font-family: Verdana;
-    font-size: 32px;
+    font-size: 24px;
     z-index:2 ;
     text-decoration: none;
-    position: absolute;
+    /*position: absolute;
     text-align: center;
     top: 100px;
-    left: 60px;
+    left: 60px;*/
 }
 
 .hex1{
@@ -33,6 +33,10 @@ a.white-color {
   height: 220px;
   background-color: #BC8F00;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hex1::after {
