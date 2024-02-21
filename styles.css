@@ -86,8 +86,6 @@
     width:230px;
     height:230px;
     background-color:#000000;
-    background-image: images/RLogo.png; 
-    background-size: cover; 
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
     position: relative;
     left: 5px;
@@ -98,6 +96,8 @@
 .hex4::before {
   content: '';
   position: absolute;
+  background-image: images/RLogo.png; 
+  background-size: cover; 
   z-index: -1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
