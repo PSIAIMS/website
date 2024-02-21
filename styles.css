@@ -1,13 +1,13 @@
 /* css styles */
 a.white-color {
     color: white;
-    text-align: center;
     font-family: Verdana;
     z-index:2 ;
     text-decoration: none;
-    position: relative;
-    left: 40px;
-    top: 100px
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hex1{
@@ -107,10 +107,6 @@ a.white-color {
 .hex4::before {
   content: '';
   position: absolute;
-  /*background-image: url('images/RLogo.png');
-  background-size: 60%; 
-  background-repeat: no-repeat;
-  background-position: calc(60% - 10px) calc(60% - 20px);*/
   z-index: 1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
@@ -122,9 +118,9 @@ a.white-color {
 
 .hex4 img {
     position: relative;
-    width:150px;
-    left: 35px;
-    top: 40px;
+    width:100px;
+    left: 50px;
+    top: 50px;
     z-index: 2; 
 }
 
