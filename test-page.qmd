@@ -28,7 +28,7 @@ This is a test, yes
 
 ::: hex5
 
-[![](images/RLogo.png)](https://cran.r-project.org/)
+[![]()](https://cran.r-project.org/)
 
 :::
 
