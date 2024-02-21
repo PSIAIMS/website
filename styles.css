@@ -5,6 +5,9 @@ a.white-color {
     font-family: Verdana;
     z-index:2 ;
     text-decoration: none;
+    position: relative;
+    left: 40px;
+    top: 100px
 }
 
 .hex1{
@@ -120,8 +123,8 @@ a.white-color {
 .hex4 img {
     position: relative;
     width:150px;
-    left: 25px;
-    top: 50px;
+    left: 35px;
+    top: 40px;
     z-index: 2; 
 }
 
