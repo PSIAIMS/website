@@ -96,9 +96,9 @@
 .hex4::before {
   content: '';
   position: absolute;
-  background-image: images/RLogo.png; 
+  background-image: url('images/RLogo.png');
   background-size: cover; 
-  z-index: -1;
+  z-index: 1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
   width: 220px;
