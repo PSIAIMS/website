@@ -8,6 +8,7 @@ a.white-color {
     justify-content: center;
     align-items: center;
     text-align: center;
+    top: 100px;
 }
 
 .hex1{
@@ -118,7 +119,7 @@ a.white-color {
 
 .hex4 img {
     position: relative;
-    width:100px;
+    width:125px;
     left: 50px;
     top: 50px;
     z-index: 2; 
