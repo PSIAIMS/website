@@ -28,6 +28,10 @@ This is a test, yes
 
 ::: hex5
 
+{=html}
+<a href="https://cran.r-project.org/" target="_blank"><div></div></a>
+{=html}
+
 :::
 
 :::
