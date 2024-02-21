@@ -4,9 +4,7 @@ a.white-color {
     font-family: Verdana;
     z-index:2 ;
     text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     text-align: center;
     top: 100px;
 }
@@ -119,7 +117,7 @@ a.white-color {
 
 .hex4 img {
     position: relative;
-    width:125px;
+    width:130px;
     left: 50px;
     top: 50px;
     z-index: 2; 
