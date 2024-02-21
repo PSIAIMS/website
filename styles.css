@@ -111,6 +111,8 @@
 
 .hex4 img {
     position: relative; 
+    left: 75px;
+    top: 75px;
     z-index: 2; 
 }
 
