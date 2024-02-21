@@ -97,9 +97,9 @@
   content: '';
   position: absolute;
   background-image: url('images/RLogo.png');
-  background-size: 50%; 
+  background-size: 60%; 
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 60% calc(60% - 10px);
   z-index: 1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
