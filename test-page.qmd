@@ -24,11 +24,11 @@ This is a test, yes
 
 ::: hex4
 
+[](https://cran.r-project.org/)
+
 :::
 
 ::: hex5
-
-[![]()](https://cran.r-project.org/)
 
 :::
 
