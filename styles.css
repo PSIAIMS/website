@@ -2,13 +2,13 @@
 a.white-color {
     color: white;
     font-family: Verdana;
-    font-size: 16px;
+    font-size: 32px;
     z-index:2 ;
     text-decoration: none;
     position: absolute;
     text-align: center;
     top: 100px;
-    left: 85px;
+    left: 60px;
 }
 
 .hex1{
