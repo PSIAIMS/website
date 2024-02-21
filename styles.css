@@ -97,7 +97,7 @@
   content: '';
   position: absolute;
   background-image: url('images/RLogo.png');
-  background-size: cover; 
+  background-size: 50px 50px; 
   z-index: 1;
   top: 5px; /* Half the width of the border */
   left: 5px; /* Half the width of the border */
