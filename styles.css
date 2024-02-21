@@ -1,6 +1,10 @@
 /* css styles */
 a.white-color {
     color: white;
+    text-align: center;
+    font-family: Verdana;
+    z-index:2 ;
+    text-decoration: none;
 }
 
 .hex1{
@@ -116,7 +120,7 @@ a.white-color {
 .hex4 img {
     position: relative;
     width:150px;
-    left: 50px;
+    left: 25px;
     top: 50px;
     z-index: 2; 
 }
