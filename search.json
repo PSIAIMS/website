@@ -81,7 +81,7 @@
     "href": "test-page.html",
     "title": "test",
     "section": "",
-    "text": "This is a test, yes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n{=html} \n\n\n\n {=html}"
+    "text": "This is a test, yes"
   },
   {
     "objectID": "why-r.html",
