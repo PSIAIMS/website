@@ -7,6 +7,7 @@ a.white-color {
     position: absolute;
     text-align: center;
     top: 100px;
+    left: 100px;
 }
 
 .hex1{
@@ -118,8 +119,8 @@ a.white-color {
 .hex4 img {
     position: relative;
     width:130px;
-    left: 50px;
-    top: 50px;
+    left: 40px;
+    top: 60px;
     z-index: 2; 
 }
 
