@@ -24,7 +24,7 @@ This is a test, yes
 
 ::: hex4
 
-[](https://cran.r-project.org/)
+<a href="https://cran.r-project.org/"><img src="images/RLogo.png" width="100px" /></a>
 
 :::
 
