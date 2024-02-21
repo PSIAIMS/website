@@ -109,6 +109,11 @@
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
 }
 
+.hex4 img {
+    position: relative; 
+    z-index: 2; 
+}
+
 .hex5{
     width:230px;
     height:230px;
