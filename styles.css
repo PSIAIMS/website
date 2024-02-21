@@ -1,4 +1,8 @@
 /* css styles */
+a.white-color {
+    color: white;
+}
+
 .hex1{
     width:230px;
     height:230px;
@@ -111,9 +115,9 @@
 
 .hex4 img {
     position: relative;
-    width:200px;
-    left: 75px;
-    top: 75px;
+    width:150px;
+    left: 50px;
+    top: 50px;
     z-index: 2; 
 }
 
