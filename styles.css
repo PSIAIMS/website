@@ -57,6 +57,9 @@ a.white-color {
     margin: 0px 0px;
     margin-left: -10px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex2::before {
@@ -80,6 +83,9 @@ a.white-color {
     left: 10px;
     margin: -61px 0px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex3::before {
@@ -120,7 +126,7 @@ a.white-color {
 .hex4 img {
     position: relative;
     width:130px;
-    left: 40px;
+    left: 45px;
     top: 55px;
     z-index: 2; 
 }
@@ -134,6 +140,12 @@ a.white-color {
     left: 0px;
     margin: -61px 0px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex5::before {
@@ -157,6 +169,9 @@ a.white-color {
     left: 122px;
     margin: -4px 0px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex6::before {
@@ -191,6 +206,9 @@ a.white-color {
     left: 117px;
     margin: -4px 0px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex7::before {
