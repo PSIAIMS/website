@@ -5,10 +5,7 @@ a.white-color {
     font-size: 24px;
     z-index:2 ;
     text-decoration: none;
-    /*position: absolute;
-    text-align: center;
-    top: 100px;
-    left: 60px;*/
+    text-align: center;    
 }
 
 .hex1{
@@ -21,6 +18,9 @@ a.white-color {
     top: 25px
     margin: 0px 0px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hex1::before {
@@ -33,10 +33,6 @@ a.white-color {
   height: 220px;
   background-color: #BC8F00;
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .hex1::after {
