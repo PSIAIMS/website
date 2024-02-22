@@ -12,6 +12,7 @@ about:
           url: https://github.com/PSIAIMS
         - text: "{{< fa envelope >}} Email"
           url: mailto:martin.brown@ppd.com
+subtitle: "When it comes to R in the Pharma industry, we would like to point you in the right direction! See some starter links in the hexes to the right"
 ---
 
 The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.
@@ -20,43 +21,42 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 :::
 
 ::: {style="display: flex;"}
-::: long-hex
-### R Adoption and Training
-
--   [Why R for your business?](https://psiaims.github.io/website/why-r.html)
-
--   [Training](https://psiaims.github.io/website/02R-tist.htm)
+::: hex1
+ [Collaboration](https://psiaims.github.io/website/rcollaborations.html){.white-color}
 :::
 
-::: long-hex
-### System
-
--   Package Management
-
-    -   [renv](https://rstudio.github.io/renv/articles/renv.html)
-    -   [Posit Package Manager](https://posit.co/products/enterprise/package-manager/)
-    -   [Viya](https://www.sas.com/en_gb/software/viya.html)
-
--   [Package validation](https://www.pharmar.org/)
-
--   [Submission](https://rconsortium.github.io/r-submission-site/)
+::: hex2
+ [News](https://psiaims.github.io/website/news.html){.white-color}
 :::
-
-::: long-hex
-### Design and Reporting
--   [SDTM, ADaM   & TFLs](https://pharmaverse.org/e2eclinical/)
-
--   [Displays](https://rconsortium.github.io/rtrs-wg/)
-
--   [Statistical Methods (CAMIS)](https://psiaims.github.io/CAMIS/)
 
 :::
 
-::: long-hex 
-### Tools
--   [Quarto](https://quarto.org)
--   [Git](https://docs.github.com/en/get-started/quickstart/hello-world)
+::: {style="display: flex;"}
 
+::: hex3
+ [Why R?](https://psiaims.github.io/website/why-r.html){.white-color}
+:::
+
+::: hex4
+
+<a href="https://cran.r-project.org/"><img src="images/RLogo.png" /></a>
+
+:::
+
+::: hex5
+ [Resources](https://psiaims.github.io/website/02R-tist.html){.white-color}
+:::
+
+:::
+
+::: {style="display: flex;"}
+
+::: hex6
+ [Statistics](https://psiaims.github.io/CAMIS/){.white-color}
+:::
+
+::: hex7
+ [PSI and Pharma](https://www.psiweb.org/){.white-color}
 :::
 
 :::
