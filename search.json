@@ -1,59 +1,38 @@
 [
   {
-    "objectID": "why-r.html",
-    "href": "why-r.html",
-    "title": "Why R?",
+    "objectID": "minutes.html",
+    "href": "minutes.html",
+    "title": "Meeting Minutes",
     "section": "",
-    "text": "SAS has been a long standing pharmaceutical industry standard for GXP work, so it’s understandable that proposing to change to alternative software, would be met with resistance and trepidation. However, it’s important to ask yourself “Why R?”, why is there a shift by companies to start to use R alongside SAS (or even replacing SAS)? Some key justification are provided below, which could be used to persuade reluctant adopters that there truly is a business case for R adoption (and for open source collaboration in general).\n\nWhy open-source software?\nOpen-source is a positive shift in mindset incorporating the following traits:\n\nAdapt to survive\nUse-and-improve\nChallenge the status quo\nContinuous feedback\nSelf-service learning\nCollaborate\n\n\n\nR ecosystem synergies result in resource efficiencies and cost savings\nR and python ecosystems are ideal for analytic engineering:\n\nModular, build-and-extend model\nFully integrated help documentation with further user-guide capabilities via quarto (markdown)\nStandardised test frameworks\nContinuous arrival of new methods and tools being written\nInteroperability between R python and the wider Data Science ecosystem (multi-language code usage)\nNo purchase costs\n\nCollaboration allows for a larger pool of available talent to achieve more together:\n\nReduces duplication of work being conducted within each company\nEasy re-use of code\nEngineering efficiencies (built in documentation/test frameworks/re-use of code & tools)\n\n\n\nEnhanced graphics & reporting capabilities\nThe following are just a few of the Enhanced graphics & reporting capabilities offered when using open-source software\n\nBrilliant graphics and interactive graphics\nInteractive story-telling capabilities through Shiny\nDynamic/automated reporting through quarto (rmarkdown)\nMetadata efficiencies\nSupports advanced analytics\n\n\n\nLarger community support\n\nR community user support is larger than any purchased software company could provide\nA wealth of information, help and advice available for free online\n\n\n\nIndustry trend\nSubstantial work ongoing to support the use of R within pharma. This is highlighted by the number of cross industry working groups addressing each of the areas of previous concern\n\npharmaverse\nR Submissions working group\nRTRS working group\nR Validation Hub\nCAMIS\n\n\n\nTalent attraction and retention\nThe pharmaceutical industry has always struggled to bring in enough experienced SAS programmers and statisticians. Open source languages and tools will lead to a bigger pool of available talent to work in the pharmaceutical industry. New starters (Uni leavers) will know R and data science tools already. Talent from other academic and industry fields may want to transition into pharma increasing our talent pool. Learning from each other enables the industry to move adapt quicker and embrace new technilogy quicker which leads to more efficiencies and cost savings\n\n\nIncreased opportunities for cross-pharma standardization/Reduced burden for individual companies\nCurrently each company writes their own specific processes, SAS macros and tools. This time is “Non-billable time”, at a cost to the company. pharmaverse are providing open source industry wide standard macros for SDTM, ADaM, TFLs and tools. Moving to open source languages and tools would have the following benefits:\n\nReduced cost, burden and duplication of effort for individual companies - increased efficiencies\nPackage/macro support and documentation thorough and complete\nTransferable knowledge when people move companies as staff are familiar with open source macros and do not have to re-learn individual company macros and tools\nStandardized SDTM, AdAM & TFLs means less project specific bespoke programming for common analyses / endpoints\nFrom limited static approach per company to multiple innovative collaborative approaches\nModular building of packages/macros enables quick adoption of new more efficient methods"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMar 15, 2024\n\n\nMinutes 2024-03-15\n\n\n\n\nFeb 16, 2024\n\n\nMinutes 2024-02-16\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "test-page.html",
-    "href": "test-page.html",
-    "title": "test",
+    "objectID": "rcollaborations.html",
+    "href": "rcollaborations.html",
+    "title": "R Collaborations",
     "section": "",
-    "text": "This is a test, yes\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "minutes/2024-03-15/index.html",
+    "href": "minutes/2024-03-15/index.html",
+    "title": "Minutes 2024-03-15",
     "section": "",
-    "text": "With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible."
+    "text": "View Attendee List\n\n\n\n\n\n\nMartin Brown\nMichael Cartwright\nMatthew Neilson\nCamilo Rojas Cifuentes"
   },
   {
-    "objectID": "about.html#background",
-    "href": "about.html#background",
-    "title": "About",
-    "section": "",
-    "text": "With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible."
+    "objectID": "minutes/2024-03-15/index.html#publicising",
+    "href": "minutes/2024-03-15/index.html#publicising",
+    "title": "Minutes 2024-03-15",
+    "section": "Publicising",
+    "text": "Publicising\nGet into habit of posting news and putting it on linkedin - reshares etc. Get traffic going to the site. Not looking for lengthy blog posts but efficient news. Camilo to check out analytics on GitHub for website traffic. If you have any news - either put it on the site or flag it up to me. Plan to meet with Alexander Schact for his podcast to flag up the work of AIMS and pull multiple people to our website and resources."
   },
   {
-    "objectID": "about.html#aim",
-    "href": "about.html#aim",
-    "title": "About",
-    "section": "Aim",
-    "text": "Aim\nTo support and contribute to researching the use of R within the industry."
-  },
-  {
-    "objectID": "about.html#current-goals",
-    "href": "about.html#current-goals",
-    "title": "About",
-    "section": "Current Goals",
-    "text": "Current Goals\n\nSupporting and influencing the working groups and collaborations that are happening within the industry\nIdentifying the key topics and areas of interest which require promotion, future research and development\nSharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source)\nUnderstanding what our adoption of the PSI digital strategy looks like\nEnsuring the industry stays up to date with technological advancement\nLooking to bring a statistical presence to discussions on R"
-  },
-  {
-    "objectID": "about.html#members-and-affiliations",
-    "href": "about.html#members-and-affiliations",
-    "title": "About",
-    "section": "Members and Affiliations",
-    "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD Part of Thermo Fisher Scientific\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nCytel\n\n\n\nMark Bynens\nJnJ\n\n\n\nAlexandra Lauer\nBoehringer-Ingelheim\n\n\n\nDaniel Leibovitz\nIndependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\n\n\n\nCamilo Rojas Cifuentes\nJanssen\n\n\n\nIrene Vassallo\nIncyte"
-  },
-  {
-    "objectID": "02R-tist.html",
-    "href": "02R-tist.html",
-    "title": "Zero to R-tist",
-    "section": "",
-    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
+    "objectID": "minutes/2024-03-15/index.html#phuse-us-connect",
+    "href": "minutes/2024-03-15/index.html#phuse-us-connect",
+    "title": "Minutes 2024-03-15",
+    "section": "Phuse US Connect",
+    "text": "Phuse US Connect\nNext time ask Mark and others about particular highlights from Phuse US Connect and other feedback."
   },
   {
     "objectID": "minutes/2024-01-19/index.html",
@@ -105,41 +84,6 @@
     "text": "R Industry Working Groups feedback\nCAMIS (Lyn) - good recent progress - new people, new content, enthusiasm exponentially growing\nBusy!\nExpanded leadership with Harshal and Chi\nCan we get someone to either join R validation Hub or someone from there to join AIMS?\nOr just ask them for updates? Important to keep relationship\nSet up quarterly updates? Lyn reached out to Juliane and Doug\nPharmaverse (Christina) Looking to make Admiral more stable and preparing for conferences.\nRTRS (Christina) bookdown more stabilised - making more organic\nOpenstatsware updates from Kevin and website\nSubmissions working group updates from website\nAny other active working groups - none that we know of."
   },
   {
-    "objectID": "minutes/2024-03-15/index.html",
-    "href": "minutes/2024-03-15/index.html",
-    "title": "Minutes 2024-03-15",
-    "section": "",
-    "text": "View Attendee List\n\n\n\n\n\n\nMartin Brown\nMichael Cartwright\nMatthew Neilson\nCamilo Rojas Cifuentes"
-  },
-  {
-    "objectID": "minutes/2024-03-15/index.html#publicising",
-    "href": "minutes/2024-03-15/index.html#publicising",
-    "title": "Minutes 2024-03-15",
-    "section": "Publicising",
-    "text": "Publicising\nGet into habit of posting news and putting it on linkedin - reshares etc. Get traffic going to the site. Not looking for lengthy blog posts but efficient news. Camilo to check out analytics on GitHub for website traffic. If you have any news - either put it on the site or flag it up to me. Plan to meet with Alexander Schact for his podcast to flag up the work of AIMS and pull multiple people to our website and resources."
-  },
-  {
-    "objectID": "minutes/2024-03-15/index.html#phuse-us-connect",
-    "href": "minutes/2024-03-15/index.html#phuse-us-connect",
-    "title": "Minutes 2024-03-15",
-    "section": "Phuse US Connect",
-    "text": "Phuse US Connect\nNext time ask Mark and others about particular highlights from Phuse US Connect and other feedback."
-  },
-  {
-    "objectID": "posts/test/CAMIS2023.html",
-    "href": "posts/test/CAMIS2023.html",
-    "title": "2023: A Year of Progress for PHUSE CAMIS Working Group",
-    "section": "",
-    "text": "As we draw towards the end of 2023, the PHUSE CAMIS Working Group reflect on their key progress and successes this year. The CAMIS repository went live in January 2023, drawing on the content from the PHUSE CSRMLW project. This searchable repo compares analysis method implementations in software (CAMIS) such as SAS, R and python.\nThe White Paper was published in June, which highlighted the importance of clearly specifying your analysis, such that it can be replicated in different software, and isn’t relying on default options which can be different. For more complex analyses, it can still be hard to understand what defaults and algorithms your software is using, so the team focused 2023 on expanding our repo content, comparing SAS vs R methods. By August, we had covered the following topics in the repo: quartiles, rounding, anova, mmrm, cmh, log-rank, cox-ph, mcnemar’s test, kruskal-wallis test and logistic. October saw the launch of the sub-working group: CAMIS-Oncology, led by Somasekhar Sriadibhatla (AstraZeneca). This team will focus specifically on oncology endpoints and analyzing them in SAS, R and Python. The CAMIS team have expanded in membership during 2023 presenting at numerous conferences around the world. In November, we welcomed Harshal Khanolkar (NovoNordisk), to join the leadership team alongside Christina Fillmore (GSK) and Lyn Taylor (PAREXEL). Our focus for 2024, will be on the creation of additional content for the repo, and sharing awareness of the project across the medical research and wider community. We’d like to take this opportunity to thank all of our team members and contributors, and encourage everyone to check out the repository and help us to grow our content CAMIS (psiaims.github.io). If you would like to join the team please get in touch through the repo."
-  },
-  {
-    "objectID": "minutes.html",
-    "href": "minutes.html",
-    "title": "Meeting Minutes",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\n\n\n\n\nMar 15, 2024\n\n\nMinutes 2024-03-15\n\n\n\n\nFeb 16, 2024\n\n\nMinutes 2024-02-16\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/test/FDApilot3.html",
     "href": "posts/test/FDApilot3.html",
     "title": "FDA Pilot 3 submission",
@@ -147,11 +91,53 @@
     "text": "The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: https://github.com/RConsortium/submissions-pilot3-adam-to-fda \nThe pilot 3 test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from pilot 3 and tables, listings, figures (TLFs) from pilot 1, analysis data reviewer’s guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the pilot 3 team here: https://rconsortium.github.io/submissions-pilot3-adam/main/index.html.\nSee here for more information about pilot 1, 2, 3 and the future plans for pilot 4."
   },
   {
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
+    "section": "",
+    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "why-r.html",
+    "href": "why-r.html",
+    "title": "Why R?",
+    "section": "",
+    "text": "SAS has been a long standing pharmaceutical industry standard for GXP work, so it’s understandable that proposing to change to alternative software, would be met with resistance and trepidation. However, it’s important to ask yourself “Why R?”, why is there a shift by companies to start to use R alongside SAS (or even replacing SAS)? Some key justification are provided below, which could be used to persuade reluctant adopters that there truly is a business case for R adoption (and for open source collaboration in general).\n\nWhy open-source software?\nOpen-source is a positive shift in mindset incorporating the following traits:\n\nAdapt to survive\nUse-and-improve\nChallenge the status quo\nContinuous feedback\nSelf-service learning\nCollaborate\n\n\n\nR ecosystem synergies result in resource efficiencies and cost savings\nR and python ecosystems are ideal for analytic engineering:\n\nModular, build-and-extend model\nFully integrated help documentation with further user-guide capabilities via quarto (markdown)\nStandardised test frameworks\nContinuous arrival of new methods and tools being written\nInteroperability between R python and the wider Data Science ecosystem (multi-language code usage)\nNo purchase costs\n\nCollaboration allows for a larger pool of available talent to achieve more together:\n\nReduces duplication of work being conducted within each company\nEasy re-use of code\nEngineering efficiencies (built in documentation/test frameworks/re-use of code & tools)\n\n\n\nEnhanced graphics & reporting capabilities\nThe following are just a few of the Enhanced graphics & reporting capabilities offered when using open-source software\n\nBrilliant graphics and interactive graphics\nInteractive story-telling capabilities through Shiny\nDynamic/automated reporting through quarto (rmarkdown)\nMetadata efficiencies\nSupports advanced analytics\n\n\n\nLarger community support\n\nR community user support is larger than any purchased software company could provide\nA wealth of information, help and advice available for free online\n\n\n\nIndustry trend\nSubstantial work ongoing to support the use of R within pharma. This is highlighted by the number of cross industry working groups addressing each of the areas of previous concern\n\npharmaverse\nR Submissions working group\nRTRS working group\nR Validation Hub\nCAMIS\n\n\n\nTalent attraction and retention\nThe pharmaceutical industry has always struggled to bring in enough experienced SAS programmers and statisticians. Open source languages and tools will lead to a bigger pool of available talent to work in the pharmaceutical industry. New starters (Uni leavers) will know R and data science tools already. Talent from other academic and industry fields may want to transition into pharma increasing our talent pool. Learning from each other enables the industry to move adapt quicker and embrace new technilogy quicker which leads to more efficiencies and cost savings\n\n\nIncreased opportunities for cross-pharma standardization/Reduced burden for individual companies\nCurrently each company writes their own specific processes, SAS macros and tools. This time is “Non-billable time”, at a cost to the company. pharmaverse are providing open source industry wide standard macros for SDTM, ADaM, TFLs and tools. Moving to open source languages and tools would have the following benefits:\n\nReduced cost, burden and duplication of effort for individual companies - increased efficiencies\nPackage/macro support and documentation thorough and complete\nTransferable knowledge when people move companies as staff are familiar with open source macros and do not have to re-learn individual company macros and tools\nStandardized SDTM, AdAM & TFLs means less project specific bespoke programming for common analyses / endpoints\nFrom limited static approach per company to multiple innovative collaborative approaches\nModular building of packages/macros enables quick adoption of new more efficient methods"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
+    "section": "",
+    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+  },
+  {
+    "objectID": "test-page.html",
+    "href": "test-page.html",
+    "title": "test",
+    "section": "",
+    "text": "This is a test, yes\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+  },
+  {
+    "objectID": "rinpharma.html",
+    "href": "rinpharma.html",
+    "title": "R Collaborations",
+    "section": "",
+    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+  },
+  {
     "objectID": "posts/test/index.html",
     "href": "posts/test/index.html",
     "title": "R and FDA Submission",
     "section": "",
     "text": "Check out the following exciting webinar on R and FDA submissions:"
+  },
+  {
+    "objectID": "posts/test/CAMIS2023.html",
+    "href": "posts/test/CAMIS2023.html",
+    "title": "2023: A Year of Progress for PHUSE CAMIS Working Group",
+    "section": "",
+    "text": "As we draw towards the end of 2023, the PHUSE CAMIS Working Group reflect on their key progress and successes this year. The CAMIS repository went live in January 2023, drawing on the content from the PHUSE CSRMLW project. This searchable repo compares analysis method implementations in software (CAMIS) such as SAS, R and python.\nThe White Paper was published in June, which highlighted the importance of clearly specifying your analysis, such that it can be replicated in different software, and isn’t relying on default options which can be different. For more complex analyses, it can still be hard to understand what defaults and algorithms your software is using, so the team focused 2023 on expanding our repo content, comparing SAS vs R methods. By August, we had covered the following topics in the repo: quartiles, rounding, anova, mmrm, cmh, log-rank, cox-ph, mcnemar’s test, kruskal-wallis test and logistic. October saw the launch of the sub-working group: CAMIS-Oncology, led by Somasekhar Sriadibhatla (AstraZeneca). This team will focus specifically on oncology endpoints and analyzing them in SAS, R and Python. The CAMIS team have expanded in membership during 2023 presenting at numerous conferences around the world. In November, we welcomed Harshal Khanolkar (NovoNordisk), to join the leadership team alongside Christina Fillmore (GSK) and Lyn Taylor (PAREXEL). Our focus for 2024, will be on the creation of additional content for the repo, and sharing awareness of the project across the medical research and wider community. We’d like to take this opportunity to thank all of our team members and contributors, and encourage everyone to check out the repository and help us to grow our content CAMIS (psiaims.github.io). If you would like to join the team please get in touch through the repo."
   },
   {
     "objectID": "minutes/2024-02-16/index.html",
@@ -196,31 +182,45 @@
     "text": "Website\nTalked about problems with AIMS logo not showing on homepage - issue to do with space in filename. Talked about importance of what homepage is trying to achieve, good load times and CSS for hexes and collapsible boxes: https://www.w3schools.com/howto/howto_js_collapsible.asp"
   },
   {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Date\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\nNo matching items"
+    "text": "With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible."
   },
   {
-    "objectID": "rcollaborations.html",
-    "href": "rcollaborations.html",
-    "title": "R Collaborations",
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
     "section": "",
-    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+    "text": "With the continual growth of the use of open-source software within the industry, it is important for statisticians, statistical programmers and data scientists to be aware of the latest developments and help to drive them forward. Open source software can provide faster technological advancements and wider sharing of new methods, which can make clinical trial development more efficient, allowing more focus to be on “Patients First” and getting medications to market as quickly and safely as possible."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PSI AIMS Special Interest Group",
-    "section": "",
-    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+    "objectID": "about.html#aim",
+    "href": "about.html#aim",
+    "title": "About",
+    "section": "Aim",
+    "text": "Aim\nTo support and contribute to researching the use of R within the industry."
   },
   {
-    "objectID": "rinpharma.html",
-    "href": "rinpharma.html",
-    "title": "R Collaborations",
+    "objectID": "about.html#current-goals",
+    "href": "about.html#current-goals",
+    "title": "About",
+    "section": "Current Goals",
+    "text": "Current Goals\n\nSupporting and influencing the working groups and collaborations that are happening within the industry\nIdentifying the key topics and areas of interest which require promotion, future research and development\nSharing knowledge and information on the above in appropriate ways with the PSI community (many of whom are not aware of or comfortable with open-source)\nUnderstanding what our adoption of the PSI digital strategy looks like\nEnsuring the industry stays up to date with technological advancement\nLooking to bring a statistical presence to discussions on R"
+  },
+  {
+    "objectID": "about.html#members-and-affiliations",
+    "href": "about.html#members-and-affiliations",
+    "title": "About",
+    "section": "Members and Affiliations",
+    "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD Part of Thermo Fisher Scientific\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nCytel\n\n\n\nMark Bynens\nJnJ\n\n\n\nAlexandra Lauer\nBoehringer-Ingelheim\n\n\n\nDaniel Leibovitz\nIndependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\n\n\n\nCamilo Rojas Cifuentes\nJanssen\n\n\n\nIrene Vassallo\nIncyte"
+  },
+  {
+    "objectID": "02R-tist.html",
+    "href": "02R-tist.html",
+    "title": "Zero to R-tist",
     "section": "",
-    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
   }
 ]
