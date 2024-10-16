@@ -2,4 +2,4 @@
 title: "R Collaborations"
 ---
 
-<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=[https://github.com/PSIAIMS/website/blob/main/assets/PSI%202023%20-%20AIMS%20SIG%20-%20MBrown.pptx]' width="1200px" height="800px" frameborder='0'>
+<iframe src='https://view.officeapps.live.com/op/view.aspx?src=[https://github.com/PSIAIMS/website/blob/main/assets/PSI%202023%20-%20AIMS%20SIG%20-%20MBrown.pptx]' width="1200px" height="800px" frameborder='0'>
