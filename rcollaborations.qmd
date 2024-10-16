@@ -2,4 +2,4 @@
 title: "R Collaborations"
 ---
 
-<iframe src='https://view.officeapps.live.com/op/embed.aspx?src=[https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FPSIAIMS%2Fwebsite%2Frefs%2Fheads%2Fmain%2Fassets%2FPSI%2520June%25202023%2520Poster%2520AIMS.pptx&wdOrigin=BROWSELINK]' width="1200px" height="800px" frameborder='0'>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%3A443%2FPSIAIMS%2Fwebsite%2Frefs%2Fheads%2Fmain%2Fassets%2FPSI%2520June%25202023%2520Poster%2520AIMS%2Epptx&amp;wdAr=1.4140625" width="1200px" height="800px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
