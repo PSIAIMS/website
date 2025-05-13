@@ -35,67 +35,11 @@
     "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\n\n\n\n\n\nMar 15, 2024\n\n\nMinutes 2024-03-15\n\n\n\n\n\n\nFeb 16, 2024\n\n\nMinutes 2024-02-16\n\n\n\n\n\n\nJan 19, 2024\n\n\nMinutes 2024-01-19\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PSI AIMS Special Interest Group",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
-  },
-  {
-    "objectID": "rinpharma.html",
-    "href": "rinpharma.html",
-    "title": "R Collaborations",
-    "section": "",
-    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
-  },
-  {
-    "objectID": "02R-tist.html",
-    "href": "02R-tist.html",
-    "title": "Zero to R-tist",
-    "section": "",
-    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
-  },
-  {
-    "objectID": "test-page.html",
-    "href": "test-page.html",
-    "title": "test",
-    "section": "",
-    "text": "This is a test, yes\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
-  },
-  {
-    "objectID": "posts/test/FDApilot3.html",
-    "href": "posts/test/FDApilot3.html",
-    "title": "FDA Pilot 3 submission",
-    "section": "",
-    "text": "The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: https://github.com/RConsortium/submissions-pilot3-adam-to-fda \nThe pilot 3 test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from pilot 3 and tables, listings, figures (TLFs) from pilot 1, analysis data reviewer’s guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the pilot 3 team here: https://rconsortium.github.io/submissions-pilot3-adam/main/index.html.\nSee here for more information about pilot 1, 2, 3 and the future plans for pilot 4."
-  },
-  {
-    "objectID": "posts/test/index.html",
-    "href": "posts/test/index.html",
-    "title": "R and FDA Submission",
-    "section": "",
-    "text": "Check out the following exciting webinar on R and FDA submissions:"
-  },
-  {
-    "objectID": "posts/test/CAMIS2023.html",
-    "href": "posts/test/CAMIS2023.html",
-    "title": "2023: A Year of Progress for PHUSE CAMIS Working Group",
-    "section": "",
-    "text": "As we draw towards the end of 2023, the PHUSE CAMIS Working Group reflect on their key progress and successes this year. The CAMIS repository went live in January 2023, drawing on the content from the PHUSE CSRMLW project. This searchable repo compares analysis method implementations in software (CAMIS) such as SAS, R and python.\nThe White Paper was published in June, which highlighted the importance of clearly specifying your analysis, such that it can be replicated in different software, and isn’t relying on default options which can be different. For more complex analyses, it can still be hard to understand what defaults and algorithms your software is using, so the team focused 2023 on expanding our repo content, comparing SAS vs R methods. By August, we had covered the following topics in the repo: quartiles, rounding, anova, mmrm, cmh, log-rank, cox-ph, mcnemar’s test, kruskal-wallis test and logistic. October saw the launch of the sub-working group: CAMIS-Oncology, led by Somasekhar Sriadibhatla (AstraZeneca). This team will focus specifically on oncology endpoints and analyzing them in SAS, R and Python. The CAMIS team have expanded in membership during 2023 presenting at numerous conferences around the world. In November, we welcomed Harshal Khanolkar (NovoNordisk), to join the leadership team alongside Christina Fillmore (GSK) and Lyn Taylor (PAREXEL). Our focus for 2024, will be on the creation of additional content for the repo, and sharing awareness of the project across the medical research and wider community. We’d like to take this opportunity to thank all of our team members and contributors, and encourage everyone to check out the repository and help us to grow our content CAMIS (psiaims.github.io). If you would like to join the team please get in touch through the repo."
-  },
-  {
-    "objectID": "rcollaborations.html",
-    "href": "rcollaborations.html",
-    "title": "R Collaborations",
-    "section": "",
-    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
-  },
-  {
-    "objectID": "news.html",
-    "href": "news.html",
-    "title": "News",
-    "section": "",
-    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nMay 13, 2025\n\n\nWhy Open-Source Skills are Important\n\n\nPSI AIMS\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -133,11 +77,74 @@
     "text": "Members and Affiliations\n\n\n\n\n\nName\nCompany\nRole\n\n\n\n\nMartin Brown\nPPD Part of Thermo Fisher Scientific\nChair\n\n\nLyn Taylor\nParexel\n\n\n\nAndy Nicholls\nGSK\n\n\n\nChristina Fillmore\nGSK\n\n\n\nMatthew Neilson\nPhastar\n\n\n\nMin-Hua Jen\nEli-Lilly\n\n\n\nMichael Cartwright\nParexel\n\n\n\nChris Toffis\nCytel\n\n\n\nMark Bynens\nJnJ\n\n\n\nAlexandra Lauer\nBoehringer-Ingelheim\n\n\n\nDaniel Leibovitz\nIndependent\n\n\n\nMarie-Laure Casadebaig\nIncyte\n\n\n\nKevin Kunzmann\nBoehringer-Ingelheim\n\n\n\nCamilo Rojas Cifuentes\nJanssen\n\n\n\nIrene Vassallo\nIncyte"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "Blog",
+    "objectID": "news.html",
+    "href": "news.html",
+    "title": "News",
     "section": "",
-    "text": "No matching items"
+    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "rcollaborations.html",
+    "href": "rcollaborations.html",
+    "title": "R Collaborations",
+    "section": "",
+    "text": "This is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+  },
+  {
+    "objectID": "posts/test/CAMIS2023.html",
+    "href": "posts/test/CAMIS2023.html",
+    "title": "2023: A Year of Progress for PHUSE CAMIS Working Group",
+    "section": "",
+    "text": "As we draw towards the end of 2023, the PHUSE CAMIS Working Group reflect on their key progress and successes this year. The CAMIS repository went live in January 2023, drawing on the content from the PHUSE CSRMLW project. This searchable repo compares analysis method implementations in software (CAMIS) such as SAS, R and python.\nThe White Paper was published in June, which highlighted the importance of clearly specifying your analysis, such that it can be replicated in different software, and isn’t relying on default options which can be different. For more complex analyses, it can still be hard to understand what defaults and algorithms your software is using, so the team focused 2023 on expanding our repo content, comparing SAS vs R methods. By August, we had covered the following topics in the repo: quartiles, rounding, anova, mmrm, cmh, log-rank, cox-ph, mcnemar’s test, kruskal-wallis test and logistic. October saw the launch of the sub-working group: CAMIS-Oncology, led by Somasekhar Sriadibhatla (AstraZeneca). This team will focus specifically on oncology endpoints and analyzing them in SAS, R and Python. The CAMIS team have expanded in membership during 2023 presenting at numerous conferences around the world. In November, we welcomed Harshal Khanolkar (NovoNordisk), to join the leadership team alongside Christina Fillmore (GSK) and Lyn Taylor (PAREXEL). Our focus for 2024, will be on the creation of additional content for the repo, and sharing awareness of the project across the medical research and wider community. We’d like to take this opportunity to thank all of our team members and contributors, and encourage everyone to check out the repository and help us to grow our content CAMIS (psiaims.github.io). If you would like to join the team please get in touch through the repo."
+  },
+  {
+    "objectID": "posts/test/index.html",
+    "href": "posts/test/index.html",
+    "title": "R and FDA Submission",
+    "section": "",
+    "text": "Check out the following exciting webinar on R and FDA submissions:"
+  },
+  {
+    "objectID": "posts/test/FDApilot3.html",
+    "href": "posts/test/FDApilot3.html",
+    "title": "FDA Pilot 3 submission",
+    "section": "",
+    "text": "The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: https://github.com/RConsortium/submissions-pilot3-adam-to-fda \nThe pilot 3 test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from pilot 3 and tables, listings, figures (TLFs) from pilot 1, analysis data reviewer’s guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the pilot 3 team here: https://rconsortium.github.io/submissions-pilot3-adam/main/index.html.\nSee here for more information about pilot 1, 2, 3 and the future plans for pilot 4."
+  },
+  {
+    "objectID": "test-page.html",
+    "href": "test-page.html",
+    "title": "test",
+    "section": "",
+    "text": "This is a test, yes\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+  },
+  {
+    "objectID": "02R-tist.html",
+    "href": "02R-tist.html",
+    "title": "Zero to R-tist",
+    "section": "",
+    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
+  },
+  {
+    "objectID": "rinpharma.html",
+    "href": "rinpharma.html",
+    "title": "R Collaborations",
+    "section": "",
+    "text": "Work in Progress!\n\nThis is an embedded &lt;a target=\"_blank\" href=\"https://office.com\"&gt;Microsoft Office&lt;/a&gt; presentation, powered by &lt;a target=\"_blank\" href=\"https://office.com/webapps\"&gt;Office&lt;/a&gt;."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
+    "section": "",
+    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+  },
+  {
+    "objectID": "blogs/test/openskillintro.html",
+    "href": "blogs/test/openskillintro.html",
+    "title": "Why Open-Source Skills are Important",
+    "section": "",
+    "text": "Introduction In a pharmaceutical industry that is rapidly changing and evolving, there can be many reactions to open-source, from worry and fear on the one side, to over-excitement and ‘jumping on the band-wagon’ on the other. The aim of this blog post and others throughout the year from the PSI AIMS SIG is to show that open-source skills are important. They can increase your work efficiencies and enhance your career, whatever type of statistician or data scientist you are! Therefore, we will present a range of essential skills and foundational concepts in a clear and accessible manner.\nWhat do open-source skills bring? Open-source is a positive shift in mindset challenging the status quo incorporating the following traits: • Faster innovation • Increased efficiency • Modular, build-and-extend models • Better collaboration • Standardised test frameworks • Continuous arrival of new methods and tools being written But this does not mean that every statistician needs to become a software engineer! A natural misconception with a new coding language, is that you need to become a deep expert of all its aspects, to use it effectively. In fact, the big positive of open-source is that many different types of people can use it effectively, in small and large ways, effectively leaning on each other - “Standing on the shoulders of giants”!. The following Venn diagram picks out 3 main ‘statistician’ types:\n\n\n\n\n\n\n\n\n\nWhere do I begin?! Whatever type of statistician you are, you can benefit from understanding the basics of various skills, concepts and terms. As everything is moving forward quickly and there is an abundance of ‘google’ knowledge, it is hard to know where to start. We want to help you, through provision of these blogs!\nIntroducing Open Source Skills Over this series of blog posts, we will look at and introduce you to some key areas: 1) Open source landscape basics (R version, IDEs, package versions, terms, different setups, lots can change) 2) How do I find / review packages? 3) Popular open-source stats resources (CAMIS, Pharmaverse, AIMS, Openstatsware etc.) 4) Good coding practices (style guides) 5) Collaborating with people on packages (CRAN email, GitHub intro) 6) How to file a GitHub issue 7) How to carry out a GitHub pull request 8) Containers introduction 9) Parallelization – what is the minimum amount I need to understand about the system to be successful?\nConclusion Open-source skills are a crucial asset in the pharmaceutical industry, offering a wealth of opportunities to enhance your work day and career. Regardless of your role—whether you’re a project statistician, statistical data scientist, or methodologist—embracing open-source software can lead to faster innovation, better collaboration, and a continuous influx of new methods and tools. Stay tuned for our upcoming blog posts, where we’ll dive deeper into the open-source landscape basics, share practical tips for finding and using packages, and guide you through essential coding practices. You’ll learn how to collaborate effectively, contribute to the community, and leverage these tools to drive your projects forward. Get ready to unlock the full potential of open-source skills and transform the way you work!"
   },
   {
     "objectID": "minutes/2024-02-16/index.html",

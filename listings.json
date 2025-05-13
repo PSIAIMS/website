@@ -8,15 +8,17 @@
     ]
   },
   {
+    "listing": "/blog.html",
+    "items": [
+      "/blogs/test/openskillintro.html"
+    ]
+  },
+  {
     "listing": "/news.html",
     "items": [
       "/posts/test/CAMIS2023.html",
       "/posts/test/index.html",
       "/posts/test/FDApilot3.html"
     ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": []
   }
 ]
