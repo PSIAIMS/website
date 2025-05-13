@@ -1,0 +1,48 @@
+---
+title: "Why Open-Source Skills are Important"
+author:
+  - name: PSI AIMS
+    url: https://psiaims.github.io/website/
+
+date: 5-13-2025
+categories: [Open-Source Skills] # self-defined categories
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+**Introduction**
+In a pharmaceutical industry that is rapidly changing and evolving, there can be many reactions to open-source, from worry and fear on the one side, to over-excitement and ‘jumping on the band-wagon' on the other.
+The aim of this blog post and others throughout the year from the PSI AIMS SIG is to show that open-source skills are important. They can increase your work efficiencies and enhance your career, whatever type of statistician or data scientist you are!  Therefore, we will present a range of essential skills and foundational concepts in a clear and accessible manner.
+
+**What do open-source skills bring?**
+Open-source is a positive shift in mindset challenging the status quo incorporating the following traits:
+•	Faster innovation
+•	Increased efficiency
+•	Modular, build-and-extend models
+•	Better collaboration
+•	Standardised test frameworks
+•	Continuous arrival of new methods and tools being written
+But this does not mean that every statistician needs to become a software engineer! 
+A natural misconception with a new coding language, is that you need to become a deep expert of all its aspects, to use it effectively. In fact, the big positive of open-source is that many different types of people can use it effectively, in small and large ways, effectively leaning on each other - “Standing on the shoulders of giants”!. The following Venn diagram picks out 3 main ‘statistician’ types:
+
+```{r, echo=FALSE, fig.align='center', out.width="100%"}
+knitr::include_graphics("../../images/openskillsstattypes.png")
+```
+
+**Where do I begin?!**
+Whatever type of statistician you are, you can benefit from understanding the basics of various skills, concepts and terms. As everything is moving forward quickly and there is an abundance of ‘google’ knowledge, it is hard to know where to start. We want to help you, through provision of these blogs!
+
+**Introducing Open Source Skills**
+Over this series of blog posts, we will look at and introduce you to some key areas:
+1)	Open source landscape basics (R version, IDEs, package versions, terms, different setups, lots can change)
+2)	How do I find / review packages?
+3)	Popular open-source stats resources (CAMIS, Pharmaverse, AIMS, Openstatsware etc.)
+4)	Good coding practices (style guides)
+5)	Collaborating with people on packages (CRAN email, GitHub intro)
+6)	How to file a GitHub issue
+7)	How to carry out a GitHub pull request
+8)	Containers introduction
+9)	Parallelization – what is the minimum amount I need to understand about the system to be successful?
+
+**Conclusion**
+Open-source skills are a crucial asset in the pharmaceutical industry, offering a wealth of opportunities to enhance your work day and career. Regardless of your role—whether you're a project statistician, statistical data scientist, or methodologist—embracing open-source software can lead to faster innovation, better collaboration, and a continuous influx of new methods and tools.
+Stay tuned for our upcoming blog posts, where we'll dive deeper into the open-source landscape basics, share practical tips for finding and using packages, and guide you through essential coding practices. You'll learn how to collaborate effectively, contribute to the community, and leverage these tools to drive your projects forward. Get ready to unlock the full potential of open-source skills and transform the way you work! 
