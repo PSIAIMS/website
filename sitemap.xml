@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://PSIAIMS.github.io/website/minutes.html</loc>
-    <lastmod>2024-10-16T10:44:50.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/rcollaborations.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
+    <loc>https://PSIAIMS.github.io/website/why-r.html</loc>
+    <lastmod>2025-05-13T10:26:28.214Z</lastmod>
   </url>
   <url>
     <loc>https://PSIAIMS.github.io/website/minutes/2024-03-15/index.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
   </url>
   <url>
-    <loc>https://PSIAIMS.github.io/website/minutes/2024-01-19/index.html</loc>
-    <lastmod>2024-10-16T10:44:50.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/posts/test/FDApilot3.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/news.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/why-r.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
+    <loc>https://PSIAIMS.github.io/website/minutes.html</loc>
+    <lastmod>2025-05-13T10:26:28.212Z</lastmod>
   </url>
   <url>
     <loc>https://PSIAIMS.github.io/website/index.html</loc>
-    <lastmod>2024-10-16T10:44:50.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/test-page.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
+    <lastmod>2025-05-13T10:26:28.212Z</lastmod>
   </url>
   <url>
     <loc>https://PSIAIMS.github.io/website/rinpharma.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/posts/test/index.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/posts/test/CAMIS2023.html</loc>
-    <lastmod>2024-10-16T10:44:50.734Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/minutes/2024-02-16/index.html</loc>
-    <lastmod>2024-10-16T10:44:50.733Z</lastmod>
-  </url>
-  <url>
-    <loc>https://PSIAIMS.github.io/website/about.html</loc>
-    <lastmod>2024-10-16T10:44:50.728Z</lastmod>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
   </url>
   <url>
     <loc>https://PSIAIMS.github.io/website/02R-tist.html</loc>
-    <lastmod>2024-10-16T10:44:50.722Z</lastmod>
+    <lastmod>2025-05-13T10:26:28.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/test-page.html</loc>
+    <lastmod>2025-05-13T10:26:28.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/posts/test/FDApilot3.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/posts/test/index.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/posts/test/CAMIS2023.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/rcollaborations.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/news.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/about.html</loc>
+    <lastmod>2025-05-13T10:26:28.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/blog.html</loc>
+    <lastmod>2025-05-13T10:26:28.211Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/minutes/2024-02-16/index.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
+  </url>
+  <url>
+    <loc>https://PSIAIMS.github.io/website/minutes/2024-01-19/index.html</loc>
+    <lastmod>2025-05-13T10:26:28.213Z</lastmod>
   </url>
 </urlset>
