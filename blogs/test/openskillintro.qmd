@@ -15,12 +15,12 @@ The aim of this blog post and others throughout the year from the PSI AIMS SIG i
 
 # What do open-source skills bring?
 Open-source is a positive shift in mindset challenging the status quo incorporating the following traits:<br>
--	Faster innovation
--	Increased efficiency
--	Modular, build-and-extend models
--	Better collaboration
--	Standardised test frameworks
--	Continuous arrival of new methods and tools being written
+*	Faster innovation
+*	Increased efficiency
+*	Modular, build-and-extend models
+*	Better collaboration
+*	Standardised test frameworks
+*	Continuous arrival of new methods and tools being written
 But this does not mean that every statistician needs to become a software engineer! 
 A natural misconception with a new coding language, is that you need to become a deep expert of all its aspects, to use it effectively. In fact, the big positive of open-source is that many different types of people can use it effectively, in small and large ways, effectively leaning on each other - “Standing on the shoulders of giants”!. The following Venn diagram picks out 3 main ‘statistician’ types:
 
@@ -34,14 +34,14 @@ Whatever type of statistician you are, you can benefit from understanding the ba
 # Introducing Open Source Skills
 Over this series of blog posts, we will look at and introduce you to some key areas:<br>
 1. Open source landscape basics (R version, IDEs, package versions, terms, different setups, lots can change)
-2. How do I find / review packages?
-3. Popular open-source stats resources (CAMIS, Pharmaverse, AIMS, Openstatsware etc.)
-4. Good coding practices (style guides)
-5. Collaborating with people on packages (CRAN email, GitHub intro)
-6. How to file a GitHub issue
-7. How to carry out a GitHub pull request
-8. Containers introduction
-9. Parallelization – what is the minimum amount I need to understand about the system to be successful?
+1. How do I find / review packages?
+1. Popular open-source stats resources (CAMIS, Pharmaverse, AIMS, Openstatsware etc.)
+1. Good coding practices (style guides)
+1. Collaborating with people on packages (CRAN email, GitHub intro)
+1. How to file a GitHub issue
+1. How to carry out a GitHub pull request
+1. Containers introduction
+1. Parallelization – what is the minimum amount I need to understand about the system to be successful?
 
 # Conclusion
 Open-source skills are a crucial asset in the pharmaceutical industry, offering a wealth of opportunities to enhance your work day and career. Regardless of your role—whether you're a project statistician, statistical data scientist, or methodologist—embracing open-source software can lead to faster innovation, better collaboration, and a continuous influx of new methods and tools.
