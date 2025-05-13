@@ -17,10 +17,6 @@
   },
   {
     "listing": "/blog.html",
-    "items": [
-      "/posts/test/CAMIS2023.html",
-      "/posts/test/index.html",
-      "/posts/test/FDApilot3.html"
-    ]
+    "items": []
   }
 ]
