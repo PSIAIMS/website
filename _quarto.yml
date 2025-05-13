@@ -14,6 +14,7 @@ website:
       - news.qmd
       - text: "Meeting Minutes"
         href: minutes.qmd
+      - blog.qmd
 
 format:
   html:
