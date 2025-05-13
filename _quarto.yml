@@ -12,8 +12,6 @@ website:
       - 02R-tist.qmd
       - rcollaborations.qmd
       - news.qmd
-      - text: "Meeting Minutes"
-        href: minutes.qmd
       - blog.qmd
 
 format:
