@@ -79,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -194,7 +194,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q0FNSVM=">CAMIS <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29tcGFyaXNvbiUyMG9mJTIwU29mdHdhcmU=">Comparison of Software <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RkRB">FDA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UmVndWxhdG9yeQ==">Regulatory <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -222,8 +222,65 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table caption-top" data-quarto-postprocess="true">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+Date
+</th>
+
+<th>
+Title
+</th>
+
+<th>
+Author
+</th>
+
+</tr>
+</thead>
 <tbody class="list">
+
+<tr data-index="0" data-categories="Q0FNSVMlMkNDb21wYXJpc29uJTIwb2YlMjBTb2Z0d2FyZQ==" data-listing-date-sort="1700438400000" data-listing-file-modified-sort="1747132139196" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301" data-listing-title-sort="2023: A Year of Progress for PHUSE CAMIS Working Group" data-listing-filename-sort="CAMIS2023.qmd">
+<td>
+<span class="listing-date">Nov 20, 2023</span>
+</td>
+<td>
+<a href="./posts/test/CAMIS2023.html" class="title listing-title">2023: A Year of Progress for PHUSE CAMIS Working Group</a>
+</td>
+<td>
+<span class="listing-author">Lyn Taylor</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="UmVndWxhdG9yeSUyQ0ZEQQ==" data-listing-date-sort="1694649600000" data-listing-file-modified-sort="1747132139196" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14" data-listing-title-sort="R and FDA Submission" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 14, 2023</span>
+</td>
+<td>
+<a href="./posts/test/index.html" class="title listing-title">R and FDA Submission</a>
+</td>
+<td>
+<span class="listing-author">Martin Brown</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="UmVndWxhdG9yeSUyQ0ZEQQ==" data-listing-date-sort="1693180800000" data-listing-file-modified-sort="1747132139196" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="197" data-listing-title-sort="FDA Pilot 3 submission" data-listing-filename-sort="FDApilot3.qmd">
+<td>
+<span class="listing-date">Aug 28, 2023</span>
+</td>
+<td>
+<a href="./posts/test/FDApilot3.html" class="title listing-title">FDA Pilot 3 submission</a>
+</td>
+<td>
+<span class="listing-author">Lyn Taylor</span>
+</td>
+
+</tr>
+
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
