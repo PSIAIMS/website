@@ -11,7 +11,7 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 
 # Introduction
 In a pharmaceutical industry that is rapidly changing and evolving, there can be many reactions to open-source, from worry and fear on the one side, to over-excitement and ‘jumping on the band-wagon' on the other.
-The aim of this blog post and others throughout the year from the PSI AIMS SIG is to show that open-source skills are important. They can increase your work efficiencies and enhance your career, whatever type of statistician or data scientist you are!  Therefore, we will present a range of essential skills and foundational concepts in a clear and accessible manner.
+The aim of this blog post and others throughout the year from the PSI AIMS SIG is to show that open-source skills are important. They can increase your work efficiencies and enhance your career, whatever type of statistician or data scientist you are!  Therefore, we will be presenting a range of essential skills and foundational concepts in a clear and accessible manner through these blog posts.
 
 # What do open-source skills bring?
 Open-source is a positive shift in mindset challenging the status quo incorporating the following traits:
