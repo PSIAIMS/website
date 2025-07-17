@@ -1,0 +1,19 @@
+---
+title: "PSI AIMS One Day meeting on Change Management in the Transition to Open-Source / R"
+description: "Held on 3rd July 2025 at The Hub, Astra Zeneca, Cambridge UK"
+author:
+  - name: Martin Brown
+    url: https://psiaims.github.io/website/
+
+date: 07-17-2025
+categories: [Change Management] # self-defined categories
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+```{r, echo=FALSE, fig.align='center', out.width="100%"}
+knitr::include_graphics("../../images/SDEChangeOpenPics.png")
+```
+
+This was a very successful event where 70+ people attended to discuss change management issues in Open-Source including training, organisational change and managing during times of big changes, communicating to colleagues and managers, timing and resourcing change. The audience were split across Pharma (46%), CRO (41%), Biotech (4%) and other affiliations including academia. The audience were pretty evenly split between those that used R and open-source tools regularly (49%) and those that used it infrequently or not at all (51%). Our 9 speakers presented on many topics, covering managing change at larger pharma companies where they have already made the move to open-source tools, but also presenting the view from CROs where use of open-source tools is growing but not yet established. Training, support and preparedness for change was a common theme in presentations – being ready for the journey and whatever happens along the way.
+The audience were very engaged and asked interesting questions many of which we covered as part of a panel discussion. Common themes in questions included resourcing for change when the day job doesn’t allow much additional time and resource to do so; how AI might help with changing from one software and programming language to another; addressing management and IT organisation questions about moving to new systems and the return on investment. At the end of the day, delegates were invited to reflect and think about next steps in group discussion – what is the next action to take within their organisation, what are the “quick wins” or proofs of concept that might convince others within their organistion, and how to “unlock” acceptance of open-source.
+Feedback from delegates was very positive and we will aim to provide some resources for delegates and those that did not attend – the first of which, the presentations from the day, can be found below. PSI AIMS and PhUSE Open Source Technologies for Clinical Data Analysis (OSTCDA) working groups will benefit from this event enormously, having a better understanding of industry needs and looking to provide more support and material in this area. As there also seemed to be support for a follow-on meeting, the obvious next steps for the groups would be to organise more events which could be online or in person.
