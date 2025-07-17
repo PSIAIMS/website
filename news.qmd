@@ -7,7 +7,15 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
+  # Add these options:
+  page-columns: 1    # Uses full page width
+  table-striped: true  # Optional: makes table more readable
+  field-display-names: 
+    date: "Date"
+    title: "Title"
+    author: "Author"
+  # Control column widths (date, title, author)
+  table-width: !expr c(15, 60, 25)  # Percentages for each column
 page-layout: full
 title-block-banner: false
 ---
-
