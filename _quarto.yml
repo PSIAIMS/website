@@ -1,5 +1,8 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!tmp-*.md"
 
 website:
   title: "PSI AIMS SIG Website"
@@ -10,6 +13,8 @@ website:
       - about.qmd
       - why-r.qmd
       - 02R-tist.qmd
+      - href: resources.qmd
+        text: "R Resources"
       - rcollaborations.qmd
       - news.qmd
       - blog.qmd
