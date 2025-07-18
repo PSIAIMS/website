@@ -1,0 +1,496 @@
+---
+title: "R Resources for PSI AIMS Community"
+description: "Comprehensive collection of R resources for pharmaceutical statisticians"
+toc: true
+toc-depth: 3
+page-layout: full
+---
+
+## Welcome to the PSI AIMS Resource Hub
+
+This comprehensive collection brings together the most valuable R resources for pharmaceutical statisticians, clinical programmers, and data scientists. Whether you're new to R or an experienced practitioner, you'll find curated links to help advance your skills and stay current with industry best practices.
+
+Use the table of contents to navigate to specific areas of interest, or browse through our featured resources below.
+
+---
+
+## Quick Access - Essential Resources
+
+### 🌟 Top Pharmaverse & Clinical Resources
+*Most critical resources for pharmaceutical R development*
+
+- **[pharmaverse main site](https://pharmaverse.org/)**  
+  *Central hub for pharmaceutical R packages and community*
+
+- **[ADaM in R Asset Library • admiral](https://pharmaverse.github.io/admiral/)**  
+  *Core package for Analysis Data Model (ADaM) creation in R*
+
+- **[R Submissions Working Group](https://rconsortium.github.io/submissions-wg/)**  
+  *Official guidance for R-based regulatory submissions*
+
+- **[R for Data Science (2e)](https://r4ds.hadley.nz/)**  
+  *Essential learning resource for R and data science*
+
+### 🎯 Quick Start for New Users
+- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**
+- **[Introduction to R for SAS programmers](https://pharmaverse.github.io/r-sas/)**
+- **[Cheatsheets - Posit](https://posit.co/resources/cheatsheets/)**
+
+---
+
+## Resource Categories
+
+### 1. Pharmaverse & Admiral {#pharmaverse}
+*Clinical data standards and pharmaceutical-specific R packages*
+
+#### Core Pharmaverse
+- **[pharmaverse main site](https://pharmaverse.org/)**  
+  Central ecosystem for pharmaceutical R packages and community collaboration.
+
+- **[ADaM in R Asset Library • admiral](https://pharmaverse.github.io/admiral/)**  
+  Comprehensive package for creating Analysis Data Model (ADaM) datasets in R.
+
+- **[Oncology Extension Package for ADaM • admiralonco](https://pharmaverse.github.io/admiralonco/)**  
+  Specialized extension for oncology clinical trials and analyses.
+
+- **[ADaM in R Asset Library - Ophthalmology • admiralophtha](https://pharmaverse.github.io/admiralophtha/)**  
+  Ophthalmology-specific extensions for clinical data processing.
+
+- **[Vaccine Extension Package for ADaM • admiralvaccine](https://pharmaverse.github.io/admiralvaccine/)**  
+  Vaccine trial-specific functionality and standards.
+
+- **[falcon](https://pharmaverse.github.io/falcon/)**  
+  Clinical trial data manipulation and analysis tools.
+
+#### CDISC & Clinical Standards
+- **[CDISC Pilot: Efficacy Tables • pilot1wrappers](https://rconsortium.github.io/pilot1wrappers/)**  
+  Reference implementation for CDISC-compliant efficacy analyses.
+
+- **[Tables in Clinical Trials with R](https://rconsortium.github.io/rtrs/)**  
+  Comprehensive guide for regulatory-grade table creation.
+
+- **[Create Random SDTM and ADAM Datasets • random.cdisc.data](https://insightsengineering.github.io/random.cdisc.data/)**  
+  Generate realistic test datasets for development and validation.
+
+- **[Analysis Results Data • cards](https://insightsengineering.github.io/cards/)**  
+  Standardized format for analysis results metadata.
+
+---
+
+### 2. Regulatory Submissions {#regulatory}
+*Resources for R-based regulatory submissions and compliance*
+
+#### R Consortium Working Groups
+- **[R Submissions Working Group - Introduction](https://rconsortium.github.io/submissions-wg/)**  
+  Official guidance and best practices for regulatory submissions using R.
+
+- **[R for Clinical Study Reports and Submission](https://r4csr.org/)**  
+  Comprehensive resource for clinical study report generation in R.
+
+- **[RConsortium/rtrs-wg: R Tables for Regulatory Submissions](https://github.com/RConsortium/rtrs-wg)**  
+  Working group focused on regulatory-compliant table creation.
+
+#### PHUSE Resources
+- **[Links to Resources and Knowledge - PHUSE](https://advance.phuse.global/display/WEL/Links+to+Resources+and+Knowledge)**  
+  Curated collection of pharmaceutical statistical resources.
+
+- **[Available Training for Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Available+Training+for+Open+Source+Technology)**  
+  Training opportunities for open source tools in pharma.
+
+- **[Data Visualisation & Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Data+Visualisation+and+Open+Source+Technology)** ⚠️ **LINK ISSUE**  
+  Best practices for data visualization in regulatory contexts.  
+  *Note: Confluence system may be deprecated. For current PHUSE resources, visit [PHUSE main site](https://www.phuse.global/).*
+
+---
+
+### 3. Industry Groups {#industry}
+*Professional organizations and collaborative initiatives*
+
+#### Professional Organizations
+- **[PSI AIMS SIG Website](https://psiaims.github.io/website/)**  
+  Home of the PSI Application and Implementation of Medical Statistics group.
+
+- **[R/Pharma](https://rinpharma.com/)**  
+  Premier conference for R in pharmaceutical development.
+
+- **[R in Pharma - YouTube](https://www.youtube.com/c/RinPharma)**  
+  Video content from R/Pharma conferences and workshops.
+
+- **[PharmaSUG](https://www.pharmasug.org/)**  
+  Regional pharmaceutical programming user groups.
+
+- **[R Validation Hub](https://www.pharmar.org/)**  
+  Cross-industry initiative for R package validation.
+
+- **[openstatsware](https://www.openstatsware.org/)**  
+  Collaborative initiative for open source statistical software.
+
+#### Working Groups
+- **[CAMIS - A PHUSE DVOST Working Group](https://psiaims.github.io/CAMIS/)**  
+  Clinical Analysis, Metrics & Interactive Solutions working group.
+
+- **[Overview | Interactive Safety Graphics](https://safetyGraphics.github.io/)**  
+  Framework for interactive safety data visualization.
+
+- **[Intro to Shiny App • safetyGraphics](https://github.com/SafetyGraphics/safetyGraphics)**  
+  Interactive safety monitoring applications.
+
+---
+
+### 4. Dashboards & Interactive Tools {#dashboards}
+*Shiny applications and interactive visualization tools*
+
+#### Shiny Resources
+- **[Mastering Shiny](https://mastering-shiny.org/)**  
+  Comprehensive guide to building production Shiny applications.
+
+- **[Shiny for R Gallery](https://shiny.posit.co/gallery/)**  
+  Official gallery of Shiny applications and code examples.
+
+- **[Welcome | Mastering Shiny Solutions](https://mastering-shiny-solutions.netlify.app/)**  
+  Solutions and examples for Mastering Shiny exercises.
+
+- **[Shiny examples (shinylive.io)](https://shinylive.io/r/examples/)**  
+  Browser-based Shiny examples and tutorials.
+
+#### Clinical Dashboard Examples
+- **[Teal Efficacy](https://genentech.shinyapps.io/teal_efficacy/)**  
+  Interactive efficacy analysis dashboard.
+
+- **[Teal Exploratory](https://genentech.shinyapps.io/teal_exploratory/)**  
+  Exploratory data analysis platform.
+
+- **[Teal Safety](https://genentech.shinyapps.io/teal_safety/)**  
+  Safety monitoring and analysis dashboard.
+
+- **[FDA App](https://genentech.shinyapps.io/FDA-app/)**  
+  FDA submission-ready interactive application.
+
+- **[Teal Gallery](https://insightsengineering.github.io/teal.gallery/)**  
+  Collection of clinical analysis applications.
+
+#### Dashboard Tools
+- **[R Markdown Format for Flexible Dashboards • flexdashboard](https://pkgs.rstudio.com/flexdashboard/)**  
+  Easy-to-use dashboard framework for R Markdown.
+
+- **[Leaflet + Flexdashboard + DT + Crosstalk](https://matt-dray.github.io/earl18-crosstalk/)**  
+  Advanced interactive dashboard techniques.
+
+- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
+  Professional Shiny application examples.  
+  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
+
+---
+
+### 5. Training & Courses {#training}
+*Educational resources and structured learning paths*
+
+#### R Learning Resources
+- **[R for Data Science (2e)](https://r4ds.hadley.nz/)**  
+  Essential modern introduction to R and data science.
+
+- **[Introduction to R for SAS programmers](https://pharmaverse.github.io/r-sas/)**  
+  Targeted resource for SAS users learning R.
+
+- **[Data Science in a Box - Welcome](https://datasciencebox.org/)**  
+  Complete data science course materials and structure.
+
+- **[R Adoption Series - YouTube](https://www.youtube.com/playlist?list=PLMtxz1fUYA5C0d8dSE_D7PLF2p-wJrXKq)**  
+  Video series on R adoption in pharmaceutical settings.
+
+- **[Webinars - R Consortium](https://r-consortium.org/webinars)**  
+  Regular webinars on R developments and applications.
+
+#### Professional Training
+- **[Hands On Clinical Reporting Using R - Coursera](https://www.coursera.org/learn/clinical-reporting-r)**  
+  Structured course for clinical reporting with R.
+
+- **[PSI Simulation Using the Tidyverse](https://github.com/PSIAIMS/psi-simulation-tidyverse)** ⚠️ **LINK BROKEN**  
+  Simulation techniques using modern R approaches.  
+  *Note: Repository not found (404 error). For current PSI training materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
+
+- **[Remaster the Tidyverse](https://github.com/rstudio-education/remaster-the-tidyverse)**  
+  Advanced tidyverse concepts and applications.
+
+#### Educational Platforms
+- **[Posit Academy](https://posit.co/products/education/)**  
+  Professional R and Python training platform.
+
+- **[edx courses](https://www.edx.org/learn/r-programming)**  
+  University-level R programming courses.
+
+- **[datacamp](https://www.datacamp.com/)**  
+  Interactive R learning platform.
+
+- **[coursera](https://www.coursera.org/learn/r-programming)**  
+  Johns Hopkins R Programming specialization.
+
+- **[MOOC](https://www.mooc-list.com/tags/r-programming)**  
+  Comprehensive list of R programming MOOCs.
+
+#### Learning Materials & Guides
+- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**  
+  Beginner-friendly learning path from RStudio.
+
+- **[RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)**  
+  Intermediate skill development resources.
+
+- **[RStudio Education (Experts)](https://education.rstudio.com/learn/expert/)**  
+  Advanced R programming and data science.
+
+- **[RStudio Webinars](https://www.rstudio.com/resources/webinars/)**  
+  Regular webinars on R and data science topics.
+
+- **[R Studio Cheat sheets](https://rstudio.com/resources/cheatsheets/)**  
+  Quick reference guides for R packages.
+
+---
+
+### 6. Books & References {#books}
+*Essential reading and reference materials*
+
+#### Core R Books
+- **[Books - RStudio](https://www.rstudio.com/resources/books/)** ⚠️ **LINK BROKEN**  
+  Official collection of recommended R books.  
+  *Note: Removed during RStudio → Posit transition. Alternative: [Big Book of R](https://www.bigbookofr.com/).*
+
+- **[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)**  
+  Comprehensive guide to R Markdown and reproducible documents.
+
+- **[Welcome | Advanced R](https://adv-r.hadley.nz/)**  
+  Deep dive into R programming concepts and best practices.
+
+- **[Posit Recipes (Some tasty R code snippets)](https://docs.posit.co/ide/user/ide/guide/code/code-snippets.html)** ⚠️ **LINK BROKEN**  
+  Practical code examples and techniques.  
+  *Note: URL path incorrect (404 error). Alternative: [Posit Cheatsheets](https://posit.co/resources/cheatsheets/).*
+
+- **[Big Book of R](https://www.bigbookofr.com/)**  
+  Massive collection of R learning resources and books.
+
+#### Specialized References
+- **[What They Forgot to Teach You About R](https://rstats.wtf/)**  
+  Practical R programming skills often missed in courses.
+
+- **[Building Stories With Data - Articles](https://cararthompson.com/talks.html)**  
+  Data storytelling and communication techniques.
+
+#### Essential Technical Books
+- **[Advanced R - Hadley Wickham](https://adv-r.hadley.nz/)**  
+  Comprehensive guide to advanced R programming concepts.
+
+- **[R Packages - Hadley Wickham](http://r-pkgs.had.co.nz/)**  
+  Complete guide to creating R packages.
+
+- **[bookdown: Authoring Books and Technical Documents - Yihui Xie](https://bookdown.org/yihui/bookdown/)**  
+  Creating books and long-form documents with R Markdown.
+
+- **[Efficient R Programming - Colin Gillespie, Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)**  
+  Writing efficient and scalable R code.
+
+- **[quarto](https://quarto.org)**  
+  Next-generation scientific publishing system.
+
+- **[Tidyverse Style Guide](https://style.tidyverse.org/)**  
+  Coding style guidelines for readable R code.
+
+- **[rOpenSci Package development](https://devguide.ropensci.org/building.html)**  
+  Best practices for R package development.
+
+- **[R Packages (2e)](https://r-pkgs.org)**  
+  Updated guide to modern R package development.
+
+---
+
+### 7. Data Visualization {#visualization}
+*Charts, graphs, and visual communication resources*
+
+#### Core Visualization Resources
+- **[ggplot2 extensions gallery](https://exts.ggplot2.tidyverse.org/gallery/)**  
+  Comprehensive collection of ggplot2 extensions and examples.
+
+- **[The R Graph Gallery](https://r-graph-gallery.com/)**  
+  Extensive collection of R chart examples with code.
+
+- **[R Gallery Book](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/)** ⚠️ **LINK BROKEN**  
+  Comprehensive guide to creating visualizations in R.  
+  *Note: Bookdown URL error. Alternative: [The R Graph Gallery](https://r-graph-gallery.com/) for similar content.*
+
+- **[Data Visualization - A practical introduction](https://socviz.co/)**  
+  Excellent combination of visualization theory and R practice.
+
+- **[From data to Viz | Find the graphic you need](https://data-to-viz.com/)** ⚠️ **LINK ISSUE**  
+  Interactive guide to choosing appropriate visualizations.  
+  *Note: WebSocket timeout errors may prevent access. If unavailable, try [Data Visualization Catalogue](https://datavizcatalogue.com/).*
+
+- **[chart-doctor/visual-vocabulary - Financial Times](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary)**  
+  Professional visualization standards and guidelines.
+
+#### ggplot2 Resources
+- **[Aesthetic specifications • ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2-specs.html)**  
+  Technical documentation for ggplot2 aesthetics.
+
+- **[ggplot2: Elegant Graphics for Data Analysis (3e)](https://ggplot2-book.org/)**  
+  Definitive guide to ggplot2 by its creator.
+
+#### Clinical Visualization
+- **[Clinical Graphs and Tables Adhering to Graphical Principles • visR](https://openpharma.github.io/visR/)**  
+  Specialized package for clinical trial visualizations.
+
+- **[TLG Catalog - Stable](https://insightsengineering.github.io/tlg-catalog/stable/)**  
+  Tables, listings, and graphs examples for clinical trials.
+
+---
+
+### 8. Tools & Utilities {#tools}
+*Development tools, utilities, and productivity resources*
+
+#### Development Tools
+- **[Posit Cloud](https://posit.cloud/)**  
+  Cloud-based R and Python development environment.
+
+- **[Cheatsheets - Posit](https://posit.co/resources/cheatsheets/)**  
+  Essential quick reference guides for R packages and concepts.
+
+- **[htmlwidgets for R](https://www.htmlwidgets.org/)**  
+  Framework for creating interactive web visualizations.
+
+- **[R-universe: pharmaverse](https://pharmaverse.r-universe.dev/)**  
+  Centralized repository for pharmaceutical R packages.
+
+- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)** ⚠️ **LINK BROKEN**  
+  Interactive ggplot2 chart builder.  
+  *Note: 502 Bad Gateway error - server appears down. For similar functionality, try installing the esquisse R package locally.*
+
+#### Design & Color Resources
+- **[R colors [Full List, Color Converter and Color Picker]](https://r-charts.com/colors/)**  
+  Comprehensive R color reference and tools.
+
+- **[Color Hex - ColorHexa.com](https://www.colorhexa.com/)**  
+  Color information and conversion utilities.
+
+- **[👍 Color Picker online | HEX Color Picker](https://imagecolorpicker.com/)**  
+  Online color picker and palette generator.
+
+- **[Darken Color - mdigi.tools](https://mdigi.tools/darken-color/)**  
+  Simple color adjustment tool.
+
+- **[Coblis — Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)**  
+  Test visualizations for color blind accessibility.
+
+#### Advanced Development Tools
+- **[Graphic Design with ggplot2](https://rstudio-conf-2022.github.io/ggplot2-graphic-design/)**  
+  Advanced ggplot2 techniques for publication-quality graphics.
+
+- **[Engaging and Beautiful Data Visualizations with ggplot2](https://posit-conf-2023.github.io/dataviz-ggplot2/)**  
+  Workshop materials for creating engaging visualizations.
+
+- **[GitHub - philbowsher/Clinical-Tables-in-R-with-gt](https://github.com/philbowsher/Clinical-Tables-in-R-with-gt)**  
+  Creating regulatory-grade tables with the gt package.
+
+- **[Additional Beginner Resources](02R-tist.qmd)**  
+  More beginner-friendly resources and learning paths.
+
+---
+
+### 9. Examples & Galleries {#examples}
+*Inspiration and real-world implementations*
+
+#### Application Galleries  
+- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
+  High-quality Shiny applications for inspiration.  
+  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
+
+- **[safetyGraphics (shinyapps.io)](https://jwildfire.shinyapps.io/safetyGraphics/)**  
+  Live safety monitoring application example.
+
+- **[realtimeclinical.shinyapps.io/rsum/](https://realtimeclinical.shinyapps.io/rsum/)**  
+  Real-time clinical data monitoring dashboard.
+
+#### Inspiration Resources
+- **[Inspiration | Datylon Report Studio](https://www.datylon.com/gallery)** ⚠️ **LINK BROKEN**  
+  Professional data visualization examples.  
+  *Note: 404 error - page not found. Check site's Resources menu for current gallery location.*
+
+- **[Dataviz Inspiration | Hundreds of chart examples](https://dataviz-inspiration.com/)**  
+  Curated collection of exceptional data visualizations.
+
+- **[Best Practices for Data Visualisation - RSS](https://royal-statistical-society.github.io/datavisguide/)**  
+  Professional guidelines for statistical visualization.
+
+---
+
+### 10. Conference Materials & Community {#conferences}
+*Conference proceedings, presentations, and educational content*
+
+#### Conference Resources
+- **[Conference Videos (glacon.eu)](https://www.glacon.eu/)**  
+  Basel R user group presentations and materials.
+
+- **[SAS Proceedings and more (lexjansen.com)](https://www.lexjansen.com/)**  
+  Comprehensive archive of pharmaceutical conference proceedings.
+
+- **[Conference Material](https://github.com/PSIAIMS/conference-materials)** ⚠️ **LINK BROKEN**  
+  PSI AIMS conference presentations and materials.  
+  *Note: Repository not found (404 error). For current materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
+
+#### Community & Learning Content
+- **[Home | RWeekly.org - Blogs to Learn R from the Community](https://rweekly.org/)**  
+  Curated weekly newsletter of R developments.
+
+- **[Data Science Learning Community Videos - YouTube](https://www.youtube.com/c/RfortheRestofUs)** ⚠️ **LINK BROKEN**  
+  Educational R content for practical applications.  
+  *Note: Channel moved or discontinued (404 error). For current content, visit [R for the Rest of Us website](https://rfortherestofus.com/).*
+
+- **[Blog - R for the Rest of Us](https://rfortherestofus.com/blog/)**  
+  Practical R tutorials and best practices.
+
+- **[Blog | Nicola Rennie](https://nrennie.rbind.io/blog/)**  
+  Advanced R programming and data science techniques.
+
+#### News & Media
+- **[R-bloggers](https://www.r-bloggers.com/)**  
+  Aggregated R news and tutorials from the community.
+
+- **[RStudio Blog](https://www.rstudio.com/blog/)**  
+  Official news and updates from RStudio/Posit.
+
+- **[R Views](https://rviews.rstudio.com/)**  
+  RStudio's R community blog.
+
+- **[YouTube](https://www.youtube.com/results?search_query=R+language)**  
+  Video tutorials and presentations on R programming.
+
+---
+
+## Additional Specialized Resources
+
+### Quarto & Modern Publishing
+- **[Quarto - Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)**  
+  Essential guide for modern scientific publishing.
+
+- **[Quarto - Document Listings](https://quarto.org/docs/websites/website-listings.html)**  
+  Creating dynamic website content with Quarto.
+
+- **[mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)**  
+  Comprehensive collection of Quarto resources.
+
+---
+
+## Resource Statistics
+
+- **Total Resources:** 105
+- **Categories:** 10 major areas
+- **Coverage:** Beginner to advanced levels
+- **Focus:** Pharmaceutical and clinical applications
+
+## Getting Help
+
+For questions about these resources or suggestions for additions:
+- 📧 **Contact:** [PSI AIMS Leadership](mailto:martin.brown@ppd.com)
+- 💬 **Discussion:** PSI AIMS community forums
+- 🐛 **Issues:** Report broken links or suggest improvements
+
+---
+
+*Last Updated: January 2025*  
+*Maintained by: PSI AIMS Special Interest Group* 
