@@ -6,6 +6,14 @@ toc-depth: 3
 page-layout: full
 ---
 
+## Welcome to the PSI AIMS Resource Hub
+
+This comprehensive collection brings together the most valuable R resources for pharmaceutical statisticians, clinical programmers, and data scientists. Whether you're new to R or an experienced practitioner, you'll find curated links to help advance your skills and stay current with industry best practices.
+
+Use the table of contents to navigate to specific areas of interest, or browse through our featured resources below.
+
+---
+
 ## Quick Access - Essential Resources
 
 ### 🌟 Top Pharmaverse & Clinical Resources
@@ -201,6 +209,38 @@ page-layout: full
 - **[Remaster the Tidyverse](https://github.com/rstudio-education/remaster-the-tidyverse)**  
   Advanced tidyverse concepts and applications.
 
+#### Educational Platforms
+- **[Posit Academy](https://posit.co/products/education/)**  
+  Professional R and Python training platform.
+
+- **[edx courses](https://www.edx.org/learn/r-programming)**  
+  University-level R programming courses.
+
+- **[datacamp](https://www.datacamp.com/)**  
+  Interactive R learning platform.
+
+- **[coursera](https://www.coursera.org/learn/r-programming)**  
+  Johns Hopkins R Programming specialization.
+
+- **[MOOC](https://www.mooc-list.com/tags/r-programming)**  
+  Comprehensive list of R programming MOOCs.
+
+#### Learning Materials & Guides
+- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**  
+  Beginner-friendly learning path from RStudio.
+
+- **[RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)**  
+  Intermediate skill development resources.
+
+- **[RStudio Education (Experts)](https://education.rstudio.com/learn/expert/)**  
+  Advanced R programming and data science.
+
+- **[RStudio Webinars](https://www.rstudio.com/resources/webinars/)**  
+  Regular webinars on R and data science topics.
+
+- **[R Studio Cheat sheets](https://rstudio.com/resources/cheatsheets/)**  
+  Quick reference guides for R packages.
+
 ---
 
 ### 6. Books & References {#books}
@@ -228,6 +268,31 @@ page-layout: full
 
 - **[Building Stories With Data - Articles](https://cararthompson.com/talks.html)**  
   Data storytelling and communication techniques.
+
+#### Essential Technical Books
+- **[Advanced R - Hadley Wickham](https://adv-r.hadley.nz/)**  
+  Comprehensive guide to advanced R programming concepts.
+
+- **[R Packages - Hadley Wickham](http://r-pkgs.had.co.nz/)**  
+  Complete guide to creating R packages.
+
+- **[bookdown: Authoring Books and Technical Documents - Yihui Xie](https://bookdown.org/yihui/bookdown/)**  
+  Creating books and long-form documents with R Markdown.
+
+- **[Efficient R Programming - Colin Gillespie, Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)**  
+  Writing efficient and scalable R code.
+
+- **[quarto](https://quarto.org)**  
+  Next-generation scientific publishing system.
+
+- **[Tidyverse Style Guide](https://style.tidyverse.org/)**  
+  Coding style guidelines for readable R code.
+
+- **[rOpenSci Package development](https://devguide.ropensci.org/building.html)**  
+  Best practices for R package development.
+
+- **[R Packages (2e)](https://r-pkgs.org)**  
+  Updated guide to modern R package development.
 
 ---
 
@@ -288,7 +353,7 @@ page-layout: full
 - **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)**  
   Interactive ggplot2 chart builder.
 
-#### Reference Materials
+#### Design & Color Resources
 - **[R colors [Full List, Color Converter and Color Picker]](https://r-charts.com/colors/)**  
   Comprehensive R color reference and tools.
 
@@ -304,9 +369,18 @@ page-layout: full
 - **[Coblis — Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)**  
   Test visualizations for color blind accessibility.
 
-#### Additional Development Resources
-- **[Existing Resources from Zero to R-tist](02R-tist.qmd)**  
-  Additional beginner-friendly resources and learning paths.
+#### Advanced Development Tools
+- **[Graphic Design with ggplot2](https://rstudio-conf-2022.github.io/ggplot2-graphic-design/)**  
+  Advanced ggplot2 techniques for publication-quality graphics.
+
+- **[Engaging and Beautiful Data Visualizations with ggplot2](https://posit-conf-2023.github.io/dataviz-ggplot2/)**  
+  Workshop materials for creating engaging visualizations.
+
+- **[GitHub - philbowsher/Clinical-Tables-in-R-with-gt](https://github.com/philbowsher/Clinical-Tables-in-R-with-gt)**  
+  Creating regulatory-grade tables with the gt package.
+
+- **[Additional Beginner Resources](02R-tist.qmd)**  
+  More beginner-friendly resources and learning paths.
 
 ---
 
@@ -335,7 +409,7 @@ page-layout: full
 
 ---
 
-### 10. Conference Materials {#conferences}
+### 10. Conference Materials & Community {#conferences}
 *Conference proceedings, presentations, and educational content*
 
 #### Conference Resources
@@ -348,7 +422,7 @@ page-layout: full
 - **[Conference Material](https://github.com/PSIAIMS/conference-materials)**  
   PSI AIMS conference presentations and materials.
 
-#### Educational Content
+#### Community & Learning Content
 - **[Home | RWeekly.org - Blogs to Learn R from the Community](https://rweekly.org/)**  
   Curated weekly newsletter of R developments.
 
@@ -361,11 +435,24 @@ page-layout: full
 - **[Blog | Nicola Rennie](https://nrennie.rbind.io/blog/)**  
   Advanced R programming and data science techniques.
 
+#### News & Media
+- **[R-bloggers](https://www.r-bloggers.com/)**  
+  Aggregated R news and tutorials from the community.
+
+- **[RStudio Blog](https://www.rstudio.com/blog/)**  
+  Official news and updates from RStudio/Posit.
+
+- **[R Views](https://rviews.rstudio.com/)**  
+  RStudio's R community blog.
+
+- **[YouTube](https://www.youtube.com/results?search_query=R+language)**  
+  Video tutorials and presentations on R programming.
+
 ---
 
 ## Additional Specialized Resources
 
-### Quarto & Documentation
+### Quarto & Modern Publishing
 - **[Quarto - Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)**  
   Essential guide for modern scientific publishing.
 
@@ -375,53 +462,14 @@ page-layout: full
 - **[mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)**  
   Comprehensive collection of Quarto resources.
 
-### Educational Materials from Existing Site
-- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**
-- **[RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)**
-- **[RStudio Education (Experts)](https://education.rstudio.com/learn/expert/)**
-- **[RStudio Webinars](https://www.rstudio.com/resources/webinars/)**
-- **[R Studio Cheat sheets](https://rstudio.com/resources/cheatsheets/)**
-
-### Technical Books (Existing)
-- **[Advanced R - Hadley Wickham](https://adv-r.hadley.nz/)**
-- **[R Packages - Hadley Wickham](http://r-pkgs.had.co.nz/)**
-- **[bookdown: Authoring Books and Technical Documents - Yihui Xie](https://bookdown.org/yihui/bookdown/)**
-- **[Efficient R Programming - Colin Gillespie, Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)**
-- **[quarto](https://quarto.org)**
-- **[Tidyverse Style Guide](https://style.tidyverse.org/)**
-- **[rOpenSci Package development](https://devguide.ropensci.org/building.html)**
-- **[R Packages (2e)](https://r-pkgs.org)**
-
-### Learning Platforms (Existing)
-- **[Posit Academy](https://posit.co/products/education/)**
-- **[edx courses](https://www.edx.org/learn/r-programming)**
-- **[datacamp](https://www.datacamp.com/)**
-- **[coursera](https://www.coursera.org/learn/r-programming)**
-- **[MOOC](https://www.mooc-list.com/tags/r-programming)**
-
-### Blogs/Media (Existing)
-- **[R-bloggers](https://www.r-bloggers.com/)**
-- **[RStudio Blog](https://www.rstudio.com/blog/)**
-- **[R Views](https://rviews.rstudio.com/)**
-- **[YouTube](https://www.youtube.com/results?search_query=R+language)**
-
-### Specialized Development Tools
-- **[Graphic Design with ggplot2](https://rstudio-conf-2022.github.io/ggplot2-graphic-design/)**  
-  Advanced ggplot2 techniques for publication-quality graphics.
-
-- **[Engaging and Beautiful Data Visualizations with ggplot2](https://posit-conf-2023.github.io/dataviz-ggplot2/)**  
-  Workshop materials for creating engaging visualizations.
-
-- **[GitHub - philbowsher/Clinical-Tables-in-R-with-gt](https://github.com/philbowsher/Clinical-Tables-in-R-with-gt)**  
-  Creating regulatory-grade tables with the gt package.
-
 ---
 
 ## Resource Statistics
 
 - **Total Resources:** 105
-- **Functional Resources:** ~100+ (being validated)
 - **Categories:** 10 major areas
+- **Coverage:** Beginner to advanced levels
+- **Focus:** Pharmaceutical and clinical applications
 
 ## Getting Help
 
