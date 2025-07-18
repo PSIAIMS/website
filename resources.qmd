@@ -97,8 +97,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Available Training for Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Available+Training+for+Open+Source+Technology)**  
   Training opportunities for open source tools in pharma.
 
-- **[Data Visualisation & Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Data+Visualisation+and+Open+Source+Technology)**  
-  Best practices for data visualization in regulatory contexts.
+- **[Data Visualisation & Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Data+Visualisation+and+Open+Source+Technology)** ⚠️ **LINK ISSUE**  
+  Best practices for data visualization in regulatory contexts.  
+  *Note: Confluence system may be deprecated. For current PHUSE resources, visit [PHUSE main site](https://www.phuse.global/).*
 
 ---
 
@@ -175,8 +176,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Leaflet + Flexdashboard + DT + Crosstalk](https://matt-dray.github.io/earl18-crosstalk/)**  
   Advanced interactive dashboard techniques.
 
-- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)**  
-  Professional Shiny application examples.
+- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
+  Professional Shiny application examples.  
+  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
 
 ---
 
@@ -203,8 +205,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Hands On Clinical Reporting Using R - Coursera](https://www.coursera.org/learn/clinical-reporting-r)**  
   Structured course for clinical reporting with R.
 
-- **[PSI Simulation Using the Tidyverse](https://github.com/PSIAIMS/psi-simulation-tidyverse)**  
-  Simulation techniques using modern R approaches.
+- **[PSI Simulation Using the Tidyverse](https://github.com/PSIAIMS/psi-simulation-tidyverse)** ⚠️ **LINK BROKEN**  
+  Simulation techniques using modern R approaches.  
+  *Note: Repository not found (404 error). For current PSI training materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
 
 - **[Remaster the Tidyverse](https://github.com/rstudio-education/remaster-the-tidyverse)**  
   Advanced tidyverse concepts and applications.
@@ -247,8 +250,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 *Essential reading and reference materials*
 
 #### Core R Books
-- **[Books - RStudio](https://www.rstudio.com/resources/books/)**  
-  Official collection of recommended R books.
+- **[Books - RStudio](https://www.rstudio.com/resources/books/)** ⚠️ **LINK BROKEN**  
+  Official collection of recommended R books.  
+  *Note: Removed during RStudio → Posit transition. Alternative: [Big Book of R](https://www.bigbookofr.com/).*
 
 - **[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)**  
   Comprehensive guide to R Markdown and reproducible documents.
@@ -256,8 +260,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Welcome | Advanced R](https://adv-r.hadley.nz/)**  
   Deep dive into R programming concepts and best practices.
 
-- **[Posit Recipes (Some tasty R code snippets)](https://docs.posit.co/ide/user/ide/guide/code/code-snippets.html)**  
-  Practical code examples and techniques.
+- **[Posit Recipes (Some tasty R code snippets)](https://docs.posit.co/ide/user/ide/guide/code/code-snippets.html)** ⚠️ **LINK BROKEN**  
+  Practical code examples and techniques.  
+  *Note: URL path incorrect (404 error). Alternative: [Posit Cheatsheets](https://posit.co/resources/cheatsheets/).*
 
 - **[Big Book of R](https://www.bigbookofr.com/)**  
   Massive collection of R learning resources and books.
@@ -306,14 +311,16 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[The R Graph Gallery](https://r-graph-gallery.com/)**  
   Extensive collection of R chart examples with code.
 
-- **[R Gallery Book](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/)**  
-  Comprehensive guide to creating visualizations in R.
+- **[R Gallery Book](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/)** ⚠️ **LINK BROKEN**  
+  Comprehensive guide to creating visualizations in R.  
+  *Note: Bookdown URL error. Alternative: [The R Graph Gallery](https://r-graph-gallery.com/) for similar content.*
 
 - **[Data Visualization - A practical introduction](https://socviz.co/)**  
   Excellent combination of visualization theory and R practice.
 
-- **[From data to Viz | Find the graphic you need](https://data-to-viz.com/)**  
-  Interactive guide to choosing appropriate visualizations.
+- **[From data to Viz | Find the graphic you need](https://data-to-viz.com/)** ⚠️ **LINK ISSUE**  
+  Interactive guide to choosing appropriate visualizations.  
+  *Note: WebSocket timeout errors may prevent access. If unavailable, try [Data Visualization Catalogue](https://datavizcatalogue.com/).*
 
 - **[chart-doctor/visual-vocabulary - Financial Times](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary)**  
   Professional visualization standards and guidelines.
@@ -350,8 +357,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[R-universe: pharmaverse](https://pharmaverse.r-universe.dev/)**  
   Centralized repository for pharmaceutical R packages.
 
-- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)**  
-  Interactive ggplot2 chart builder.
+- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)** ⚠️ **LINK BROKEN**  
+  Interactive ggplot2 chart builder.  
+  *Note: 502 Bad Gateway error - server appears down. For similar functionality, try installing the esquisse R package locally.*
 
 #### Design & Color Resources
 - **[R colors [Full List, Color Converter and Color Picker]](https://r-charts.com/colors/)**  
@@ -388,8 +396,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 *Inspiration and real-world implementations*
 
 #### Application Galleries  
-- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)**  
-  High-quality Shiny applications for inspiration.
+- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
+  High-quality Shiny applications for inspiration.  
+  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
 
 - **[safetyGraphics (shinyapps.io)](https://jwildfire.shinyapps.io/safetyGraphics/)**  
   Live safety monitoring application example.
@@ -398,8 +407,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
   Real-time clinical data monitoring dashboard.
 
 #### Inspiration Resources
-- **[Inspiration | Datylon Report Studio](https://www.datylon.com/gallery)**  
-  Professional data visualization examples.
+- **[Inspiration | Datylon Report Studio](https://www.datylon.com/gallery)** ⚠️ **LINK BROKEN**  
+  Professional data visualization examples.  
+  *Note: 404 error - page not found. Check site's Resources menu for current gallery location.*
 
 - **[Dataviz Inspiration | Hundreds of chart examples](https://dataviz-inspiration.com/)**  
   Curated collection of exceptional data visualizations.
@@ -419,15 +429,17 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[SAS Proceedings and more (lexjansen.com)](https://www.lexjansen.com/)**  
   Comprehensive archive of pharmaceutical conference proceedings.
 
-- **[Conference Material](https://github.com/PSIAIMS/conference-materials)**  
-  PSI AIMS conference presentations and materials.
+- **[Conference Material](https://github.com/PSIAIMS/conference-materials)** ⚠️ **LINK BROKEN**  
+  PSI AIMS conference presentations and materials.  
+  *Note: Repository not found (404 error). For current materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
 
 #### Community & Learning Content
 - **[Home | RWeekly.org - Blogs to Learn R from the Community](https://rweekly.org/)**  
   Curated weekly newsletter of R developments.
 
-- **[Data Science Learning Community Videos - YouTube](https://www.youtube.com/c/RfortheRestofUs)**  
-  Educational R content for practical applications.
+- **[Data Science Learning Community Videos - YouTube](https://www.youtube.com/c/RfortheRestofUs)** ⚠️ **LINK BROKEN**  
+  Educational R content for practical applications.  
+  *Note: Channel moved or discontinued (404 error). For current content, visit [R for the Rest of Us website](https://rfortherestofus.com/).*
 
 - **[Blog - R for the Rest of Us](https://rfortherestofus.com/blog/)**  
   Practical R tutorials and best practices.
