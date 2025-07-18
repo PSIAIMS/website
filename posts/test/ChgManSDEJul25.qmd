@@ -1,5 +1,5 @@
 ---
-title: "PSI AIMS One Day meeting on Change Management in the Transition to Open-Source / R"
+title: "One Day meeting on Change Management in the Transition to Open-Source / R"
 description: "Held on 3rd July 2025 at The Hub, Astra Zeneca, Cambridge UK"
 author:
   - name: Martin Brown
