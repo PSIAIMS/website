@@ -404,12 +404,12 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ## Getting Help
 
-For questions about these resources or suggestions for additions:
-- 📧 **Contact:** [PSI AIMS Leadership](mailto:martin.brown@ppd.com)
-- 💬 **Discussion:** PSI AIMS community forums
-- 🐛 **Issues:** Report broken links or suggest improvements
+For questions about these resources or suggestions for additions:  
+- 📧 **Contact:** [PSI AIMS Leadership](mailto:martin.brown@ppd.com)  
+- 💬 **Discussion:** PSI AIMS community forums  
+- 🐛 **Issues:** [Report broken links or suggest improvements](https://github.com/PSIAIMS/website/issues)
 
 ---
 
-*Last Updated: January 2025*  
+*Last Updated: July 2025*  
 *Maintained by: PSI AIMS Special Interest Group*
