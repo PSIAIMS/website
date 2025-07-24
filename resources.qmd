@@ -15,7 +15,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 1. Getting Started with R
+## Getting Started with R
 *Essential resources for newcomers to R and pharmaceutical programming*
 
 - **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**  
@@ -35,7 +35,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 2. Pharmaverse & Admiral {#pharmaverse}
+## Pharmaverse & Admiral {#pharmaverse}
 *Clinical data standards and pharmaceutical-specific R packages*
 
 #### Core Pharmaverse
@@ -72,7 +72,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 3. Regulatory Submissions {#regulatory}
+## Regulatory Submissions {#regulatory}
 *Official guidance and working groups for R-based regulatory submissions*
 
 #### R Consortium Working Groups
@@ -87,7 +87,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 4. Industry Groups {#industry}
+## Industry Groups {#industry}
 *Professional organizations and collaborative initiatives*
 
 #### Professional Organizations
@@ -96,16 +96,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 - **[PHUSE (Pharmaceutical Users Software Exchange)](https://www.phuse.global/)**  
   Leading organization for pharmaceutical statisticians and data professionals.
-
-- **[Links to Resources and Knowledge - PHUSE](https://advance.phuse.global/display/WEL/Links+to+Resources+and+Knowledge)**  
-  Curated collection of pharmaceutical statistical resources.
-
-- **[Available Training for Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Available+Training+for+Open+Source+Technology)**  
-  Training opportunities for open source tools in pharma.
-
-- **[Data Visualisation & Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Data+Visualisation+and+Open+Source+Technology)** ⚠️ **LINK ISSUE**  
-  Best practices for data visualization in regulatory contexts.  
-  *Note: Confluence system may be deprecated. For current PHUSE resources, visit [PHUSE main site](https://www.phuse.global/).*
 
 - **[R/Pharma](https://rinpharma.com/)**  
   Premier conference for R in pharmaceutical development.
@@ -134,7 +124,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 5. Dashboards & Interactive Tools {#dashboards}
+## Dashboards & Interactive Tools {#dashboards}
 *Shiny applications and interactive visualization tools*
 
 #### Shiny Resources
@@ -175,7 +165,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 6. Training & Courses {#training}
+## Training & Courses {#training}
 *Educational resources and structured learning paths*
 
 #### R Learning Resources
@@ -190,10 +180,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Hands On Clinical Reporting Using R - Coursera](https://www.coursera.org/learn/clinical-reporting-r)**  
   Structured course for clinical reporting with R.
 
-- **[PSI Simulation Using the Tidyverse](https://github.com/PSIAIMS/psi-simulation-tidyverse)** ⚠️ **LINK BROKEN**  
-  Simulation techniques using modern R approaches.  
-  *Note: Repository not found (404 error). For current PSI training materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
-
 - **[Remaster the Tidyverse](https://github.com/rstudio-education/remaster-the-tidyverse)**  
   Advanced tidyverse concepts and applications.
 
@@ -201,47 +187,19 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Posit Academy](https://posit.co/products/education/)**  
   Professional R and Python training platform.
 
-- **[edx courses](https://www.edx.org/learn/r-programming)**  
-  University-level R programming courses.
-
-- **[datacamp](https://www.datacamp.com/)**  
-  Interactive R learning platform.
-
-- **[coursera](https://www.coursera.org/learn/r-programming)**  
-  Johns Hopkins R Programming specialization.
-
-- **[MOOC](https://www.mooc-list.com/tags/r-programming)**  
-  Comprehensive list of R programming MOOCs.
-
 #### Learning Materials & Guides
-- **[RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)**  
-  Intermediate skill development resources.
-
-- **[RStudio Education (Experts)](https://education.rstudio.com/learn/expert/)**  
-  Advanced R programming and data science.
-
-- **[RStudio Webinars](https://www.rstudio.com/resources/webinars/)**  
-  Regular webinars on R and data science topics.
 
 ---
 
-## 7. Books & References {#books}
+## Books & References {#books}
 *Essential reading and reference materials*
 
 #### Core R Books
-- **[Books - RStudio](https://www.rstudio.com/resources/books/)** ⚠️ **LINK BROKEN**  
-  Official collection of recommended R books.  
-  *Note: Removed during RStudio → Posit transition. Alternative: [Big Book of R](https://www.bigbookofr.com/).*
-
 - **[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)**  
   Comprehensive guide to R Markdown and reproducible documents.
 
 - **[Welcome | Advanced R](https://adv-r.hadley.nz/)**  
   Deep dive into R programming concepts and best practices.
-
-- **[Posit Recipes (Some tasty R code snippets)](https://docs.posit.co/ide/user/ide/guide/code/code-snippets.html)** ⚠️ **LINK BROKEN**  
-  Practical code examples and techniques.  
-  *Note: URL path incorrect (404 error). Alternative: [Posit Cheatsheets](https://posit.co/resources/cheatsheets/).*
 
 - **[Big Book of R](https://www.bigbookofr.com/)**  
   Massive collection of R learning resources and books.
@@ -277,7 +235,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 8. Data Visualization {#visualization}
+## Data Visualization {#visualization}
 *Charts, graphs, and visual communication resources*
 
 #### Core Visualization Resources
@@ -287,16 +245,8 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[The R Graph Gallery](https://r-graph-gallery.com/)**  
   Extensive collection of R chart examples with code.
 
-- **[R Gallery Book](https://bookdown.org/content/b298e479-b1ab-49fa-b83d-a57c2b034d49/)** ⚠️ **LINK BROKEN**  
-  Comprehensive guide to creating visualizations in R.  
-  *Note: Bookdown URL error. Alternative: [The R Graph Gallery](https://r-graph-gallery.com/) for similar content.*
-
 - **[Data Visualization - A practical introduction](https://socviz.co/)**  
   Excellent combination of visualization theory and R practice.
-
-- **[From data to Viz | Find the graphic you need](https://data-to-viz.com/)** ⚠️ **LINK ISSUE**  
-  Interactive guide to choosing appropriate visualizations.  
-  *Note: WebSocket timeout errors may prevent access. If unavailable, try [Data Visualization Catalogue](https://datavizcatalogue.com/).*
 
 - **[chart-doctor/visual-vocabulary - Financial Times](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary)**  
   Professional visualization standards and guidelines.
@@ -309,15 +259,18 @@ Use the table of contents to navigate to specific areas of interest, or browse t
   Definitive guide to ggplot2 by its creator.
 
 #### Clinical Visualization
-- **[Clinical Graphs and Tables Adhering to Graphical Principles • visR](https://openpharma.github.io/visR/)**  
-  Specialized package for clinical trial visualizations.
-
 - **[TLG Catalog - Stable](https://insightsengineering.github.io/tlg-catalog/stable/)**  
   Tables, listings, and graphs examples for clinical trials.
 
+- **[R Charts - ggplot2 Gallery](https://r-charts.com/ggplot2/)**  
+  Comprehensive ggplot2 examples with code for chart creation.
+
+- **[Data Visualization Catalogue](https://datavizcatalogue.com/)**  
+  Interactive guide to choosing appropriate chart types for your data.
+
 ---
 
-## 9. Tools & Utilities {#tools}
+## Tools & Utilities {#tools}
 *Development tools, utilities, and productivity resources*
 
 #### Development Tools
@@ -330,22 +283,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[R-universe: pharmaverse](https://pharmaverse.r-universe.dev/)**  
   Centralized repository for pharmaceutical R packages.
 
-- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)** ⚠️ **LINK BROKEN**
-  Interactive ggplot2 chart builder.
-  *Note: 502 Bad Gateway error - server appears down. For similar functionality, try installing the esquisse R package locally.*
-
 #### Design & Color Resources
 - **[R colors [Full List, Color Converter and Color Picker]](https://r-charts.com/colors/)**  
   Comprehensive R color reference and tools.
-
-- **[Color Hex - ColorHexa.com](https://www.colorhexa.com/)**  
-  Color information and conversion utilities.
-
-- **[👍 Color Picker online | HEX Color Picker](https://imagecolorpicker.com/)**  
-  Online color picker and palette generator.
-
-- **[Darken Color - mdigi.tools](https://mdigi.tools/darken-color/)**  
-  Simple color adjustment tool.
 
 - **[Coblis — Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)**  
   Test visualizations for color blind accessibility.
@@ -375,14 +315,10 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 10. Examples & Galleries {#examples}
+## Examples & Galleries {#examples}
 *Inspiration and real-world implementations*
 
 #### Application Galleries  
-- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
-  High-quality Shiny applications for inspiration.  
-  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
-
 - **[safetyGraphics (shinyapps.io)](https://jwildfire.shinyapps.io/safetyGraphics/)**  
   Live safety monitoring application example.
 
@@ -390,10 +326,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
   Real-time clinical data monitoring dashboard.
 
 #### Inspiration Resources
-- **[Inspiration | Datylon Report Studio](https://www.datylon.com/gallery)** ⚠️ **LINK BROKEN**  
-  Professional data visualization examples.  
-  *Note: 404 error - page not found. Check site's Resources menu for current gallery location.*
-
 - **[Dataviz Inspiration | Hundreds of chart examples](https://dataviz-inspiration.com/)**  
   Curated collection of exceptional data visualizations.
 
@@ -402,7 +334,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## 11. Conference Materials & Community {#conferences}
+## Conference Materials & Community {#conferences}
 *Conference proceedings, presentations, and educational content*
 
 #### Conference Resources
@@ -412,17 +344,9 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[SAS Proceedings and more (lexjansen.com)](https://www.lexjansen.com/)**  
   Comprehensive archive of pharmaceutical conference proceedings.
 
-- **[Conference Material](https://github.com/PSIAIMS/conference-materials)** ⚠️ **LINK BROKEN**  
-  PSI AIMS conference presentations and materials.  
-  *Note: Repository not found (404 error). For current materials, visit [PSI AIMS website](https://psiaims.github.io/website/).*
-
 #### Community & Learning Content
 - **[Home | RWeekly.org - Blogs to Learn R from the Community](https://rweekly.org/)**  
   Curated weekly newsletter of R developments.
-
-- **[Data Science Learning Community Videos - YouTube](https://www.youtube.com/c/RfortheRestofUs)** ⚠️ **LINK BROKEN**  
-  Educational R content for practical applications.  
-  *Note: Channel moved or discontinued (404 error). For current content, visit [R for the Rest of Us website](https://rfortherestofus.com/).*
 
 - **[Blog - R for the Rest of Us](https://rfortherestofus.com/blog/)**  
   Practical R tutorials and best practices.
@@ -430,27 +354,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Blog | Nicola Rennie](https://nrennie.rbind.io/blog/)**  
   Advanced R programming and data science techniques.
 
-#### News & Media
-- **[R-bloggers](https://www.r-bloggers.com/)**  
-  Aggregated R news and tutorials from the community.
-
-- **[RStudio Blog](https://www.rstudio.com/blog/)**  
-  Official news and updates from RStudio/Posit.
-
-- **[R Views](https://rviews.rstudio.com/)**  
-  RStudio's R community blog.
-
-- **[YouTube](https://www.youtube.com/results?search_query=R+language)**  
-  Video tutorials and presentations on R programming.
-
 ---
-
-## Resource Statistics
-
-- **Total Resources:** 100
-- **Categories:** 10 major areas
-- **Coverage:** Beginner to advanced levels
-- **Focus:** Pharmaceutical and clinical applications
 
 ## Getting Help
 
