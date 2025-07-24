@@ -4,6 +4,7 @@ description: "Comprehensive collection of R resources for pharmaceutical statist
 toc: true
 toc-depth: 3
 page-layout: full
+body-class: "resources-page"
 ---
 
 ## Welcome to the PSI AIMS Resource Hub
@@ -15,21 +16,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 ---
 
 ## Quick Access - Essential Resources
-
-### 🌟 Top Pharmaverse & Clinical Resources
-*Most critical resources for pharmaceutical R development*
-
-- **[pharmaverse main site](https://pharmaverse.org/)**  
-  *Central hub for pharmaceutical R packages and community*
-
-- **[ADaM in R Asset Library • admiral](https://pharmaverse.github.io/admiral/)**  
-  *Core package for Analysis Data Model (ADaM) creation in R*
-
-- **[R Submissions Working Group](https://rconsortium.github.io/submissions-wg/)**  
-  *Official guidance for R-based regulatory submissions*
-
-- **[R for Data Science (2e)](https://r4ds.hadley.nz/)**  
-  *Essential learning resource for R and data science*
 
 ### 🎯 Quick Start for New Users
 - **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**
@@ -59,7 +45,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Vaccine Extension Package for ADaM • admiralvaccine](https://pharmaverse.github.io/admiralvaccine/)**  
   Vaccine trial-specific functionality and standards.
 
-- **[falcon](https://pharmaverse.github.io/falcon/)**  
+- **[falcon](https://pharmaverse.github.io/falcon/)**
   Clinical trial data manipulation and analysis tools.
 
 #### CDISC & Clinical Standards
@@ -69,10 +55,10 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Tables in Clinical Trials with R](https://rconsortium.github.io/rtrs/)**  
   Comprehensive guide for regulatory-grade table creation.
 
-- **[Create Random SDTM and ADAM Datasets • random.cdisc.data](https://insightsengineering.github.io/random.cdisc.data/)**  
+- **[Create Random SDTM and ADAM Datasets • random.cdisc.data](https://insightsengineering.github.io/random.cdisc.data/)**
   Generate realistic test datasets for development and validation.
 
-- **[Analysis Results Data • cards](https://insightsengineering.github.io/cards/)**  
+- **[Analysis Results Data • cards](https://insightsengineering.github.io/cards/)**
   Standardized format for analysis results metadata.
 
 ---
@@ -176,10 +162,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Leaflet + Flexdashboard + DT + Crosstalk](https://matt-dray.github.io/earl18-crosstalk/)**  
   Advanced interactive dashboard techniques.
 
-- **[R Shiny App Gallery - Dashboards and Data Visualizations](https://appsilon.com/demos/)** ⚠️ **LINK BROKEN**  
-  Professional Shiny application examples.  
-  *Note: Page moved (404 error). Alternative: [Appsilon Demo Gallery](https://appsilon.com/shiny-demo-gallery/).*
-
 ---
 
 ### 5. Training & Courses {#training}
@@ -241,9 +223,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[RStudio Webinars](https://www.rstudio.com/resources/webinars/)**  
   Regular webinars on R and data science topics.
 
-- **[R Studio Cheat sheets](https://rstudio.com/resources/cheatsheets/)**  
-  Quick reference guides for R packages.
-
 ---
 
 ### 6. Books & References {#books}
@@ -275,9 +254,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
   Data storytelling and communication techniques.
 
 #### Essential Technical Books
-- **[Advanced R - Hadley Wickham](https://adv-r.hadley.nz/)**  
-  Comprehensive guide to advanced R programming concepts.
-
 - **[R Packages - Hadley Wickham](http://r-pkgs.had.co.nz/)**  
   Complete guide to creating R packages.
 
@@ -348,17 +324,14 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Posit Cloud](https://posit.cloud/)**  
   Cloud-based R and Python development environment.
 
-- **[Cheatsheets - Posit](https://posit.co/resources/cheatsheets/)**  
-  Essential quick reference guides for R packages and concepts.
-
 - **[htmlwidgets for R](https://www.htmlwidgets.org/)**  
   Framework for creating interactive web visualizations.
 
 - **[R-universe: pharmaverse](https://pharmaverse.r-universe.dev/)**  
   Centralized repository for pharmaceutical R packages.
 
-- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)** ⚠️ **LINK BROKEN**  
-  Interactive ggplot2 chart builder.  
+- **[esquisse web app](https://shinyapps.dreamrs.fr/esquisse/)** ⚠️ **LINK BROKEN**
+  Interactive ggplot2 chart builder.
   *Note: 502 Bad Gateway error - server appears down. For similar functionality, try installing the esquisse R package locally.*
 
 #### Design & Color Resources
@@ -478,7 +451,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ## Resource Statistics
 
-- **Total Resources:** 105
+- **Total Resources:** 100
 - **Categories:** 10 major areas
 - **Coverage:** Beginner to advanced levels
 - **Focus:** Pharmaceutical and clinical applications
@@ -493,4 +466,4 @@ For questions about these resources or suggestions for additions:
 ---
 
 *Last Updated: January 2025*  
-*Maintained by: PSI AIMS Special Interest Group* 
+*Maintained by: PSI AIMS Special Interest Group*

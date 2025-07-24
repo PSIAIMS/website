@@ -6,37 +6,70 @@
 .resource-section {
     margin-bottom: 3rem;
     padding: 1.5rem;
-    border-left: 4px solid #BC8F00;
+    border-left: 4px solid #2C5F7C;
     background-color: #f8f9fa;
     border-radius: 0 8px 8px 0;
 }
 
 .resource-section h3 {
     color: #000000;
-    border-bottom: 2px solid #BC8F00;
+    border-bottom: 2px solid #2C5F7C;
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-/* Resource Cards */
-.resource-item {
+/* Resource Cards - ONLY for R Resources page */
+body.resources-page main ul li {
     margin-bottom: 1.5rem;
     padding: 1rem;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-left: 3px solid #BC8F00;
+    border-left: 3px solid #2C5F7C;
     transition: all 0.3s ease;
+    list-style: none;
 }
 
-.resource-item:hover {
+body.resources-page main ul li:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     transform: translateX(5px);
 }
 
+/* Remove default list styling - ONLY for R Resources page */
+body.resources-page main ul {
+    padding-left: 0;
+}
+
+/* Style individual resource items - ONLY for R Resources page */
+body.resources-page main ul li p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+body.resources-page main ul li strong {
+    color: #1a365d;
+    font-weight: 600;
+}
+
+body.resources-page main ul li a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+body.resources-page main ul li a:hover {
+    text-decoration: underline;
+}
+
+body.resources-page main ul li em {
+    color: #555;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
 /* Star Ratings */
 .star-rating {
-    color: #BC8F00;
+    color: #2C5F7C;
     font-size: 1rem;
     margin-right: 0.5rem;
     font-weight: bold;
@@ -56,7 +89,7 @@
 
 /* Quick Access Section */
 .quick-access {
-    background: linear-gradient(135deg, #BC8F00 0%, #000000 100%);
+    background: linear-gradient(135deg, #2C5F7C 0%, #5AC8DB 100%);
     color: white;
     padding: 2rem;
     border-radius: 12px;
@@ -76,7 +109,7 @@
 }
 
 .quick-access a:hover {
-    color: #BC8F00;
+    color: #2C5F7C;
     background-color: white;
     padding: 2px 6px;
     border-radius: 4px;
@@ -85,7 +118,7 @@
 
 /* Resource Categories */
 .category-header {
-    background: linear-gradient(90deg, #000000 0%, #BC8F00 100%);
+    background: linear-gradient(90deg, #2C5F7C 0%, #5AC8DB 100%);
     color: white;
     padding: 1rem 1.5rem;
     margin: 2rem 0 1rem 0;
@@ -99,7 +132,7 @@
     color: #666;
     margin-bottom: 1.5rem;
     padding-left: 1rem;
-    border-left: 3px solid #BC8F00;
+    border-left: 3px solid #2C5F7C;
 }
 
 /* Responsive Design */
@@ -145,7 +178,7 @@
 
 /* Accessibility Enhancements */
 .resource-item:focus-within {
-    outline: 2px solid #BC8F00;
+    outline: 2px solid #2C5F7C;
     outline-offset: 2px;
 }
 
@@ -159,7 +192,7 @@
 }
 
 .resource-item a:hover {
-    border-bottom-color: #BC8F00;
+    border-bottom-color: #2C5F7C;
 }
 
 /* Statistics section */
@@ -173,13 +206,13 @@
 
 .resource-stats h2 {
     color: #000;
-    border-bottom: 2px solid #BC8F00;
+    border-bottom: 2px solid #2C5F7C;
     padding-bottom: 0.5rem;
 }
 
 /* Contact section styling */
 .contact-section {
-    background: linear-gradient(135deg, #000000 0%, #BC8F00 100%);
+    background: linear-gradient(135deg, #2C5F7C 0%, #5AC8DB 100%);
     color: white;
     padding: 2rem;
     border-radius: 12px;
@@ -196,20 +229,23 @@
     font-weight: 600;
 }
 
-/* Broken Link Warning Styling */
-.resource-item:has([href*="⚠️"]) {
+/* Broken Link Warning Styling - ONLY for R Resources page */
+body.resources-page main ul li:has(strong:contains("LINK BROKEN")), 
+body.resources-page main ul li:has(strong:contains("LINK ISSUE")) {
     border-left-color: #dc3545;
     background-color: #fff5f5;
 }
 
-/* Broken link warning text styling */
-strong:contains("⚠️") {
+/* Broken link warning text styling - ONLY for R Resources page */
+body.resources-page strong:contains("⚠️"),
+body.resources-page strong:contains("LINK BROKEN"),
+body.resources-page strong:contains("LINK ISSUE") {
     color: #dc3545;
     font-weight: 700;
 }
 
-/* Note styling for broken links */
-em:contains("Note:") {
+/* Note styling for broken links - ONLY for R Resources page */
+body.resources-page em:contains("Note:") {
     color: #666;
     font-size: 0.9rem;
     font-style: italic;
@@ -219,6 +255,41 @@ em:contains("Note:") {
     background-color: #f8f9fa;
     border-radius: 4px;
     border-left: 3px solid #dc3545;
+}
+
+/* Enhanced styling for broken link entries - ONLY for R Resources page */
+body.resources-page main ul li strong[href*="⚠️"],
+body.resources-page main ul li strong:contains("LINK BROKEN"),
+body.resources-page main ul li strong:contains("LINK ISSUE") {
+    background-color: #fef2f2;
+    border: 1px solid #dc3545;
+    border-radius: 4px;
+    padding: 2px 6px;
+    display: inline-block;
+}
+
+/* Warning icon styling - ONLY for R Resources page */
+body.resources-page main ul li:contains("⚠️") {
+    border-left-color: #dc3545 !important;
+    background-color: #fff5f5 !important;
+}
+
+/* Alternative link styling - ONLY for R Resources page */
+body.resources-page main ul li em a {
+    color: #0066cc;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Better note formatting for broken links - ONLY for R Resources page */
+body.resources-page main ul li em:contains("Note:") {
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border-left: 3px solid #6c757d;
+    margin-top: 0.5rem;
+    display: block;
+    font-size: 0.9rem;
 }
 a.white-color {
     color: white;
