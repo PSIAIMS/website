@@ -18,54 +18,29 @@
     margin-bottom: 1.5rem;
 }
 
-/* Resource Cards - ONLY for R Resources page */
-body.resources-page main ul li {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
+/* Resource Cards - Only for wrapped resource lists */
+.resource-list ul li {
     background: white;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-left: 3px solid #2C5F7C;
-    transition: all 0.3s ease;
+    border-left: 4px solid #2C5F7C;
     list-style: none;
+    transition: all 0.3s ease;
 }
 
-body.resources-page main ul li:hover {
+.resource-list ul li:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
-/* Remove default list styling - ONLY for R Resources page */
-body.resources-page main ul {
+.resource-list ul {
     padding-left: 0;
 }
 
-/* Style individual resource items - ONLY for R Resources page */
-body.resources-page main ul li p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
-}
 
-body.resources-page main ul li strong {
-    color: #1a365d;
-    font-weight: 600;
-}
-
-body.resources-page main ul li a {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-body.resources-page main ul li a:hover {
-    text-decoration: underline;
-}
-
-body.resources-page main ul li em {
-    color: #555;
-    font-style: italic;
-    font-size: 0.95rem;
-}
 
 /* Star Ratings */
 .star-rating {
@@ -135,6 +110,8 @@ body.resources-page main ul li em {
     border-left: 3px solid #2C5F7C;
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .resource-section {
@@ -142,7 +119,7 @@ body.resources-page main ul li em {
         margin-bottom: 2rem;
     }
     
-    .resource-item {
+    .resource-list ul li {
         padding: 0.8rem;
         margin-bottom: 1rem;
     }
@@ -159,7 +136,7 @@ body.resources-page main ul li em {
 
 /* Print Styles */
 @media print {
-    .resource-item {
+    .resource-list ul li {
         break-inside: avoid;
         box-shadow: none;
         border: 1px solid #ccc;
@@ -177,7 +154,7 @@ body.resources-page main ul li em {
 }
 
 /* Accessibility Enhancements */
-.resource-item:focus-within {
+.resource-list ul li:focus-within {
     outline: 2px solid #2C5F7C;
     outline-offset: 2px;
 }
@@ -229,68 +206,7 @@ body.resources-page main ul li em {
     font-weight: 600;
 }
 
-/* Broken Link Warning Styling - ONLY for R Resources page */
-body.resources-page main ul li:has(strong:contains("LINK BROKEN")), 
-body.resources-page main ul li:has(strong:contains("LINK ISSUE")) {
-    border-left-color: #dc3545;
-    background-color: #fff5f5;
-}
 
-/* Broken link warning text styling - ONLY for R Resources page */
-body.resources-page strong:contains("⚠️"),
-body.resources-page strong:contains("LINK BROKEN"),
-body.resources-page strong:contains("LINK ISSUE") {
-    color: #dc3545;
-    font-weight: 700;
-}
-
-/* Note styling for broken links - ONLY for R Resources page */
-body.resources-page em:contains("Note:") {
-    color: #666;
-    font-size: 0.9rem;
-    font-style: italic;
-    display: block;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    background-color: #f8f9fa;
-    border-radius: 4px;
-    border-left: 3px solid #dc3545;
-}
-
-/* Enhanced styling for broken link entries - ONLY for R Resources page */
-body.resources-page main ul li strong[href*="⚠️"],
-body.resources-page main ul li strong:contains("LINK BROKEN"),
-body.resources-page main ul li strong:contains("LINK ISSUE") {
-    background-color: #fef2f2;
-    border: 1px solid #dc3545;
-    border-radius: 4px;
-    padding: 2px 6px;
-    display: inline-block;
-}
-
-/* Warning icon styling - ONLY for R Resources page */
-body.resources-page main ul li:contains("⚠️") {
-    border-left-color: #dc3545 !important;
-    background-color: #fff5f5 !important;
-}
-
-/* Alternative link styling - ONLY for R Resources page */
-body.resources-page main ul li em a {
-    color: #0066cc;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-/* Better note formatting for broken links - ONLY for R Resources page */
-body.resources-page main ul li em:contains("Note:") {
-    background-color: #f8f9fa;
-    padding: 0.5rem;
-    border-radius: 4px;
-    border-left: 3px solid #6c757d;
-    margin-top: 0.5rem;
-    display: block;
-    font-size: 0.9rem;
-}
 a.white-color {
     color: white;
     font-family: Verdana;
