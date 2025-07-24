@@ -15,18 +15,27 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-## Quick Access - Essential Resources
+## 1. Getting Started with R
+*Essential resources for newcomers to R and pharmaceutical programming*
 
-### 🎯 Quick Start for New Users
-- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**
-- **[Introduction to R for SAS programmers](https://pharmaverse.github.io/r-sas/)**
-- **[Cheatsheets - Posit](https://posit.co/resources/cheatsheets/)**
+- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**  
+  Beginner-friendly learning path from RStudio.
+
+- **[Introduction to R for SAS programmers](https://pharmaverse.github.io/r-sas/)**  
+  Targeted resource for SAS users learning R.
+
+- **[Cheatsheets - Posit](https://posit.co/resources/cheatsheets/)**  
+  Essential quick reference guides for R packages and concepts.
+
+- **[R for Data Science (2e)](https://r4ds.hadley.nz/)**  
+  Essential modern introduction to R and data science.
+
+- **[Data Science in a Box - Welcome](https://datasciencebox.org/)**  
+  Complete data science course materials and structure.
 
 ---
 
-## Resource Categories
-
-### 1. Pharmaverse & Admiral {#pharmaverse}
+## 2. Pharmaverse & Admiral {#pharmaverse}
 *Clinical data standards and pharmaceutical-specific R packages*
 
 #### Core Pharmaverse
@@ -63,8 +72,8 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 2. Regulatory Submissions {#regulatory}
-*Resources for R-based regulatory submissions and compliance*
+## 3. Regulatory Submissions {#regulatory}
+*Official guidance and working groups for R-based regulatory submissions*
 
 #### R Consortium Working Groups
 - **[R Submissions Working Group - Introduction](https://rconsortium.github.io/submissions-wg/)**  
@@ -76,7 +85,18 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[RConsortium/rtrs-wg: R Tables for Regulatory Submissions](https://github.com/RConsortium/rtrs-wg)**  
   Working group focused on regulatory-compliant table creation.
 
-#### PHUSE Resources
+---
+
+## 4. Industry Groups {#industry}
+*Professional organizations and collaborative initiatives*
+
+#### Professional Organizations
+- **[PSI AIMS SIG Website](https://psiaims.github.io/website/)**  
+  Home of the PSI Application and Implementation of Medical Statistics group.
+
+- **[PHUSE (Pharmaceutical Users Software Exchange)](https://www.phuse.global/)**  
+  Leading organization for pharmaceutical statisticians and data professionals.
+
 - **[Links to Resources and Knowledge - PHUSE](https://advance.phuse.global/display/WEL/Links+to+Resources+and+Knowledge)**  
   Curated collection of pharmaceutical statistical resources.
 
@@ -86,15 +106,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[Data Visualisation & Open Source Technology - PHUSE](https://advance.phuse.global/display/WEL/Data+Visualisation+and+Open+Source+Technology)** ⚠️ **LINK ISSUE**  
   Best practices for data visualization in regulatory contexts.  
   *Note: Confluence system may be deprecated. For current PHUSE resources, visit [PHUSE main site](https://www.phuse.global/).*
-
----
-
-### 3. Industry Groups {#industry}
-*Professional organizations and collaborative initiatives*
-
-#### Professional Organizations
-- **[PSI AIMS SIG Website](https://psiaims.github.io/website/)**  
-  Home of the PSI Application and Implementation of Medical Statistics group.
 
 - **[R/Pharma](https://rinpharma.com/)**  
   Premier conference for R in pharmaceutical development.
@@ -123,7 +134,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 4. Dashboards & Interactive Tools {#dashboards}
+## 5. Dashboards & Interactive Tools {#dashboards}
 *Shiny applications and interactive visualization tools*
 
 #### Shiny Resources
@@ -164,18 +175,10 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 5. Training & Courses {#training}
+## 6. Training & Courses {#training}
 *Educational resources and structured learning paths*
 
 #### R Learning Resources
-- **[R for Data Science (2e)](https://r4ds.hadley.nz/)**  
-  Essential modern introduction to R and data science.
-
-- **[Introduction to R for SAS programmers](https://pharmaverse.github.io/r-sas/)**  
-  Targeted resource for SAS users learning R.
-
-- **[Data Science in a Box - Welcome](https://datasciencebox.org/)**  
-  Complete data science course materials and structure.
 
 - **[R Adoption Series - YouTube](https://www.youtube.com/playlist?list=PLMtxz1fUYA5C0d8dSE_D7PLF2p-wJrXKq)**  
   Video series on R adoption in pharmaceutical settings.
@@ -211,9 +214,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
   Comprehensive list of R programming MOOCs.
 
 #### Learning Materials & Guides
-- **[RStudio Education (Beginners)](https://education.rstudio.com/learn/beginner/)**  
-  Beginner-friendly learning path from RStudio.
-
 - **[RStudio Education (Intermediates)](https://education.rstudio.com/learn/intermediate/)**  
   Intermediate skill development resources.
 
@@ -225,7 +225,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 6. Books & References {#books}
+## 7. Books & References {#books}
 *Essential reading and reference materials*
 
 #### Core R Books
@@ -277,7 +277,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 7. Data Visualization {#visualization}
+## 8. Data Visualization {#visualization}
 *Charts, graphs, and visual communication resources*
 
 #### Core Visualization Resources
@@ -317,7 +317,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 8. Tools & Utilities {#tools}
+## 9. Tools & Utilities {#tools}
 *Development tools, utilities, and productivity resources*
 
 #### Development Tools
@@ -360,12 +360,22 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 - **[GitHub - philbowsher/Clinical-Tables-in-R-with-gt](https://github.com/philbowsher/Clinical-Tables-in-R-with-gt)**  
   Creating regulatory-grade tables with the gt package.
 
-- **[Additional Beginner Resources](02R-tist.qmd)**  
+- **[Additional Beginner Resources](http://localhost:4200/02R-tist.html)**  
   More beginner-friendly resources and learning paths.
+
+#### Modern Publishing & Documentation
+- **[Quarto - Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)**  
+  Essential guide for modern scientific publishing.
+
+- **[Quarto - Document Listings](https://quarto.org/docs/websites/website-listings.html)**  
+  Creating dynamic website content with Quarto.
+
+- **[mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)**  
+  Comprehensive collection of Quarto resources.
 
 ---
 
-### 9. Examples & Galleries {#examples}
+## 10. Examples & Galleries {#examples}
 *Inspiration and real-world implementations*
 
 #### Application Galleries  
@@ -392,7 +402,7 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 ---
 
-### 10. Conference Materials & Community {#conferences}
+## 11. Conference Materials & Community {#conferences}
 *Conference proceedings, presentations, and educational content*
 
 #### Conference Resources
@@ -432,20 +442,6 @@ Use the table of contents to navigate to specific areas of interest, or browse t
 
 - **[YouTube](https://www.youtube.com/results?search_query=R+language)**  
   Video tutorials and presentations on R programming.
-
----
-
-## Additional Specialized Resources
-
-### Quarto & Modern Publishing
-- **[Quarto - Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)**  
-  Essential guide for modern scientific publishing.
-
-- **[Quarto - Document Listings](https://quarto.org/docs/websites/website-listings.html)**  
-  Creating dynamic website content with Quarto.
-
-- **[mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)**  
-  Comprehensive collection of Quarto resources.
 
 ---
 
