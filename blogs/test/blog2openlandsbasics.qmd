@@ -141,7 +141,7 @@ The tidyverse is a collection of packages designed to work together harmoniously
 -	tibble: Modern data frames
 Example of tidyverse syntax:
 
-```{r}
+```r
 # Base R approach
 subset(data, Age > 18)[, c("PatientID", "Treatment")]
 
@@ -170,7 +170,7 @@ Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so
 # Quick Start: Your First 5 Minutes with R
 Let's walk through a complete example from installation to visualization. We'll analyse some survival data using just the essentials:
 
-```{r}
+```r
 # 1. Install and load just what we need
 install.packages(c("dplyr", "ggplot2", "survival"))  # Only needed once
 library(dplyr)              
