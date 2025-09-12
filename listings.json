@@ -1,5 +1,14 @@
 [
   {
+    "listing": "/news.html",
+    "items": [
+      "/posts/test/ChgManSDEJul25.html",
+      "/posts/test/CAMIS2023.html",
+      "/posts/test/index.html",
+      "/posts/test/FDApilot3.html"
+    ]
+  },
+  {
     "listing": "/minutes.html",
     "items": [
       "/minutes/2024-03-15/index.html",
@@ -10,16 +19,8 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blogs/test/blog2openlandsbasics.html",
       "/blogs/test/openskillintro.html"
-    ]
-  },
-  {
-    "listing": "/news.html",
-    "items": [
-      "/posts/test/ChgManSDEJul25.html",
-      "/posts/test/CAMIS2023.html",
-      "/posts/test/index.html",
-      "/posts/test/FDApilot3.html"
     ]
   }
 ]

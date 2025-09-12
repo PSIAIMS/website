@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="PSI AIMS">
-<meta name="dcterms.date" content="2025-05-13">
+<meta name="dcterms.date" content="2025-08-15">
 
-<title>Why Open-Source Skills are Important – PSI AIMS SIG Website</title>
+<title>Open-Source Landscapes Basics – PSI AIMS SIG Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -133,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Why Open-Source Skills are Important</h1>
+      <h1 class="title">Open-Source Landscapes Basics</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Open-Source Skills</div>
               </div>
@@ -153,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 13, 2025</p>
+        <p class="date">August 15, 2025</p>
       </div>
     </div>
     
@@ -169,11 +204,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#what-do-open-source-skills-bring" id="toc-what-do-open-source-skills-bring" class="nav-link" data-scroll-target="#what-do-open-source-skills-bring">What do open-source skills bring?</a></li>
-  <li><a href="#where-do-i-begin" id="toc-where-do-i-begin" class="nav-link" data-scroll-target="#where-do-i-begin">Where do I begin?!</a></li>
-  <li><a href="#introducing-open-source-skills" id="toc-introducing-open-source-skills" class="nav-link" data-scroll-target="#introducing-open-source-skills">Introducing Open Source Skills</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#r-introduction" id="toc-r-introduction" class="nav-link active" data-scroll-target="#r-introduction">R Introduction</a></li>
+  <li><a href="#cran-the-comprehensive-r-archive-network---httpscran.r-project.org" id="toc-cran-the-comprehensive-r-archive-network---httpscran.r-project.org" class="nav-link" data-scroll-target="#cran-the-comprehensive-r-archive-network---httpscran.r-project.org">CRAN – the Comprehensive R Archive Network - https://cran.r-project.org/</a></li>
+  <li><a href="#packages-and-dependencies" id="toc-packages-and-dependencies" class="nav-link" data-scroll-target="#packages-and-dependencies">Packages and Dependencies</a></li>
+  <li><a href="#other-open-source-languages" id="toc-other-open-source-languages" class="nav-link" data-scroll-target="#other-open-source-languages">Other Open-Source Languages</a></li>
+  <li><a href="#integrated-development-environments-ides" id="toc-integrated-development-environments-ides" class="nav-link" data-scroll-target="#integrated-development-environments-ides">Integrated Development Environments (IDEs)</a></li>
+  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
+  <li><a href="#rstudio-desktop" id="toc-rstudio-desktop" class="nav-link" data-scroll-target="#rstudio-desktop">RStudio Desktop</a></li>
+  <li><a href="#posit-workbench" id="toc-posit-workbench" class="nav-link" data-scroll-target="#posit-workbench">Posit Workbench</a></li>
+  <li><a href="#alternative-ides" id="toc-alternative-ides" class="nav-link" data-scroll-target="#alternative-ides">Alternative IDEs</a></li>
+  <li><a href="#popular-packages" id="toc-popular-packages" class="nav-link" data-scroll-target="#popular-packages">Popular Packages</a></li>
+  <li><a href="#tidyverse-modern-data-science-tools-httpswww.tidyverse.org" id="toc-tidyverse-modern-data-science-tools-httpswww.tidyverse.org" class="nav-link" data-scroll-target="#tidyverse-modern-data-science-tools-httpswww.tidyverse.org">Tidyverse: Modern Data Science Tools – https://www.tidyverse.org/</a></li>
+  <li><a href="#pharmaverse-industry-specific-tools-httpspharmaverse.org" id="toc-pharmaverse-industry-specific-tools-httpspharmaverse.org" class="nav-link" data-scroll-target="#pharmaverse-industry-specific-tools-httpspharmaverse.org">Pharmaverse: Industry-Specific Tools – https://pharmaverse.org/</a></li>
+  <li><a href="#quick-start-your-first-5-minutes-with-r" id="toc-quick-start-your-first-5-minutes-with-r" class="nav-link" data-scroll-target="#quick-start-your-first-5-minutes-with-r">Quick Start: Your First 5 Minutes with R</a></li>
+  <li><a href="#quick-start-tips" id="toc-quick-start-tips" class="nav-link" data-scroll-target="#quick-start-tips">Quick Start Tips:</a></li>
+  <li><a href="#further-reading-and-links" id="toc-further-reading-and-links" class="nav-link" data-scroll-target="#further-reading-and-links">Further Reading and Links</a></li>
   </ul>
 </nav>
     </div>
@@ -184,54 +229,209 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>In a pharmaceutical industry that is rapidly changing and evolving, there can be many reactions to open-source, from worry and fear on the one side, to over-excitement and ‘jumping on the band-wagon’ on the other. The aim of this blog post and others throughout the year from the PSI AIMS SIG is to show that open-source skills are important. They can increase your work efficiencies and enhance your career, whatever type of statistician or data scientist you are! Therefore, we will be presenting a range of essential skills and foundational concepts in a clear and accessible manner through these blog posts.</p>
-</section>
-<section id="what-do-open-source-skills-bring" class="level1">
-<h1>What do open-source skills bring?</h1>
-<p>Open-source is a positive shift in mindset challenging the status quo incorporating the following traits:</p>
-<ul>
-<li>Faster innovation</li>
-<li>Increased efficiency</li>
-<li>Modular, build-and-extend models</li>
-<li>Better collaboration</li>
-<li>Standardised test frameworks</li>
-<li>Continuous arrival of new methods and tools being written</li>
-</ul>
-<p>But this does not mean that every statistician needs to become a software engineer! A natural misconception with a new coding language, is that you need to become a deep expert of all its aspects, to use it effectively. In fact, the big positive of open-source is that many different types of people can use it effectively, in small and large ways, effectively leaning on each other - “Standing on the shoulders of giants”!. The following Venn diagram picks out 3 main ‘statistician’ types:</p>
+<section id="r-introduction" class="level1">
+<h1>R Introduction</h1>
+<p>What is R? – https://www.r-project.org/</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../../images/openskillsstattypes.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+<p><img src="../../images/RLogo.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>R is a powerful programming language and environment specifically designed for statistical computing and graphics. Born in the halls of academia in 1993, it has evolved into an essential tool in the statistical world, especially for clinical research. Think of R as your statistical workshop where:</p>
+<ul>
+<li>You can perform sophisticated statistical analyses, from traditional hypothesis testing to cutting-edge adaptive designs</li>
+<li>Create publication-quality graphics with precise control over every visual element</li>
+<li>Handle data of any size or structure with elegant efficiency</li>
+<li>Automate repetitive tasks with custom functions</li>
+<li>Share and collaborate through reproducible code</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/openblog2p2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>What makes R special is its modular framework and extensibility—it’s like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly. Did You Know? 📝 R was named after its creators’ first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.</p>
+</section>
+<section id="cran-the-comprehensive-r-archive-network---httpscran.r-project.org" class="level1">
+<h1>CRAN – the Comprehensive R Archive Network - https://cran.r-project.org/</h1>
+<p>Your one-stop package shop!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/openblog2p3.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>CRAN is the treasure trove of over 22,000 packages that extend R’s capabilities in a multitude of ways – statistical, graphical, AI, computational.</p>
+<ul>
+<li>Want to analyze time-to-event data? There are packages for that</li>
+<li>Looking to design adaptive clinical trials? Covered</li>
+<li>Looking to build machine learning models? Take your pick</li>
+</ul>
+</section>
+<section id="packages-and-dependencies" class="level1">
+<h1>Packages and Dependencies</h1>
+<p>R packages are like LEGO blocks—they snap together to build something amazing. Here’s what you need to know:</p>
+<ul>
+<li>Packages are collections of R functions, data, and code</li>
+<li>Dependencies are packages that need to be installed for your package to work</li>
+<li>Installation can be as simple as: install.packages(“package_name”) and dependencies will install automatically</li>
+</ul>
+</section>
+<section id="other-open-source-languages" class="level1">
+<h1>Other Open-Source Languages</h1>
+<p>While R excels in statistical computing and is the main open-source language currently being used in the industry, there are others:</p>
+<ul>
+<li>Python: Used extensively for machine learning, artificial intelligence, and deep learning applications. Popular for mathematics courses, processing real-world evidence data, natural language processing of medical texts, and developing prediction models for patient outcomes.</li>
+<li>Julia: A high-performance language specifically designed for numerical and scientific computing. Gaining traction in clinical trial simulations and complex mathematical modeling due to its exceptional speed, particularly useful for large-scale clinical trial simulations and pharmacometric analyses.</li>
+<li>JavaScript: Powers interactive applications and dashboards for clinical trial data visualization. Essential for creating dynamic, web-based reporting tools and interactive safety monitoring displays. Often used with R Shiny applications to enhance user interfaces.</li>
+<li>HTML: The foundation for web-based tasks. Essential for creating structured, accessible documentation that can be easily shared across organizations.</li>
+</ul>
+</section>
+<section id="integrated-development-environments-ides" class="level1">
+<h1>Integrated Development Environments (IDEs)</h1>
+<p>An Integrated Development Environment (IDE) is like a sophisticated text editor specifically designed for writing code. Instead of just typing R commands into a basic console, an IDE provides a complete workspace with helpful features like syntax highlighting (coloring your code for readability), error checking, code completion, and integrated help. Think of it as the difference between writing in a basic notepad versus using a modern word processor with spell check, formatting, and other helpful tools. The right IDE can significantly improve your coding efficiency and help maintain good programming practices. It brings together all the tools you need - code editor, R console, file management, and visualization tools - into one organized interface.</p>
+</section>
+<section id="rstudio" class="level1">
+<h1>RStudio</h1>
+<p>RStudio is the most widely used IDE for R programming in the pharmaceutical industry.</p>
+</section>
+<section id="rstudio-desktop" class="level1">
+<h1>RStudio Desktop</h1>
+<p>The free version of RStudio provides all essential features: - Code editor with syntax highlighting - R console for immediate output - Environment pane showing your data and objects - Output panes for plots, files, packages, and help - Project management capabilities - Built-in Git integration</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/openblog2p4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="where-do-i-begin" class="level1">
-<h1>Where do I begin?!</h1>
-<p>Whatever type of statistician you are, you can benefit from understanding the basics of various skills, concepts and terms. As everything is moving forward quickly and there is an abundance of ‘google’ knowledge, it is hard to know where to start. We want to help you, through provision of these blogs!</p>
+<section id="posit-workbench" class="level1">
+<h1>Posit Workbench</h1>
+<p>The paid, enterprise version of RStudio is tailored for collaboration and scalability:</p>
+<p>Key Benefits: - Centralized &amp; Secure: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers - Collaboration: Multiple team members can work on the same projects and share code easily - Control: IT departments can manage: - Who has access to what - Which R versions and packages are available - Where data and code are stored - How resources (memory, CPU) are allocated</p>
 </section>
-<section id="introducing-open-source-skills" class="level1">
-<h1>Introducing Open Source Skills</h1>
-<p>Over this series of blog posts, we will look at and introduce you to some key areas:</p>
-<ol type="1">
-<li>Open source landscape basics (R version, IDEs, package versions, terms, different setups, lots can change)</li>
-<li>How do I find / review packages?</li>
-<li>Popular open-source stats resources (CAMIS, Pharmaverse, AIMS, Openstatsware etc.)</li>
-<li>Good coding practices (style guides)</li>
-<li>Collaborating with people on packages (CRAN email, GitHub intro)</li>
-<li>How to file a GitHub issue</li>
-<li>How to carry out a GitHub pull request</li>
-<li>Containers introduction</li>
-<li>Parallelization – what is the minimum amount I need to understand about the system to be successful?</li>
-</ol>
+<section id="alternative-ides" class="level1">
+<h1>Alternative IDEs</h1>
+<p>Other IDEs are available and may be useful depending on your needs. Here are some examples:</p>
+<ul>
+<li>Visual Studio Code</li>
+<li>Modern interface</li>
+<li>Supports multiple programming languages</li>
+<li>Strong debugging tools</li>
+<li>Jupyter Notebook</li>
+<li>Document-style analysis</li>
+<li>Combines code and documentation</li>
+<li>Popular for sharing analytical work</li>
+<li>Posit Positron</li>
+<li>New desktop IDE from Posit</li>
+<li>Modern, lightweight alternative to RStudio Desktop</li>
+<li>Built on VS Code technology</li>
+<li>Supports both R and Python</li>
+<li>Currently in early adoption phase</li>
+</ul>
 </section>
-<section id="conclusion" class="level1">
-<h1>Conclusion</h1>
-<p>Open-source skills are a crucial asset in the pharmaceutical industry, offering a wealth of opportunities to enhance your work day and career. Regardless of your role—whether you’re a project statistician, statistical data scientist, or methodologist—embracing open-source software can lead to faster innovation, better collaboration, and a continuous influx of new methods and tools. Stay tuned for our upcoming blog posts, where we’ll dive deeper into the open-source landscape basics, share practical tips for finding and using packages, and guide you through essential coding practices. You’ll learn how to collaborate effectively, contribute to the community, and leverage these tools to drive your projects forward. Get ready to unlock the full potential of open-source skills and transform the way you work! </p>
+<section id="popular-packages" class="level1">
+<h1>Popular Packages</h1>
+<p>So you have R in the R Studio IDE, let’s introduce some essential packages to start your journey. ## Base R: Your Foundation Base R comes pre-installed with your R installation and includes fundamental tools for: - Data structures (vectors, matrices, data frames) - Basic statistical functions (mean, median, linear regression) - Simple plotting capabilities - File input/output operations See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS). While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.</p>
+</section>
+<section id="tidyverse-modern-data-science-tools-httpswww.tidyverse.org" class="level1">
+<h1>Tidyverse: Modern Data Science Tools – https://www.tidyverse.org/</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/openblog2p5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include: - dplyr: Data manipulation (filter, sort, summarize) - ggplot2: Creating professional graphics - tidyr: Data cleaning and reshaping - haven: SAS data import - tibble: Modern data frames Example of tidyverse syntax:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R approach</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(data, Age <span class="sc">&gt;</span> <span class="dv">18</span>)[, <span class="fu">c</span>(<span class="st">"PatientID"</span>, <span class="st">"Treatment"</span>)]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Tidyverse approach</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Age <span class="sc">&gt;</span> <span class="dv">18</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(PatientID, Treatment)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="pharmaverse-industry-specific-tools-httpspharmaverse.org" class="level1">
+<h1>Pharmaverse: Industry-Specific Tools – https://pharmaverse.org/</h1>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../images/openblog2p6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples: - admiral: ADaM dataset creation following CDISC standards - ggsurvfit: Publication-ready survival plots and time-to-event analyses - riskmetric: Risk assessment and validation of R packages - logrx: Standardized logging for clinical trial analysis These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability. Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.</p>
+</section>
+<section id="quick-start-your-first-5-minutes-with-r" class="level1">
+<h1>Quick Start: Your First 5 Minutes with R</h1>
+<p>Let’s walk through a complete example from installation to visualization. We’ll analyse some survival data using just the essentials:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Install and load just what we need</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"dplyr"</span>, <span class="st">"ggplot2"</span>, <span class="st">"survival"</span>))  <span class="co"># Only needed once</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)              </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)            </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)           </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Get some example data (built into survival package)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>?lung                       <span class="co"># Information on survival data from a cancer study</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lung)                  <span class="co"># Quick look at first few rows</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Simple analysis: Calculate median survival time by sex</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>lung_analysis <span class="ot">&lt;-</span> lung <span class="sc">%&gt;%</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">sex =</span> <span class="fu">factor</span>(sex, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Male"</span>, <span class="st">"Female"</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">median_time =</span> <span class="fu">median</span>(time, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Create a simple survival plot</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lung, <span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> status, <span class="at">color =</span> <span class="fu">factor</span>(sex))) <span class="sc">+</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">"Survival Status by Time"</span>, <span class="at">x =</span> <span class="st">"Time (days)"</span>, <span class="at">y =</span> <span class="st">"Status"</span> )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="quick-start-tips" class="level1">
+<h1>Quick Start Tips:</h1>
+<ul>
+<li>✅ Start RStudio</li>
+<li>✅ Copy this code into a new script</li>
+<li>✅ Run each section using Ctrl+Enter (Cmd+Enter on Mac)</li>
+<li>✅ Save your script (File &gt; Save As…) Common First-Time Issues:</li>
+<li>❌ Make sure to run library() after installation</li>
+<li>❌ Watch for typos - R is case-sensitive That’s it! You’ve just completed your first R analysis. From here, you can explore more packages as needed.</li>
+</ul>
+</section>
+<section id="further-reading-and-links" class="level1">
+<h1>Further Reading and Links</h1>
+<ul>
+<li><p>Further Reading: “R for Data Science” by Hadley Wickham &amp; Garrett Grolemund</p></li>
+<li><p>Essential guide for modern R programming</p></li>
+<li><p>Free online: https://r4ds.hadley.nz/</p></li>
+<li><p>Links:</p></li>
+<li><p>https://www.r-project.org/</p></li>
+<li><p>https://cran.r-project.org/</p></li>
+<li><p>https://posit.co/download/rstudio-desktop/</p></li>
+<li><p>https://www.tidyverse.org/</p></li>
+<li><p>https://pharmaverse.org/</p></li>
+</ul>
 
 
 </section>
