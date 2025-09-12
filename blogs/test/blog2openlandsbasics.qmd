@@ -6,13 +6,13 @@ author:
 
 date: 8-15-2025
 categories: [Open-Source Skills] # self-defined categories
-draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
 # R Introduction
-What is R? – https://www.r-project.org/
+What is R? – `[R: The R Project for Statistical Computing](https://www.r-project.org/)`
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, fig.align='center', out.width="10%"}
 knitr::include_graphics("../../images/RLogo.png")
 ```
 
