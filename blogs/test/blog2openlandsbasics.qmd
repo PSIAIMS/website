@@ -13,7 +13,7 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 What is R? – https://www.r-project.org/
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/RLogo.png")
 ```
 
 R is a powerful programming language and environment specifically designed for statistical computing and graphics. Born in the halls of academia in 1993, it has evolved into an essential tool in the statistical world, especially for clinical research.
@@ -26,7 +26,7 @@ Think of R as your statistical workshop where:
 -	Share and collaborate through reproducible code
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/openblogp2.png")
 ```
 
 What makes R special is its modular framework and extensibility—it's like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.
@@ -37,7 +37,7 @@ Did You Know? 📝 R was named after its creators' first initials (Ross Ihaka an
 Your one-stop package shop!
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/openblogp3.png")
 ```
 
 CRAN is the treasure trove of over 22,000 packages that extend R’s capabilities in a multitude of ways – statistical, graphical, AI, computational.
@@ -82,7 +82,7 @@ The free version of RStudio provides all essential features:
 -	Built-in Git integration
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/openblogp4.png")
 ```
 
 # Posit Workbench
@@ -130,7 +130,7 @@ While Base R is powerful, modern R programming often relies on additional packag
 # Tidyverse: Modern Data Science Tools – https://www.tidyverse.org/
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/openblogp5.png")
 ```
 
 The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include:
@@ -141,13 +141,22 @@ The tidyverse is a collection of packages designed to work together harmoniously
 -	tibble: Modern data frames
 Example of tidyverse syntax:
 
-CODE TO GO HERE
+```{r}
+# Base R approach
+subset(data, Age > 18)[, c("PatientID", "Treatment")]
+
+# Tidyverse approach
+data %>% 
+  filter(Age > 18) %>% 
+  select(PatientID, Treatment)
+
+```
 
 
 # Pharmaverse: Industry-Specific Tools – https://pharmaverse.org/
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/.png")
+knitr::include_graphics("../../images/openblogp6.png")
 ```
 
 The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples:
@@ -161,7 +170,31 @@ Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so
 # Quick Start: Your First 5 Minutes with R
 Let's walk through a complete example from installation to visualization. We'll analyse some survival data using just the essentials:
 
-CODE TO GO HERE
+```{r}
+# 1. Install and load just what we need
+install.packages(c("dplyr", "ggplot2", "survival"))  # Only needed once
+library(dplyr)              
+library(ggplot2)            
+library(survival)           
+
+# 2. Get some example data (built into survival package)
+?lung                       # Information on survival data from a cancer study
+head(lung)                  # Quick look at first few rows
+
+# 3. Simple analysis: Calculate median survival time by sex
+lung_analysis <- lung %>%
+  mutate(sex = factor(sex, labels = c("Male", "Female"))) %>%
+  group_by(sex) %>%
+  summarise(
+    n = n(),
+    median_time = median(time, na.rm = TRUE)
+  )
+
+# 4. Create a simple survival plot
+ggplot(lung, aes(x = time, y = status, color = factor(sex))) +
+  geom_point(alpha = 0.5) +
+  labs( title = "Survival Status by Time", x = "Time (days)", y = "Status" )
+```
 
 # Quick Start Tips:
 -	✅ Start RStudio
