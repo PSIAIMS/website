@@ -26,7 +26,7 @@ Think of R as your statistical workshop where:
 -	Share and collaborate through reproducible code
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/openblogp2.png")
+knitr::include_graphics("../../images/openblog2p2.png")
 ```
 
 What makes R special is its modular framework and extensibility—it's like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.
@@ -37,7 +37,7 @@ Did You Know? 📝 R was named after its creators' first initials (Ross Ihaka an
 Your one-stop package shop!
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/openblogp3.png")
+knitr::include_graphics("../../images/openblog2p3.jpg")
 ```
 
 CRAN is the treasure trove of over 22,000 packages that extend R’s capabilities in a multitude of ways – statistical, graphical, AI, computational.
@@ -82,7 +82,7 @@ The free version of RStudio provides all essential features:
 -	Built-in Git integration
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/openblogp4.png")
+knitr::include_graphics("../../images/openblog2p4.png")
 ```
 
 # Posit Workbench
@@ -130,7 +130,7 @@ While Base R is powerful, modern R programming often relies on additional packag
 # Tidyverse: Modern Data Science Tools – https://www.tidyverse.org/
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/openblogp5.png")
+knitr::include_graphics("../../images/openblog2p5.png")
 ```
 
 The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include:
@@ -156,7 +156,7 @@ data %>%
 # Pharmaverse: Industry-Specific Tools – https://pharmaverse.org/
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
-knitr::include_graphics("../../images/openblogp6.png")
+knitr::include_graphics("../../images/openblog2p6.png")
 ```
 
 The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples:
