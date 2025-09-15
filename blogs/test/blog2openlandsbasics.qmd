@@ -29,18 +29,18 @@ Think of R as your statistical workshop where:
 -	Automate repetitive tasks with custom functions
 -	Share and collaborate through reproducible code
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, out.width="75%"}
 knitr::include_graphics("../../images/openblog2p2.png")
 ```
 
 What makes R special is its modular framework and extensibility—it's like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.
-Did You Know? 📝 R was named after its creators' first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.
+**Did You Know?** 📝 R was named after its creators' first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.
 
-# CRAN – the Comprehensive R Archive Network - `[CRAN](https://cran.r-project.org/)`
+# CRAN – the Comprehensive R Archive Network – [CRAN](https://cran.r-project.org/)
 
-Your one-stop package shop!
+**Your one-stop package shop!**
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, out.width="10%"}
 knitr::include_graphics("../../images/openblog2p3.jpg")
 ```
 
@@ -85,7 +85,7 @@ The free version of RStudio provides all essential features:
 -	Project management capabilities
 -	Built-in Git integration
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, out.width="75%"}
 knitr::include_graphics("../../images/openblog2p4.png")
 ```
 
@@ -93,9 +93,9 @@ knitr::include_graphics("../../images/openblog2p4.png")
 The paid, enterprise version of RStudio is tailored for collaboration and scalability:
 
 Key Benefits:
--	Centralized & Secure: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers
--	Collaboration: Multiple team members can work on the same projects and share code easily
--	Control: IT departments can manage:
+-	**Centralized & Secure**: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers
+-	**Collaboration**: Multiple team members can work on the same projects and share code easily
+-	**Control**: IT departments can manage:
     - Who has access to what
     -	Which R versions and packages are available
     -	Where data and code are stored
@@ -104,15 +104,15 @@ Key Benefits:
 # Alternative IDEs
 Other IDEs are available and may be useful depending on your needs. Here are some examples:
 
--	Visual Studio Code
+-	**Visual Studio Code**
   -	Modern interface
   -	Supports multiple programming languages
   -	Strong debugging tools
--	Jupyter Notebook
+-	**Jupyter Notebook**
   -	Document-style analysis
   -	Combines code and documentation
   - Popular for sharing analytical work
--	Posit Positron
+-	**Posit Positron**
   -	New desktop IDE from Posit
   -	Modern, lightweight alternative to RStudio Desktop
   -	Built on VS Code technology
@@ -131,9 +131,9 @@ See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-w
 R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS).
 While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.
 
-# Tidyverse: Modern Data Science Tools – `[Tidyverse](https://www.tidyverse.org/)`
+# Tidyverse: Modern Data Science Tools – [Tidyverse](https://www.tidyverse.org/)
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, out.width="10%"}
 knitr::include_graphics("../../images/openblog2p5.png")
 ```
 
@@ -157,9 +157,9 @@ data %>%
 ```
 
 
-# Pharmaverse: Industry-Specific Tools – `[Pharmaverse](https://pharmaverse.org/)`
+# Pharmaverse: Industry-Specific Tools – [Pharmaverse](https://pharmaverse.org/)
 
-```{r, echo=FALSE, fig.align='center', out.width="75%"}
+```{r, echo=FALSE, out.width="10%"}
 knitr::include_graphics("../../images/openblog2p6.png")
 ```
 
@@ -214,11 +214,11 @@ That's it! You've just completed your first R analysis. From here, you can explo
 -	Further Reading: 
 "R for Data Science" by Hadley Wickham & Garrett Grolemund
 -	Essential guide for modern R programming
--	Free online: `[R for Data Science eBook](https://r4ds.hadley.nz/)`
+-	Free online: [R for Data Science eBook](https://r4ds.hadley.nz/)
 
 -	Links: 
--	`[R: The R Project for Statistical Computing](https://www.r-project.org/)`
--	`[CRAN](https://cran.r-project.org/)`
--	`[RStudio Desktop Download](https://posit.co/download/rstudio-desktop/)`
--	`[Tidyverse](https://www.tidyverse.org/)`
--	`[Pharmaverse](https://pharmaverse.org/)`
+-	[R: The R Project for Statistical Computing](https://www.r-project.org/)
+- [CRAN](https://cran.r-project.org/)
+-	[RStudio Desktop Download](https://posit.co/download/rstudio-desktop/)
+-	[Tidyverse](https://www.tidyverse.org/)
+-	[Pharmaverse](https://pharmaverse.org/)
