@@ -63,14 +63,15 @@ R packages are like LEGO blocks—they snap together to build something amazing.
 # Other Open-Source Languages
 While R excels in statistical computing and is the main open-source language currently being used in the industry, there are others:
 
--	Python: Used extensively for machine learning, artificial intelligence, and deep learning applications. Popular for mathematics courses, processing real-world evidence data, natural language processing of medical texts, and developing prediction models for patient outcomes.
--	Julia: A high-performance language specifically designed for numerical and scientific computing. Gaining traction in clinical trial simulations and complex mathematical modeling due to its exceptional speed, particularly useful for large-scale clinical trial simulations and pharmacometric analyses.
--	JavaScript: Powers interactive applications and dashboards for clinical trial data visualization. Essential for creating dynamic, web-based reporting tools and interactive safety monitoring displays. Often used with R Shiny applications to enhance user interfaces.
--	HTML: The foundation for web-based tasks. Essential for creating structured, accessible documentation that can be easily shared across organizations.
+-	**Python:** Used extensively for machine learning, artificial intelligence, and deep learning applications. Popular for mathematics courses, processing real-world evidence data, natural language processing of medical texts, and developing prediction models for patient outcomes.
+-	**Julia:** A high-performance language specifically designed for numerical and scientific computing. Gaining traction in clinical trial simulations and complex mathematical modeling due to its exceptional speed, particularly useful for large-scale clinical trial simulations and pharmacometric analyses.
+-	**JavaScript:** Powers interactive applications and dashboards for clinical trial data visualization. Essential for creating dynamic, web-based reporting tools and interactive safety monitoring displays. Often used with R Shiny applications to enhance user interfaces.
+-	**HTML:** The foundation for web-based tasks. Essential for creating structured, accessible documentation that can be easily shared across organizations.
 
 # Integrated Development Environments (IDEs)
 
 An Integrated Development Environment (IDE) is like a sophisticated text editor specifically designed for writing code. Instead of just typing R commands into a basic console, an IDE provides a complete workspace with helpful features like syntax highlighting (coloring your code for readability), error checking, code completion, and integrated help. Think of it as the difference between writing in a basic notepad versus using a modern word processor with spell check, formatting, and other helpful tools.
+
 The right IDE can significantly improve your coding efficiency and help maintain good programming practices. It brings together all the tools you need - code editor, R console, file management, and visualization tools - into one organized interface.
 
 # RStudio
@@ -132,7 +133,7 @@ Other IDEs are available and may be useful depending on your needs. Here are som
 # Popular Packages
 So you have R in the R Studio IDE,  let's introduce some essential packages to start your journey.
 
-## Base R: Your Foundation
+# Base R: Your Foundation
 Base R comes pre-installed with your R installation and includes fundamental tools for:
 
 -	Data structures (vectors, matrices, data frames)
@@ -237,9 +238,7 @@ That's it! You've just completed your first R analysis. From here, you can explo
 # Further Reading and Links
 
 -	**Further Reading:** 
-
 "R for Data Science" by Hadley Wickham & Garrett Grolemund
-
     - Essential guide for modern R programming
     - Free online: [R for Data Science eBook](https://r4ds.hadley.nz/)
 
