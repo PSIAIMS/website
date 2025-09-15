@@ -10,9 +10,9 @@ draft: false # setting this to `true` will prevent your post from appearing on y
 ---
 
 # R Introduction
-What is R? – `[R: The R Project for Statistical Computing](https://www.r-project.org/)`
+What is R? – [R: The R Project for Statistical Computing](https://www.r-project.org/)
 
-```{r, echo=FALSE, fig.align='center', out.width="10%"}
+```{r, echo=FALSE, fig.align='left', out.width="10%"}
 knitr::include_graphics("../../images/RLogo.png")
 ```
 
