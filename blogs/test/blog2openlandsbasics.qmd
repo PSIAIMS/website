@@ -21,6 +21,7 @@ knitr::include_graphics("../../images/RLogo.png")
 ```
 
 R is a powerful programming language and environment specifically designed for statistical computing and graphics. Born in the halls of academia in 1993, it has evolved into an essential tool in the statistical world, especially for clinical research.
+
 Think of R as your statistical workshop where:
 
 -	You can perform sophisticated statistical analyses, from traditional hypothesis testing to cutting-edge adaptive designs
@@ -34,6 +35,7 @@ knitr::include_graphics("../../images/openblog2p2.png")
 ```
 
 What makes R special is its modular framework and extensibility—it's like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.
+
 **Did You Know?** 📝 R was named after its creators' first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.
 
 # CRAN – the Comprehensive R Archive Network – [CRAN](https://cran.r-project.org/)
@@ -78,6 +80,7 @@ RStudio is the most widely used IDE for R programming in the pharmaceutical indu
 # RStudio Desktop
 
 The free version of RStudio provides all essential features:
+
 -	Code editor with syntax highlighting
 -	R console for immediate output
 -	Environment pane showing your data and objects
@@ -93,9 +96,11 @@ knitr::include_graphics("../../images/openblog2p4.png")
 The paid, enterprise version of RStudio is tailored for collaboration and scalability:
 
 Key Benefits:
+
 -	**Centralized & Secure**: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers
 -	**Collaboration**: Multiple team members can work on the same projects and share code easily
 -	**Control**: IT departments can manage:
+
     - Who has access to what
     -	Which R versions and packages are available
     -	Where data and code are stored
@@ -105,14 +110,17 @@ Key Benefits:
 Other IDEs are available and may be useful depending on your needs. Here are some examples:
 
 -	**Visual Studio Code**
+
   -	Modern interface
   -	Supports multiple programming languages
   -	Strong debugging tools
 -	**Jupyter Notebook**
+
   -	Document-style analysis
   -	Combines code and documentation
   - Popular for sharing analytical work
 -	**Posit Positron**
+
   -	New desktop IDE from Posit
   -	Modern, lightweight alternative to RStudio Desktop
   -	Built on VS Code technology
@@ -123,10 +131,12 @@ Other IDEs are available and may be useful depending on your needs. Here are som
 So you have R in the R Studio IDE,  let's introduce some essential packages to start your journey.
 ## Base R: Your Foundation
 Base R comes pre-installed with your R installation and includes fundamental tools for:
+
 -	Data structures (vectors, matrices, data frames)
 -	Basic statistical functions (mean, median, linear regression)
 -	Simple plotting capabilities
 -	File input/output operations
+
 See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf
 R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS).
 While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.
@@ -138,11 +148,13 @@ knitr::include_graphics("../../images/openblog2p5.png")
 ```
 
 The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include:
+
 -	dplyr: Data manipulation (filter, sort, summarize)
 -	ggplot2: Creating professional graphics
 -	tidyr: Data cleaning and reshaping
 -	haven: SAS data import
 -	tibble: Modern data frames
+
 Example of tidyverse syntax:
 
 ```r
@@ -164,10 +176,12 @@ knitr::include_graphics("../../images/openblog2p6.png")
 ```
 
 The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples:
+
 -	admiral: ADaM dataset creation following CDISC standards
 -	ggsurvfit: Publication-ready survival plots and time-to-event analyses
 -	riskmetric: Risk assessment and validation of R packages
 -	logrx: Standardized logging for clinical trial analysis
+
 These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability.
 Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.
 
@@ -201,18 +215,25 @@ ggplot(lung, aes(x = time, y = status, color = factor(sex))) +
 ```
 
 # Quick Start Tips:
+
 -	✅ Start RStudio
 -	✅ Copy this code into a new script
 -	✅ Run each section using Ctrl+Enter (Cmd+Enter on Mac)
 -	✅ Save your script (File > Save As...)
+
 Common First-Time Issues:
+
 -	❌ Make sure to run library() after installation
 -	❌ Watch for typos - R is case-sensitive
+
 That's it! You've just completed your first R analysis. From here, you can explore more packages as needed.
 
 # Further Reading and Links
+
 -	Further Reading: 
+
 "R for Data Science" by Hadley Wickham & Garrett Grolemund
+
 -	Essential guide for modern R programming
 -	Free online: [R for Data Science eBook](https://r4ds.hadley.nz/)
 
