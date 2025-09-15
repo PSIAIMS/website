@@ -241,7 +241,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>R is a powerful programming language and environment specifically designed for statistical computing and graphics. Born in the halls of academia in 1993, it has evolved into an essential tool in the statistical world, especially for clinical research. Think of R as your statistical workshop where:</p>
+<p>R is a powerful programming language and environment specifically designed for statistical computing and graphics. Born in the halls of academia in 1993, it has evolved into an essential tool in the statistical world, especially for clinical research.</p>
+<p>Think of R as your statistical workshop where:</p>
 <ul>
 <li>You can perform sophisticated statistical analyses, from traditional hypothesis testing to cutting-edge adaptive designs</li>
 <li>Create publication-quality graphics with precise control over every visual element</li>
@@ -258,7 +259,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>What makes R special is its modular framework and extensibility—it’s like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly. <strong>Did You Know?</strong> 📝 R was named after its creators’ first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.</p>
+<p>What makes R special is its modular framework and extensibility—it’s like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.</p>
+<p><strong>Did You Know?</strong> 📝 R was named after its creators’ first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.</p>
 </section>
 <section id="cran-the-comprehensive-r-archive-network-cran" class="level1">
 <h1>CRAN – the Comprehensive R Archive Network – <a href="https://cran.r-project.org/">CRAN</a></h1>
@@ -308,7 +310,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="rstudio-desktop" class="level1">
 <h1>RStudio Desktop</h1>
-<p>The free version of RStudio provides all essential features: - Code editor with syntax highlighting - R console for immediate output - Environment pane showing your data and objects - Output panes for plots, files, packages, and help - Project management capabilities - Built-in Git integration</p>
+<p>The free version of RStudio provides all essential features:</p>
+<ul>
+<li>Code editor with syntax highlighting</li>
+<li>R console for immediate output</li>
+<li>Environment pane showing your data and objects</li>
+<li>Output panes for plots, files, packages, and help</li>
+<li>Project management capabilities</li>
+<li>Built-in Git integration</li>
+</ul>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -322,31 +332,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="posit-workbench" class="level1">
 <h1>Posit Workbench</h1>
 <p>The paid, enterprise version of RStudio is tailored for collaboration and scalability:</p>
-<p>Key Benefits: - <strong>Centralized &amp; Secure</strong>: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers - <strong>Collaboration</strong>: Multiple team members can work on the same projects and share code easily - <strong>Control</strong>: IT departments can manage: - Who has access to what - Which R versions and packages are available - Where data and code are stored - How resources (memory, CPU) are allocated</p>
+<p>Key Benefits:</p>
+<ul>
+<li><p><strong>Centralized &amp; Secure</strong>: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers</p></li>
+<li><p><strong>Collaboration</strong>: Multiple team members can work on the same projects and share code easily</p></li>
+<li><p><strong>Control</strong>: IT departments can manage:</p>
+<ul>
+<li>Who has access to what</li>
+<li>Which R versions and packages are available</li>
+<li>Where data and code are stored</li>
+<li>How resources (memory, CPU) are allocated</li>
+</ul></li>
+</ul>
 </section>
 <section id="alternative-ides" class="level1">
 <h1>Alternative IDEs</h1>
 <p>Other IDEs are available and may be useful depending on your needs. Here are some examples:</p>
 <ul>
-<li><strong>Visual Studio Code</strong></li>
-<li>Modern interface</li>
-<li>Supports multiple programming languages</li>
-<li>Strong debugging tools</li>
-<li><strong>Jupyter Notebook</strong></li>
-<li>Document-style analysis</li>
-<li>Combines code and documentation</li>
-<li>Popular for sharing analytical work</li>
-<li><strong>Posit Positron</strong></li>
-<li>New desktop IDE from Posit</li>
-<li>Modern, lightweight alternative to RStudio Desktop</li>
-<li>Built on VS Code technology</li>
-<li>Supports both R and Python</li>
-<li>Currently in early adoption phase</li>
+<li><p><strong>Visual Studio Code</strong></p></li>
+<li><p>Modern interface</p></li>
+<li><p>Supports multiple programming languages</p></li>
+<li><p>Strong debugging tools</p></li>
+<li><p><strong>Jupyter Notebook</strong></p></li>
+<li><p>Document-style analysis</p></li>
+<li><p>Combines code and documentation</p></li>
+<li><p>Popular for sharing analytical work</p></li>
+<li><p><strong>Posit Positron</strong></p></li>
+<li><p>New desktop IDE from Posit</p></li>
+<li><p>Modern, lightweight alternative to RStudio Desktop</p></li>
+<li><p>Built on VS Code technology</p></li>
+<li><p>Supports both R and Python</p></li>
+<li><p>Currently in early adoption phase</p></li>
 </ul>
 </section>
 <section id="popular-packages" class="level1">
 <h1>Popular Packages</h1>
-<p>So you have R in the R Studio IDE, let’s introduce some essential packages to start your journey. ## Base R: Your Foundation Base R comes pre-installed with your R installation and includes fundamental tools for: - Data structures (vectors, matrices, data frames) - Basic statistical functions (mean, median, linear regression) - Simple plotting capabilities - File input/output operations See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS). While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.</p>
+<p>So you have R in the R Studio IDE, let’s introduce some essential packages to start your journey. ## Base R: Your Foundation Base R comes pre-installed with your R installation and includes fundamental tools for:</p>
+<ul>
+<li>Data structures (vectors, matrices, data frames)</li>
+<li>Basic statistical functions (mean, median, linear regression)</li>
+<li>Simple plotting capabilities</li>
+<li>File input/output operations</li>
+</ul>
+<p>See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS). While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.</p>
 </section>
 <section id="tidyverse-modern-data-science-tools-tidyverse" class="level1">
 <h1>Tidyverse: Modern Data Science Tools – <a href="https://www.tidyverse.org/">Tidyverse</a></h1>
@@ -359,7 +387,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include: - dplyr: Data manipulation (filter, sort, summarize) - ggplot2: Creating professional graphics - tidyr: Data cleaning and reshaping - haven: SAS data import - tibble: Modern data frames Example of tidyverse syntax:</p>
+<p>The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include:</p>
+<ul>
+<li>dplyr: Data manipulation (filter, sort, summarize)</li>
+<li>ggplot2: Creating professional graphics</li>
+<li>tidyr: Data cleaning and reshaping</li>
+<li>haven: SAS data import</li>
+<li>tibble: Modern data frames</li>
+</ul>
+<p>Example of tidyverse syntax:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R approach</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(data, Age <span class="sc">&gt;</span> <span class="dv">18</span>)[, <span class="fu">c</span>(<span class="st">"PatientID"</span>, <span class="st">"Treatment"</span>)]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -379,7 +415,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples: - admiral: ADaM dataset creation following CDISC standards - ggsurvfit: Publication-ready survival plots and time-to-event analyses - riskmetric: Risk assessment and validation of R packages - logrx: Standardized logging for clinical trial analysis These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability. Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.</p>
+<p>The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples:</p>
+<ul>
+<li>admiral: ADaM dataset creation following CDISC standards</li>
+<li>ggsurvfit: Publication-ready survival plots and time-to-event analyses</li>
+<li>riskmetric: Risk assessment and validation of R packages</li>
+<li>logrx: Standardized logging for clinical trial analysis</li>
+</ul>
+<p>These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability. Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.</p>
 </section>
 <section id="quick-start-your-first-5-minutes-with-r" class="level1">
 <h1>Quick Start: Your First 5 Minutes with R</h1>
@@ -414,15 +457,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>✅ Start RStudio</li>
 <li>✅ Copy this code into a new script</li>
 <li>✅ Run each section using Ctrl+Enter (Cmd+Enter on Mac)</li>
-<li>✅ Save your script (File &gt; Save As…) Common First-Time Issues:</li>
-<li>❌ Make sure to run library() after installation</li>
-<li>❌ Watch for typos - R is case-sensitive That’s it! You’ve just completed your first R analysis. From here, you can explore more packages as needed.</li>
+<li>✅ Save your script (File &gt; Save As…)</li>
 </ul>
+<p>Common First-Time Issues:</p>
+<ul>
+<li>❌ Make sure to run library() after installation</li>
+<li>❌ Watch for typos - R is case-sensitive</li>
+</ul>
+<p>That’s it! You’ve just completed your first R analysis. From here, you can explore more packages as needed.</p>
 </section>
 <section id="further-reading-and-links" class="level1">
 <h1>Further Reading and Links</h1>
 <ul>
-<li><p>Further Reading: “R for Data Science” by Hadley Wickham &amp; Garrett Grolemund</p></li>
+<li>Further Reading:</li>
+</ul>
+<p>“R for Data Science” by Hadley Wickham &amp; Garrett Grolemund</p>
+<ul>
 <li><p>Essential guide for modern R programming</p></li>
 <li><p>Free online: <a href="https://r4ds.hadley.nz/">R for Data Science eBook</a></p></li>
 <li><p>Links:</p></li>
