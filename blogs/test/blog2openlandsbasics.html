@@ -213,11 +213,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#rstudio-desktop" id="toc-rstudio-desktop" class="nav-link" data-scroll-target="#rstudio-desktop">RStudio Desktop</a></li>
   <li><a href="#posit-workbench" id="toc-posit-workbench" class="nav-link" data-scroll-target="#posit-workbench">Posit Workbench</a></li>
   <li><a href="#alternative-ides" id="toc-alternative-ides" class="nav-link" data-scroll-target="#alternative-ides">Alternative IDEs</a></li>
-  <li><a href="#popular-packages" id="toc-popular-packages" class="nav-link" data-scroll-target="#popular-packages">Popular Packages</a></li>
+  <li><a href="#popular-packages" id="toc-popular-packages" class="nav-link" data-scroll-target="#popular-packages">Popular Packages</a>
+  <ul class="collapse">
+  <li><a href="#base-r-your-foundation" id="toc-base-r-your-foundation" class="nav-link" data-scroll-target="#base-r-your-foundation">Base R: Your Foundation</a></li>
+  </ul></li>
   <li><a href="#tidyverse-modern-data-science-tools-tidyverse" id="toc-tidyverse-modern-data-science-tools-tidyverse" class="nav-link" data-scroll-target="#tidyverse-modern-data-science-tools-tidyverse">Tidyverse: Modern Data Science Tools – Tidyverse</a></li>
   <li><a href="#pharmaverse-industry-specific-tools-pharmaverse" id="toc-pharmaverse-industry-specific-tools-pharmaverse" class="nav-link" data-scroll-target="#pharmaverse-industry-specific-tools-pharmaverse">Pharmaverse: Industry-Specific Tools – Pharmaverse</a></li>
   <li><a href="#quick-start-your-first-5-minutes-with-r" id="toc-quick-start-your-first-5-minutes-with-r" class="nav-link" data-scroll-target="#quick-start-your-first-5-minutes-with-r">Quick Start: Your First 5 Minutes with R</a></li>
   <li><a href="#quick-start-tips" id="toc-quick-start-tips" class="nav-link" data-scroll-target="#quick-start-tips">Quick Start Tips:</a></li>
+  <li><a href="#common-first-time-issues" id="toc-common-first-time-issues" class="nav-link" data-scroll-target="#common-first-time-issues">Common First-Time Issues:</a></li>
   <li><a href="#further-reading-and-links" id="toc-further-reading-and-links" class="nav-link" data-scroll-target="#further-reading-and-links">Further Reading and Links</a></li>
   </ul>
 </nav>
@@ -332,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="posit-workbench" class="level1">
 <h1>Posit Workbench</h1>
 <p>The paid, enterprise version of RStudio is tailored for collaboration and scalability:</p>
-<p>Key Benefits:</p>
+<p><strong>Key Benefits:</strong></p>
 <ul>
 <li><p><strong>Centralized &amp; Secure</strong>: Everyone works in the same validated environment through a web browser, rather than having R Studio installed on individual computers</p></li>
 <li><p><strong>Collaboration</strong>: Multiple team members can work on the same projects and share code easily</p></li>
@@ -367,14 +371,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="popular-packages" class="level1">
 <h1>Popular Packages</h1>
-<p>So you have R in the R Studio IDE, let’s introduce some essential packages to start your journey. ## Base R: Your Foundation Base R comes pre-installed with your R installation and includes fundamental tools for:</p>
+<p>So you have R in the R Studio IDE, let’s introduce some essential packages to start your journey.</p>
+<section id="base-r-your-foundation" class="level2">
+<h2 class="anchored" data-anchor-id="base-r-your-foundation">Base R: Your Foundation</h2>
+<p>Base R comes pre-installed with your R installation and includes fundamental tools for:</p>
 <ul>
 <li>Data structures (vectors, matrices, data frames)</li>
 <li>Basic statistical functions (mean, median, linear regression)</li>
 <li>Simple plotting capabilities</li>
 <li>File input/output operations</li>
 </ul>
-<p>See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS). While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.</p>
+<p>See this helpful cheat sheet for basic commands – <a href="https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf">r-cheat-sheet.key</a></p>
+<p>R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS).</p>
+<p>While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.</p>
+</section>
 </section>
 <section id="tidyverse-modern-data-science-tools-tidyverse" class="level1">
 <h1>Tidyverse: Modern Data Science Tools – <a href="https://www.tidyverse.org/">Tidyverse</a></h1>
@@ -389,11 +399,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The tidyverse is a collection of packages designed to work together harmoniously for standard dataset tasks. Core packages include:</p>
 <ul>
-<li>dplyr: Data manipulation (filter, sort, summarize)</li>
-<li>ggplot2: Creating professional graphics</li>
-<li>tidyr: Data cleaning and reshaping</li>
-<li>haven: SAS data import</li>
-<li>tibble: Modern data frames</li>
+<li><strong>dplyr:</strong> Data manipulation (filter, sort, summarize)</li>
+<li><strong>ggplot2:</strong> Creating professional graphics</li>
+<li><strong>tidyr:</strong> Data cleaning and reshaping</li>
+<li><strong>haven:</strong> SAS data import</li>
+<li><strong>tibble:</strong> Modern data frames</li>
 </ul>
 <p>Example of tidyverse syntax:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Base R approach</span></span>
@@ -417,12 +427,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The pharmaverse is a collection of packages specifically designed for clinical trial workflows. Here are some examples:</p>
 <ul>
-<li>admiral: ADaM dataset creation following CDISC standards</li>
-<li>ggsurvfit: Publication-ready survival plots and time-to-event analyses</li>
-<li>riskmetric: Risk assessment and validation of R packages</li>
-<li>logrx: Standardized logging for clinical trial analysis</li>
+<li><strong>admiral:</strong> ADaM dataset creation following CDISC standards</li>
+<li><strong>ggsurvfit:</strong> Publication-ready survival plots and time-to-event analyses</li>
+<li><strong>riskmetric:</strong> Risk assessment and validation of R packages</li>
+<li><strong>logrx:</strong> Standardized logging for clinical trial analysis</li>
 </ul>
-<p>These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability. Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.</p>
+<p>These packages work together to support regulatory-compliant clinical trial analysis workflows while maintaining reproducibility and traceability.</p>
+<p>Getting Started Tip: Most pharmaverse packages build on tidyverse principles, so becoming comfortable with tidyverse first will make learning industry-specific packages easier.</p>
 </section>
 <section id="quick-start-your-first-5-minutes-with-r" class="level1">
 <h1>Quick Start: Your First 5 Minutes with R</h1>
@@ -459,7 +470,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>✅ Run each section using Ctrl+Enter (Cmd+Enter on Mac)</li>
 <li>✅ Save your script (File &gt; Save As…)</li>
 </ul>
-<p>Common First-Time Issues:</p>
+</section>
+<section id="common-first-time-issues" class="level1">
+<h1>Common First-Time Issues:</h1>
 <ul>
 <li>❌ Make sure to run library() after installation</li>
 <li>❌ Watch for typos - R is case-sensitive</li>
@@ -469,18 +482,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="further-reading-and-links" class="level1">
 <h1>Further Reading and Links</h1>
 <ul>
-<li>Further Reading:</li>
+<li><strong>Further Reading:</strong></li>
 </ul>
 <p>“R for Data Science” by Hadley Wickham &amp; Garrett Grolemund</p>
+<pre><code>- Essential guide for modern R programming
+- Free online: [R for Data Science eBook](https://r4ds.hadley.nz/)</code></pre>
 <ul>
-<li><p>Essential guide for modern R programming</p></li>
-<li><p>Free online: <a href="https://r4ds.hadley.nz/">R for Data Science eBook</a></p></li>
-<li><p>Links:</p></li>
-<li><p><a href="https://www.r-project.org/">R: The R Project for Statistical Computing</a></p></li>
-<li><p><a href="https://cran.r-project.org/">CRAN</a></p></li>
-<li><p><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop Download</a></p></li>
-<li><p><a href="https://www.tidyverse.org/">Tidyverse</a></p></li>
-<li><p><a href="https://pharmaverse.org/">Pharmaverse</a></p></li>
+<li><strong>Links:</strong>
+<ul>
+<li><a href="https://www.r-project.org/">R: The R Project for Statistical Computing</a></li>
+<li><a href="https://cran.r-project.org/">CRAN</a></li>
+<li><a href="https://posit.co/download/rstudio-desktop/">RStudio Desktop Download</a></li>
+<li><a href="https://www.tidyverse.org/">Tidyverse</a></li>
+<li><a href="https://pharmaverse.org/">Pharmaverse</a></li>
+</ul></li>
 </ul>
 
 
