@@ -6,7 +6,7 @@ author:
 
 date: 8-15-2025
 categories: [Open-Source Skills] # self-defined categories
-draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
 
 # R Introduction
@@ -32,7 +32,7 @@ knitr::include_graphics("../../images/openblog2p2.png")
 What makes R special is its modular framework and extensibility—it's like having a basic toolkit that you can continuously enhance with specialized instruments. This is particularly valuable in clinical research, where methodological requirements can be highly specific and evolve quickly.
 Did You Know? 📝 R was named after its creators' first initials (Ross Ihaka and Robert Gentleman) and as a playful reference to the S programming language it superseded.
 
-# CRAN – the Comprehensive R Archive Network - https://cran.r-project.org/
+# CRAN – the Comprehensive R Archive Network - `[CRAN](https://cran.r-project.org/)`
 
 Your one-stop package shop!
 
@@ -127,7 +127,7 @@ See this helpful cheat sheet for basic commands – https://iqss.github.io/dss-w
 R comes with many built-in packages. Some are loaded automatically when you start R (like stats and graphics), while others are installed but need to be loaded with library() when you need them (like survival or MASS).
 While Base R is powerful, modern R programming often relies on additional packages that make coding more intuitive and efficient. This firstly leads us on to the tidyverse.
 
-# Tidyverse: Modern Data Science Tools – https://www.tidyverse.org/
+# Tidyverse: Modern Data Science Tools – `[Tidyverse](https://www.tidyverse.org/)`
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
 knitr::include_graphics("../../images/openblog2p5.png")
@@ -153,7 +153,7 @@ data %>%
 ```
 
 
-# Pharmaverse: Industry-Specific Tools – https://pharmaverse.org/
+# Pharmaverse: Industry-Specific Tools – `[Pharmaverse](https://pharmaverse.org/)`
 
 ```{r, echo=FALSE, fig.align='center', out.width="75%"}
 knitr::include_graphics("../../images/openblog2p6.png")
@@ -210,11 +210,11 @@ That's it! You've just completed your first R analysis. From here, you can explo
 -	Further Reading: 
 "R for Data Science" by Hadley Wickham & Garrett Grolemund
 -	Essential guide for modern R programming
--	Free online: https://r4ds.hadley.nz/
+-	Free online: `[R for Data Science eBook](https://r4ds.hadley.nz/)`
 
 -	Links: 
--	https://www.r-project.org/
--	https://cran.r-project.org/
--	https://posit.co/download/rstudio-desktop/
--	https://www.tidyverse.org/
--	https://pharmaverse.org/
+-	`[R: The R Project for Statistical Computing](https://www.r-project.org/)`
+-	`[CRAN](https://cran.r-project.org/)`
+-	`[RStudio Desktop Download](https://posit.co/download/rstudio-desktop/)`
+-	`[Tidyverse](https://www.tidyverse.org/)`
+-	`[Pharmaverse](https://pharmaverse.org/)`
