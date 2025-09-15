@@ -112,23 +112,23 @@ Other IDEs are available and may be useful depending on your needs. Here are som
 
 -	**Visual Studio Code**
 
-  -	Modern interface
-  -	Supports multiple programming languages
-  -	Strong debugging tools
+    - Modern interface
+    - Supports multiple programming languages
+    - Strong debugging tools
 
 -	**Jupyter Notebook**
 
-  -	Document-style analysis
-  -	Combines code and documentation
-  - Popular for sharing analytical work
+    - Document-style analysis
+    - Combines code and documentation
+    - Popular for sharing analytical work
 
 -	**Posit Positron**
 
-  -	New desktop IDE from Posit
-  -	Modern, lightweight alternative to RStudio Desktop
-  -	Built on VS Code technology
-  -	Supports both R and Python
-  -	Currently in early adoption phase
+    - New desktop IDE from Posit
+    - Modern, lightweight alternative to RStudio Desktop
+    - Built on VS Code technology
+    - Supports both R and Python
+    - Currently in early adoption phase
 
 # Popular Packages
 So you have R in the R Studio IDE,  let's introduce some essential packages to start your journey.
