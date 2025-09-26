@@ -11,7 +11,7 @@ about:
           text: Github
           url: https://github.com/PSIAIMS
         - text: "{{< fa envelope >}} Email"
-          url: mailto:martin.brown@ppd.com
+          url: mailto:Martin.Brown1@thermofisher.com
 subtitle: "When it comes to R in the Pharma industry, we would like to point you in the right direction! See some starter links in the hexes to the right"
 ---
 
