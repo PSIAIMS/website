@@ -57,3 +57,7 @@ Substantial free training is available for R. A few links to get you started are
     -   [coursera](https://www.coursera.org/learn/r-programming)
 
     -   [MOOC](https://www.mooc-list.com/tags/r-programming)
+
+-   Open-Source Lunch Bites
+
+    -   [IDEs September 2025](https://vimeo.com/1118659181/88a241198d?share=copy)
