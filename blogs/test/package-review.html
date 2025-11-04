@@ -269,7 +269,15 @@ Tip
 <section id="pairwiseci" class="level3">
 <h3 class="anchored" data-anchor-id="pairwiseci">{pairwiseCI}</h3>
 <p>Starting with {pairwiseCI}, the <a href="https://cran.r-project.org/web/packages/pairwiseCI/index.html">index</a> page looks like this:</p>
-<p><img src="images/clipboard-4202698305.png" class="img-fluid"></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../../images/clipboard-4202698305.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>Now let’s go down the checklist to see if there are any red flags for this package.</p>
 <ul>
 <li><p>Is this package being actively maintained?</p>
@@ -318,7 +326,15 @@ Tip
 <section id="coin" class="level3">
 <h3 class="anchored" data-anchor-id="coin">{coin}</h3>
 <p>Now on to {coin} with the same questions. The <a href="https://cran.r-project.org/web/packages/coin/index.html">index</a> page is as follows:</p>
-<p><img src="images/clipboard-1725037014.png" class="img-fluid"></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../../images/clipboard-1725037014.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <ul>
 <li><p>Is this package being actively maintained?</p>
 <p style="color:blue;">
@@ -364,12 +380,28 @@ Tip
 <p>Having gone through most the questions, I am fairly confident in saying I want to use {coin} to investigate this method rather than {pairwiseCI}. For almost all the questions {coin} looks slightly better than {pairwiseCI} and really just has a larger accumulation of evidence of quality. But, I haven’t answered the last question in my checklist for either these packages. What about community adoption? It can be a bit hard to look at directly, but I tend to use a few different ways.</p>
 <p>First, staying on the CRAN index page for the package, I look at the Reverse Dependencies. This section gets split into three parts, “Reverse depends”, “Reverse imports”, and “Reverse suggests” which explains how the other packages are using the package. In terms of community adoption, it doesn’t matter if other packages are depending, importing or suggesting the package, all that matters is they are using it. <strong>Note:</strong> This section only appears if other packages on CRAN use the package.</p>
 <p>For these two packages, only {coin} has this section and we can see there are many other packages that use {coin}.</p>
-<p><img src="images/clipboard-118256266.png" class="img-fluid"></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../../images/clipboard-118256266.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>The next thing I will check is the number of downloads. This can easily be done with the following bit of code:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cranlogs<span class="sc">::</span><span class="fu">cran_downloads</span>(<span class="at">package =</span> <span class="fu">c</span>(<span class="st">"coin"</span>, <span class="st">"pairwiseCI"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><img src="images/clipboard-3979687165.png" class="img-fluid"></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="../../images/clipboard-3979687165.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>And you can see {coin} is much more popular than {pairwiseCI}.</p>
 <p>So with all of this information, I think starting with {coin} is going to be the best use of my time.</p>
 <p>When looking at the number of downloads, you can look over a longer period like over the last month (by using the <code>when</code> parameter) or you can look between specific dates (by using the <code>from</code> and <code>to</code> parameters). But, it will give you the download numbers for each day, which you will need to summaries. These day-by-day numbers can be very helpful to look at trends, especially when there is a new package that is getting rapidly adopted.</p>
