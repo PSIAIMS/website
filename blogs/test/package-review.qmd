@@ -61,7 +61,9 @@ Let's pull up the CRAN index pages for each of these packages and see if we can 
 
 Starting with {pairwiseCI}, the [index](https://cran.r-project.org/web/packages/pairwiseCI/index.html) page looks like this:
 
-![](images/clipboard-4202698305.png)
+```{r, echo=FALSE, out.width="75%"}
+knitr::include_graphics("../../images/clipboard-4202698305.png")
+```
 
 Now let's go down the checklist to see if there are any red flags for this package.
 
@@ -143,7 +145,9 @@ Okay, having gone through all but the final question, I would say I feel not ama
 
 Now on to {coin} with the same questions. The [index](https://cran.r-project.org/web/packages/coin/index.html) page is as follows:
 
-![](images/clipboard-1725037014.png)
+```{r, echo=FALSE, out.width="75%"}
+knitr::include_graphics("../../images/clipboard-1725037014.png")
+```
 
 -   Is this package being actively maintained?
 
@@ -223,7 +227,9 @@ First, staying on the CRAN index page for the package, I look at the Reverse Dep
 
 For these two packages, only {coin} has this section and we can see there are many other packages that use {coin}.
 
-![](images/clipboard-118256266.png)
+```{r, echo=FALSE, out.width="75%"}
+knitr::include_graphics("../../images/clipboard-118256266.png")
+```
 
 The next thing I will check is the number of downloads. This can easily be done with the following bit of code:
 
@@ -233,7 +239,9 @@ cranlogs::cran_downloads(package = c("coin", "pairwiseCI"))
 
 ```
 
-![](images/clipboard-3979687165.png)
+```{r, echo=FALSE, out.width="75%"}
+knitr::include_graphics("../../images/clipboard-3979687165.png")
+```
 
 And you can see {coin} is much more popular than {pairwiseCI}.
 
