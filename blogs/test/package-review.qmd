@@ -25,7 +25,7 @@ When looking at a package the first place to start is the CRAN index page. You c
 
     -   Are there references to external peer reviewed papers?
 
-    -   Is there a website / vignettes?
+    -   Is there a website or vignettes?
 
 -   Is there a way to report bugs?
 
@@ -33,35 +33,36 @@ When looking at a package the first place to start is the CRAN index page. You c
 
 -   Does the package have a lot of dependencies / unusual dependencies?
 
--   Look at community adoption?
+-   How much has the statistical community or industry adopted it?
 
 Using this checklist can help you quickly and consistently get a sense of a package before spending time looking into the code directly. Let's see how this works in practice.
 
 ## Worked Example: Wilcoxon Rank-Sum Test
 
-For this, we are going to look at the Wilcoxon Rank-Sum test and the associated Hodges-Lehmann confidence interval. After googling a bit, I found three different packages that do a Wilcoxon Rank-Sum p-value and Hodges-Lehmann CI:
+To think this through, we are going to look at a specific worked example - the Wilcoxon Rank-Sum test and the associated Hodges-Lehmann confidence interval.
+After googling for a little while, I found three different packages that do a Wilcoxon Rank-Sum p-value and Hodges-Lehmann CI:
 
-1.  {stats} (part of base R)
+1.  **stats** (part of base R)
 
-2.  {pairwiseCI}
+2.  **pairwiseCI**
 
-3.  {coin}
+3.  **coin**
 
-Great! I might be kind of done, because I tend to favor base R stats functions, but as I start looking into this, I found the {stats} function can't handle ties if I want the exact methods. So I need to look into and compare the {pairwiseCI} and {coin} packages.
+Great! I might be kind of done, because I tend to favor base R stats functions, but as I start looking into this, I found the **stats** function can't handle ties if I want the exact methods. So I need to look into and compare the **pairwiseCI** and **coin** packages.
 
 ::: callout-tip
 You often find that differences between packages and software show up when there are ties, missing data, and/or extreme values, so it is good to try to include these in the dataset you are using to compare.
 :::
 
-Now I need to choose between {pairwaiseCI} and {coin}. I could just run the model in both and see if the results match, but that will be a lot of work. So before I get started I want to go through our checklist.
+Now I need to choose between **pairwaiseCI** and **coin**. I could just run the model in both and see if the results match, but that will be a lot of work. So before I get started I want to go through our checklist.
 
 Let's pull up the CRAN index pages for each of these packages and see if we can figure out which package we should use for this analysis.
 
-### {pairwiseCI}
+### **pairwiseCI**
 
-Starting with {pairwiseCI}, the [index](https://cran.r-project.org/web/packages/pairwiseCI/index.html) page looks like this:
+Starting with **pairwiseCI**, the [index](https://cran.r-project.org/web/packages/pairwiseCI/index.html) page looks like this:
 
-```{r, echo=FALSE, out.width="75%"}
+```{r, echo=FALSE, out.width="90%"}
 knitr::include_graphics("../../images/clipboard-4202698305.png")
 ```
 
@@ -107,7 +108,7 @@ Now let's go down the checklist to see if there are any red flags for this packa
 
         </p>
 
-    -   Is there a website / Vignettes?
+    -   Is there a website or vignettes?
 
         <p style="color:blue;">
 
@@ -135,17 +136,17 @@ Now let's go down the checklist to see if there are any red flags for this packa
 
     <p style="color:blue;">
 
-    It looks like this package only has two dependencies, {MCPAN} and, interestingly, {coin}, the other package we are looking at.
+    It looks like this package only has two dependencies, **MCPAN** and, interestingly, **coin**, the other package we are looking at.
 
     </p>
 
-Okay, having gone through all but the final question, I would say I feel not amazing about the package, but if it was my only option I would still try to use it. The author gives me confidence in the package, but other things like documentation and last update date, make me a bit nervous about this package.
+Okay, having gone through all but the final question, I would say I do not feel great about the package, but if it was my only option I would still try to use it. The author gives me confidence in the package, but other things like documentation and last update date make me a bit nervous about this package.
 
-### {coin}
+### **coin**
 
-Now on to {coin} with the same questions. The [index](https://cran.r-project.org/web/packages/coin/index.html) page is as follows:
+Now on to **coin** with the same questions. The [index](https://cran.r-project.org/web/packages/coin/index.html) page is as follows:
 
-```{r, echo=FALSE, out.width="75%"}
+```{r, echo=FALSE, out.width="90%"}
 knitr::include_graphics("../../images/clipboard-1725037014.png")
 ```
 
@@ -189,7 +190,7 @@ knitr::include_graphics("../../images/clipboard-1725037014.png")
 
         </p>
 
-    -   Is there a website / Vignettes?
+    -   Is there a website or vignettes?
 
         <p style="color:blue;">
 
@@ -209,7 +210,7 @@ knitr::include_graphics("../../images/clipboard-1725037014.png")
 
     <p style="color:blue;">
 
-    Same as above. It doesn't directly said it can handle our edge case, but I know it can.
+    Same as above. It doesn't directly say it can handle our edge case, but I know it can.
 
     </p>
 
@@ -221,13 +222,13 @@ knitr::include_graphics("../../images/clipboard-1725037014.png")
 
     </p>
 
-Having gone through most the questions, I am fairly confident in saying I want to use {coin} to investigate this method rather than {pairwiseCI}. For almost all the questions {coin} looks slightly better than {pairwiseCI} and really just has a larger accumulation of evidence of quality. But, I haven't answered the last question in my checklist for either these packages. What about community adoption? It can be a bit hard to look at directly, but I tend to use a few different ways.
+Having gone through the questions, I am fairly confident in saying I want to use **coin** to investigate this method rather than **pairwiseCI**. For almost all of the questions **coin** looks slightly better than **pairwiseCI** and really just has a larger accumulation of evidence of quality. But, I haven't answered the last question in my checklist for either of these packages - How much has the statistical community or industry adopted it? It can be a bit hard to look at directly, but I tend to investigate this a few different ways.
 
-First, staying on the CRAN index page for the package, I look at the Reverse Dependencies. This section gets split into three parts, "Reverse depends", "Reverse imports", and "Reverse suggests" which explains how the other packages are using the package. In terms of community adoption, it doesn't matter if other packages are depending, importing or suggesting the package, all that matters is they are using it. **Note:** This section only appears if other packages on CRAN use the package.
+First, staying on the CRAN index page for the package, I look at the Reverse Dependencies. This section gets split into three parts, "Reverse depends", "Reverse imports", and "Reverse suggests" which explains how the other packages are using the package. In terms of community adoption, it doesn't matter if other packages are depending on, importing or suggesting the package. All that matters is that they are using it. **Note:** This section only appears if other packages on CRAN use the package.
 
-For these two packages, only {coin} has this section and we can see there are many other packages that use {coin}.
+For these two packages, only **coin** has this section and we can see there are many other packages that use **coin**.
 
-```{r, echo=FALSE, out.width="75%"}
+```{r, echo=FALSE, out.width="90%"}
 knitr::include_graphics("../../images/clipboard-118256266.png")
 ```
 
@@ -239,16 +240,18 @@ cranlogs::cran_downloads(package = c("coin", "pairwiseCI"))
 
 ```
 
-```{r, echo=FALSE, out.width="75%"}
+```{r, echo=FALSE, out.width="60%"}
 knitr::include_graphics("../../images/clipboard-3979687165.png")
 ```
 
-And you can see {coin} is much more popular than {pairwiseCI}.
+And you can see **coin** is much more popular than **pairwiseCI**.
 
-So with all of this information, I think starting with {coin} is going to be the best use of my time.
+So with all of this information, I think starting with **coin** is going to be the best use of my time.
 
-When looking at the number of downloads, you can look over a longer period like over the last month (by using the `when` parameter) or you can look between specific dates (by using the `from` and `to` parameters). But, it will give you the download numbers for each day, which you will need to summaries. These day-by-day numbers can be very helpful to look at trends, especially when there is a new package that is getting rapidly adopted.
+When looking at the number of downloads, you can look over a longer period like over the last month (by using the `when` parameter) or you can look between specific dates (by using the `from` and `to` parameters). But, it will give you the download numbers for each day, which you will need to summarise. These day-by-day numbers can be very helpful to look at trends, especially when there is a new package that is getting rapidly adopted.
 
-The checklist isn't intended to replace a full review of the package for an GxP workflows. But, when just trying to decide which package to look into for a particular stats method it can be helpful.
+Please note that this checklist isn't intended to replace a full review of the package for GxP workflows. But it is intended to be helpful when starting to think through the issues involved in package choice particularly for statistical methods.
 
-In summary, selecting the appropriate R package for statistical analyses is hard. Google, isn't perfect and so it worth finding a few packages and going through this checklist. By taking a few minutes to consider factors like maintenance, documentation, and community adoption can save you time in the long run.
+## Summary
+
+In summary, selecting the appropriate R package for statistical analyses is hard. Google isn't perfect and so it is worth finding a few packages and going through this checklist. By taking a few minutes to consider factors like maintenance, documentation, and community adoption can save you time in the long run.
