@@ -207,9 +207,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#package-checklist" id="toc-package-checklist" class="nav-link active" data-scroll-target="#package-checklist">Package Checklist</a></li>
   <li><a href="#worked-example-wilcoxon-rank-sum-test" id="toc-worked-example-wilcoxon-rank-sum-test" class="nav-link" data-scroll-target="#worked-example-wilcoxon-rank-sum-test">Worked Example: Wilcoxon Rank-Sum Test</a>
   <ul class="collapse">
-  <li><a href="#pairwiseci" id="toc-pairwiseci" class="nav-link" data-scroll-target="#pairwiseci">{pairwiseCI}</a></li>
-  <li><a href="#coin" id="toc-coin" class="nav-link" data-scroll-target="#coin">{coin}</a></li>
+  <li><a href="#pairwiseci" id="toc-pairwiseci" class="nav-link" data-scroll-target="#pairwiseci"><strong>pairwiseCI</strong></a></li>
+  <li><a href="#coin" id="toc-coin" class="nav-link" data-scroll-target="#coin"><strong>coin</strong></a></li>
   </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul>
 </nav>
     </div>
@@ -233,24 +234,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Does the package have adequate documentation?</p>
 <ul>
 <li><p>Are there references to external peer reviewed papers?</p></li>
-<li><p>Is there a website / vignettes?</p></li>
+<li><p>Is there a website or vignettes?</p></li>
 </ul></li>
 <li><p>Is there a way to report bugs?</p></li>
 <li><p>Can the packages handle different edge cases?</p></li>
 <li><p>Does the package have a lot of dependencies / unusual dependencies?</p></li>
-<li><p>Look at community adoption?</p></li>
+<li><p>How much has the statistical community or industry adopted it?</p></li>
 </ul>
 <p>Using this checklist can help you quickly and consistently get a sense of a package before spending time looking into the code directly. Let’s see how this works in practice.</p>
 </section>
 <section id="worked-example-wilcoxon-rank-sum-test" class="level2">
 <h2 class="anchored" data-anchor-id="worked-example-wilcoxon-rank-sum-test">Worked Example: Wilcoxon Rank-Sum Test</h2>
-<p>For this, we are going to look at the Wilcoxon Rank-Sum test and the associated Hodges-Lehmann confidence interval. After googling a bit, I found three different packages that do a Wilcoxon Rank-Sum p-value and Hodges-Lehmann CI:</p>
+<p>To think this through, we are going to look at a specific worked example - the Wilcoxon Rank-Sum test and the associated Hodges-Lehmann confidence interval. After googling for a little while, I found three different packages that do a Wilcoxon Rank-Sum p-value and Hodges-Lehmann CI:</p>
 <ol type="1">
-<li><p>{stats} (part of base R)</p></li>
-<li><p>{pairwiseCI}</p></li>
-<li><p>{coin}</p></li>
+<li><p><strong>stats</strong> (part of base R)</p></li>
+<li><p><strong>pairwiseCI</strong></p></li>
+<li><p><strong>coin</strong></p></li>
 </ol>
-<p>Great! I might be kind of done, because I tend to favor base R stats functions, but as I start looking into this, I found the {stats} function can’t handle ties if I want the exact methods. So I need to look into and compare the {pairwiseCI} and {coin} packages.</p>
+<p>Great! I might be kind of done, because I tend to favor base R stats functions, but as I start looking into this, I found the <strong>stats</strong> function can’t handle ties if I want the exact methods. So I need to look into and compare the <strong>pairwiseCI</strong> and <strong>coin</strong> packages.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -264,16 +265,16 @@ Tip
 <p>You often find that differences between packages and software show up when there are ties, missing data, and/or extreme values, so it is good to try to include these in the dataset you are using to compare.</p>
 </div>
 </div>
-<p>Now I need to choose between {pairwaiseCI} and {coin}. I could just run the model in both and see if the results match, but that will be a lot of work. So before I get started I want to go through our checklist.</p>
+<p>Now I need to choose between <strong>pairwaiseCI</strong> and <strong>coin</strong>. I could just run the model in both and see if the results match, but that will be a lot of work. So before I get started I want to go through our checklist.</p>
 <p>Let’s pull up the CRAN index pages for each of these packages and see if we can figure out which package we should use for this analysis.</p>
 <section id="pairwiseci" class="level3">
-<h3 class="anchored" data-anchor-id="pairwiseci">{pairwiseCI}</h3>
-<p>Starting with {pairwiseCI}, the <a href="https://cran.r-project.org/web/packages/pairwiseCI/index.html">index</a> page looks like this:</p>
+<h3 class="anchored" data-anchor-id="pairwiseci"><strong>pairwiseCI</strong></h3>
+<p>Starting with <strong>pairwiseCI</strong>, the <a href="https://cran.r-project.org/web/packages/pairwiseCI/index.html">index</a> page looks like this:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="../../images/clipboard-4202698305.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p><img src="../../images/clipboard-4202698305.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -303,7 +304,7 @@ Tip
 <p style="color:blue;">
 </p><p>On the index there are no references, but there might be some references on the function level. Really it just means they haven’t published a paper about this package.</p>
 <p></p></li>
-<li><p>Is there a website / Vignettes?</p>
+<li><p>Is there a website or vignettes?</p>
 <p style="color:blue;">
 </p><p>There isn’t a website or vingettes. This means all the documenation will be limited to just the functions, which can be harder to understand.</p>
 <p></p></li>
@@ -318,19 +319,19 @@ Tip
 <p></p></li>
 <li><p>Does the package have a lot of dependencies / unusual dependencies?</p>
 <p style="color:blue;">
-</p><p>It looks like this package only has two dependencies, {MCPAN} and, interestingly, {coin}, the other package we are looking at.</p>
+</p><p>It looks like this package only has two dependencies, <strong>MCPAN</strong> and, interestingly, <strong>coin</strong>, the other package we are looking at.</p>
 <p></p></li>
 </ul>
-<p>Okay, having gone through all but the final question, I would say I feel not amazing about the package, but if it was my only option I would still try to use it. The author gives me confidence in the package, but other things like documentation and last update date, make me a bit nervous about this package.</p>
+<p>Okay, having gone through all but the final question, I would say I do not feel great about the package, but if it was my only option I would still try to use it. The author gives me confidence in the package, but other things like documentation and last update date make me a bit nervous about this package.</p>
 </section>
 <section id="coin" class="level3">
-<h3 class="anchored" data-anchor-id="coin">{coin}</h3>
-<p>Now on to {coin} with the same questions. The <a href="https://cran.r-project.org/web/packages/coin/index.html">index</a> page is as follows:</p>
+<h3 class="anchored" data-anchor-id="coin"><strong>coin</strong></h3>
+<p>Now on to <strong>coin</strong> with the same questions. The <a href="https://cran.r-project.org/web/packages/coin/index.html">index</a> page is as follows:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="../../images/clipboard-1725037014.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p><img src="../../images/clipboard-1725037014.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -359,7 +360,7 @@ Tip
 <p style="color:blue;">
 </p><p>Yes, there is a peer reviewed paper in the description of this package.</p>
 <p></p></li>
-<li><p>Is there a website / Vignettes?</p>
+<li><p>Is there a website or vignettes?</p>
 <p style="color:blue;">
 </p><p>While there isn’t a website here, there are four different vignettes.</p>
 <p></p></li>
@@ -370,21 +371,21 @@ Tip
 <p></p></li>
 <li><p>Can the packages handle different edge cases?</p>
 <p style="color:blue;">
-</p><p>Same as above. It doesn’t directly said it can handle our edge case, but I know it can.</p>
+</p><p>Same as above. It doesn’t directly say it can handle our edge case, but I know it can.</p>
 <p></p></li>
 <li><p>Does the package have a lot of dependencies / unusual dependencies?</p>
 <p style="color:blue;">
 </p><p>While this package has more dependencies, all the dependencies are very standard and do not raise any red flags for me</p>
 <p></p></li>
 </ul>
-<p>Having gone through most the questions, I am fairly confident in saying I want to use {coin} to investigate this method rather than {pairwiseCI}. For almost all the questions {coin} looks slightly better than {pairwiseCI} and really just has a larger accumulation of evidence of quality. But, I haven’t answered the last question in my checklist for either these packages. What about community adoption? It can be a bit hard to look at directly, but I tend to use a few different ways.</p>
-<p>First, staying on the CRAN index page for the package, I look at the Reverse Dependencies. This section gets split into three parts, “Reverse depends”, “Reverse imports”, and “Reverse suggests” which explains how the other packages are using the package. In terms of community adoption, it doesn’t matter if other packages are depending, importing or suggesting the package, all that matters is they are using it. <strong>Note:</strong> This section only appears if other packages on CRAN use the package.</p>
-<p>For these two packages, only {coin} has this section and we can see there are many other packages that use {coin}.</p>
+<p>Having gone through the questions, I am fairly confident in saying I want to use <strong>coin</strong> to investigate this method rather than <strong>pairwiseCI</strong>. For almost all of the questions <strong>coin</strong> looks slightly better than <strong>pairwiseCI</strong> and really just has a larger accumulation of evidence of quality. But, I haven’t answered the last question in my checklist for either of these packages - How much has the statistical community or industry adopted it? It can be a bit hard to look at directly, but I tend to investigate this a few different ways.</p>
+<p>First, staying on the CRAN index page for the package, I look at the Reverse Dependencies. This section gets split into three parts, “Reverse depends”, “Reverse imports”, and “Reverse suggests” which explains how the other packages are using the package. In terms of community adoption, it doesn’t matter if other packages are depending on, importing or suggesting the package. All that matters is that they are using it. <strong>Note:</strong> This section only appears if other packages on CRAN use the package.</p>
+<p>For these two packages, only <strong>coin</strong> has this section and we can see there are many other packages that use <strong>coin</strong>.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="../../images/clipboard-118256266.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p><img src="../../images/clipboard-118256266.png" class="img-fluid figure-img" style="width:90.0%"></p>
 </figure>
 </div>
 </div>
@@ -397,19 +398,22 @@ Tip
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="../../images/clipboard-3979687165.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p><img src="../../images/clipboard-3979687165.png" class="img-fluid figure-img" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>And you can see {coin} is much more popular than {pairwiseCI}.</p>
-<p>So with all of this information, I think starting with {coin} is going to be the best use of my time.</p>
-<p>When looking at the number of downloads, you can look over a longer period like over the last month (by using the <code>when</code> parameter) or you can look between specific dates (by using the <code>from</code> and <code>to</code> parameters). But, it will give you the download numbers for each day, which you will need to summaries. These day-by-day numbers can be very helpful to look at trends, especially when there is a new package that is getting rapidly adopted.</p>
-<p>The checklist isn’t intended to replace a full review of the package for an GxP workflows. But, when just trying to decide which package to look into for a particular stats method it can be helpful.</p>
-<p>In summary, selecting the appropriate R package for statistical analyses is hard. Google, isn’t perfect and so it worth finding a few packages and going through this checklist. By taking a few minutes to consider factors like maintenance, documentation, and community adoption can save you time in the long run.</p>
-
-
+<p>And you can see <strong>coin</strong> is much more popular than <strong>pairwiseCI</strong>.</p>
+<p>So with all of this information, I think starting with <strong>coin</strong> is going to be the best use of my time.</p>
+<p>When looking at the number of downloads, you can look over a longer period like over the last month (by using the <code>when</code> parameter) or you can look between specific dates (by using the <code>from</code> and <code>to</code> parameters). But, it will give you the download numbers for each day, which you will need to summarise. These day-by-day numbers can be very helpful to look at trends, especially when there is a new package that is getting rapidly adopted.</p>
+<p>Please note that this checklist isn’t intended to replace a full review of the package for GxP workflows. But it is intended to be helpful when starting to think through the issues involved in package choice particularly for statistical methods.</p>
 </section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In summary, selecting the appropriate R package for statistical analyses is hard. Google isn’t perfect and so it is worth finding a few packages and going through this checklist. By taking a few minutes to consider factors like maintenance, documentation, and community adoption can save you time in the long run.</p>
+
+
 </section>
 
 </main> <!-- /main -->
