@@ -4,7 +4,7 @@ author:
   - name: PSI AIMS
     url: https://psiaims.github.io/website/
 
-date: 04-12-2025
+date: 12-04-2025
 categories: [Open-Source Skills] # self-defined categories
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 ---
@@ -19,7 +19,7 @@ knitr::include_graphics("../../images/AIMSSIG.png")
 
 One of PSI AIMS SIGs objectives is to support and contribute to working groups researching and developing tools that will help us use R in Pharmaceutical research. These wide ranging working groups focus on replication across software, development of packages and tools, application of statistical methods in R and R submissions. This article introduces you to some of the most popular working groups, whose collective remit is to encourage and support the use of R in regulatory research. PSI AIMS SIG actively supports these projects so check out what each does below and become active by joining PSI AIMS SIG or one or more of the projects !
 
-```{r, echo=FALSE, fig.align='left', out.width="20%"}
+```{r, echo=FALSE, fig.align='left', out.width="15%", out.height="20%"}
 knitr::include_graphics("../../images/CAMIS.png")
 ```
 
