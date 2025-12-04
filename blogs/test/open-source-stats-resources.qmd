@@ -7,7 +7,7 @@ editor: visual
 ## 
 
 ```{r, echo=FALSE, fig.align='right', out.width="15%"}
-knitr::include_graphics("images/AIMSSIG.png")
+knitr::include_graphics("../../images/AIMSSIG.png")
 ```
 
 ## Introduction to PSI AIMS SIG
@@ -15,7 +15,7 @@ knitr::include_graphics("images/AIMSSIG.png")
 One of PSI AIMS SIGs objectives is to support and contribute to working groups researching and developing tools that will help us use R in Pharmaceutical research. These wide ranging working groups focus on replication across software, development of packages and tools, application of statistical methods in R and R submissions. This article introduces you to some of the most popular working groups, whose collective remit is to encourage and support the use of R in regulatory research. PSI AIMS SIG actively supports these projects so check out what each does below and become active by joining PSI AIMS SIG or one or more of the projects !
 
 ```{r, echo=FALSE, fig.align='right', out.width="20%"}
-knitr::include_graphics("images/CAMIS.png")
+knitr::include_graphics("../../images/CAMIS.png")
 ```
 
 ## Introduction to PHUSE CAMIS
@@ -59,7 +59,7 @@ CAMIS is an open source collaboration, and with your help, the repository will c
 ## 
 
 ```{r, echo=FALSE, fig.align='right', out.width="15%"}
-knitr::include_graphics("images/pharmaverse.png")
+knitr::include_graphics("../../images/pharmaverse.png")
 ```
 
 ## Introduction to pharmaverse
@@ -89,7 +89,7 @@ In addition to packages that support production of [TLGs](https://pharmaverse.or
 ## 
 
 ```{r, echo=FALSE, fig.align='right', out.width="15%"}
-knitr::include_graphics("images/openstatsware.png")
+knitr::include_graphics("../../images/openstatsware.png")
 ```
 
 ## Introduction to openstatsware
@@ -121,7 +121,7 @@ See [openstatsware](https://www.openstatsware.org/) for more information.
 ## 
 
 ```{r, echo=FALSE, fig.align='right', out.width="25%"}
-knitr::include_graphics("images/rvalidationhub.png")
+knitr::include_graphics("../../images/rvalidationhub.png")
 ```
 
 ## Introduction to r validation hub
@@ -139,7 +139,7 @@ One of the earliest working groups initially set up by the PSI AIMS SIG in 2018 
 The R validation hub is still identifying and addressing issues and challenges with R implementation, and offers a range of free webinars throughout the year encouraging discussion and collaboration on a range of topics.  See [R Validation Hub](https://www.pharmar.org/) for more information.
 
 ```{r, echo=FALSE, fig.align='right', out.width="10%"}
-knitr::include_graphics("images/rconsortium.png")
+knitr::include_graphics("../../images/rconsortium.png")
 ```
 
 ## Introduction to R Consortium R Submission Pilot
