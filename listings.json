@@ -11,10 +11,10 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/blogs/test/open-source-stats-resources.html",
       "/blogs/test/package-review.html",
       "/blogs/test/blog2openlandsbasics.html",
-      "/blogs/test/openskillintro.html",
-      "/blogs/test/open-source-stats-resources.html"
+      "/blogs/test/openskillintro.html"
     ]
   },
   {
