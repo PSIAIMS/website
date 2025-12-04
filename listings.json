@@ -9,19 +9,20 @@
     ]
   },
   {
+    "listing": "/blog.html",
+    "items": [
+      "/blogs/test/open-source-stats-resources.html",
+      "/blogs/test/package-review.html",
+      "/blogs/test/blog2openlandsbasics.html",
+      "/blogs/test/openskillintro.html"
+    ]
+  },
+  {
     "listing": "/minutes.html",
     "items": [
       "/minutes/2024-03-15/index.html",
       "/minutes/2024-02-16/index.html",
       "/minutes/2024-01-19/index.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/blogs/test/package-review.html",
-      "/blogs/test/blog2openlandsbasics.html",
-      "/blogs/test/openskillintro.html"
     ]
   }
 ]
