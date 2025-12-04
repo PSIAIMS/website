@@ -18,7 +18,9 @@ knitr::include_graphics("../../images/AIMSSIG.png")
 ## Introduction to PSI AIMS SIG
 
 One of PSI AIMS SIGs objectives is to support and contribute to working groups researching and developing tools that will help us use R in Pharmaceutical research. These wide ranging working groups focus on replication across software, development of packages and tools, application of statistical methods in R and R submissions. This article introduces you to some of the most popular working groups, whose collective remit is to encourage and support the use of R in regulatory research. PSI AIMS SIG actively supports these projects so check out what each does below and become active by joining PSI AIMS SIG or one or more of the projects!
-<br>
+::: {.blank-space height="1em"}
+:::
+
 
 ```{r, echo=FALSE, fig.align='left', out.width="15%"}
 knitr::include_graphics("../../images/CAMIS.png")
