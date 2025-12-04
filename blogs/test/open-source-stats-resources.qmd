@@ -18,9 +18,8 @@ knitr::include_graphics("../../images/AIMSSIG.png")
 ## Introduction to PSI AIMS SIG
 
 One of PSI AIMS SIGs objectives is to support and contribute to working groups researching and developing tools that will help us use R in Pharmaceutical research. These wide ranging working groups focus on replication across software, development of packages and tools, application of statistical methods in R and R submissions. This article introduces you to some of the most popular working groups, whose collective remit is to encourage and support the use of R in regulatory research. PSI AIMS SIG actively supports these projects so check out what each does below and become active by joining PSI AIMS SIG or one or more of the projects!
-::: {.blank-space height="1em"}
-:::
 
+## 
 
 ```{r, echo=FALSE, fig.align='left', out.width="15%"}
 knitr::include_graphics("../../images/CAMIS.png")
@@ -70,7 +69,7 @@ CAMIS is an open source collaboration, and with your help, the repository will c
 knitr::include_graphics("../../images/pharmaverse.png")
 ```
 
-## Introduction to pharmaverse
+## Introduction to the pharmaverse
 
 **pharmaverse is a connected network of companies and individuals working to promote collaborative development of curated open source R packages for clinical reporting usage in pharma, in a space where previously we would only ever have worked in silos on our own closed source and often duplicative solutions**
 
@@ -132,7 +131,7 @@ See [openstatsware](https://www.openstatsware.org/) for more information.
 knitr::include_graphics("../../images/rvalidationhub.png")
 ```
 
-## Introduction to r validation hub
+## Introduction to the R Validation Hub
 
 **R Validation Hub is a cross-industry initiative whose mission is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.**
 
@@ -145,6 +144,8 @@ One of the earliest working groups initially set up by the PSI AIMS SIG in 2018 
 -   During 2022-2023 a series of R adoption talks and case studies provided a transparency rarely seen previously in pharmaceutical research.  These talks made public many companies plans and methods to start to do statistical analysis reporting in R and/or transition to R fully.
 
 The R validation hub is still identifying and addressing issues and challenges with R implementation, and offers a range of free webinars throughout the year encouraging discussion and collaboration on a range of topics.  See [R Validation Hub](https://www.pharmar.org/) for more information.
+
+##
 
 ```{r, echo=FALSE, fig.align='left', out.width="10%"}
 knitr::include_graphics("../../images/rconsortium.png")
