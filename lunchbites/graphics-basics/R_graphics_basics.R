@@ -370,24 +370,3 @@ f4 <- ggplot(data = dadvs2, aes(x=AVISIT,y=AVAL,group=interaction(AVISIT,TRTA),c
 
 #Save figure
 ggsave("f4.png", f4, device = agg_png, width=9.00, height=4.75, dpi=300, scaling=0.8)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# IMPORTANT: enforce correct ordering via TRTAN (not alphabetical)
-dadvs2 <- dadvs %>%
-  mutate(
-    TRTA = fct_reorder(TRTA, TRTAN),
-    AVISIT = fct_reorder(AVISIT, AVISITN)
-  )
-
