@@ -1,14 +1,5 @@
 [
   {
-    "listing": "/news.html",
-    "items": [
-      "/posts/test/ChgManSDEJul25.html",
-      "/posts/test/CAMIS2023.html",
-      "/posts/test/index.html",
-      "/posts/test/FDApilot3.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/blogs/test/open-source-stats-resources.html",
@@ -23,6 +14,15 @@
       "/minutes/2024-03-15/index.html",
       "/minutes/2024-02-16/index.html",
       "/minutes/2024-01-19/index.html"
+    ]
+  },
+  {
+    "listing": "/news.html",
+    "items": [
+      "/posts/test/ChgManSDEJul25.html",
+      "/posts/test/CAMIS2023.html",
+      "/posts/test/index.html",
+      "/posts/test/FDApilot3.html"
     ]
   }
 ]
