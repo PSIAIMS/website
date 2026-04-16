@@ -116,70 +116,63 @@
     "href": "blogs/test/good_coding_practices.html",
     "title": "Good Coding Practices in R",
     "section": "",
-    "text": "Writing clear code in any software isn’t just a detail—it’s a practical investment that pays off in reproducibility, reliability, and speed of delivery. As a biostatistician, you’ll feel these benefits in day-to-day analysis, regulatory submissions, and long-lived projects.\nIn this blog, we write-up basic clean code rules. These rules will help you with:\n“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.”\n(https://style.tidyverse.org/)\nWe focus on coding in R for this blog. Most of the materials presented here are taken form a short course “Good Software Engineering Practice for R Packages”. A short course presented at multiple conferences, and recommended for everyone wanting to learn more on writing good code. (see for example https://openstatsware.github.io/shortcourse-iscb2025/listing.html)\nIf you are interested in a deep dive on good coding styles, you can take a look at the tidyverse style guide (https://style.tidyverse.org/).\nUseful R-packages that provide some automation to help clean up your code are:\nThe following list presents a non-exhaustive summary of clean code rules (CCR):\nThis piece of code breaks all common clean code rules. Can you easily spot what this coding is doing? Let’s fix it!"
+    "text": "Writing clear code in any software isn’t just a detail—it’s a practical investment that pays off in reproducibility, reliability, and speed of delivery. As a biostatistician, you’ll feel these benefits in day-to-day analysis, regulatory submissions, and long-lived projects.\nIn this blog, we write-up basic clean code rules. These rules will help you with:\n“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.”\n(https://style.tidyverse.org/)\nWe focus on coding in R for this blog. Most of the materials presented here are taken form a short course “Good Software Engineering Practice for R Packages”. A short course presented at multiple conferences, and recommended for everyone wanting to learn more on writing good code. (see for example https://openstatsware.github.io/shortcourse-iscb2025/listing.html)\nIf you are interested in a deep dive on good coding styles, you can take a look at the tidyverse style guide (https://style.tidyverse.org/).\nUseful R-packages that provide some automation to help clean up your code are:\nThe following list presents a non-exhaustive summary of clean code rules (CCR):"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section",
-    "href": "blogs/test/good_coding_practices.html#section",
+    "objectID": "blogs/test/good_coding_practices.html#example",
+    "href": "blogs/test/good_coding_practices.html#example",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "y=function(x){\n  s1=0\n  for(v1 in x){s1=s1+v1}\n  m1=s1/length(x)\n  i=ceiling(length(x)/2)\n  if(length(x) %% 2 == 0){i=c(i,i+1)}\n  s2=0\n  for(v2 in i){s2=s2+x[v2]}\n  m2=s2/length(i)\n  c(m1,m2)\n}\ny(c(1:7, 100))\n\n[1] 16.0  4.5\n\n\n[1] 16.0 4.5"
+    "section": "Example",
+    "text": "Example\nThis piece of code breaks all common clean code rules. Can you easily spot what this coding is doing? Let’s fix it!\n\ny=function(x){\n  s1=0\n  for(v1 in x){s1=s1+v1}\n  m1=s1/length(x)\n  i=ceiling(length(x)/2)\n  if(length(x) %% 2 == 0){i=c(i,i+1)}\n  s2=0\n  for(v2 in i){s2=s2+x[v2]}\n  m2=s2/length(i)\n  c(m1,m2)\n}\ny(c(1:7, 100))\n\n[1] 16.0  4.5"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-1",
-    "href": "blogs/test/good_coding_practices.html#section-1",
+    "objectID": "blogs/test/good_coding_practices.html#ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes",
+    "href": "blogs/test/good_coding_practices.html#ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMeanAndMedian=function(x){\n  sum1=0\n  for(value in x){sum1=sum1+value}\n  meanValue=sum1/length(x)\n  centerIndices=ceiling(length(x)/2)\n  if(length(x) %% 2 == 0){\n    centerIndices=c(centerIndices,centerIndices+1)\n  }\n  sum2=0\n  for(centerIndex in centerIndices){sum2=sum2+x[centerIndex]}\n  medianValue=sum2/length(centerIndices)\n  c(meanValue,medianValue)\n}\n\n**\n**\nCCR#1 Naming: Use descriptive and meaningful names for variables, functions, and classes"
+    "section": "CCR#1 Naming: Use descriptive and meaningful names for variables, functions, and classes",
+    "text": "CCR#1 Naming: Use descriptive and meaningful names for variables, functions, and classes\n\ngetMeanAndMedian=function(x){\n  sum1=0\n  for(value in x){sum1=sum1+value}\n  meanValue=sum1/length(x)\n  centerIndices=ceiling(length(x)/2)\n  if(length(x) %% 2 == 0){\n    centerIndices=c(centerIndices,centerIndices+1)\n  }\n  sum2=0\n  for(centerIndex in centerIndices){sum2=sum2+x[centerIndex]}\n  medianValue=sum2/length(centerIndices)\n  c(meanValue,medianValue)\n}\n\nNow it is already clear what the function is calculating. In the code you can also see at which step the mean and median is calculated."
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-2",
-    "href": "blogs/test/good_coding_practices.html#section-2",
+    "objectID": "blogs/test/good_coding_practices.html#ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read",
+    "href": "blogs/test/good_coding_practices.html#ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMeanAndMedian=function(x){\n  sum1=0\n  for(value in x){sum1=sum1+value}\n  meanValue=sum1/length(x)\n  centerIndices=ceiling(length(x)/2)\n  if(length(x) %% 2 == 0){\n    centerIndices=c(centerIndices,centerIndices+1)\n  }\n  sum2=0\n  for(centerIndex in centerIndices){sum2=sum2+x[centerIndex]}\n  medianValue=sum2/length(centerIndices)\n  c(meanValue,medianValue)\n}\n\nNow it is already clear what the function is calculating. In the code you can also see at which step the mean and median is calculated.\nCCR#2 Formatting: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read"
+    "section": "CCR#2 Formatting: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read",
+    "text": "CCR#2 Formatting: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read\n\ngetMeanAndMedian &lt;- function(x) {\n  sum1 &lt;- 0\n  for (value in x) {\n    sum1 &lt;- sum1 + value\n  }\n  meanValue &lt;- sum1 / length(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (length(x) %% 2 == 0) {\n    centerIndices &lt;- c(\n      centerIndices, centerIndices + 1)\n  }\n  sum2 &lt;- 0\n  for (centerIndex in centerIndices) {\n    sum2 &lt;- sum2 + x[centerIndex]\n  }\n  medianValue &lt;- sum2 / length(centerIndices)\n  c(meanValue, medianValue)\n}\n\nAccording to standard indentation rules it is best to indent the body of loops; if/else statements; function definitions; and subsequent lines of a long function."
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-3",
-    "href": "blogs/test/good_coding_practices.html#section-3",
+    "objectID": "blogs/test/good_coding_practices.html#ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity",
+    "href": "blogs/test/good_coding_practices.html#ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMeanAndMedian &lt;- function(x) {\n  sum1 &lt;- 0\n  for (value in x) {\n    sum1 &lt;- sum1 + value\n  }\n  meanValue &lt;- sum1 / length(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (length(x) %% 2 == 0) {\n    centerIndices &lt;- c(\n      centerIndices, centerIndices + 1)\n  }\n  sum2 &lt;- 0\n  for (centerIndex in centerIndices) {\n    sum2 &lt;- sum2 + x[centerIndex]\n  }\n  medianValue &lt;- sum2 / length(centerIndices)\n  c(meanValue, medianValue)\n}\n\nAccording to standard indentation rules it is best to indent the body of loops; if/else statements; function definitions; and subsequent lines of a long function.\nCCR#3 Simplicity: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity\nFor example, in this code we could simplify the two for-loops that are just calculating a summation. For this a standard function sum() is already available."
+    "section": "CCR#3 Simplicity: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity",
+    "text": "CCR#3 Simplicity: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity\nFor example, in this code we could simplify the two for-loops that are just calculating a summation. For this a standard function sum() is already available.\n\ngetMeanAndMedian &lt;- function(x) {\n  meanValue &lt;- sum(x) / length(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (length(x) %% 2 == 0) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  medianValue &lt;- sum(x[centerIndices]) / length(centerIndices)\n  c(meanValue, medianValue)\n}"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-4",
-    "href": "blogs/test/good_coding_practices.html#section-4",
+    "objectID": "blogs/test/good_coding_practices.html#ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose",
+    "href": "blogs/test/good_coding_practices.html#ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMeanAndMedian &lt;- function(x) {\n  meanValue &lt;- sum(x) / length(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (length(x) %% 2 == 0) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  medianValue &lt;- sum(x[centerIndices]) / length(centerIndices)\n  c(meanValue, medianValue)\n}\n\nCCR#4 Single Responsibility Principle (SRP): Each function should have a single, well-defined purpose\nCurrently the function calculates both the mean and median, however following the SRP principle it would be better to have separate functions for the mean and median. Further we provide a function to clarify what the following piece of code “length(x) %%2 == 0” is doing."
+    "section": "CCR#4 Single Responsibility Principle (SRP): Each function should have a single, well-defined purpose",
+    "text": "CCR#4 Single Responsibility Principle (SRP): Each function should have a single, well-defined purpose\nCurrently the function calculates both the mean and median, however following the SRP principle it would be better to have separate functions for the mean and median. Further we provide a function to clarify what the following piece of code “length(x) %%2 == 0” is doing.\n\ngetMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  sum(x[centerIndices]) / length(centerIndices)\n}"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-5",
-    "href": "blogs/test/good_coding_practices.html#section-5",
+    "objectID": "blogs/test/good_coding_practices.html#ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions",
+    "href": "blogs/test/good_coding_practices.html#ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  sum(x[centerIndices]) / length(centerIndices)\n}\n\nCCR#5 Don’t Repeat Yourself (DRY): Avoid duplication of code, either by reusing existing code or creating functions \nThe current code is already adhering well to this rule. However, one subtle change could be made as we have twice in the code a part where we have division of the sum and length."
+    "section": "CCR#5 Don’t Repeat Yourself (DRY): Avoid duplication of code, either by reusing existing code or creating functions ",
+    "text": "CCR#5 Don’t Repeat Yourself (DRY): Avoid duplication of code, either by reusing existing code or creating functions \nThe current code is already adhering well to this rule. However, one subtle change could be made as we have twice in the code a part where we have division of the sum and length.\n\ngetMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-6",
-    "href": "blogs/test/good_coding_practices.html#section-6",
+    "objectID": "blogs/test/good_coding_practices.html#ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic",
+    "href": "blogs/test/good_coding_practices.html#ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "getMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices, centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}\n\nCCR#6 Comments: Use comments to explain the purpose of code blocks and to clarify complex logic\nAt a minimum, proper commenting is needed before each function or code block. Further commenting within a function or code block can surely provide benefit as well for longer functions and code blocks."
+    "section": "CCR#6 Comments: Use comments to explain the purpose of code blocks and to clarify complex logic",
+    "text": "CCR#6 Comments: Use comments to explain the purpose of code blocks and to clarify complex logic\nAt a minimum, proper commenting is needed before each function or code block. Further commenting within a function or code block can surely provide benefit as well for longer functions and code blocks.\n\n# returns the mean of x\ngetMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is an even number;\n# FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices,\n                       centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}"
   },
   {
-    "objectID": "blogs/test/good_coding_practices.html#section-7",
-    "href": "blogs/test/good_coding_practices.html#section-7",
+    "objectID": "blogs/test/good_coding_practices.html#ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations",
+    "href": "blogs/test/good_coding_practices.html#ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations",
     "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "# returns the mean of x\ngetMean &lt;- function(x) {\n  sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is an even number;\n# FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n  length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices,\n                       centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}\n\nCCR#7 Error Handling: Include error handling code to gracefully handle exceptions and unexpected situations \nMaking sure your code produces very helpful error message is also very important! The checkmate package is very useful for this. It has built-in functions that produce informative error messages. We present two examples in the code."
-  },
-  {
-    "objectID": "blogs/test/good_coding_practices.html#section-8",
-    "href": "blogs/test/good_coding_practices.html#section-8",
-    "title": "Good Coding Practices in R",
-    "section": "",
-    "text": "# returns the mean of x\ngetMean &lt;- function(x) {\n  checkmate::assertNumeric(x)\n  sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is an even number;\n# FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n  checkmate::assertVector(x)\n  length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n  checkmate::assertNumeric(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices,\n                       centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}\n\nWe will not go in detail for CCR #8 and CCR #9. Generally, it is advisable to test your code to make sure it is providing results as expected. Further, depending on the use of the code, having an independent code review is recommended."
+    "section": "CCR#7 Error Handling: Include error handling code to gracefully handle exceptions and unexpected situations ",
+    "text": "CCR#7 Error Handling: Include error handling code to gracefully handle exceptions and unexpected situations \nMaking sure your code produces very helpful error message is also very important! The checkmate package is very useful for this. It has built-in functions that produce informative error messages. We present two examples in the code.\n\n# returns the mean of x\ngetMean &lt;- function(x) {\n  checkmate::assertNumeric(x)\n  sum(x) / length(x)\n}\n\n# returns TRUE if the length of x is an even number;\n# FALSE otherwise\nisLengthAnEvenNumber &lt;- function(x) {\n  checkmate::assertVector(x)\n  length(x) %% 2 == 0\n}\n\n# returns the median of x\ngetMedian &lt;- function(x) {\n  checkmate::assertNumeric(x)\n  centerIndices &lt;- ceiling(length(x) / 2)\n  if (isLengthAnEvenNumber(x)) {\n    centerIndices &lt;- c(centerIndices,\n                       centerIndices + 1)\n  }\n  getMean(x[centerIndices])\n}\n\nWe will not go in detail for CCR #8 and CCR #9. Generally, it is advisable to test your code to make sure it is providing results as expected. Further, depending on the use of the code, having an independent code review is recommended."
   },
   {
     "objectID": "news.html",

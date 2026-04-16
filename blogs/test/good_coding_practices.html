@@ -204,15 +204,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
-  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
-  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
-  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a></li>
-  <li><a href="#section-7" id="toc-section-7" class="nav-link" data-scroll-target="#section-7"></a></li>
-  <li><a href="#section-8" id="toc-section-8" class="nav-link" data-scroll-target="#section-8"></a></li>
+  <li><a href="#example" id="toc-example" class="nav-link active" data-scroll-target="#example">Example</a></li>
+  <li><a href="#ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes" id="toc-ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes" class="nav-link" data-scroll-target="#ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes"><strong>CCR#1&nbsp;Naming</strong>: Use descriptive and meaningful names for variables, functions, and classes</a></li>
+  <li><a href="#ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read" id="toc-ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read" class="nav-link" data-scroll-target="#ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read"><strong>CCR#2</strong>&nbsp;<strong>Formatting</strong>: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read</a></li>
+  <li><a href="#ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity" id="toc-ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity" class="nav-link" data-scroll-target="#ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity"><strong>CCR#3</strong>&nbsp;<strong>Simplicity</strong>: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity</a></li>
+  <li><a href="#ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose" id="toc-ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose" class="nav-link" data-scroll-target="#ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose"><strong>CCR#4 Single Responsibility Principle (SRP)</strong>: Each function should have a single, well-defined purpose</a></li>
+  <li><a href="#ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions" id="toc-ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions" class="nav-link" data-scroll-target="#ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions"><strong>CCR#5</strong>&nbsp;<strong>Don’t Repeat Yourself (DRY)</strong>: Avoid duplication of code, either by reusing existing code or creating functions&nbsp;</a></li>
+  <li><a href="#ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic" id="toc-ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic" class="nav-link" data-scroll-target="#ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic"><strong>CCR#6</strong>&nbsp;<strong>Comments</strong>: Use comments to explain the purpose of code blocks and to clarify complex logic</a></li>
+  <li><a href="#ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations" id="toc-ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations" class="nav-link" data-scroll-target="#ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations"><strong>CCR#7</strong>&nbsp;<strong>Error Handling</strong>: Include error handling code to gracefully handle exceptions and unexpected situations&nbsp;</a></li>
   </ul>
 </nav>
     </div>
@@ -234,7 +233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Performance</strong>: The code often runs faster, uses less memory, or is easier to optimize</p></li>
 </ul>
 <p><strong>“Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.”</strong><br>
-(https://style.tidyverse.org/)</p>
+(<a href="https://style.tidyverse.org/" class="uri">https://style.tidyverse.org/</a>)</p>
 <p>We focus on coding in R for this blog. Most of the materials presented here are taken form a short course “<em>Good Software Engineering Practice for R Packages</em>”. A short course presented at multiple conferences, and recommended for everyone wanting to learn more on writing good code. (see for example <a href="https://openstatsware.github.io/shortcourse-iscb2025/listing.html" class="uri">https://openstatsware.github.io/shortcourse-iscb2025/listing.html</a>)</p>
 <p>If you are interested in a deep dive on good coding styles, you can take a look at the tidyverse style guide (<a href="https://style.tidyverse.org/" class="uri">https://style.tidyverse.org/</a>).</p>
 <p>Useful R-packages that provide some automation to help clean up your code are:</p>
@@ -255,9 +254,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Test-Driven Development (TDD)</strong>: Write tests for your code to ensure it behaves as expected and to catch bugs early</p></li>
 <li><p><strong>Code Review</strong>: Have other team members review your code to catch potential issues and improve its quality</p></li>
 </ol>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
 <p>This piece of code breaks all common clean code rules. Can you easily spot what this coding is doing? Let’s fix it!</p>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>y<span class="ot">=</span><span class="cf">function</span>(x){</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  s1<span class="ot">=</span><span class="dv">0</span></span>
@@ -275,10 +274,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] 16.0  4.5</code></pre>
 </div>
 </div>
-<p>[1] 16.0 4.5</p>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1"></h2>
+<section id="ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes" class="level2">
+<h2 class="anchored" data-anchor-id="ccr1-naming-use-descriptive-and-meaningful-names-for-variables-functions-and-classes"><strong>CCR#1&nbsp;Naming</strong>: Use descriptive and meaningful names for variables, functions, and classes</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>getMeanAndMedian<span class="ot">=</span><span class="cf">function</span>(x){</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  sum1<span class="ot">=</span><span class="dv">0</span></span>
@@ -294,74 +292,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue,medianValue)</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>**<br>
-**</p>
-<p><strong>CCR#1&nbsp;Naming</strong>: Use descriptive and meaningful names for variables, functions, and classes</p>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2"></h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>getMeanAndMedian<span class="ot">=</span><span class="cf">function</span>(x){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  sum1<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(value <span class="cf">in</span> x){sum1<span class="ot">=</span>sum1<span class="sc">+</span>value}</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  meanValue<span class="ot">=</span>sum1<span class="sc">/</span><span class="fu">length</span>(x)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  centerIndices<span class="ot">=</span><span class="fu">ceiling</span>(<span class="fu">length</span>(x)<span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    centerIndices<span class="ot">=</span><span class="fu">c</span>(centerIndices,centerIndices<span class="sc">+</span><span class="dv">1</span>)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  sum2<span class="ot">=</span><span class="dv">0</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span>(centerIndex <span class="cf">in</span> centerIndices){sum2<span class="ot">=</span>sum2<span class="sc">+</span>x[centerIndex]}</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  medianValue<span class="ot">=</span>sum2<span class="sc">/</span><span class="fu">length</span>(centerIndices)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue,medianValue)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Now it is already clear what the function is calculating. In the code you can also see at which step the mean and median is calculated.</p>
-<p><strong>CCR#2</strong>&nbsp;<strong>Formatting</strong>: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read</p>
 </section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3"></h2>
+<section id="ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read" class="level2">
+<h2 class="anchored" data-anchor-id="ccr2-formatting-adhere-to-consistent-indentation-spacing-and-bracketing-to-make-the-code-easy-to-read"><strong>CCR#2</strong>&nbsp;<strong>Formatting</strong>: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  sum1 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (value <span class="cf">in</span> x) {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    sum1 <span class="ot">&lt;-</span> sum1 <span class="sc">+</span> value</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  meanValue <span class="ot">&lt;-</span> sum1 <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  sum2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (centerIndex <span class="cf">in</span> centerIndices) {</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    sum2 <span class="ot">&lt;-</span> sum2 <span class="sc">+</span> x[centerIndex]</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  medianValue <span class="ot">&lt;-</span> sum2 <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue, medianValue)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>According to standard indentation rules it is best to indent the body of loops; if/else statements; function definitions; and subsequent lines of a long function.</p>
+</section>
+<section id="ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity" class="level2">
+<h2 class="anchored" data-anchor-id="ccr3-simplicity-keep-the-code-as-simple-and-straightforward-as-possible-avoiding-unnecessary-complexity"><strong>CCR#3</strong>&nbsp;<strong>Simplicity</strong>: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity</h2>
+<p>For example, in this code we could simplify the two for-loops that are just calculating a summation. For this a standard function sum() is already available.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  sum1 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (value <span class="cf">in</span> x) {</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    sum1 <span class="ot">&lt;-</span> sum1 <span class="sc">+</span> value</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  meanValue <span class="ot">&lt;-</span> sum1 <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>      centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  sum2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (centerIndex <span class="cf">in</span> centerIndices) {</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    sum2 <span class="ot">&lt;-</span> sum2 <span class="sc">+</span> x[centerIndex]</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  medianValue <span class="ot">&lt;-</span> sum2 <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue, medianValue)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  meanValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  medianValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue, medianValue)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>According to standard indentation rules it is best to indent the body of loops;&nbsp;if/else&nbsp;statements; function definitions; and subsequent lines of a long function.</p>
-<p><strong>CCR#3</strong>&nbsp;<strong>Simplicity</strong>: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity</p>
-<p>For example, in this code we could simplify the two for-loops that are just calculating a summation. For this a standard function sum() is already available.</p>
 </section>
-<section id="section-4" class="level2">
-<h2 class="anchored" data-anchor-id="section-4"></h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>getMeanAndMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  meanValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  medianValue <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(meanValue, medianValue)</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><strong>CCR#4 Single Responsibility Principle (SRP)</strong>: Each function should have a single, well-defined purpose</p>
+<section id="ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose" class="level2">
+<h2 class="anchored" data-anchor-id="ccr4-single-responsibility-principle-srp-each-function-should-have-a-single-well-defined-purpose"><strong>CCR#4 Single Responsibility Principle (SRP)</strong>: Each function should have a single, well-defined purpose</h2>
 <p>Currently the function calculates both the mean and median, however following the SRP principle it would be better to have separate functions for the mean and median. Further we provide a function to clarify what the following piece of code “length(x) %%2 == 0” is doing.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="section-5" class="level2">
-<h2 class="anchored" data-anchor-id="section-5"></h2>
+<section id="ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions" class="level2">
+<h2 class="anchored" data-anchor-id="ccr5-dont-repeat-yourself-dry-avoid-duplication-of-code-either-by-reusing-existing-code-or-creating-functions"><strong>CCR#5</strong>&nbsp;<strong>Don’t Repeat Yourself (DRY)</strong>: Avoid duplication of code, either by reusing existing code or creating functions&nbsp;</h2>
+<p>The current code is already adhering well to this rule. However, one subtle change could be made as we have twice in the code a part where we have division of the sum and length.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
@@ -376,87 +371,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
 <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x[centerIndices]) <span class="sc">/</span> <span class="fu">length</span>(centerIndices)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
 <span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>CCR#5</strong>&nbsp;<strong>Don’t Repeat Yourself (DRY)</strong>: Avoid duplication of code, either by reusing existing code or creating functions&nbsp;</p>
-<p>The current code is already adhering well to this rule. However, one subtle change could be made as we have twice in the code a part where we have division of the sum and length.</p>
 </section>
-<section id="section-6" class="level2">
-<h2 class="anchored" data-anchor-id="section-6"></h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices, centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><strong>CCR#6</strong>&nbsp;<strong>Comments</strong>: Use comments to explain the purpose of code blocks and to clarify complex logic</p>
+<section id="ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic" class="level2">
+<h2 class="anchored" data-anchor-id="ccr6-comments-use-comments-to-explain-the-purpose-of-code-blocks-and-to-clarify-complex-logic"><strong>CCR#6</strong>&nbsp;<strong>Comments</strong>: Use comments to explain the purpose of code blocks and to clarify complex logic</h2>
 <p>At a minimum, proper commenting is needed before each function or code block. Further commenting within a function or code block can surely provide benefit as well for longer functions and code blocks.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the mean of x</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># returns TRUE if the length of x is an even number;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># FALSE otherwise</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the median of x</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices,</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>                       centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
-<section id="section-7" class="level2">
-<h2 class="anchored" data-anchor-id="section-7"></h2>
+<section id="ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations" class="level2">
+<h2 class="anchored" data-anchor-id="ccr7-error-handling-include-error-handling-code-to-gracefully-handle-exceptions-and-unexpected-situations"><strong>CCR#7</strong>&nbsp;<strong>Error Handling</strong>: Include error handling code to gracefully handle exceptions and unexpected situations&nbsp;</h2>
+<p>Making sure your code produces very helpful error message is also very important! The <em>checkmate</em> package is very useful for this. It has built-in functions that produce informative error messages. We present two examples in the code.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the mean of x</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># returns TRUE if the length of x is an even number;</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># FALSE otherwise</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the median of x</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices,</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>                       centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p><strong>CCR#7</strong>&nbsp;<strong>Error Handling</strong>: Include error handling code to gracefully handle exceptions and unexpected situations&nbsp;</p>
-<p>Making sure your code produces very helpful error message is also very important! The <em>checkmate</em> package is very useful for this. It has built-in functions that produce informative error messages. We present two examples in the code.</p>
-</section>
-<section id="section-8" class="level2">
-<h2 class="anchored" data-anchor-id="section-8"></h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the mean of x</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>getMean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># returns TRUE if the length of x is an even number;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># FALSE otherwise</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the median of x</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices,</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>                       centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sum</span>(x) <span class="sc">/</span> <span class="fu">length</span>(x)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># returns TRUE if the length of x is an even number;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># FALSE otherwise</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>isLengthAnEvenNumber <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertVector</span>(x)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">length</span>(x) <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the median of x</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>getMedian <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  checkmate<span class="sc">::</span><span class="fu">assertNumeric</span>(x)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  centerIndices <span class="ot">&lt;-</span> <span class="fu">ceiling</span>(<span class="fu">length</span>(x) <span class="sc">/</span> <span class="dv">2</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">isLengthAnEvenNumber</span>(x)) {</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    centerIndices <span class="ot">&lt;-</span> <span class="fu">c</span>(centerIndices,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>                       centerIndices <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getMean</span>(x[centerIndices])</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>We will not go in detail for CCR #8 and CCR #9. Generally, it is advisable to test your code to make sure it is providing results as expected. Further, depending on the use of the code, having an independent code review is recommended.</p>
 
