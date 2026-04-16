@@ -1,11 +1,10 @@
 [
   {
-    "listing": "/news.html",
+    "listing": "/minutes.html",
     "items": [
-      "/posts/test/ChgManSDEJul25.html",
-      "/posts/test/CAMIS2023.html",
-      "/posts/test/index.html",
-      "/posts/test/FDApilot3.html"
+      "/minutes/2024-03-15/index.html",
+      "/minutes/2024-02-16/index.html",
+      "/minutes/2024-01-19/index.html"
     ]
   },
   {
@@ -19,11 +18,13 @@
     ]
   },
   {
-    "listing": "/minutes.html",
+    "listing": "/news.html",
     "items": [
-      "/minutes/2024-03-15/index.html",
-      "/minutes/2024-02-16/index.html",
-      "/minutes/2024-01-19/index.html"
+      "/posts/test/lunchbitesSep2025ide.html",
+      "/posts/test/ChgManSDEJul25.html",
+      "/posts/test/CAMIS2023.html",
+      "/posts/test/index.html",
+      "/posts/test/FDApilot3.html"
     ]
   }
 ]

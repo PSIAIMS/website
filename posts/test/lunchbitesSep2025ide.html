@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="PSI AIMS">
+<meta name="dcterms.date" content="2025-09-12">
 
-<title>Blog – PSI AIMS SIG Website</title>
+<title>Open-Source Lunch Bites Webinar - IDEs – PSI AIMS SIG Website</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,25 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8025ca2feb125698fbae19385d383f2e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8025ca2feb125698fbae19385d383f2e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,77 +72,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">PSI AIMS SIG Website</span>
     </a>
   </div>
@@ -153,31 +95,31 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./why-r.html"> 
+    <a class="nav-link" href="../../why-r.html"> 
 <span class="menu-text">Why R?</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./02R-tist.html"> 
+    <a class="nav-link" href="../../02R-tist.html"> 
 <span class="menu-text">Zero to R-tist</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./rcollaborations.html"> 
+    <a class="nav-link" href="../../rcollaborations.html"> 
 <span class="menu-text">R Collaborations</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./news.html"> 
+    <a class="nav-link" href="../../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -188,128 +130,147 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Open-Source Lunch Bites Webinar - IDEs</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Lunch Bites</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><a href="https://psiaims.github.io/website/">PSI AIMS</a> </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 12, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=">Open-Source Skills <span class="quarto-category-count">(5)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#why-use-an-ide" id="toc-why-use-an-ide" class="nav-link" data-scroll-target="#why-use-an-ide">Why use an IDE?</a></li>
+  <li><a href="#key-rstudio-components" id="toc-key-rstudio-components" class="nav-link" data-scroll-target="#key-rstudio-components">Key RStudio components</a></li>
+  <li><a href="#editor-features" id="toc-editor-features" class="nav-link" data-scroll-target="#editor-features">Editor features</a></li>
+  <li><a href="#demonstrated-workflow" id="toc-demonstrated-workflow" class="nav-link" data-scroll-target="#demonstrated-workflow">Demonstrated workflow</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#rstudio-ide-cheatsheet" id="toc-rstudio-ide-cheatsheet" class="nav-link" data-scroll-target="#rstudio-ide-cheatsheet">RStudio IDE Cheatsheet</a></li>
+  <li><a href="#external" id="toc-external" class="nav-link" data-scroll-target="#external">External</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Blog</h1>
-</div>
-
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
 
 
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>This session introduced Integrated Development Environments (IDEs) using <strong>RStudio</strong> as an example.</p>
+<hr>
+</section>
+<section id="why-use-an-ide" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-an-ide">Why use an IDE?</h2>
+<ul>
+<li><strong>Productivity</strong>: code editing, execution, debugging in one place<br>
+</li>
+<li><strong>Integrated tools</strong>: plots, packages, help, version control<br>
+</li>
+<li><strong>Project structure</strong>: reproducible and organised workflows<br>
+</li>
+<li><strong>Support</strong>: documentation, customization, cross-platform</li>
+</ul>
+<hr>
+</section>
+<section id="key-rstudio-components" class="level2">
+<h2 class="anchored" data-anchor-id="key-rstudio-components">Key RStudio components</h2>
+<ul>
+<li><strong>Source</strong>: write scripts and notebooks<br>
+</li>
+<li><strong>Console</strong>: run code interactively<br>
+</li>
+<li><strong>Environment</strong>: view objects and data<br>
+</li>
+<li><strong>Files / Plots / Packages / Help</strong>: navigation and outputs</li>
+</ul>
+<hr>
+</section>
+<section id="editor-features" class="level2">
+<h2 class="anchored" data-anchor-id="editor-features">Editor features</h2>
+<ul>
+<li>Syntax highlighting<br>
+</li>
+<li>Code completion (Tab / Ctrl+Space)<br>
+</li>
+<li>Error diagnostics and hover tips<br>
+</li>
+<li>File outline and navigation</li>
+</ul>
+<p>Typical colour scheme: - Comments → green<br>
+- Keywords → blue<br>
+- Strings → red<br>
+- Functions → purple</p>
+<hr>
+</section>
+<section id="demonstrated-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="demonstrated-workflow">Demonstrated workflow</h2>
+<ul>
+<li>Writing and running a simple script<br>
+</li>
+<li>Running code in console vs source<br>
+</li>
+<li>Viewing objects in the Environment pane<br>
+</li>
+<li>Creating and viewing plots<br>
+</li>
+<li>Accessing help/documentation</li>
+</ul>
+<hr>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<section id="rstudio-ide-cheatsheet" class="level3">
+<h3 class="anchored" data-anchor-id="rstudio-ide-cheatsheet">RStudio IDE Cheatsheet</h3>
+<iframe src="../lunchbites/intro-ides/rstudio-ide-cheatsheet.pdf" width="100%" height="800">
+</iframe>
+<hr>
+</section>
+<section id="external" class="level3">
+<h3 class="anchored" data-anchor-id="external">External</h3>
+<ul>
+<li>https://posit.co/products/open-source/rstudio/</li>
+</ul>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
 
-<th>
-Date
-</th>
+</section>
+</section>
 
-<th>
-Title
-</th>
-
-<th>
-Author
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=" data-listing-date-sort="1776297600000" data-listing-file-modified-sort="1776345824831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1359" data-listing-title-sort="Good Coding Practices in R" data-listing-filename-sort="good_coding_practices.qmd">
-<td>
-<span class="listing-date">Apr 16, 2026</span>
-</td>
-<td>
-<a href="./blogs/test/good_coding_practices.html" class="title listing-title">Good Coding Practices in R</a>
-</td>
-<td>
-<span class="listing-author">PSI AIMS</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-categories="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=" data-listing-date-sort="1764806400000" data-listing-file-modified-sort="1776345824831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2491" data-listing-title-sort="A Guide to Open-Source Statistical Resources and Working Groups" data-listing-filename-sort="open-source-stats-resources.qmd">
-<td>
-<span class="listing-date">Dec 4, 2025</span>
-</td>
-<td>
-<a href="./blogs/test/open-source-stats-resources.html" class="title listing-title">A Guide to Open-Source Statistical Resources and Working Groups</a>
-</td>
-<td>
-<span class="listing-author">PSI AIMS</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-categories="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=" data-listing-date-sort="1760572800000" data-listing-file-modified-sort="1776345824831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1955" data-listing-title-sort="How to Choose an R Package for Statistics" data-listing-filename-sort="package-review.qmd">
-<td>
-<span class="listing-date">Oct 16, 2025</span>
-</td>
-<td>
-<a href="./blogs/test/package-review.html" class="title listing-title">How to Choose an R Package for Statistics</a>
-</td>
-<td>
-<span class="listing-author">PSI AIMS</span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-categories="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=" data-listing-date-sort="1757894400000" data-listing-file-modified-sort="1776345824831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1414" data-listing-title-sort="Open-Source Landscapes Basics" data-listing-filename-sort="blog2openlandsbasics.qmd">
-<td>
-<span class="listing-date">Sep 15, 2025</span>
-</td>
-<td>
-<a href="./blogs/test/blog2openlandsbasics.html" class="title listing-title">Open-Source Landscapes Basics</a>
-</td>
-<td>
-<span class="listing-author">PSI AIMS</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-categories="T3Blbi1Tb3VyY2UlMjBTa2lsbHM=" data-listing-date-sort="1747094400000" data-listing-file-modified-sort="1776345824831" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="491" data-listing-title-sort="Why Open-Source Skills are Important" data-listing-filename-sort="openskillintro.qmd">
-<td>
-<span class="listing-date">May 13, 2025</span>
-</td>
-<td>
-<a href="./blogs/test/openskillintro.html" class="title listing-title">Why Open-Source Skills are Important</a>
-</td>
-<td>
-<span class="listing-author">PSI AIMS</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
