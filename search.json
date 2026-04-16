@@ -60,7 +60,7 @@
     "href": "posts/test/lunchbitesSep2025ide.html#editor-features",
     "title": "Open-Source Lunch Bites Webinar - IDEs",
     "section": "Editor features",
-    "text": "Editor features\n\nSyntax highlighting\n\nCode completion (Tab / Ctrl+Space)\n\nError diagnostics and hover tips\n\nFile outline and navigation\n\nTypical colour scheme: - Comments → green\n- Keywords → blue\n- Strings → red\n- Functions → purple"
+    "text": "Editor features\n\nSyntax highlighting\n\nCode completion (Tab / Ctrl+Space)\n\nError diagnostics and hover tips\n\nFile outline and navigation"
   },
   {
     "objectID": "posts/test/lunchbitesSep2025ide.html#demonstrated-workflow",
@@ -74,7 +74,7 @@
     "href": "posts/test/lunchbitesSep2025ide.html#resources",
     "title": "Open-Source Lunch Bites Webinar - IDEs",
     "section": "Resources",
-    "text": "Resources\n\nRStudio IDE Cheatsheet\n\n\n\n\n\nExternal\n\nhttps://posit.co/products/open-source/rstudio/"
+    "text": "Resources\n\nRStudio IDE Cheatsheet\n\n\n\n\n\nExternal\n\n(https://posit.co/products/open-source/rstudio/)"
   },
   {
     "objectID": "02R-tist.html",
