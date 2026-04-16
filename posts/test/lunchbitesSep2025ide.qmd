@@ -1,0 +1,76 @@
+---
+title: "Open-Source Lunch Bites Webinar - IDEs"
+author:
+  - name: PSI AIMS
+    url: https://psiaims.github.io/website/
+
+date: 09-12-2025
+categories: [Lunch Bites] # self-defined categories
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+
+## Overview
+
+This session introduced Integrated Development Environments (IDEs) using **RStudio** as an example.
+
+---
+
+## Why use an IDE?
+
+- **Productivity**: code editing, execution, debugging in one place  
+- **Integrated tools**: plots, packages, help, version control  
+- **Project structure**: reproducible and organised workflows  
+- **Support**: documentation, customization, cross-platform  
+
+---
+
+## Key RStudio components
+
+- **Source**: write scripts and notebooks  
+- **Console**: run code interactively  
+- **Environment**: view objects and data  
+- **Files / Plots / Packages / Help**: navigation and outputs  
+
+---
+
+## Editor features
+
+- Syntax highlighting  
+- Code completion (Tab / Ctrl+Space)  
+- Error diagnostics and hover tips  
+- File outline and navigation  
+
+Typical colour scheme:
+- Comments → green  
+- Keywords → blue  
+- Strings → red  
+- Functions → purple  
+
+---
+
+## Demonstrated workflow
+
+- Writing and running a simple script  
+- Running code in console vs source  
+- Viewing objects in the Environment pane  
+- Creating and viewing plots  
+- Accessing help/documentation  
+
+---
+
+## Resources
+
+### RStudio IDE Cheatsheet
+
+<iframe
+  src="../lunchbites/intro-ides/rstudio-ide-cheatsheet.pdf"
+  width="100%"
+  height="800">
+</iframe>
+
+---
+
+### External
+
+- https://posit.co/products/open-source/rstudio/
