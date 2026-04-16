@@ -81,7 +81,7 @@ y(c(1:7, 100))
 
 ```
 
-## **CCR#1 Naming**: Use descriptive and meaningful names for variables, functions, and classes
+### **CCR#1 Naming**: Use descriptive and meaningful names for variables, functions, and classes
 
 ```{r}
 
@@ -103,7 +103,7 @@ getMeanAndMedian=function(x){
 
 Now it is already clear what the function is calculating. In the code you can also see at which step the mean and median is calculated.
 
-## **CCR#2** **Formatting**: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read
+### **CCR#2** **Formatting**: Adhere to consistent indentation, spacing, and bracketing to make the code easy to read
 
 ```{r}
           
@@ -129,7 +129,7 @@ getMeanAndMedian <- function(x) {
 ```
 According to standard indentation rules it is best to indent the body of loops; if/else statements; function definitions; and subsequent lines of a long function.
 
-## **CCR#3** **Simplicity**: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity
+### **CCR#3** **Simplicity**: Keep the code as simple and straightforward as possible, avoiding unnecessary complexity
 
 For example, in this code we could simplify the two for-loops that are just calculating a summation. For this a standard function sum() is already available.
 
@@ -147,7 +147,7 @@ getMeanAndMedian <- function(x) {
 
 ```
 
-## **CCR#4 Single Responsibility Principle (SRP)**: Each function should have a single, well-defined purpose
+### **CCR#4 Single Responsibility Principle (SRP)**: Each function should have a single, well-defined purpose
 
 Currently the function calculates both the mean and median, however following the SRP principle it would be better to have separate functions for the mean and median. Further we provide a function to clarify what the following piece of code “length(x) %%2 == 0” is doing.
 
@@ -171,7 +171,7 @@ getMedian <- function(x) {
 
 ```
 
-## **CCR#5** **Don’t Repeat Yourself (DRY)**: Avoid duplication of code, either by reusing existing code or creating functions 
+### **CCR#5** **Don’t Repeat Yourself (DRY)**: Avoid duplication of code, either by reusing existing code or creating functions 
 
 The current code is already adhering well to this rule. However, one subtle change could be made as we have twice in the code a part where we have division of the sum and length.
 
@@ -195,7 +195,7 @@ getMedian <- function(x) {
 
 ```
 
-## **CCR#6** **Comments**: Use comments to explain the purpose of code blocks and to clarify complex logic
+### **CCR#6** **Comments**: Use comments to explain the purpose of code blocks and to clarify complex logic
 
 At a minimum, proper commenting is needed before each function or code block. Further commenting within a function or code block can surely provide benefit as well for longer functions and code blocks.
 
@@ -224,7 +224,7 @@ getMedian <- function(x) {
 
 ```
 
-## **CCR#7** **Error Handling**: Include error handling code to gracefully handle exceptions and unexpected situations 
+### **CCR#7** **Error Handling**: Include error handling code to gracefully handle exceptions and unexpected situations 
 
 Making sure your code produces very helpful error message is also very important! The *checkmate* package is very useful for this. It has built-in functions that produce informative error messages. We present two examples in the code.
 
