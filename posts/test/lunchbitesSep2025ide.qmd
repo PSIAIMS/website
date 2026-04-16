@@ -41,12 +41,6 @@ This session introduced Integrated Development Environments (IDEs) using **RStud
 - Error diagnostics and hover tips  
 - File outline and navigation  
 
-Typical colour scheme:
-- Comments → green  
-- Keywords → blue  
-- Strings → red  
-- Functions → purple  
-
 ---
 
 ## Demonstrated workflow
@@ -64,7 +58,7 @@ Typical colour scheme:
 ### RStudio IDE Cheatsheet
 
 <iframe
-  src="../lunchbites/intro-ides/rstudio-ide-cheatsheet.pdf"
+  src="../../lunchbites/intro-ides/rstudio-ide-cheatsheet.pdf"
   width="100%"
   height="800">
 </iframe>
@@ -73,4 +67,4 @@ Typical colour scheme:
 
 ### External
 
-- https://posit.co/products/open-source/rstudio/
+- (<https://posit.co/products/open-source/rstudio/>)
