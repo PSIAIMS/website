@@ -64,6 +64,27 @@ new_obj
 Inside `filter()`, writing `new_obj == 4` compares the string `"cyl"` to `4`; it does not automatically look up the `cyl` column.
 
 ```{r}
+wrong_filter <- mtcars |>
+  filter(new_obj == 4)
+
+nrow(wrong_filter)
+```
+
+This is an issue rather than a loud error: the code runs, but it returns no rows because `"cyl" == 4` is `FALSE`.
+
+If the stored column name is wrong, `.data[[...]]` gives a clearer error.
+
+```{r}
+#| error: true
+wrong_obj <- "Cyl"
+
+mtcars |>
+  filter(.data[[wrong_obj]] == 4)
+```
+
+The fix is to use the stored column name explicitly and make sure the name matches the data.
+
+```{r}
 mtcars |>
   filter(.data[[new_obj]] == 4)
 ```
@@ -78,11 +99,14 @@ Errors often appear at the end of a pipe, but the cause may be earlier.
 
 When debugging a pipeline, run it one line at a time and check the output after each step.
 
+Here the final step has a typo: `vroom_indx` is missing an `e`.
+
 ```{r}
+#| error: true
 mtcars |>
   filter(cyl == 4) |>
   mutate(vroom_index = hp * drat / wt) |>
-  summarise(mean_vroom_index = mean(vroom_index))
+  summarise(mean_vroom_index = mean(vroom_indx))
 ```
 
 A useful approach is to build the pipe gradually.
@@ -104,6 +128,8 @@ mtcars |>
   mutate(vroom_index = hp * drat / wt) |>
   summarise(mean_vroom_index = mean(vroom_index))
 ```
+
+The error appears in the final line, but the step-by-step checks show that the earlier `filter()` and `mutate()` calls worked. That narrows the problem to the object name used inside `summarise()`.
 
 ---
 
