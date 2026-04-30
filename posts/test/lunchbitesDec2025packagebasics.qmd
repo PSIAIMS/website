@@ -70,107 +70,97 @@ Installing into a user or project library is usually safer than installing direc
 
 ## Inspecting installed packages
 
-`installed.packages()` returns metadata about packages installed in the active library paths.
+Start by looking at where R searches for packages and which packages are already installed.
 
 ```{r}
 #| eval: false
+# Show the current library paths where R looks for packages
+.libPaths()
+
+# List all installed packages (data frame of package metadata)
 installed.packages()
-```
-
-For a smaller view:
-
-```{r}
-#| eval: false
-pkgs <- installed.packages()
-pkgs[, c("Package", "Version", "LibPath")]
 ```
 
 ---
 
 ## Changing and resetting library paths
 
-Changing `.libPaths()` can be useful for demonstrations, testing, and project-specific libraries. It is best to save the original paths first so they can be restored.
+Changing `.libPaths()` can be useful for demonstrations, testing, and understanding where packages are being installed from. It is best to save the original paths first so they can be restored.
 
 ```{r}
 #| eval: false
-# Save the current library search paths
+# Save the current library search paths so we can restore them later
 old_libpaths <- .libPaths()
 
-# Temporarily use a clean folder
-demo_library <- file.path(tempdir(), "r-library-demo")
-dir.create(demo_library, showWarnings = FALSE)
-.libPaths(demo_library)
+# Temporarily set the library path to a temp folder (not recommended long-term)
+.libPaths(tempdir())
+
+# Change library path to the current working directory
+.libPaths(getwd())
 
 # Restore the original library paths
 .libPaths(old_libpaths)
-```
 
-You can also prepend a custom library so R searches it first.
-
-```{r}
-#| eval: false
-custom_library <- path.expand("~/R/library-demo")
-dir.create(custom_library, recursive = TRUE, showWarnings = FALSE)
-
-.libPaths(c(custom_library, old_libpaths))
+# Prepend a custom folder to the library paths
+.libPaths(c("C:/Users/Martin.Brown1/Desktop/OldCBTI/WorkBTI/RDemo/Test Folder",
+            old_libpaths))
 ```
 
 ---
 
-## Installing from CRAN
+## Installing packages into different locations
 
-`install.packages()` downloads and installs packages from CRAN or a CRAN mirror.
+`install.packages()` downloads and installs packages from CRAN or a CRAN mirror. By default, R installs into the first writable library in `.libPaths()`.
 
 ```{r}
 #| eval: false
-# Install into the first library in .libPaths()
+# Install DoseFinding into the *first* library in .libPaths()
 install.packages("DoseFinding")
-```
 
-Useful arguments include:
-
-- `lib`: choose the library folder where the package should be installed
-- `repos`: choose the CRAN mirror
-- `dependencies`: control whether dependencies are installed too
-
-```{r}
-#| eval: false
+# Install 'stringr' into a specific library folder, using a custom CRAN mirror,
+# and without installing dependencies
 install.packages(
   "stringr",
-  lib = custom_library,
+  lib = "C:/Users/Martin.Brown1/Desktop/OldCBTI/WorkBTI/RDemo/Test Folder2",
   repos = "https://cran.ma.imperial.ac.uk/",
-  dependencies = TRUE
+  dependencies = FALSE
 )
-```
 
-After installing a package, you normally need to load it before using its exported functions.
+# Overwrite library paths to look only in Program Files
+# (R likely has no write access here)
+.libPaths("C:/Program Files")
 
-```{r}
-#| eval: false
-library(stringr)
+# Install a package from a source tarball (older version from CRAN Archive)
+install.packages(
+  "https://cran.r-project.org/src/contrib/Archive/DoseFinding/DoseFinding_1.3-1.tar.gz",
+  repos = NULL, type = "source"
+)
+
+# Remove a previously installed package
+remove.packages("DoseFinding")
 ```
 
 ---
 
-## Loading packages and namespaces
+## Demonstrating function masking and namespaces
 
 Installing a package puts it on your machine. Loading a package attaches it to your R session.
 
 ```{r}
 #| eval: false
-words <- c("First", "Second", "Third")
+words <- c("First","Second","Third")
 
-# This will fail unless stringr is loaded
+# Calling str_length() *before* loading stringr - will fail unless stringr loaded
 str_length(words)
 
 library(stringr)
+# Now str_length() works because stringr is attached
 str_length(words)
-```
 
-You can also call a function directly from a package namespace without attaching the package.
+# Detach the package completely
+detach("package:stringr", unload = TRUE)
 
-```{r}
-#| eval: false
+# Using the function explicitly via namespace, without attaching the package
 stringr::str_length(words)
 ```
 
@@ -216,29 +206,32 @@ Masking happens when two attached packages provide functions with the same name.
 
 ```{r}
 #| eval: false
+install.packages("dplyr")
+
 library(dplyr)
+
+View(iris)
 
 # dplyr::filter() filters rows
 filter(iris, Sepal.Length > 7)
-```
 
-If the wrong `filter()` is found, the result may be an error or unexpected behaviour.
+# Detach stats (usually not needed - just for demonstration)
+detach("package:stats", unload = TRUE)
+
+# Re-load stats
+library(stats)
+
+# Now filter() may refer to stats::filter (time-series filter!), not dplyr
+filter(iris, Sepal.Length > 7)   # likely error or unexpected result
+
+# Help for filter will show the stats version
+?filter
+
+# Use the fully qualified dplyr function
+dplyr::filter(iris, Sepal.Length > 7)
+```
 
 Use explicit namespaces when there is any ambiguity.
-
-```{r}
-#| eval: false
-dplyr::filter(iris, Sepal.Length > 7)
-stats::filter
-```
-
-Help can also be requested from a specific package.
-
-```{r}
-#| eval: false
-?dplyr::filter
-?stats::filter
-```
 
 ---
 
@@ -248,19 +241,20 @@ Help can also be requested from a specific package.
 
 ```{r}
 #| eval: false
+# Point the library path to a custom folder
+.libPaths("C:/Users/Martin.Brown1/Desktop/OldCBTI/WorkBTI/RDemo/Test Folder3")
+
+# Install readr into that folder
 install.packages("readr")
+
 library(readr)
 
 ?read_csv
 
-mai <- read_csv("MAI.csv")
-```
-
-The same function can be called without attaching `readr`.
-
-```{r}
-#| eval: false
-mai <- readr::read_csv("MAI.csv")
+# Read a CSV file using readr
+MAI <- read_csv(
+  file = "C:/Users/Martin.Brown1/Desktop/OldCBTI/WorkBTI/RDemo/MAI.csv"
+)
 ```
 
 ---
@@ -287,8 +281,9 @@ One option is `remotes`.
 
 ```{r}
 #| eval: false
-install.packages("remotes")
+install.packages("remotes")  # install once
 
+# Install a specific tagged GitHub release
 remotes::install_github(
   "insightsengineering/teal.reporter",
   ref = "v0.5.0"
@@ -299,8 +294,9 @@ Another option is `pak`.
 
 ```{r}
 #| eval: false
-install.packages("pak")
+install.packages("pak")  # install once
 
+# Install the same tagged release, using pak's syntax
 pak::pkg_install("github::insightsengineering/teal.reporter@v0.5.0")
 ```
 
@@ -338,27 +334,25 @@ A minimal workflow is:
 
 ```{r}
 #| eval: false
+# Set the library path to a clean folder for the renv demo
+.libPaths("C:/Users/Martin.Brown1/Desktop/OldCBTI/WorkBTI/RDemo/Test Folder3")
+
 install.packages("renv")
 
-# Initialize renv without scanning the project for dependencies
+# Initialize renv WITHOUT scanning the project for dependencies
 renv::init(bare = TRUE)
 
-# Install packages into the project library
-install.packages("stringr")
+# Install a package inside the renv environment
+install.packages("stringr")   # or any package you like
 
-# Snapshot the current project library to renv.lock
+# Snapshot the exact state of the renv library to renv.lock
 renv::snapshot()
 
-# Show dependencies renv can detect in the project
+# Show dependencies that renv thinks are in the project
 renv::dependencies()
 ```
 
-The lockfile can then be used to restore the package environment later.
-
-```{r}
-#| eval: false
-renv::restore()
-```
+The lockfile can then be used later to restore the package environment.
 
 ---
 
