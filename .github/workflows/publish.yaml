@@ -20,6 +20,8 @@ jobs:
       - name: Install R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
+          packages: |
+            cicalc
           cache-version: 2
 
       - name: Publish to GitHub Pages (and render)
@@ -27,4 +29,4 @@ jobs:
         with:
           target: gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
