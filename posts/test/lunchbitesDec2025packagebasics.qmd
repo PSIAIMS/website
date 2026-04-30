@@ -1,0 +1,398 @@
+---
+title: "Open-Source Lunch Bites Webinar - Package Basics"
+author:
+  - name: PSI AIMS
+    url: https://psiaims.github.io/website/
+
+date: 12-05-2025
+categories: [Lunch Bites]
+draft: false
+---
+
+
+## Overview
+
+This session introduced the basics of **R packages**: what they are, where they live, how to install and load them, and how to manage common issues such as library paths, dependencies, package masking, archived packages, GitHub installs, and reproducible project libraries with `renv`.
+
+---
+
+## What is a package?
+
+An R package is a bundle of reusable code, documentation, metadata, tests, and sometimes data.
+
+Packages help us:
+
+- Reuse functions without copying code between projects
+- Share statistical methods and workflows
+- Document how functions should be used
+- Track versions and dependencies
+- Make analysis more reproducible
+
+---
+
+## Package example
+
+`DoseFinding` is a useful example of a package from the clinical trials space. On CRAN, it is described as a package for planning and analysing dose-finding experiments, with a focus on pharmaceutical Phase II clinical trials.
+
+```{r}
+#| eval: false
+install.packages("DoseFinding")
+library(DoseFinding)
+
+help(package = "DoseFinding")
+```
+
+Package pages are useful because they show the package version, maintainer, dependencies, documentation, vignettes, CRAN checks, and links to source code or issue trackers.
+
+---
+
+## Where do packages live?
+
+R looks for installed packages in library folders.
+
+```{r}
+#| eval: false
+# Show all library paths searched by R
+.libPaths()
+```
+
+The search order matters. R checks the first path first, then moves through the remaining paths.
+
+Typical library locations include:
+
+- **User library**: packages installed for your user account
+- **System library**: packages installed for everyone on the machine
+- **Project library**: packages installed for a specific project, often through `renv`
+
+Installing into a user or project library is usually safer than installing directly into `C:/Program Files`, where write access may be restricted.
+
+---
+
+## Inspecting installed packages
+
+`installed.packages()` returns metadata about packages installed in the active library paths.
+
+```{r}
+#| eval: false
+installed.packages()
+```
+
+For a smaller view:
+
+```{r}
+#| eval: false
+pkgs <- installed.packages()
+pkgs[, c("Package", "Version", "LibPath")]
+```
+
+---
+
+## Changing and resetting library paths
+
+Changing `.libPaths()` can be useful for demonstrations, testing, and project-specific libraries. It is best to save the original paths first so they can be restored.
+
+```{r}
+#| eval: false
+# Save the current library search paths
+old_libpaths <- .libPaths()
+
+# Temporarily use a clean folder
+demo_library <- file.path(tempdir(), "r-library-demo")
+dir.create(demo_library, showWarnings = FALSE)
+.libPaths(demo_library)
+
+# Restore the original library paths
+.libPaths(old_libpaths)
+```
+
+You can also prepend a custom library so R searches it first.
+
+```{r}
+#| eval: false
+custom_library <- path.expand("~/R/library-demo")
+dir.create(custom_library, recursive = TRUE, showWarnings = FALSE)
+
+.libPaths(c(custom_library, old_libpaths))
+```
+
+---
+
+## Installing from CRAN
+
+`install.packages()` downloads and installs packages from CRAN or a CRAN mirror.
+
+```{r}
+#| eval: false
+# Install into the first library in .libPaths()
+install.packages("DoseFinding")
+```
+
+Useful arguments include:
+
+- `lib`: choose the library folder where the package should be installed
+- `repos`: choose the CRAN mirror
+- `dependencies`: control whether dependencies are installed too
+
+```{r}
+#| eval: false
+install.packages(
+  "stringr",
+  lib = custom_library,
+  repos = "https://cran.ma.imperial.ac.uk/",
+  dependencies = TRUE
+)
+```
+
+After installing a package, you normally need to load it before using its exported functions.
+
+```{r}
+#| eval: false
+library(stringr)
+```
+
+---
+
+## Loading packages and namespaces
+
+Installing a package puts it on your machine. Loading a package attaches it to your R session.
+
+```{r}
+#| eval: false
+words <- c("First", "Second", "Third")
+
+# This will fail unless stringr is loaded
+str_length(words)
+
+library(stringr)
+str_length(words)
+```
+
+You can also call a function directly from a package namespace without attaching the package.
+
+```{r}
+#| eval: false
+stringr::str_length(words)
+```
+
+The `package::function()` style is especially useful in scripts, teaching material, and regulated work because it makes the source of the function explicit.
+
+---
+
+## Detaching packages
+
+During demonstrations, you may want to detach a package after loading it.
+
+```{r}
+#| eval: false
+detach("package:stringr", unload = TRUE)
+```
+
+In day-to-day analysis, restarting R is often the cleanest way to reset the session.
+
+---
+
+## The global environment
+
+Installed packages do not put every function into the global environment.
+
+When you run:
+
+```{r}
+#| eval: false
+library(readr)
+```
+
+R attaches the package so that exported functions such as `read_csv()` are available by name.
+
+Objects you create yourself, such as data frames and variables, live in the global environment unless they are created inside a function or another environment.
+
+---
+
+## Function masking
+
+Masking happens when two attached packages provide functions with the same name. The function from the package earlier on the search path is used first.
+
+`filter()` is a common example because both `dplyr` and `stats` provide a function called `filter()`.
+
+```{r}
+#| eval: false
+library(dplyr)
+
+# dplyr::filter() filters rows
+filter(iris, Sepal.Length > 7)
+```
+
+If the wrong `filter()` is found, the result may be an error or unexpected behaviour.
+
+Use explicit namespaces when there is any ambiguity.
+
+```{r}
+#| eval: false
+dplyr::filter(iris, Sepal.Length > 7)
+stats::filter
+```
+
+Help can also be requested from a specific package.
+
+```{r}
+#| eval: false
+?dplyr::filter
+?stats::filter
+```
+
+---
+
+## Reading a CSV with readr
+
+`readr` is a tidyverse package for reading rectangular text data such as CSV files.
+
+```{r}
+#| eval: false
+install.packages("readr")
+library(readr)
+
+?read_csv
+
+mai <- read_csv("MAI.csv")
+```
+
+The same function can be called without attaching `readr`.
+
+```{r}
+#| eval: false
+mai <- readr::read_csv("MAI.csv")
+```
+
+---
+
+## Checking versions and session information
+
+When sharing code or debugging package problems, version information is often important.
+
+```{r}
+#| eval: false
+packageVersion("ggplot2")
+sessionInfo()
+```
+
+`sessionInfo()` records the R version, operating system, attached packages, and loaded namespaces.
+
+---
+
+## Installing from GitHub
+
+Not every package version is installed from CRAN. Some package releases are installed from GitHub.
+
+One option is `remotes`.
+
+```{r}
+#| eval: false
+install.packages("remotes")
+
+remotes::install_github(
+  "insightsengineering/teal.reporter",
+  ref = "v0.5.0"
+)
+```
+
+Another option is `pak`.
+
+```{r}
+#| eval: false
+install.packages("pak")
+
+pak::pkg_install("github::insightsengineering/teal.reporter@v0.5.0")
+```
+
+Pinning a tag or commit helps make the install more reproducible than installing whatever happens to be on the default branch.
+
+---
+
+## Installing archived packages
+
+Sometimes packages are archived on CRAN. Archived packages are no longer active on the main CRAN package list, but older source versions may still be available from the CRAN archive.
+
+For example, if an archived package depends on other packages, install those dependencies first.
+
+```{r}
+#| eval: false
+install.packages(c("mvtnorm", "clinfun"), dependencies = FALSE)
+
+package_url <- "https://cran.r-project.org/src/contrib/Archive/ph2hetero/ph2hetero_1.0.2.tar.gz"
+
+install.packages(package_url, repos = NULL, type = "source")
+
+library(ph2hetero)
+help(package = "ph2hetero")
+```
+
+Installing from source may require additional tools, especially on Windows. Archived packages should be used with care because they may no longer pass current CRAN checks or current R versions.
+
+---
+
+## Reproducible libraries with renv
+
+`renv` helps projects use their own package library and record exact package versions in a lockfile.
+
+A minimal workflow is:
+
+```{r}
+#| eval: false
+install.packages("renv")
+
+# Initialize renv without scanning the project for dependencies
+renv::init(bare = TRUE)
+
+# Install packages into the project library
+install.packages("stringr")
+
+# Snapshot the current project library to renv.lock
+renv::snapshot()
+
+# Show dependencies renv can detect in the project
+renv::dependencies()
+```
+
+The lockfile can then be used to restore the package environment later.
+
+```{r}
+#| eval: false
+renv::restore()
+```
+
+---
+
+## Packages recap
+
+Key points from the session:
+
+- Packages are reusable, documented bundles of R code
+- R searches library paths in order
+- User and project libraries are usually safer than system locations
+- `install.packages()` installs packages; `library()` attaches them
+- CRAN mirrors and dependencies matter when installing packages
+- Use `package::function()` when function names are ambiguous
+- `detach()` can remove a package from the search path, but restarting R is often cleaner
+- Package versions and `sessionInfo()` help with troubleshooting
+- GitHub installs should be pinned to a tag or commit when reproducibility matters
+- `renv` can record and restore project-specific package versions
+
+---
+
+## Resources
+
+### PSI AIMS
+
+- [Package review example](https://psiaims.github.io/website/blogs/test/package-review.html)
+
+### CRAN
+
+- [DoseFinding on CRAN](https://cran.r-project.org/web/packages/DoseFinding/index.html)
+- [CRAN Clinical Trials Task View](https://cran.r-project.org/web/views/ClinicalTrials.html)
+- [CRAN Task Views](https://cran.r-project.org/web/views/)
+- [readr on CRAN](https://cran.r-project.org/web/packages/readr/index.html)
+
+### Package websites
+
+- [readr documentation](https://readr.tidyverse.org/)
+- [renv introduction](https://rstudio.github.io/renv/articles/renv.html)
