@@ -122,6 +122,18 @@ mtcars |>
   mutate(vroom_index = hp * drat / wt)
 ```
 
+The intermediate data contains `vroom_index`, so the problem is probably in the last line. Re-run the last step with the typo to reproduce the error in a smaller example.
+
+```{r}
+#| error: true
+mtcars |>
+  filter(cyl == 4) |>
+  mutate(vroom_index = hp * drat / wt) |>
+  summarise(mean_vroom_index = mean(vroom_indx))
+```
+
+Now fix the spelling in `summarise()`.
+
 ```{r}
 mtcars |>
   filter(cyl == 4) |>
@@ -137,24 +149,28 @@ The error appears in the final line, but the step-by-step checks show that the e
 
 Small functions are easier to debug because each line has a clear purpose.
 
+Here is a function with a mistake. The loop tries to use `step`, but `step` has not been created anywhere.
+
 ```{r}
 my_function <- function(x) {
   while (x < 10) {
-    x <- x + 1
+    x <- x + step
   }
   x
 }
 ```
 
-We can test the function with a simple input.
+Testing the function gives us a visible error.
 
 ```{r}
+#| error: true
 my_function(5)
 ```
 
-If this function behaved unexpectedly, useful questions would include:
+Useful questions include:
 
 - What is the value of `x` when the function starts?
+- Where should `step` come from?
 - Does the `while` condition ever become `FALSE`?
 - What value is returned at the end?
 
@@ -165,7 +181,20 @@ For interactive debugging, `browser()` can pause the function while it is runnin
 my_function <- function(x) {
   browser()
   while (x < 10) {
-    x <- x + 1
+    x <- x + step
+  }
+  x
+}
+
+my_function(5)
+```
+
+The fix is to define `step`, either inside the function or as an argument.
+
+```{r}
+my_function <- function(x, step = 1) {
+  while (x < 10) {
+    x <- x + step
   }
   x
 }
@@ -184,22 +213,34 @@ test <- rbinom(50, 1, 0.6)
 ci_prop_wald(test)
 ```
 
-Use `debugonce()` when you want to step through a function the next time it is called.
+Now create an input that is not appropriate for a proportion confidence interval function.
+
+```{r}
+#| error: true
+bad_test <- c("success", "failure", "success")
+ci_prop_wald(bad_test)
+```
+
+That error tells us the package function received something it could not calculate with. If the error message is not enough, use `debugonce()` when you want to step through a function the next time it is called.
 
 ```{r}
 #| eval: false
 debugonce(ci_prop_wald)
-ci_prop_wald(test)
+ci_prop_wald(bad_test)
 ```
+
+`debugonce()` is interactive. In a rendered Quarto document it will not print a useful walkthrough. Run it in the console, then use the browser controls to step through the function.
 
 Use `debug()` when you want debugging to stay on for every future call.
 
 ```{r}
 #| eval: false
 debug(ci_prop_wald)
-ci_prop_wald(test)
+ci_prop_wald(bad_test)
 undebug(ci_prop_wald)
 ```
+
+Use `undebug()` when you are finished, otherwise R will keep opening the debugger whenever that function is called.
 
 You can also debug functions from common packages, although this can be noisy because widely used functions may call many other helper functions.
 
