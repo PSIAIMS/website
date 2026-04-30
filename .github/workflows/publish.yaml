@@ -21,7 +21,9 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            cicalc
+            any::knitr
+            any::rmarkdown
+            any::cicalc
           cache-version: 2
 
       - name: Publish to GitHub Pages (and render)
