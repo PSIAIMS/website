@@ -1,0 +1,224 @@
+---
+title: "Open-Source Lunch Bites Webinar - Debugging in R"
+author:
+  - name: PSI AIMS
+    url: https://psiaims.github.io/website/
+
+date: 10-03-2025
+categories: [Lunch Bites]
+draft: false
+---
+
+
+## Overview
+
+This session introduced practical debugging in **R**, with examples based on common mistakes in data analysis code and tools available in RStudio.
+
+Much of the content is based on the debugging chapter of **Advanced R** by Hadley Wickham.
+
+---
+
+## Setup
+
+We will use `tidyverse` for data manipulation and `cicalc` for a package function that we can step through.
+
+```{r}
+#| message: false
+#| warning: false
+library(tidyverse)
+library(cicalc)
+```
+
+---
+
+## Reading Error Messages
+
+The first step in debugging is to read the error message carefully.
+
+In this example, `mtcars` has a column called `cyl`, not `Cyl`. R is case sensitive, so these are different names.
+
+```{r}
+#| error: true
+mtcars |>
+  filter(Cyl == 4)
+```
+
+The error points us toward the problem: `Cyl` cannot be found. The fix is to use the actual column name.
+
+```{r}
+mtcars |>
+  filter(cyl == 4)
+```
+
+---
+
+## Objects and Column Names
+
+Sometimes we store a column name in an object.
+
+```{r}
+new_obj <- "cyl"
+new_obj
+```
+
+Inside `filter()`, writing `new_obj == 4` compares the string `"cyl"` to `4`; it does not automatically look up the `cyl` column.
+
+```{r}
+mtcars |>
+  filter(.data[[new_obj]] == 4)
+```
+
+The `.data[[...]]` form is useful when a column name is stored as text.
+
+---
+
+## Reading Errors With Many Steps
+
+Errors often appear at the end of a pipe, but the cause may be earlier.
+
+When debugging a pipeline, run it one line at a time and check the output after each step.
+
+```{r}
+mtcars |>
+  filter(cyl == 4) |>
+  mutate(vroom_index = hp * drat / wt) |>
+  summarise(mean_vroom_index = mean(vroom_index))
+```
+
+A useful approach is to build the pipe gradually.
+
+```{r}
+mtcars |>
+  filter(cyl == 4)
+```
+
+```{r}
+mtcars |>
+  filter(cyl == 4) |>
+  mutate(vroom_index = hp * drat / wt)
+```
+
+```{r}
+mtcars |>
+  filter(cyl == 4) |>
+  mutate(vroom_index = hp * drat / wt) |>
+  summarise(mean_vroom_index = mean(vroom_index))
+```
+
+---
+
+## Debugging My Own Code
+
+Small functions are easier to debug because each line has a clear purpose.
+
+```{r}
+my_function <- function(x) {
+  while (x < 10) {
+    x <- x + 1
+  }
+  x
+}
+```
+
+We can test the function with a simple input.
+
+```{r}
+my_function(5)
+```
+
+If this function behaved unexpectedly, useful questions would include:
+
+- What is the value of `x` when the function starts?
+- Does the `while` condition ever become `FALSE`?
+- What value is returned at the end?
+
+For interactive debugging, `browser()` can pause the function while it is running.
+
+```{r}
+#| eval: false
+my_function <- function(x) {
+  browser()
+  while (x < 10) {
+    x <- x + 1
+  }
+  x
+}
+
+my_function(5)
+```
+
+---
+
+## Debugging Other People's Code
+
+Sometimes the problem is inside a function from a package. We can still inspect what is happening.
+
+```{r}
+test <- rbinom(50, 1, 0.6)
+ci_prop_wald(test)
+```
+
+Use `debugonce()` when you want to step through a function the next time it is called.
+
+```{r}
+#| eval: false
+debugonce(ci_prop_wald)
+ci_prop_wald(test)
+```
+
+Use `debug()` when you want debugging to stay on for every future call.
+
+```{r}
+#| eval: false
+debug(ci_prop_wald)
+ci_prop_wald(test)
+undebug(ci_prop_wald)
+```
+
+You can also debug functions from common packages, although this can be noisy because widely used functions may call many other helper functions.
+
+```{r}
+#| eval: false
+debug(mutate)
+
+mtcars |>
+  mutate(vroom_index = hp * drat / wt)
+
+undebug(mutate)
+```
+
+---
+
+## Debugging Workflow
+
+A practical debugging workflow is:
+
+- Reproduce the problem
+- Read the full error message
+- Identify where the error occurs
+- Simplify the code until the smallest failing example remains
+- Inspect objects and assumptions
+- Fix one thing at a time
+- Re-run the code to confirm the fix
+
+---
+
+## Useful RStudio Tools
+
+- **Console**: test small pieces of code
+- **Environment pane**: inspect objects and values
+- **Traceback**: see the sequence of function calls that led to an error
+- **Breakpoints**: pause code at a chosen line
+- **Debug mode**: step through code one line at a time
+
+---
+
+## Resources
+
+### Advanced R
+
+- [Debugging chapter](https://adv-r.hadley.nz/debugging.html)
+
+### Posit / RStudio
+
+- [RStudio IDE debugging support](https://support.posit.co/hc/en-us/articles/205612627-Debugging-with-the-RStudio-IDE)
