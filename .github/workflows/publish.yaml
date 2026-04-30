@@ -23,6 +23,7 @@ jobs:
           packages: |
             any::knitr
             any::rmarkdown
+            any::tidyverse
             any::cicalc
           cache-version: 2
 
