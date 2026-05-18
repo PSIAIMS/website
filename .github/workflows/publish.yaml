@@ -25,6 +25,7 @@ jobs:
             any::rmarkdown
             any::tidyverse
             any::cicalc
+            any::plotly
           cache-version: 2
 
       - name: Publish to GitHub Pages (and render)
