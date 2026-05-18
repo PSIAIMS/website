@@ -4,9 +4,11 @@ description: "Fast, Fresh & Interactive: R Dashboards for Statisticians in 30 Mi
 author:
   - name: PSI AIMS
     url: https://psiaims.github.io/website/
-date: 18-05-2026
+date: "2026-06-16"
 categories: [Conference]
 draft: false
+resources:
+  - interactive-outputs/
 format:
   html:
     toc: true
@@ -26,6 +28,9 @@ library(plotly)
 library(DT)
 library(htmlwidgets)
 library(pharmaverseadamjnj)
+
+output_dir <- "interactive-outputs"
+dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
 adsl <- pharmaverseadamjnj::adsl
 
@@ -57,7 +62,7 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   )
 
 g1 <- ggplotly(f1)
-saveWidget(g1, "boxplotly.html")
+saveWidget(g1, file.path(output_dir, "boxplotly.html"), selfcontained = TRUE)
 
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
   geom_point() +
@@ -81,7 +86,7 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
   )
 
 g2 <- ggplotly(f2)
-saveWidget(g2, "scatterplotly.html")
+saveWidget(g2, file.path(output_dir, "scatterplotly.html"), selfcontained = TRUE)
 
 my_table <- adsl3
 
@@ -106,10 +111,11 @@ d <- datatable(
     lengthMenu = c(5, 10, 12, 20, 50, 100)
   )
 )
-saveWidget(d, "datatable.html")
+saveWidget(d, file.path(output_dir, "datatable.html"), selfcontained = TRUE)
 ```
 
 ## Setup
+### Package Installation
 
 ```r
 install.packages("tibble", type = "binary")
@@ -121,6 +127,8 @@ install.packages("htmlwidgets", type = "binary")
 install.packages("pharmaverseadamjnj")
 ```
 
+### Package Load
+
 ```r
 library(dplyr)
 library(ggplot2)
@@ -129,6 +137,8 @@ library(DT)
 library(htmlwidgets)
 library(pharmaverseadamjnj)
 ```
+
+### Read in ADSL and carry out some data preparation
 
 ```r
 adsl <- pharmaverseadamjnj::adsl
@@ -178,14 +188,14 @@ f1
 ```r
 g1 <- ggplotly(f1)
 
-saveWidget(g1, "boxplotly.html")
+saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
 ```
 
 ```{r}
 g1
 ```
 
-[Open the interactive boxplot](boxplotly.html)
+[Open the interactive boxplot](interactive-outputs/boxplotly.html)
 
 ### Scatterplot: Create The Static Figure
 
@@ -223,14 +233,14 @@ f2
 ```r
 g2 <- ggplotly(f2)
 
-saveWidget(g2, "scatterplotly.html")
+saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
 ```
 
 ```{r}
 g2
 ```
 
-[Open the interactive scatterplot](scatterplotly.html)
+[Open the interactive scatterplot](interactive-outputs/scatterplotly.html)
 
 ## Recipe 2: Make A Table Explorable
 
@@ -265,14 +275,14 @@ d <- datatable(
   )
 )
 
-saveWidget(d, "datatable.html")
+saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
 ```
 
 ```{r}
 d
 ```
 
-[Open the interactive table](datatable.html)
+[Open the interactive table](interactive-outputs/datatable.html)
 
 ## Recipe 3: Bring Outputs Together
 
@@ -335,7 +345,7 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
 
 g1 <- ggplotly(f1)
 
-saveWidget(g1, "boxplotly.html")
+saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
 
 
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
@@ -361,7 +371,7 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
 
 g2 <- ggplotly(f2)
 
-saveWidget(g2, "scatterplotly.html")
+saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
 
 
 # Recipe 2: Make a table explorable --------------------------------------
@@ -390,5 +400,5 @@ d <- datatable(
   )
 )
 
-saveWidget(d, "datatable.html")
+saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
 ```
