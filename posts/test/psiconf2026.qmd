@@ -9,7 +9,6 @@ categories: [Conference]
 draft: false
 format:
   html:
-    theme: cosmo
     toc: true
     code-copy: true
     embed-resources: true
@@ -55,9 +54,10 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   scale_fill_manual(
     values = tf_colors,
     name = "Treatment Group"
-  ) +
-  theme_bw() +
-  theme(legend.position = "top")
+  )
+
+g1 <- ggplotly(f1)
+saveWidget(g1, "boxplotly.html")
 
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
   geom_point() +
@@ -78,14 +78,207 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
   scale_colour_manual(
     values = tf_colors,
     name = "Treatment Group"
-  ) +
-  theme_bw() +
-  theme(legend.position = "top")
+  )
+
+g2 <- ggplotly(f2)
+saveWidget(g2, "scatterplotly.html")
+
+my_table <- adsl3
+
+my_table_2 <- my_table %>%
+  rename(
+    "Unique Subject Identifier" = USUBJID,
+    "Treatment Group" = TRT01P,
+    "Total Treatment Duration (Days)" = TRTDURD,
+    "Baseline Weight (kg)" = WEIGHTBL,
+    "Baseline Height (cm)" = HEIGHTBL
+  )
+
+d <- datatable(
+  my_table_2,
+  extensions = c("ColReorder"),
+  rownames = FALSE,
+  filter = "top",
+  class = "stripe hover compact",
+  options = list(
+    colReorder = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 12, 20, 50, 100)
+  )
+)
+saveWidget(d, "datatable.html")
 ```
 
-## Copy The Code
+## Setup
 
-Copy and run this script to create the interactive figure and table examples.
+```r
+install.packages("tibble", type = "binary")
+install.packages("dplyr", type = "binary")
+install.packages("ggplot2", type = "binary")
+install.packages("plotly", type = "binary")
+install.packages("DT", type = "binary")
+install.packages("htmlwidgets", type = "binary")
+install.packages("pharmaverseadamjnj")
+```
+
+```r
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+library(htmlwidgets)
+library(pharmaverseadamjnj)
+```
+
+```r
+adsl <- pharmaverseadamjnj::adsl
+
+adsl2 <- adsl %>%
+  select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL) %>%
+  filter(!is.na(TRT01P) & !is.na(TRTDURD))
+
+adsl3 <- adsl2 %>%
+  mutate_if(is.character, as.factor)
+
+tf_colors <- c(
+  "Placebo" = "#0072B2",
+  "Xanomeline High Dose" = "#D55E00",
+  "Xanomeline Low Dose" = "#CC79A7"
+)
+```
+
+## Recipe 1: Make A Figure Interactive
+
+### Boxplot: Create The Static Figure
+
+```r
+f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
+  geom_boxplot() +
+  scale_x_discrete(name = "Treatment Group") +
+  scale_y_continuous(
+    limits = c(0, 250),
+    breaks = seq(0, 250, 50),
+    expand = c(0.05, 0.05),
+    name = "Treatment Duration (Days)"
+  ) +
+  scale_fill_manual(
+    values = tf_colors,
+    name = "Treatment Group"
+  )
+```
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.8
+f1
+```
+
+### Boxplot: Make It Interactive
+
+```r
+g1 <- ggplotly(f1)
+
+saveWidget(g1, "boxplotly.html")
+```
+
+```{r}
+g1
+```
+
+[Open the interactive boxplot](boxplotly.html)
+
+### Scatterplot: Create The Static Figure
+
+```r
+f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
+  geom_point() +
+  scale_x_continuous(
+    limits = c(0, 150),
+    breaks = seq(0, 150, 10),
+    name = "Baseline Height (cm)"
+  ) +
+  scale_y_continuous(
+    limits = c(0, 150),
+    breaks = seq(0, 150, 10),
+    name = "Baseline Weight (kg)"
+  ) +
+  scale_shape_manual(
+    values = c(16, 17, 15),
+    name = "Treatment Group"
+  ) +
+  scale_colour_manual(
+    values = tf_colors,
+    name = "Treatment Group"
+  )
+```
+
+```{r}
+#| fig-width: 8
+#| fig-height: 4.8
+f2
+```
+
+### Scatterplot: Make It Interactive
+
+```r
+g2 <- ggplotly(f2)
+
+saveWidget(g2, "scatterplotly.html")
+```
+
+```{r}
+g2
+```
+
+[Open the interactive scatterplot](scatterplotly.html)
+
+## Recipe 2: Make A Table Explorable
+
+### Prepare The Table
+
+```r
+my_table <- adsl3
+
+my_table_2 <- my_table %>%
+  rename(
+    "Unique Subject Identifier" = USUBJID,
+    "Treatment Group" = TRT01P,
+    "Total Treatment Duration (Days)" = TRTDURD,
+    "Baseline Weight (kg)" = WEIGHTBL,
+    "Baseline Height (cm)" = HEIGHTBL
+  )
+```
+
+### Make It Interactive
+
+```r
+d <- datatable(
+  my_table_2,
+  extensions = c("ColReorder"),
+  rownames = FALSE,
+  filter = "top",
+  class = "stripe hover compact",
+  options = list(
+    colReorder = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 12, 20, 50, 100)
+  )
+)
+
+saveWidget(d, "datatable.html")
+```
+
+```{r}
+d
+```
+
+[Open the interactive table](datatable.html)
+
+## Recipe 3: Bring Outputs Together
+
+[Open the Quarto dashboard](PSI%20Conf%202026%20Dashboard.html)
+
+## Full Code
 
 ```r
 # PSI Conf 2026 interactivity recipes
@@ -138,21 +331,9 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   scale_fill_manual(
     values = tf_colors,
     name = "Treatment Group"
-  ) +
-  theme_bw() +
-  theme(legend.position = "top")
-
-g1 <- ggplotly(f1) %>%
-  layout(
-    legend = list(
-      orientation = "h",
-      x = 0.5,
-      xanchor = "center",
-      y = 1.02,
-      yanchor = "bottom"
-    ),
-    margin = list(t = 45)
   )
+
+g1 <- ggplotly(f1)
 
 saveWidget(g1, "boxplotly.html")
 
@@ -176,21 +357,9 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
   scale_colour_manual(
     values = tf_colors,
     name = "Treatment Group"
-  ) +
-  theme_bw() +
-  theme(legend.position = "top")
-
-g2 <- ggplotly(f2) %>%
-  layout(
-    legend = list(
-      orientation = "h",
-      x = 0.5,
-      xanchor = "center",
-      y = 1.02,
-      yanchor = "bottom"
-    ),
-    margin = list(t = 45)
   )
+
+g2 <- ggplotly(f2)
 
 saveWidget(g2, "scatterplotly.html")
 
@@ -223,33 +392,3 @@ d <- datatable(
 
 saveWidget(d, "datatable.html")
 ```
-
-## Static Previews
-
-These are the static `ggplot2` figures before they are made interactive with `plotly`.
-
-### Treatment Duration (Days) by Treatment Group
-
-```{r}
-#| fig-width: 8
-#| fig-height: 4.8
-f1
-```
-
-### Baseline Weight (kg) vs Baseline Height (cm)
-
-```{r}
-#| fig-width: 8
-#| fig-height: 4.8
-f2
-```
-
-## Interactive Outputs
-
-Open the generated HTML outputs:
-
-- [Interactive boxplot](boxplotly.html)
-- [Interactive scatterplot](scatterplotly.html)
-- [Interactive table](datatable.html)
-- [Quarto dashboard](PSI%20Conf%202026%20Dashboard.html)
-
