@@ -27,6 +27,7 @@ jobs:
             any::cicalc
             any::plotly
             any::DT
+            any::pharmaverseadamjnj
           cache-version: 2
 
       - name: Publish to GitHub Pages (and render)
