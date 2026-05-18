@@ -26,6 +26,7 @@ jobs:
             any::tidyverse
             any::cicalc
             any::plotly
+            any::DT
           cache-version: 2
 
       - name: Publish to GitHub Pages (and render)
