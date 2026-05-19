@@ -430,18 +430,171 @@ saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained 
 
 ### Quarto Dashboard Full Code {#dashboard-full-code}
 
-```{r}
-#| echo: false
-#| results: asis
-dashboard_code <- paste(readLines("PSI Conf 2026 Dashboard.qmd"), collapse = "\n")
-dashboard_code <- gsub("&", "&amp;", dashboard_code, fixed = TRUE)
-dashboard_code <- gsub("<", "&lt;", dashboard_code, fixed = TRUE)
-dashboard_code <- gsub(">", "&gt;", dashboard_code, fixed = TRUE)
+``````markdown
+---
+title: "Quarto Dashboard"
+output-file: psi-conf-2026-dashboard.html
+format:
+  dashboard:
+    theme: cosmo
+    embed-resources: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
 
-cat(
-  "<pre><code class=\"language-markdown\">",
-  dashboard_code,
-  "</code></pre>",
-  sep = ""
+```{r}
+# Run once if needed:
+# install.packages("rmarkdown")
+# install.packages("tibble")
+# install.packages("dplyr")
+# install.packages("ggplot2")
+# install.packages("plotly")
+# install.packages("DT")
+# install.packages("htmlwidgets")
+# install.packages("pharmaverseadamjnj")
+
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+library(htmlwidgets)
+library(pharmaverseadamjnj)
+
+adsl <- pharmaverseadamjnj::adsl
+
+adsl2 <- adsl %>%
+  select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL) %>%
+  filter(!is.na(TRT01P) & !is.na(TRTDURD))
+
+adsl3 <- adsl2 %>%
+  mutate_if(is.character, as.factor)
+
+tf_colors <- c(
+  "Placebo" = "#0072B2",
+  "Xanomeline High Dose" = "#D55E00",
+  "Xanomeline Low Dose" = "#CC79A7"
 )
 ```
+
+## Row {height="48%"}
+
+```{r}
+#| title: "Treatment Duration (Days) by Treatment Group"
+f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
+  geom_boxplot() +
+  scale_x_discrete(name = "Treatment Group") +
+  scale_y_continuous(
+    limits = c(0, 250),
+    breaks = seq(0, 250, 50),
+    expand = c(0.05, 0.05),
+    name = "Treatment Duration (Days)"
+  ) +
+  scale_fill_manual(
+    values = tf_colors,
+    name = "Treatment Group"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+g1 <- ggplotly(f1) %>%
+  layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = 1.02,
+      yanchor = "bottom"
+    ),
+    margin = list(t = 45)
+  )
+
+g1
+```
+
+```{r}
+#| title: "Baseline Weight (kg) vs Baseline Height (cm)"
+f2 <- ggplot(
+  data = adsl3,
+  aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)
+) +
+  geom_point() +
+  scale_x_continuous(
+    limits = c(0, 150),
+    breaks = seq(0, 150, 10),
+    name = "Baseline Height (cm)"
+  ) +
+  scale_y_continuous(
+    limits = c(0, 150),
+    breaks = seq(0, 150, 10),
+    name = "Baseline Weight (kg)"
+  ) +
+  scale_shape_manual(
+    values = c(16, 17, 15),
+    name = "Treatment Group"
+  ) +
+  scale_colour_manual(
+    values = tf_colors,
+    name = "Treatment Group"
+  ) +
+  theme_bw() +
+  theme(legend.position = "top")
+
+g2 <- ggplotly(f2) %>%
+  layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = 1.02,
+      yanchor = "bottom"
+    ),
+    margin = list(t = 45)
+  )
+
+g2
+```
+
+## Row {height="52%"}
+
+```{r}
+#| title: "Subject-Level Data"
+my_table <- adsl3
+
+my_table_2 <- my_table %>%
+  rename(
+    "Unique Subject Identifier" = USUBJID,
+    "Treatment Group" = TRT01P,
+    "Total Treatment Duration (Days)" = TRTDURD,
+    "Baseline Weight (kg)" = WEIGHTBL,
+    "Baseline Height (cm)" = HEIGHTBL
+  )
+
+d <- datatable(
+  my_table_2,
+  extensions = c("ColReorder"),
+  rownames = FALSE,
+  filter = "top",
+  class = "stripe hover compact",
+  fillContainer = FALSE,
+  autoHideNavigation = FALSE,
+  options = list(
+    colReorder = TRUE,
+    bPaginate = TRUE,
+    paging = TRUE,
+    lengthChange = TRUE,
+    searching = TRUE,
+    info = TRUE,
+    pageLength = 5,
+    lengthMenu = c(5, 10, 12, 20, 50, 100),
+    dom = '<"top"lf>rt<"bottom"ip>',
+    language = list(
+      info = "Showing _START_ to _END_ of _TOTAL_ entries"
+    )
+  )
+)
+
+d
+```
+``````
