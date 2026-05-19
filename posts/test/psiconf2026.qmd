@@ -304,8 +304,6 @@ The main Quarto ideas are:
 
 [Open the Quarto dashboard](../../assets/psi-conf-2026-dashboard.html)
 
-For the website, render the dashboard once and place the resulting `psi-conf-2026-dashboard.html` file in the site `assets/` folder.
-
 Full code: [dashboard](#dashboard-full-code)
 
 ## Full Code
@@ -430,7 +428,7 @@ d <- datatable(
 saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
 ```
 
-### Dashboard Full Code {#dashboard-full-code}
+### Quarto Dashboard Full Code {#dashboard-full-code}
 
 ````markdown
 ---
@@ -490,7 +488,17 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   theme_bw() +
   theme(legend.position = "top")
 
-g1 <- ggplotly(f1)
+g1 <- ggplotly(f1) %>%
+  layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = 1.02,
+      yanchor = "bottom"
+    ),
+    margin = list(t = 45)
+  )
 
 g1
 ```
@@ -520,7 +528,17 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
   theme_bw() +
   theme(legend.position = "top")
 
-g2 <- ggplotly(f2)
+g2 <- ggplotly(f2) %>%
+  layout(
+    legend = list(
+      orientation = "h",
+      x = 0.5,
+      xanchor = "center",
+      y = 1.02,
+      yanchor = "bottom"
+    ),
+    margin = list(t = 45)
+  )
 
 g2
 ```
@@ -546,10 +564,21 @@ d <- datatable(
   rownames = FALSE,
   filter = "top",
   class = "stripe hover compact",
+  fillContainer = FALSE,
+  autoHideNavigation = FALSE,
   options = list(
     colReorder = TRUE,
+    bPaginate = TRUE,
+    paging = TRUE,
+    lengthChange = TRUE,
+    searching = TRUE,
+    info = TRUE,
     pageLength = 5,
-    lengthMenu = c(5, 10, 12, 20, 50, 100)
+    lengthMenu = c(5, 10, 12, 20, 50, 100),
+    dom = '<"top"lf>rt<"bottom"ip>',
+    language = list(
+      info = "Showing _START_ to _END_ of _TOTAL_ entries"
+    )
   )
 )
 
