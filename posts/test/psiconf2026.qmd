@@ -242,6 +242,8 @@ g2
 
 [Open the interactive scatterplot](interactive-outputs/scatterplotly.html)
 
+Full code: [boxplot](#boxplot-full-code) | [scatterplot](#scatterplot-full-code)
+
 ## Recipe 2: Make A Table Explorable
 
 ### Prepare The Table
@@ -284,11 +286,24 @@ d
 
 [Open the interactive table](interactive-outputs/datatable.html)
 
+Full code: [table](#table-full-code)
+
 ## Recipe 3: Bring Outputs Together
 
-[Open the Quarto dashboard](PSI%20Conf%202026%20Dashboard.html)
+The final dashboard uses the same building blocks from the recipes above:
+
+- the `ggplot` objects from Recipe 1
+- the `ggplotly()` conversion from Recipe 1
+- the `datatable()` output from Recipe 2
+- Quarto dashboard rows and cards to arrange everything in one place
+
+[Open the Quarto dashboard](<PSI Conf 2026 Dashboard.qmd>)
+
+Full code: [dashboard](<PSI Conf 2026 Dashboard.qmd>)
 
 ## Full Code
+
+### Shared Setup
 
 ```r
 # PSI Conf 2026 interactivity recipes
@@ -325,10 +340,11 @@ tf_colors <- c(
   "Xanomeline High Dose" = "#D55E00",
   "Xanomeline Low Dose" = "#CC79A7"
 )
+```
 
+### Boxplot Full Code
 
-# Recipe 1: Make a figure interactive ------------------------------------
-
+```r
 f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   geom_boxplot() +
   scale_x_discrete(name = "Treatment Group") +
@@ -346,8 +362,11 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
 g1 <- ggplotly(f1)
 
 saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
+```
 
+### Scatterplot Full Code
 
+```r
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
   geom_point() +
   scale_x_continuous(
@@ -372,10 +391,11 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
 g2 <- ggplotly(f2)
 
 saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
+```
 
+### Table Full Code
 
-# Recipe 2: Make a table explorable --------------------------------------
-
+```r
 my_table <- adsl3
 
 my_table_2 <- my_table %>%
