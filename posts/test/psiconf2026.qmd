@@ -444,7 +444,7 @@ execute:
   message: false
 ---
 
-```{r}
+~~~{r}
 # Run once if needed:
 # install.packages("rmarkdown")
 # install.packages("tibble")
@@ -476,11 +476,11 @@ tf_colors <- c(
   "Xanomeline High Dose" = "#D55E00",
   "Xanomeline Low Dose" = "#CC79A7"
 )
-```
+~~~
 
 ## Row {height="48%"}
 
-```{r}
+~~~{r}
 #| title: "Treatment Duration (Days) by Treatment Group"
 f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   geom_boxplot() +
@@ -511,9 +511,9 @@ g1 <- ggplotly(f1) %>%
   )
 
 g1
-```
+~~~
 
-```{r}
+~~~{r}
 #| title: "Baseline Weight (kg) vs Baseline Height (cm)"
 f2 <- ggplot(
   data = adsl3,
@@ -554,11 +554,11 @@ g2 <- ggplotly(f2) %>%
   )
 
 g2
-```
+~~~
 
 ## Row {height="52%"}
 
-```{r}
+~~~{r}
 #| title: "Subject-Level Data"
 my_table <- adsl3
 
@@ -596,5 +596,5 @@ d <- datatable(
 )
 
 d
-```
+~~~
 ``````
