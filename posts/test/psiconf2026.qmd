@@ -430,7 +430,7 @@ saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained 
 
 ### Quarto Dashboard Full Code {#dashboard-full-code}
 
-``````markdown
+``````text
 ---
 title: "Quarto Dashboard"
 output-file: psi-conf-2026-dashboard.html
