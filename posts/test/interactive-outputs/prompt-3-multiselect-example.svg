@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1528" height="492" viewBox="0 0 1528 492">
+  <rect x="0" y="0" width="1528" height="492" fill="#ffffff"/>
+  <rect x="1" y="1" width="1526" height="38" fill="#f7f7f7" stroke="#9b9b9b"/>
+  <text x="10" y="24" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#000000">
+    STUDYID: STUDY IDENTIFIER, DOMAIN: DOMAIN ABBREVIATION, USUBJID: UNIQUE SUBJECT IDENTIFIER, SUBJID: SUBJECT IDENTIFIER FOR THE STUDY, RFSTDTC: SUBJECT REFERENCE START DATE/TIME, RFENDTC: SUBJECT REFERENCE END DATE/TIME
+  </text>
+  <path d="M1508 15 l5 5 l5 -5" fill="none" stroke="#000000" stroke-width="1.5"/>
+
+  <rect x="0" y="43" width="1528" height="449" fill="#ffffff" stroke="#c9c9c9"/>
+  <rect x="9" y="58" width="1506" height="32" fill="#ffffff" stroke="#d6dce2"/>
+  <rect x="9" y="95" width="1506" height="28" fill="#efefef" stroke="#dadada"/>
+  <line x1="761" y1="95" x2="761" y2="123" stroke="#ffffff"/>
+  <text x="356" y="113" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#000000">SELECT ALL</text>
+  <text x="1100" y="113" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#000000">DESELECT ALL</text>
+
+  <g font-family="Arial, sans-serif" font-size="13" fill="#000000">
+    <text x="17" y="146">STUDYID: Study Identifier</text>
+    <text x="17" y="174">DOMAIN: Domain Abbreviation</text>
+    <text x="17" y="202">USUBJID: Unique Subject Identifier</text>
+    <text x="17" y="230">SUBJID: Subject Identifier for the Study</text>
+    <text x="17" y="258">RFSTDTC: Subject Reference Start Date/Time</text>
+    <text x="17" y="286">RFENDTC: Subject Reference End Date/Time</text>
+    <text x="17" y="314">RFXSTDTC: Date/Time of First Study Treatment</text>
+    <text x="17" y="342">RFXENDTC: Date/Time of Last Study Treatment</text>
+    <text x="17" y="370">RFICDTC: Date/Time of Informed Consent</text>
+    <text x="17" y="398">RFPENDTC: Date/Time of End of Participation</text>
+    <text x="17" y="426">DTHDTC: Date/Time of Death</text>
+    <text x="17" y="454">DTHFL: Subject Death Flag</text>
+    <text x="17" y="482">SITEID: Study Site Identifier</text>
+  </g>
+
+  <g fill="none" stroke="#000000" stroke-width="3">
+    <path d="M1484 139 l5 5 l9 -10"/>
+    <path d="M1484 167 l5 5 l9 -10"/>
+    <path d="M1484 195 l5 5 l9 -10"/>
+    <path d="M1484 223 l5 5 l9 -10"/>
+    <path d="M1484 251 l5 5 l9 -10"/>
+    <path d="M1484 279 l5 5 l9 -10"/>
+  </g>
+
+  <rect x="1512" y="146" width="8" height="265" rx="4" fill="#8d8d8d"/>
+  <path d="M1516 132 l4 6 h-8 z" fill="#8d8d8d"/>
+</svg>
