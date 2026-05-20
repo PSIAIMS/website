@@ -488,6 +488,61 @@ Requirements:
 
 Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polished.R)
 
+## Recipe 5: Build A Survival Dashboard Using Shiny Assistant
+
+This recipe uses Posit's Shiny Assistant to generate and then iteratively improve a Shiny app from natural-language prompts.
+
+Useful links:
+
+- [R Shiny Assistant introduction](https://shiny.posit.co/blog/posts/shiny-assistant/)
+- [Shiny Assistant app](https://gallery.shinyapps.io/assistant/)
+
+### Prompt 1: Create The Initial Survival Dashboard
+
+```text
+Create a polished R Shiny dashboard for exploring simulated clinical trial survival data.
+
+Include:
+treatment group filter
+subgroup filter
+censoring rate slider
+
+Display:
+Kaplan-Meier plot
+number at risk table
+hazard ratio summary
+downloadable survival dataset
+
+Use a modern dashboard layout with reactive updates.
+Keep the code concise and runnable as a single app.R file.
+```
+
+Generated app code: [Shiny Assistant version 1](interactive-outputs/shiny-assistant-01.txt)
+
+### Prompt 2: Add A Dataset Tab
+
+```text
+Can I have the dataset on a second tab?
+```
+
+Generated app code: [Shiny Assistant version 2](interactive-outputs/shiny-assistant-02.txt)
+
+### Prompt 3: Add Zoomable Cards
+
+```text
+Can I have zoom in capabilities on each card?
+```
+
+Generated app code: [Shiny Assistant version 3](interactive-outputs/shiny-assistant-03.txt)
+
+### Prompt 4: Add An Adjusted Cox Model Option
+
+```text
+Add a checkbox called "Adjust Cox model for age and sex".
+```
+
+Generated app code: [Shiny Assistant version 4](interactive-outputs/shiny-assistant-04.txt)
+
 ## Full Code
 
 ### Shared Setup {#shared-setup}
