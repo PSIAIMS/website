@@ -1,5 +1,5 @@
 ---
-title: "PSI Conference 2026 Presentation Code"
+title: "PSI Conference 2026 Presentation Code and AI Prompts"
 description: "Fast, Fresh & Interactive: R Dashboards for Statisticians in 30 Minutes or Less!"
 author:
   - name: PSI AIMS
