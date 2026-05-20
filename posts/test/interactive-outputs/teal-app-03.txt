@@ -1,0 +1,66 @@
+library(teal)
+library(teal.widgets)
+library(shiny)
+library(ggplot2)
+
+data <- teal_data(
+  IRIS = iris,
+  MTCARS = mtcars
+)
+
+plot_module <- function(label = "Plot") {
+  module(
+    label = label,
+    
+    ui = function(id) {
+      ns <- NS(id)
+      
+      standard_layout(
+        encoding = tagList(
+          selectInput(
+            ns("dataset"),
+            "Choose a dataset:",
+            choices = c("IRIS", "MTCARS")
+          )
+        ),
+        output = plotOutput(ns("plot"), height = "80vh")
+      )
+    },
+    
+    server = function(id, data) {
+      moduleServer(id, function(input, output, session) {
+        
+        output$plot <- renderPlot({
+          
+          df <- data()[[input$dataset]]
+          
+          # Keep numeric columns
+          num_df <- df[, sapply(df, is.numeric), drop = FALSE]
+          req(ncol(num_df) >= 2)
+          
+          x_name <- names(num_df)[1]
+          y_name <- names(num_df)[2]
+          
+          ggplot(num_df, aes_string(x = x_name, y = y_name)) +
+            geom_point(color = "steelblue", size = 2) +
+            labs(
+              title = paste("First Two Numeric Variables:", input$dataset),
+              x = x_name,
+              y = y_name
+            ) +
+            theme_minimal()
+        })
+      })
+    }
+  )
+}
+
+app <- init(
+  data = data,
+  modules = modules(plot_module())) %>%  
+  
+  modify_title("Basic Teal Demo App") %>% 
+  modify_header("My first teal app") %>% 
+  modify_footer("Powered by teal + shiny")
+
+shinyApp(app$ui, app$server)

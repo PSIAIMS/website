@@ -1,0 +1,18 @@
+library(dplyr)
+library(teal)
+
+data <- teal_data(
+  IRIS = iris,
+  MTCARS = mtcars
+)
+
+app <- init(
+  data = data,
+  modules =example_module()) %>%  
+
+  modify_title("Basic Teal Demo App") %>% 
+  modify_header("My first teal app") %>% 
+  modify_footer("Powered by teal + shiny")
+
+
+shinyApp(app$ui, app$server)
