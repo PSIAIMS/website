@@ -417,7 +417,7 @@ copy_block(c(
 ))
 ```
 
-![Example multi-select dropdown with search, Select All, Deselect All, and selected checkmarks.](interactive-outputs/prompt-3-multiselect-example.svg){fig-alt="Example multi-select dropdown with search, Select All, Deselect All, and selected checkmarks."}
+![Paste this image alongside the prompt above and prompt below](interactive-outputs/prompt-3-multiselect-example.svg){fig-alt="Example multi-select dropdown with search, Select All, Deselect All, and selected checkmarks."}
 
 
 Prompt used:
@@ -629,7 +629,8 @@ These tools show different ways to bring AI assistance into coding and app devel
 
 ## Full Code
 
-### Shared Setup {#shared-setup}
+<details id="shared-setup">
+<summary><strong>Shared Setup</strong></summary>
 
 ```r
 # PSI Conf 2026 interactivity recipes
@@ -668,7 +669,10 @@ tf_colors <- c(
 )
 ```
 
-### Boxplot Full Code {#boxplot-full-code}
+</details>
+
+<details id="boxplot-full-code">
+<summary><strong>Boxplot Full Code</strong></summary>
 
 ```r
 f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
@@ -690,7 +694,10 @@ g1 <- ggplotly(f1)
 saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
 ```
 
-### Scatterplot Full Code {#scatterplot-full-code}
+</details>
+
+<details id="scatterplot-full-code">
+<summary><strong>Scatterplot Full Code</strong></summary>
 
 ```r
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
@@ -719,7 +726,10 @@ g2 <- ggplotly(f2)
 saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
 ```
 
-### Table Full Code {#table-full-code}
+</details>
+
+<details id="table-full-code">
+<summary><strong>Table Full Code</strong></summary>
 
 ```r
 my_table <- adsl3
@@ -749,7 +759,10 @@ d <- datatable(
 saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
 ```
 
-### Quarto Dashboard Full Code {#dashboard-full-code}
+</details>
+
+<details id="dashboard-full-code">
+<summary><strong>Quarto Dashboard Full Code</strong></summary>
 
 ```{r}
 #| results: asis
@@ -930,3 +943,5 @@ cat(display_fence, "markdown\n", sep = "")
 cat(paste(dashboard_code, collapse = "\n"))
 cat("\n", display_fence, "\n", sep = "")
 ```
+
+</details>
