@@ -306,6 +306,185 @@ The main Quarto ideas are:
 
 Full code: [dashboard](#dashboard-full-code)
 
+- To see more Quarto examples, please visit: <https://quarto.org/docs/gallery/>
+
+## Recipe 4: From Quarto dashboard to Shiny app using AI prompts
+
+This recipe shows how the same dashboard code can become the starting point for a Shiny app. The prompts are deliberately iterative: first convert the Quarto dashboard, then add filters, then add more polished controls and downloads, then improve the visual design.
+
+Each prompt asks for the full `app.R` code so the result can be copied into RStudio and run as a Shiny app.
+
+### Prompt 1: Convert The Quarto Dashboard To Shiny
+
+```text
+I have already created a Quarto dashboard using the code below. Please convert this into a simple Shiny app that keeps the same data, plots, table, and overall purpose.
+
+At the top of the script, include robust package setup code that:
+- sets the CRAN repository to Posit Package Manager: https://packagemanager.posit.co/cran/latest
+- installs required packages as binaries where possible using type = "binary"
+- avoids reinstalling packages that are already installed
+- does not load packages until all package checks are complete
+- have library calls for all required packages after package install.
+
+Please reuse as much of the existing Quarto logic as possible, but restructure it into standard Shiny ui and server code.
+
+Here is the Quarto dashboard code:
+
+<PASTE QUARTO DASHBOARD CODE FROM BEFORE HERE>
+```
+
+Generated app code: [basic Shiny app](interactive-outputs/shiny-app-01-basic.R)
+
+### Prompt 2: Add Sidebar Filters
+
+Prompt builder request:
+
+```text
+Give me a prompt to update this Shiny app:
+- giving the full code
+- just updating the first version of the code that was given previously
+- Add a sidebar with:
+  - treatment group filter dropdown menu (multiple choice)
+  - subject filter dropdown menu (multiple choice)
+  - sliders for duration, weight, and height
+- Ensure all plots and the table respond to these filters
+```
+
+Prompt used:
+
+```text
+Please update the first Shiny app version you gave me previously.
+
+Give me the full updated `app.R` code, not just snippets.
+
+Keep the same data source, plots, table, package setup section, colors, and overall app purpose.
+
+Add a sidebar containing these filters:
+
+* Treatment group filter dropdown menu, allowing multiple selections
+* Subject filter dropdown menu, allowing multiple selections
+* Treatment duration slider
+* Baseline weight slider
+* Baseline height slider
+
+Requirements:
+
+* The filters should be based on the available values in `adsl3`.
+* All filters should have sensible defaults that include all available data.
+* The treatment group and subject dropdowns should support multiple selections.
+* The duration, weight, and height sliders should use the observed data ranges.
+* The two Plotly plots and the DT table must all respond to every filter.
+* Reuse as much of the original Shiny app logic as possible.
+* Keep the standard Shiny `ui` and `server` structure.
+* Include robust package setup at the top exactly as before:
+  * Set CRAN repository to Posit Package Manager: `https://packagemanager.posit.co/cran/latest`
+  * Install required packages as binaries where possible using `type = "binary"`
+  * Avoid reinstalling packages that are already installed
+  * Do not load packages until all package checks are complete
+  * Include `library()` calls for all required packages after package installation
+```
+
+Generated app code: [Shiny app with filters](interactive-outputs/shiny-app-02-filters.R)
+
+### Prompt 3: Improve The Filters And Add Downloads
+
+Prompt builder request:
+
+```text
+Give me a prompt to update this Shiny app:
+- giving the full code
+- just updating the first version of the code that was given previously
+- Change the treatment and subject filters to be like this image where we can still choose multiple values
+- Add buttons in the sidebar for the user to be able to download static files
+```
+
+Prompt used:
+
+```text
+Please update the first Shiny app version you gave me previously.
+
+Give me the full updated `app.R` code, not just a patch.
+
+Keep the same data source, plots, table, colors, and overall app purpose.
+
+Update only the first Shiny app code from earlier, incorporating the existing sidebar filter version where appropriate.
+
+Change the Treatment Group and Subject filters so they look and behave like the screenshot:
+
+* Use multi-select dropdowns that support selecting multiple values.
+* Show selected values in the collapsed input as comma-separated text.
+* Include a search box inside each dropdown.
+* Include Select All and Deselect All controls.
+* Show checkmarks for selected items.
+* Keep all treatment groups and all subjects selected by default.
+
+Add sidebar buttons that allow the user to download static files:
+
+* Download the Treatment Duration plot as a static image file.
+* Download the Baseline Weight vs Baseline Height plot as a static image file.
+* Download the filtered subject-level table as a CSV file.
+
+Requirements:
+
+* Keep the existing robust package setup at the top:
+  * Set CRAN repository to `https://packagemanager.posit.co/cran/latest`
+  * Install missing required packages using `type = "binary"`
+  * Avoid reinstalling already installed packages
+  * Do not load packages until all package checks are complete
+  * Include `library()` calls after package installation
+* Add any additional packages needed for the improved multi-select inputs or static downloads to the package setup.
+* Use a reactive filtered dataset in the server.
+* All plots and the DT table must respond to all filters.
+* The static download buttons should download the currently filtered outputs.
+* Reuse as much of the existing Shiny app logic as possible.
+* Return only the complete updated `app.R` code.
+```
+
+Generated app code: [Shiny app with improved filters and downloads](interactive-outputs/shiny-app-03-downloads.R)
+
+### Prompt 4: Improve The Name And Design
+
+Prompt builder request:
+
+```text
+Give me a prompt to update this Shiny app:
+- giving the full code
+- just updating the first version of the code that was given previously
+- Give the dashboard a meaningful name
+- Improve the look
+```
+
+Prompt used:
+
+```text
+Please update the first Shiny app version you gave me previously.
+
+Give me the full updated `app.R` code, not just a patch.
+
+Keep the same data source, plots, table, colors, filters, downloads, and overall purpose.
+
+Update only the first Shiny app code from earlier, incorporating the current sidebar filter and download-button version where appropriate.
+
+Changes requested:
+
+* Give the dashboard a meaningful clinical-style name instead of "Quarto Dashboard".
+* Improve the visual design of the app while keeping it simple and professional.
+* Use a cleaner layout with a clear title/header area.
+* Improve spacing, alignment, and section headings.
+* Make the sidebar visually cleaner and easier to scan.
+* Make the plot and table areas look more polished, for example by using card-style containers or similar Shiny/bslib layout elements.
+* Keep the app appropriate for a clinical subject-level exploratory dashboard.
+
+Requirements:
+
+* Keep the robust package setup at the top.
+* Reuse as much of the existing Shiny app logic as possible.
+* All filters, plots, table, and download buttons must continue to work.
+* Return only the complete updated `app.R` code.
+```
+
+Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polished.R)
+
 ## Full Code
 
 ### Shared Setup {#shared-setup}
