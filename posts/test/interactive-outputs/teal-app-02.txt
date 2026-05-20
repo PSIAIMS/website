@@ -1,0 +1,46 @@
+library(teal)
+library(teal.widgets)
+library(shiny)
+library(DT)
+library(teal.modules.clinical)
+
+data <- teal_data(
+  ADSL = rADSL
+)
+
+# Create join keys object
+join_keys_obj <- join_keys(
+  join_key("ADSL", keys = c("USUBJID"))
+)
+
+# Assign join keys
+join_keys(data) <- join_keys_obj
+
+# Define the Demographic Table Module
+demo_table_module <- function() {
+  tm_t_summary(
+    label = "Demographic Table",
+    dataname = "ADSL",
+    arm_var = choices_selected(
+      choices = choices_labeled(
+        choices = "ARM",
+        labels  = col_labels(rADSL, fill = FALSE)["ARM"]
+      ),
+      selected = "ARM"
+    ),
+    summarize_vars = choices_selected(
+      choices = variable_choices("ADSL"),
+      selected = c("SEX", "AGE", "RACE")
+    )
+  )
+}
+
+app <- init(
+  data = data,
+  modules = modules(demo_table_module())) %>%  
+  
+  modify_title("Basic Teal Demo App") %>% 
+  modify_header("My first teal app") %>% 
+  modify_footer("Powered by teal + shiny")
+
+shinyApp(app$ui, app$server)
