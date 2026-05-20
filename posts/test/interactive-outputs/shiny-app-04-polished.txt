@@ -85,7 +85,11 @@ make_duration_plot <- function(data) {
       name = "Treatment Group"
     ) +
     theme_bw() +
-    theme(legend.position = "top")
+    theme(
+      legend.position = "top",
+      plot.title = element_text(face = "bold"),
+      axis.title = element_text(face = "bold")
+    )
 }
 
 make_height_weight_plot <- function(data) {
@@ -98,7 +102,7 @@ make_height_weight_plot <- function(data) {
       colour = TRT01P
     )
   ) +
-    geom_point() +
+    geom_point(size = 2.3, alpha = 0.85) +
     scale_x_continuous(
       limits = c(0, 150),
       breaks = seq(0, 150, 10),
@@ -118,7 +122,11 @@ make_height_weight_plot <- function(data) {
       name = "Treatment Group"
     ) +
     theme_bw() +
-    theme(legend.position = "top")
+    theme(
+      legend.position = "top",
+      plot.title = element_text(face = "bold"),
+      axis.title = element_text(face = "bold")
+    )
 }
 
 make_subject_table <- function(data) {
@@ -134,122 +142,153 @@ make_subject_table <- function(data) {
 
 # ---- UI ----
 
-ui <- fluidPage(
-  theme = bs_theme(bootswatch = "cosmo"),
+ui <- page_sidebar(
+  title = "Clinical Subject-Level Explorer",
 
-  titlePanel("Quarto Dashboard"),
+  theme = bs_theme(
+    bootswatch = "cosmo",
+    base_font = font_google("Source Sans 3"),
+    heading_font = font_google("Source Sans 3")
+  ),
 
-  sidebarLayout(
-    sidebarPanel(
-      pickerInput(
-        inputId = "treatment_filter",
-        label = "Treatment Group",
-        choices = levels(adsl3$TRT01P),
-        selected = levels(adsl3$TRT01P),
-        multiple = TRUE,
-        options = pickerOptions(
-          actionsBox = TRUE,
-          liveSearch = TRUE,
-          selectedTextFormat = "values",
-          noneSelectedText = "No treatment groups selected",
-          selectAllText = "Select All",
-          deselectAllText = "Deselect All",
-          iconBase = "glyphicon",
-          tickIcon = "glyphicon-ok"
-        )
-      ),
+  sidebar = sidebar(
+    title = "Dashboard Controls",
+    width = 340,
 
-      pickerInput(
-        inputId = "subject_filter",
-        label = "Subject",
-        choices = levels(adsl3$USUBJID),
-        selected = levels(adsl3$USUBJID),
-        multiple = TRUE,
-        options = pickerOptions(
-          actionsBox = TRUE,
-          liveSearch = TRUE,
-          selectedTextFormat = "values",
-          noneSelectedText = "No subjects selected",
-          selectAllText = "Select All",
-          deselectAllText = "Deselect All",
-          iconBase = "glyphicon",
-          tickIcon = "glyphicon-ok"
-        )
-      ),
+    div(
+      class = "text-muted",
+      "Filter the subject-level dataset and download the current filtered outputs."
+    ),
 
-      sliderInput(
-        inputId = "duration_filter",
-        label = "Total Treatment Duration (Days)",
-        min = floor(duration_range[1]),
-        max = ceiling(duration_range[2]),
-        value = c(floor(duration_range[1]), ceiling(duration_range[2])),
-        step = 1
-      ),
+    hr(),
 
-      sliderInput(
-        inputId = "weight_filter",
-        label = "Baseline Weight (kg)",
-        min = floor(weight_range[1]),
-        max = ceiling(weight_range[2]),
-        value = c(floor(weight_range[1]), ceiling(weight_range[2])),
-        step = 1
-      ),
+    h5("Subject Selection"),
 
-      sliderInput(
-        inputId = "height_filter",
-        label = "Baseline Height (cm)",
-        min = floor(height_range[1]),
-        max = ceiling(height_range[2]),
-        value = c(floor(height_range[1]), ceiling(height_range[2])),
-        step = 1
-      ),
-
-      hr(),
-
-      downloadButton(
-        outputId = "download_duration_plot",
-        label = "Download Treatment Duration Plot"
-      ),
-
-      br(),
-      br(),
-
-      downloadButton(
-        outputId = "download_height_weight_plot",
-        label = "Download Height vs Weight Plot"
-      ),
-
-      br(),
-      br(),
-
-      downloadButton(
-        outputId = "download_subject_table",
-        label = "Download Filtered Table CSV"
+    pickerInput(
+      inputId = "treatment_filter",
+      label = "Treatment Group",
+      choices = levels(adsl3$TRT01P),
+      selected = levels(adsl3$TRT01P),
+      multiple = TRUE,
+      options = pickerOptions(
+        actionsBox = TRUE,
+        liveSearch = TRUE,
+        selectedTextFormat = "values",
+        noneSelectedText = "No treatment groups selected",
+        selectAllText = "Select All",
+        deselectAllText = "Deselect All",
+        iconBase = "glyphicon",
+        tickIcon = "glyphicon-ok"
       )
     ),
 
-    mainPanel(
-      fluidRow(
-        column(
-          width = 6,
-          h4("Treatment Duration (Days) by Treatment Group"),
-          plotlyOutput("duration_plot", height = "420px")
-        ),
-        column(
-          width = 6,
-          h4("Baseline Weight (kg) vs Baseline Height (cm)"),
-          plotlyOutput("height_weight_plot", height = "420px")
-        )
-      ),
-
-      fluidRow(
-        column(
-          width = 12,
-          h4("Subject-Level Data"),
-          DTOutput("subject_table")
-        )
+    pickerInput(
+      inputId = "subject_filter",
+      label = "Subject",
+      choices = levels(adsl3$USUBJID),
+      selected = levels(adsl3$USUBJID),
+      multiple = TRUE,
+      options = pickerOptions(
+        actionsBox = TRUE,
+        liveSearch = TRUE,
+        selectedTextFormat = "values",
+        noneSelectedText = "No subjects selected",
+        selectAllText = "Select All",
+        deselectAllText = "Deselect All",
+        iconBase = "glyphicon",
+        tickIcon = "glyphicon-ok"
       )
+    ),
+
+    hr(),
+
+    h5("Clinical Measures"),
+
+    sliderInput(
+      inputId = "duration_filter",
+      label = "Total Treatment Duration (Days)",
+      min = floor(duration_range[1]),
+      max = ceiling(duration_range[2]),
+      value = c(floor(duration_range[1]), ceiling(duration_range[2])),
+      step = 1
+    ),
+
+    sliderInput(
+      inputId = "weight_filter",
+      label = "Baseline Weight (kg)",
+      min = floor(weight_range[1]),
+      max = ceiling(weight_range[2]),
+      value = c(floor(weight_range[1]), ceiling(weight_range[2])),
+      step = 1
+    ),
+
+    sliderInput(
+      inputId = "height_filter",
+      label = "Baseline Height (cm)",
+      min = floor(height_range[1]),
+      max = ceiling(height_range[2]),
+      value = c(floor(height_range[1]), ceiling(height_range[2])),
+      step = 1
+    ),
+
+    hr(),
+
+    h5("Downloads"),
+
+    downloadButton(
+      outputId = "download_duration_plot",
+      label = "Treatment Duration PNG",
+      class = "btn-primary btn-sm w-100"
+    ),
+
+    br(),
+    br(),
+
+    downloadButton(
+      outputId = "download_height_weight_plot",
+      label = "Height vs Weight PNG",
+      class = "btn-primary btn-sm w-100"
+    ),
+
+    br(),
+    br(),
+
+    downloadButton(
+      outputId = "download_subject_table",
+      label = "Filtered Table CSV",
+      class = "btn-secondary btn-sm w-100"
     )
+  ),
+
+  div(
+    class = "mb-4",
+    h2("Clinical Subject-Level Explorer"),
+    p(
+      class = "text-muted",
+      "Interactive review of treatment duration and baseline subject characteristics by treatment group."
+    )
+  ),
+
+  layout_columns(
+    col_widths = c(6, 6),
+    card(
+      full_screen = TRUE,
+      card_header("Treatment Duration by Treatment Group"),
+      plotlyOutput("duration_plot", height = "420px")
+    ),
+    card(
+      full_screen = TRUE,
+      card_header("Baseline Weight vs Baseline Height"),
+      plotlyOutput("height_weight_plot", height = "420px")
+    )
+  ),
+
+  br(),
+
+  card(
+    full_screen = TRUE,
+    card_header("Filtered Subject-Level Data"),
+    DTOutput("subject_table")
   )
 )
 
