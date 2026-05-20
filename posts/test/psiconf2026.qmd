@@ -543,6 +543,40 @@ Add a checkbox called "Adjust Cox model for age and sex".
 
 Generated app code: [Shiny Assistant version 4](interactive-outputs/shiny-assistant-04.txt)
 
+## Recipe 6: Explore teal Apps
+
+`teal` is a Shiny-based framework for interactive data exploration, with a particular focus on clinical trial data. It gives developers a standard structure for bringing in data, applying filters, adding analysis modules, and producing reproducible outputs.
+
+In a `teal` app, the main building blocks are:
+
+- **data**: passed into the app with `teal_data()` or clinical data helpers.
+- **modules**: analysis components added with `modules()`.
+- **filters**: shared filtering controls that can be applied across modules.
+- **app wrapper**: `init()` brings the data and modules together into a Shiny app.
+
+Useful links:
+
+- [Getting started with teal](https://insightsengineering.github.io/teal/latest-tag/articles/getting-started-with-teal.html)
+- [Main teal website](https://insightsengineering.github.io/teal/latest-tag/)
+
+### Example 1: Basic teal App
+
+This is the smallest useful pattern: load example data, pass it into `teal_data()`, add a simple module, then start the app.
+
+Code: [basic teal app](interactive-outputs/teal-app-01.txt)
+
+### Example 2: Pre-Built teal Module
+
+This example uses a pre-built clinical module. The app structure stays simple, but the module gives you a clinical-style output without writing the table logic from scratch.
+
+Code: [pre-built teal app](interactive-outputs/teal-app-02.txt)
+
+### Example 3: Custom teal Module
+
+This example shows the next step: defining a custom module with its own UI and server logic, while still using the standard `teal` application wrapper.
+
+Code: [custom teal app](interactive-outputs/teal-app-03.txt)
+
 ## Full Code
 
 ### Shared Setup {#shared-setup}
