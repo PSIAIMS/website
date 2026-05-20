@@ -390,6 +390,10 @@ Generated app code: [Shiny app with filters](interactive-outputs/shiny-app-02-fi
 
 Prompt builder request:
 
+Reference image:
+
+![Example multi-select dropdown with search, Select All, Deselect All, and selected checkmarks.](interactive-outputs/prompt-3-multiselect-example.svg){fig-alt="Example multi-select dropdown with search, Select All, Deselect All, and selected checkmarks."}
+
 ```text
 Give me a prompt to update this Shiny app:
 - giving the full code
