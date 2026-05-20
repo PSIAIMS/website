@@ -1,0 +1,214 @@
+# app.R
+
+library(shiny)
+library(bslib)
+library(survival)
+library(ggplot2)
+library(dplyr)
+
+generate_survival_data <- function(n = 400, censor_rate = 0.3) {
+  set.seed(789)
+
+  data.frame(
+    id = seq_len(n),
+    treatment = sample(c("Treatment A", "Treatment B"), n, replace = TRUE),
+    subgroup = sample(c("Subgroup 1", "Subgroup 2", "Subgroup 3"), n, replace = TRUE),
+    age = round(rnorm(n, 60, 10)),
+    sex = sample(c("Female", "Male"), n, replace = TRUE)
+  ) |>
+    mutate(
+      # Adjusted rates to have more gradual decline and more events early
+      # Treatment B has better survival (lower rate), Treatment A worse (higher rate)
+      event_time = rweibull(
+        n,
+        shape = 1.2,  # Shape > 1 means more events early
+        scale = ifelse(treatment == "Treatment B", 50, 40)
+      ),
+      censor_time = runif(n, 60, 180),  # More uniform censoring to avoid late dropoff
+      time = pmin(event_time, censor_time),
+      # Cap time at 150 months
+      time = pmin(time, 150),
+      time = round(time, 1),
+      status = as.integer(event_time <= censor_time)
+    ) |>
+    select(id, treatment, subgroup, age, sex, time, status)
+}
+
+km_plot <- function(data) {
+  fit <- survfit(Surv(time, status) ~ treatment, data = data)
+  
+  # Extract confidence intervals
+  km_data <- data.frame(
+    time = fit$time,
+    survival = fit$surv,
+    upper = fit$upper,
+    lower = fit$lower,
+    strata = rep(names(fit$strata), fit$strata)
+  ) |>
+    mutate(strata = sub("treatment=", "", strata))
+
+  p_value <- tryCatch(
+    {
+      test <- survdiff(Surv(time, status) ~ treatment, data = data)
+      pchisq(test$chisq, length(test$n) - 1, lower.tail = FALSE)
+    },
+    error = function(e) NA_real_
+  )
+
+  ggplot(km_data, aes(x = time, colour = strata, fill = strata)) +
+    geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, colour = NA) +
+    geom_step(aes(y = survival), linewidth = 1) +
+    scale_colour_manual(values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419")) +
+    scale_fill_manual(values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419")) +
+    scale_x_continuous(breaks = seq(0, 150, 50), limits = c(0, 150)) +
+    scale_y_continuous(limits = c(0, 1), labels = scales::number_format(accuracy = 0.01)) +
+    labs(
+      x = "Time (months)",
+      y = "Survival Probability",
+      colour = "Treatment",
+      fill = "Treatment"
+    ) +
+    annotate(
+      "text",
+      x = 5,
+      y = 0.18,
+      hjust = 0,
+      label = ifelse(is.na(p_value), "", paste0("p = ", signif(p_value, 3)))
+    ) +
+    theme_minimal(base_size = 13) +
+    theme(legend.position = "top")
+}
+
+risk_table_plot <- function(data) {
+  fit <- survfit(Surv(time, status) ~ treatment, data = data)
+  times <- seq(0, 150, 50)
+  risk <- summary(fit, times = times, extend = TRUE)
+
+  risk_data <- data.frame(
+    treatment = sub("treatment=", "", risk$strata),
+    time = risk$time,
+    n_risk = risk$n.risk
+  ) |>
+    mutate(treatment = factor(treatment, levels = c("Treatment B", "Treatment A")))
+
+  ggplot(risk_data, aes(time, treatment, label = n_risk)) +
+    geom_text(size = 4, colour = "black") +
+    scale_y_discrete(limits = c("Treatment B", "Treatment A")) +
+    scale_x_continuous(breaks = times) +
+    labs(x = "Time", y = "Strata", title = "Number at risk") +
+    theme_minimal(base_size = 12) +
+    theme(
+      legend.position = "none",
+      axis.text.y = element_text(colour = c("#F0C419", "#56B4E9"))
+    )
+}
+
+hazard_ratio_summary <- function(data) {
+  if (length(unique(data$treatment)) < 2) {
+    return(tags$p("Select both treatment groups to estimate a hazard ratio.", style = "font-size: 0.9rem;"))
+  }
+
+  model <- coxph(Surv(time, status) ~ treatment, data = data)
+  estimate <- summary(model)
+  hr <- estimate$conf.int[1, "exp(coef)"]
+  lower <- estimate$conf.int[1, "lower .95"]
+  upper <- estimate$conf.int[1, "upper .95"]
+  p_value <- estimate$coefficients[1, "Pr(>|z|)"]
+
+  tagList(
+    h2(paste0("HR: ", round(hr, 2)), class = "text-center", style = "margin-bottom: 0.05rem; color: #56B4E9;"),
+    p(paste0("95% CI: [", round(lower, 2), ", ", round(upper, 2), "]"), class = "text-center", style = "font-size: 0.9rem; margin-bottom: 0.05rem;"),
+    p(paste0("P-value: ", signif(p_value, 3)), class = "text-center", style = "font-size: 0.9rem; margin-bottom: 0.05rem;"),
+    hr(style = "margin-top: 0.05rem; margin-bottom: 0.05rem;"),
+    p(paste0("Total subjects: ", nrow(data)), class = "text-center text-muted", style = "font-size: 0.85rem; margin-bottom: 0.02rem;"),
+    p(
+      paste0("Events: ", sum(data$status), " (", round(mean(data$status) * 100, 1), "%)"),
+      class = "text-center text-muted",
+      style = "font-size: 0.85rem; margin-bottom: 0;"
+    )
+  )
+}
+
+ui <- page_sidebar(
+  title = "Clinical Trial Survival Analysis Dashboard",
+  sidebar = sidebar(
+    width = 300,
+    selectInput(
+      "treatment",
+      "Treatment Group:",
+      choices = c("All", "Treatment A", "Treatment B")
+    ),
+    selectInput(
+      "subgroup",
+      "Subgroup:",
+      choices = c("All", "Subgroup 1", "Subgroup 2", "Subgroup 3")
+    ),
+    sliderInput(
+      "censor_rate",
+      "Censoring Rate:",
+      min = 0,
+      max = 0.5,
+      value = 0.3,
+      step = 0.05
+    ),
+    downloadButton("download_data", "Download Dataset", class = "btn-primary")
+  ),
+  card(
+    card_header("Kaplan-Meier Survival Curve"),
+    plotOutput("km_plot", height = "420px")
+  ),
+  layout_columns(
+    col_widths = c(6, 6),
+    card(
+      card_header("Number at Risk Table"),
+      plotOutput("risk_table", height = "260px")
+    ),
+    card(
+      card_header("Hazard Ratio Summary"),
+      uiOutput("hr_summary")
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  survival_data <- reactive({
+    generate_survival_data(censor_rate = input$censor_rate)
+  })
+
+  filtered_data <- reactive({
+    data <- survival_data()
+
+    if (input$treatment != "All") {
+      data <- data |> filter(treatment == input$treatment)
+    }
+
+    if (input$subgroup != "All") {
+      data <- data |> filter(subgroup == input$subgroup)
+    }
+
+    data
+  })
+
+  output$km_plot <- renderPlot({
+    km_plot(filtered_data())
+  })
+
+  output$risk_table <- renderPlot({
+    risk_table_plot(filtered_data())
+  })
+
+  output$hr_summary <- renderUI({
+    hazard_ratio_summary(filtered_data())
+  })
+
+  output$download_data <- downloadHandler(
+    filename = function() {
+      paste0("survival_data_", Sys.Date(), ".csv")
+    },
+    content = function(file) {
+      write.csv(filtered_data(), file, row.names = FALSE)
+    }
+  )
+}
+
+shinyApp(ui, server)
