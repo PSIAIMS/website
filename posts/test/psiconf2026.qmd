@@ -333,7 +333,7 @@ Here is the Quarto dashboard code:
 <PASTE QUARTO DASHBOARD CODE FROM BEFORE HERE>
 ```
 
-Generated app code: [basic Shiny app](interactive-outputs/shiny-app-01-basic.R)
+Generated app code: [basic Shiny app](interactive-outputs/shiny-app-01-basic.txt)
 
 ### Prompt 2: Add Sidebar Filters
 
@@ -384,7 +384,7 @@ Requirements:
   * Include `library()` calls for all required packages after package installation
 ```
 
-Generated app code: [Shiny app with filters](interactive-outputs/shiny-app-02-filters.R)
+Generated app code: [Shiny app with filters](interactive-outputs/shiny-app-02-filters.txt)
 
 ### Prompt 3: Improve The Filters And Add Downloads
 
@@ -443,7 +443,7 @@ Requirements:
 * Return only the complete updated `app.R` code.
 ```
 
-Generated app code: [Shiny app with improved filters and downloads](interactive-outputs/shiny-app-03-downloads.R)
+Generated app code: [Shiny app with improved filters and downloads](interactive-outputs/shiny-app-03-downloads.txt)
 
 ### Prompt 4: Improve The Name And Design
 
@@ -486,7 +486,7 @@ Requirements:
 * Return only the complete updated `app.R` code.
 ```
 
-Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polished.R)
+Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polished.txt)
 
 ## Recipe 5: Build A Survival Dashboard Using Shiny Assistant
 
