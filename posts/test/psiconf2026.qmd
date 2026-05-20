@@ -120,6 +120,10 @@ copy_block <- function(lines, language = "markdown") {
   cat(paste(lines, collapse = "\n"))
   cat("\n", fence, "\n", sep = "")
 }
+
+copy_file_block <- function(path, language = "r") {
+  copy_block(readLines(path, warn = FALSE), language = language)
+}
 ```
 
 ## Setup
@@ -250,8 +254,6 @@ g2
 
 [Open the interactive scatterplot](interactive-outputs/scatterplotly.html)
 
-Full code: [boxplot](#boxplot-full-code) | [scatterplot](#scatterplot-full-code)
-
 ## Recipe 2: Make A Table Explorable
 
 ### Prepare The Table
@@ -294,8 +296,6 @@ d
 
 [Open the interactive table](interactive-outputs/datatable.html)
 
-Full code: [table](#table-full-code)
-
 ## Recipe 3: Bring Outputs Together
 
 The final dashboard uses the same building blocks from the recipes above, but places them inside a Quarto dashboard layout.
@@ -311,7 +311,193 @@ The main Quarto ideas are:
 
 [Open the Quarto dashboard](../../assets/psi-conf-2026-dashboard.html)
 
-Full code: [dashboard](#dashboard-full-code)
+</details>
+
+<details id="dashboard-full-code">
+<summary><strong>Quarto Dashboard Full Code</strong></summary>
+
+```{r}
+#| results: asis
+qmd_fence <- "```"
+r_fence <- paste0(qmd_fence, "{r}")
+display_fence <- paste0(qmd_fence, qmd_fence)
+
+dashboard_code <- c(
+  "---",
+  'title: "Quarto Dashboard"',
+  "output-file: psi-conf-2026-dashboard.html",
+  "format:",
+  "  dashboard:",
+  "    theme: cosmo",
+  "    embed-resources: true",
+  "execute:",
+  "  echo: false",
+  "  warning: false",
+  "  message: false",
+  "---",
+  "",
+  r_fence,
+  "# Run once if needed:",
+  '# install.packages("rmarkdown")',
+  '# install.packages("tibble")',
+  '# install.packages("dplyr")',
+  '# install.packages("ggplot2")',
+  '# install.packages("plotly")',
+  '# install.packages("DT")',
+  '# install.packages("htmlwidgets")',
+  '# install.packages("pharmaverseadamjnj")',
+  "",
+  "library(dplyr)",
+  "library(ggplot2)",
+  "library(plotly)",
+  "library(DT)",
+  "library(htmlwidgets)",
+  "library(pharmaverseadamjnj)",
+  "",
+  "adsl <- pharmaverseadamjnj::adsl",
+  "",
+  "adsl2 <- adsl %>%",
+  "  select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL) %>%",
+  "  filter(!is.na(TRT01P) & !is.na(TRTDURD))",
+  "",
+  "adsl3 <- adsl2 %>%",
+  "  mutate_if(is.character, as.factor)",
+  "",
+  "tf_colors <- c(",
+  '  "Placebo" = "#0072B2",',
+  '  "Xanomeline High Dose" = "#D55E00",',
+  '  "Xanomeline Low Dose" = "#CC79A7"',
+  ")",
+  qmd_fence,
+  "",
+  '## Row {height="48%"}',
+  "",
+  r_fence,
+  '#| title: "Treatment Duration (Days) by Treatment Group"',
+  "f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +",
+  "  geom_boxplot() +",
+  '  scale_x_discrete(name = "Treatment Group") +',
+  "  scale_y_continuous(",
+  "    limits = c(0, 250),",
+  "    breaks = seq(0, 250, 50),",
+  "    expand = c(0.05, 0.05),",
+  '    name = "Treatment Duration (Days)"',
+  "  ) +",
+  "  scale_fill_manual(",
+  "    values = tf_colors,",
+  '    name = "Treatment Group"',
+  "  ) +",
+  "  theme_bw() +",
+  '  theme(legend.position = "top")',
+  "",
+  "g1 <- ggplotly(f1) %>%",
+  "  layout(",
+  "    legend = list(",
+  '      orientation = "h",',
+  "      x = 0.5,",
+  '      xanchor = "center",',
+  "      y = 1.02,",
+  '      yanchor = "bottom"',
+  "    ),",
+  "    margin = list(t = 45)",
+  "  )",
+  "",
+  "g1",
+  qmd_fence,
+  "",
+  r_fence,
+  '#| title: "Baseline Weight (kg) vs Baseline Height (cm)"',
+  "f2 <- ggplot(",
+  "  data = adsl3,",
+  "  aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)",
+  ") +",
+  "  geom_point() +",
+  "  scale_x_continuous(",
+  "    limits = c(0, 150),",
+  "    breaks = seq(0, 150, 10),",
+  '    name = "Baseline Height (cm)"',
+  "  ) +",
+  "  scale_y_continuous(",
+  "    limits = c(0, 150),",
+  "    breaks = seq(0, 150, 10),",
+  '    name = "Baseline Weight (kg)"',
+  "  ) +",
+  "  scale_shape_manual(",
+  "    values = c(16, 17, 15),",
+  '    name = "Treatment Group"',
+  "  ) +",
+  "  scale_colour_manual(",
+  "    values = tf_colors,",
+  '    name = "Treatment Group"',
+  "  ) +",
+  "  theme_bw() +",
+  '  theme(legend.position = "top")',
+  "",
+  "g2 <- ggplotly(f2) %>%",
+  "  layout(",
+  "    legend = list(",
+  '      orientation = "h",',
+  "      x = 0.5,",
+  '      xanchor = "center",',
+  "      y = 1.02,",
+  '      yanchor = "bottom"',
+  "    ),",
+  "    margin = list(t = 45)",
+  "  )",
+  "",
+  "g2",
+  qmd_fence,
+  "",
+  '## Row {height="52%"}',
+  "",
+  r_fence,
+  '#| title: "Subject-Level Data"',
+  "my_table <- adsl3",
+  "",
+  "my_table_2 <- my_table %>%",
+  "  rename(",
+  '    "Unique Subject Identifier" = USUBJID,',
+  '    "Treatment Group" = TRT01P,',
+  '    "Total Treatment Duration (Days)" = TRTDURD,',
+  '    "Baseline Weight (kg)" = WEIGHTBL,',
+  '    "Baseline Height (cm)" = HEIGHTBL',
+  "  )",
+  "",
+  "d <- datatable(",
+  "  my_table_2,",
+  '  extensions = c("ColReorder"),',
+  "  rownames = FALSE,",
+  '  filter = "top",',
+  '  class = "stripe hover compact",',
+  "  fillContainer = FALSE,",
+  "  autoHideNavigation = FALSE,",
+  "  options = list(",
+  "    colReorder = TRUE,",
+  "    bPaginate = TRUE,",
+  "    paging = TRUE,",
+  "    lengthChange = TRUE,",
+  "    searching = TRUE,",
+  "    info = TRUE,",
+  "    pageLength = 5,",
+  "    lengthMenu = c(5, 10, 12, 20, 50, 100),",
+  "    dom = '<\"top\"lf>rt<\"bottom\"ip>',",
+  "    language = list(",
+  '      info = "Showing _START_ to _END_ of _TOTAL_ entries"',
+  "    )",
+  "  )",
+  ")",
+  "",
+  "d",
+  qmd_fence
+)
+
+cat(display_fence, "markdown\n", sep = "")
+cat(paste(dashboard_code, collapse = "\n"))
+cat("\n", display_fence, "\n", sep = "")
+```
+
+</details>
+
 
 - To see more Quarto examples, please visit: <https://quarto.org/docs/gallery/>
 
@@ -629,8 +815,8 @@ These tools show different ways to bring AI assistance into coding and app devel
 
 ## Full Code
 
-<details id="shared-setup">
-<summary><strong>Shared Setup</strong></summary>
+<details id="boxplot-full-code">
+<summary><strong>Boxplot Full Code</strong></summary>
 
 ```r
 # PSI Conf 2026 interactivity recipes
@@ -639,19 +825,14 @@ install.packages("tibble", type = "binary")
 install.packages("dplyr", type = "binary")
 install.packages("ggplot2", type = "binary")
 install.packages("plotly", type = "binary")
-install.packages("DT", type = "binary")
 install.packages("htmlwidgets", type = "binary")
 install.packages("pharmaverseadamjnj")
 
 library(dplyr)
 library(ggplot2)
 library(plotly)
-library(DT)
 library(htmlwidgets)
 library(pharmaverseadamjnj)
-
-
-# Data --------------------------------------------------------------------
 
 adsl <- pharmaverseadamjnj::adsl
 
@@ -667,14 +848,7 @@ tf_colors <- c(
   "Xanomeline High Dose" = "#D55E00",
   "Xanomeline Low Dose" = "#CC79A7"
 )
-```
 
-</details>
-
-<details id="boxplot-full-code">
-<summary><strong>Boxplot Full Code</strong></summary>
-
-```r
 f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
   geom_boxplot() +
   scale_x_discrete(name = "Treatment Group") +
@@ -700,6 +874,36 @@ saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained
 <summary><strong>Scatterplot Full Code</strong></summary>
 
 ```r
+# PSI Conf 2026 interactivity recipes
+
+install.packages("tibble", type = "binary")
+install.packages("dplyr", type = "binary")
+install.packages("ggplot2", type = "binary")
+install.packages("plotly", type = "binary")
+install.packages("htmlwidgets", type = "binary")
+install.packages("pharmaverseadamjnj")
+
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(htmlwidgets)
+library(pharmaverseadamjnj)
+
+adsl <- pharmaverseadamjnj::adsl
+
+adsl2 <- adsl %>%
+  select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL) %>%
+  filter(!is.na(TRT01P) & !is.na(TRTDURD))
+
+adsl3 <- adsl2 %>%
+  mutate_if(is.character, as.factor)
+
+tf_colors <- c(
+  "Placebo" = "#0072B2",
+  "Xanomeline High Dose" = "#D55E00",
+  "Xanomeline Low Dose" = "#CC79A7"
+)
+
 f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colour = TRT01P)) +
   geom_point() +
   scale_x_continuous(
@@ -732,6 +936,28 @@ saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfconta
 <summary><strong>Table Full Code</strong></summary>
 
 ```r
+# PSI Conf 2026 interactivity recipes
+
+install.packages("tibble", type = "binary")
+install.packages("dplyr", type = "binary")
+install.packages("DT", type = "binary")
+install.packages("htmlwidgets", type = "binary")
+install.packages("pharmaverseadamjnj")
+
+library(dplyr)
+library(DT)
+library(htmlwidgets)
+library(pharmaverseadamjnj)
+
+adsl <- pharmaverseadamjnj::adsl
+
+adsl2 <- adsl %>%
+  select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL) %>%
+  filter(!is.na(TRT01P) & !is.na(TRTDURD))
+
+adsl3 <- adsl2 %>%
+  mutate_if(is.character, as.factor)
+
 my_table <- adsl3
 
 my_table_2 <- my_table %>%
@@ -942,6 +1168,124 @@ dashboard_code <- c(
 cat(display_fence, "markdown\n", sep = "")
 cat(paste(dashboard_code, collapse = "\n"))
 cat("\n", display_fence, "\n", sep = "")
+```
+
+</details>
+
+<details id="shiny-app-01-basic-code">
+<summary><strong>Shiny App 1: Basic App</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block(
+  "interactive-outputs/shiny-app-01-basic.txt"
+)
+```
+
+</details>
+
+<details id="shiny-app-02-filters-code">
+<summary><strong>Shiny App 2: Sidebar Filters</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block(
+  "interactive-outputs/shiny-app-02-filters.txt"
+)
+```
+
+</details>
+
+<details id="shiny-app-03-downloads-code">
+<summary><strong>Shiny App 3: Improved Filters And Downloads</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block(
+  "interactive-outputs/shiny-app-03-downloads.txt"
+)
+```
+
+</details>
+
+<details id="shiny-app-04-polished-code">
+<summary><strong>Shiny App 4: Polished App</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block(
+  "interactive-outputs/shiny-app-04-polished.txt"
+)
+```
+
+</details>
+
+<details id="shiny-assistant-01-code">
+<summary><strong>Shiny Assistant 1: Survival Dashboard</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/shiny-assistant-01.txt")
+```
+
+</details>
+
+<details id="shiny-assistant-02-code">
+<summary><strong>Shiny Assistant 2: Dataset Tab</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/shiny-assistant-02.txt")
+```
+
+</details>
+
+<details id="shiny-assistant-03-code">
+<summary><strong>Shiny Assistant 3: Zoomable Cards</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/shiny-assistant-03.txt")
+```
+
+</details>
+
+<details id="shiny-assistant-04-code">
+<summary><strong>Shiny Assistant 4: Adjusted Cox Model</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/shiny-assistant-04.txt")
+```
+
+</details>
+
+<details id="teal-app-01-code">
+<summary><strong>teal App 1: Basic App</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/teal-app-01.txt")
+```
+
+</details>
+
+<details id="teal-app-02-code">
+<summary><strong>teal App 2: Pre-Built Module</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/teal-app-02.txt")
+```
+
+</details>
+
+<details id="teal-app-03-code">
+<summary><strong>teal App 3: Custom Module</strong></summary>
+
+```{r}
+#| results: asis
+copy_file_block("interactive-outputs/teal-app-03.txt")
 ```
 
 </details>
