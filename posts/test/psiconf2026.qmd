@@ -316,7 +316,7 @@ Each prompt asks for the full `app.R` code so the result can be copied into RStu
 
 ### Prompt 1: Convert The Quarto Dashboard To Shiny
 
-```text
+```{.text}
 I have already created a Quarto dashboard using the code below. Please convert this into a simple Shiny app that keeps the same data, plots, table, and overall purpose.
 
 At the top of the script, include robust package setup code that:
@@ -492,7 +492,7 @@ Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polish
 
 This recipe uses Posit's Shiny Assistant to generate and then iteratively improve a Shiny app from natural-language prompts.
 
-Useful links:
+Links:
 
 - [R Shiny Assistant introduction](https://shiny.posit.co/blog/posts/shiny-assistant/)
 - [Shiny Assistant app](https://gallery.shinyapps.io/assistant/)
@@ -543,7 +543,7 @@ Add a checkbox called "Adjust Cox model for age and sex".
 
 Generated app code: [Shiny Assistant version 4](interactive-outputs/shiny-assistant-04.txt)
 
-## Recipe 6: Explore teal Apps
+## Recipe Book 1: Explore teal Apps
 
 `teal` is a Shiny-based framework for interactive data exploration, with a particular focus on clinical trial data. It gives developers a standard structure for bringing in data, applying filters, adding analysis modules, and producing reproducible outputs.
 
@@ -576,6 +576,16 @@ Code: [pre-built teal app](interactive-outputs/teal-app-02.txt)
 This example shows the next step: defining a custom module with its own UI and server logic, while still using the standard `teal` application wrapper.
 
 Code: [custom teal app](interactive-outputs/teal-app-03.txt)
+
+## Recipe Book 2: Explore AI Coding Tools
+
+These tools show different ways to bring AI assistance into coding and app development workflows.
+
+- [RStudio with Posit AI](https://docs.posit.co/ide/user/ide/guide/tools/posit-ai.html)
+- [Posit AI](https://posit.ai/)
+- [Positron](https://positron.posit.co/)
+- [Claude Code](https://code.claude.com/docs/en)
+- [Codex](https://openai.com/codex/)
 
 ## Full Code
 
