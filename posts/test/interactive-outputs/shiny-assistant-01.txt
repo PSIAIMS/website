@@ -1,5 +1,29 @@
 # app.R
 
+# ---- Robust package setup ----
+
+options(repos = c(CRAN = "https://packagemanager.posit.co/cran/latest"))
+
+required_packages <- c(
+  "shiny",
+  "bslib",
+  "survival",
+  "ggplot2",
+  "dplyr",
+  "scales"
+)
+
+installed_packages <- rownames(installed.packages())
+missing_packages <- setdiff(required_packages, installed_packages)
+
+if (length(missing_packages) > 0) {
+  install.packages(
+    missing_packages,
+    type = "binary",
+    dependencies = TRUE
+  )
+}
+
 library(shiny)
 library(bslib)
 library(survival)
