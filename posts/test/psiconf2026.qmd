@@ -200,7 +200,7 @@ f1
 ```r
 g1 <- ggplotly(f1)
 
-saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
+saveWidget(g1, "boxplotly.html", selfcontained = TRUE)
 ```
 
 ```{r}
@@ -245,7 +245,7 @@ f2
 ```r
 g2 <- ggplotly(f2)
 
-saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
+saveWidget(g2, "scatterplotly.html", selfcontained = TRUE)
 ```
 
 ```{r}
@@ -287,7 +287,7 @@ d <- datatable(
   )
 )
 
-saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
+saveWidget(d, "datatable.html", selfcontained = TRUE)
 ```
 
 ```{r}
@@ -865,7 +865,7 @@ f1 <- ggplot(data = adsl3, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
 
 g1 <- ggplotly(f1)
 
-saveWidget(g1, file.path("interactive-outputs", "boxplotly.html"), selfcontained = TRUE)
+saveWidget(g1, "boxplotly.html", selfcontained = TRUE)
 ```
 
 </details>
@@ -927,7 +927,7 @@ f2 <- ggplot(data = adsl3, aes(x = HEIGHTBL, y = WEIGHTBL, shape = TRT01P, colou
 
 g2 <- ggplotly(f2)
 
-saveWidget(g2, file.path("interactive-outputs", "scatterplotly.html"), selfcontained = TRUE)
+saveWidget(g2, "scatterplotly.html", selfcontained = TRUE)
 ```
 
 </details>
@@ -982,7 +982,7 @@ d <- datatable(
   )
 )
 
-saveWidget(d, file.path("interactive-outputs", "datatable.html"), selfcontained = TRUE)
+saveWidget(d, "datatable.html", selfcontained = TRUE)
 ```
 
 </details>
