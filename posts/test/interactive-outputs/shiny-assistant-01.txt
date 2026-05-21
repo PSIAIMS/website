@@ -5,6 +5,7 @@ library(bslib)
 library(survival)
 library(ggplot2)
 library(dplyr)
+library(scales)
 
 generate_survival_data <- function(n = 400, censor_rate = 0.3) {
   set.seed(789)
@@ -37,31 +38,40 @@ generate_survival_data <- function(n = 400, censor_rate = 0.3) {
 km_plot <- function(data) {
   fit <- survfit(Surv(time, status) ~ treatment, data = data)
   
-  # Extract confidence intervals
+  strata <- if (is.null(fit$strata)) {
+    rep(unique(data$treatment)[1], length(fit$time))
+  } else {
+    sub("treatment=", "", rep(names(fit$strata), fit$strata))
+  }
+
   km_data <- data.frame(
     time = fit$time,
     survival = fit$surv,
     upper = fit$upper,
     lower = fit$lower,
-    strata = rep(names(fit$strata), fit$strata)
-  ) |>
-    mutate(strata = sub("treatment=", "", strata))
-
-  p_value <- tryCatch(
-    {
-      test <- survdiff(Surv(time, status) ~ treatment, data = data)
-      pchisq(test$chisq, length(test$n) - 1, lower.tail = FALSE)
-    },
-    error = function(e) NA_real_
+    strata = strata
   )
+
+  p_value <- if (length(unique(data$treatment)) < 2) {
+    NA_real_
+  } else {
+    test <- survdiff(Surv(time, status) ~ treatment, data = data)
+    pchisq(test$chisq, length(test$n) - 1, lower.tail = FALSE)
+  }
 
   ggplot(km_data, aes(x = time, colour = strata, fill = strata)) +
     geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, colour = NA) +
     geom_step(aes(y = survival), linewidth = 1) +
-    scale_colour_manual(values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419")) +
-    scale_fill_manual(values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419")) +
+    scale_colour_manual(
+      values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419"),
+      drop = FALSE
+    ) +
+    scale_fill_manual(
+      values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419"),
+      drop = FALSE
+    ) +
     scale_x_continuous(breaks = seq(0, 150, 50), limits = c(0, 150)) +
-    scale_y_continuous(limits = c(0, 1), labels = scales::number_format(accuracy = 0.01)) +
+    scale_y_continuous(limits = c(0, 1), labels = number_format(accuracy = 0.01)) +
     labs(
       x = "Time (months)",
       y = "Survival Probability",
@@ -84,8 +94,14 @@ risk_table_plot <- function(data) {
   times <- seq(0, 150, 50)
   risk <- summary(fit, times = times, extend = TRUE)
 
+  treatment <- if (is.null(risk$strata)) {
+    rep(unique(data$treatment)[1], length(risk$time))
+  } else {
+    sub("treatment=", "", risk$strata)
+  }
+
   risk_data <- data.frame(
-    treatment = sub("treatment=", "", risk$strata),
+    treatment = treatment,
     time = risk$time,
     n_risk = risk$n.risk
   ) |>
@@ -93,14 +109,11 @@ risk_table_plot <- function(data) {
 
   ggplot(risk_data, aes(time, treatment, label = n_risk)) +
     geom_text(size = 4, colour = "black") +
-    scale_y_discrete(limits = c("Treatment B", "Treatment A")) +
+    scale_y_discrete(drop = TRUE) +
     scale_x_continuous(breaks = times) +
     labs(x = "Time", y = "Strata", title = "Number at risk") +
     theme_minimal(base_size = 12) +
-    theme(
-      legend.position = "none",
-      axis.text.y = element_text(colour = c("#F0C419", "#56B4E9"))
-    )
+    theme(legend.position = "none")
 }
 
 hazard_ratio_summary <- function(data) {
