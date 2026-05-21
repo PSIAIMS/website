@@ -51,18 +51,21 @@ generate_survival_data <- function(n = 400, censor_rate = 0.3) {
         shape = 1.2,  # Shape > 1 means more events early
         scale = ifelse(treatment == "Treatment B", 50, 40)
       ),
-      censor_time = runif(n, 60, 180),  # More uniform censoring to avoid late dropoff
-      time = pmin(event_time, censor_time),
-      # Cap time at 150 months
-      time = pmin(time, 150),
+      censored = rbinom(n, 1, censor_rate),
+      censor_time = ifelse(
+        censored == 1,
+        runif(n, 0.2, 0.95) * event_time,
+        180
+      ),
+      time = pmin(event_time, censor_time, 150),
       time = round(time, 1),
-      status = as.integer(event_time <= censor_time)
+      event = as.integer(event_time <= censor_time & event_time <= 150)
     ) |>
-    select(id, treatment, subgroup, age, sex, time, status)
+    select(id, treatment, subgroup, age, sex, time, event)
 }
 
 km_plot <- function(data) {
-  fit <- survfit(Surv(time, status) ~ treatment, data = data)
+  fit <- survfit(Surv(time, event) ~ treatment, data = data)
   
   strata <- if (is.null(fit$strata)) {
     rep(unique(data$treatment)[1], length(fit$time))
@@ -81,7 +84,7 @@ km_plot <- function(data) {
   p_value <- if (length(unique(data$treatment)) < 2) {
     NA_real_
   } else {
-    test <- survdiff(Surv(time, status) ~ treatment, data = data)
+    test <- survdiff(Surv(time, event) ~ treatment, data = data)
     pchisq(test$chisq, length(test$n) - 1, lower.tail = FALSE)
   }
 
@@ -116,7 +119,7 @@ km_plot <- function(data) {
 }
 
 risk_table_plot <- function(data) {
-  fit <- survfit(Surv(time, status) ~ treatment, data = data)
+  fit <- survfit(Surv(time, event) ~ treatment, data = data)
   times <- seq(0, 150, 50)
   risk <- summary(fit, times = times, extend = TRUE)
 
@@ -133,13 +136,32 @@ risk_table_plot <- function(data) {
   ) |>
     mutate(treatment = factor(treatment, levels = c("Treatment B", "Treatment A")))
 
+  label_data <- risk_data |> distinct(treatment)
+
   ggplot(risk_data, aes(time, treatment, label = n_risk)) +
     geom_text(size = 4, colour = "black") +
+    geom_text(
+      data = label_data,
+      aes(x = -8, y = treatment, label = treatment, colour = treatment),
+      inherit.aes = FALSE,
+      hjust = 1,
+      size = 3.2
+    ) +
+    scale_colour_manual(
+      values = c("Treatment A" = "#56B4E9", "Treatment B" = "#F0C419"),
+      drop = FALSE
+    ) +
     scale_y_discrete(drop = TRUE) +
-    scale_x_continuous(breaks = times) +
-    labs(x = "Time", y = "Strata", title = "Number at risk") +
+    scale_x_continuous(breaks = times, limits = c(-15, 150)) +
+    coord_cartesian(clip = "off") +
+    labs(x = "Time", y = NULL, title = "Number at risk") +
     theme_minimal(base_size = 12) +
-    theme(legend.position = "none")
+    theme(
+      legend.position = "none",
+      axis.text.y = element_blank(),
+      axis.ticks.y = element_blank(),
+      plot.margin = margin(5.5, 5.5, 5.5, 70)
+    )
 }
 
 hazard_ratio_summary <- function(data, adjust = FALSE) {
@@ -149,9 +171,9 @@ hazard_ratio_summary <- function(data, adjust = FALSE) {
 
   # Build model formula based on adjustment
   if (adjust) {
-    model <- coxph(Surv(time, status) ~ treatment + age + sex, data = data)
+    model <- coxph(Surv(time, event) ~ treatment + age + sex, data = data)
   } else {
-    model <- coxph(Surv(time, status) ~ treatment, data = data)
+    model <- coxph(Surv(time, event) ~ treatment, data = data)
   }
   
   estimate <- summary(model)
@@ -174,7 +196,7 @@ hazard_ratio_summary <- function(data, adjust = FALSE) {
     p(model_note, class = "text-center", style = "font-size: 0.7rem; font-style: italic; margin: 0; padding: 0; line-height: 0.9; color: #56B4E9;"),
     p(paste0("Total subjects: ", nrow(data)), class = "text-center text-muted", style = "font-size: 0.7rem; margin: 0; padding: 0; line-height: 0.9;"),
     p(
-      paste0("Events: ", sum(data$status), " (", round(mean(data$status) * 100, 1), "%)"),
+      paste0("Events: ", sum(data$event), " (", round(mean(data$event) * 100, 1), "%)"),
       class = "text-center text-muted",
       style = "font-size: 0.7rem; margin: 0; padding: 0; line-height: 0.9;"
     )
