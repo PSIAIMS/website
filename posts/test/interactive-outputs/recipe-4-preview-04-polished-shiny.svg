@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820">
+  <rect width="1600" height="820" fill="#ffffff"/>
+  <rect x="0" y="0" width="1600" height="48" fill="#33383b"/>
+  <text x="8" y="30" font-family="Arial, sans-serif" font-size="18" fill="#fff" font-weight="700">Clinical Subject-Level Explorer</text>
+  <rect x="0" y="48" width="280" height="772" fill="#f4f4f4" stroke="#d0d0d0"/>
+  <text x="12" y="104" font-family="Arial, sans-serif" font-size="18">Dashboard Controls</text>
+  <line x1="12" y1="126" x2="260" y2="126" stroke="#ccc"/>
+  <text x="12" y="168" font-family="Arial, sans-serif" font-size="14" fill="#68707a">Filter the subject-level dataset and</text>
+  <text x="12" y="188" font-family="Arial, sans-serif" font-size="14" fill="#68707a">download the current filtered outputs.</text>
+  <line x1="12" y1="230" x2="260" y2="230" stroke="#ccc"/>
+  <text x="12" y="270" font-family="Arial, sans-serif" font-size="18">Subject Selection</text>
+  <text x="12" y="312" font-family="Arial, sans-serif" font-size="14">Treatment Group</text>
+  <rect x="12" y="326" width="250" height="34" fill="#fff" stroke="#eee"/><text x="24" y="348" font-family="Arial, sans-serif" font-size="13">Xanomeline High Dose, Xanomeline Lo...</text><path d="M246 340 l6 6 l6 -6" fill="none" stroke="#111"/>
+  <text x="12" y="394" font-family="Arial, sans-serif" font-size="14">Subject</text>
+  <rect x="12" y="408" width="250" height="34" fill="#fff" stroke="#eee"/><text x="24" y="430" font-family="Arial, sans-serif" font-size="13">01-701-1015, 01-701-1023...</text><path d="M246 422 l6 6 l6 -6" fill="none" stroke="#111"/>
+  <line x1="12" y1="470" x2="260" y2="470" stroke="#ccc"/>
+  <text x="12" y="508" font-family="Arial, sans-serif" font-size="18">Clinical Measures</text>
+  <g font-family="Arial, sans-serif" font-size="13">
+    <text x="12" y="548">Total Treatment Duration (Days)</text><line x1="18" y1="586" x2="254" y2="586" stroke="#2d8ae8" stroke-width="7"/><circle cx="24" cy="586" r="9" fill="#ddd" stroke="#aaa"/><circle cx="246" cy="586" r="9" fill="#ddd" stroke="#aaa"/>
+    <text x="12" y="646">Baseline Weight (kg)</text><line x1="18" y1="684" x2="254" y2="684" stroke="#2d8ae8" stroke-width="7"/><circle cx="24" cy="684" r="9" fill="#ddd" stroke="#aaa"/><circle cx="246" cy="684" r="9" fill="#ddd" stroke="#aaa"/>
+    <text x="12" y="744">Baseline Height (cm)</text><line x1="18" y1="782" x2="254" y2="782" stroke="#2d8ae8" stroke-width="7"/><circle cx="24" cy="782" r="9" fill="#ddd" stroke="#aaa"/><circle cx="246" cy="782" r="9" fill="#ddd" stroke="#aaa"/>
+  </g>
+  <text x="310" y="88" font-family="Arial, sans-serif" font-size="30" fill="#222">Clinical Subject-Level Explorer</text>
+  <text x="310" y="120" font-family="Arial, sans-serif" font-size="14" fill="#68707a">Interactive review of treatment duration and baseline subject characteristics by treatment group.</text>
+  <rect x="310" y="178" width="640" height="306" fill="#fff" stroke="#d1d1d1"/>
+  <rect x="310" y="178" width="640" height="36" fill="#f8f8f8" stroke="#d1d1d1"/><text x="326" y="202" font-family="Arial, sans-serif" font-size="14">Treatment Duration by Treatment Group</text>
+  <rect x="980" y="178" width="610" height="306" fill="#fff" stroke="#d1d1d1"/>
+  <rect x="980" y="178" width="610" height="36" fill="#f8f8f8" stroke="#d1d1d1"/><text x="996" y="202" font-family="Arial, sans-serif" font-size="14">Baseline Weight vs Baseline Height</text>
+  <rect x="360" y="265" width="545" height="170" fill="#fff" stroke="#999"/>
+  <g stroke="#e7e7e7"><line x1="360" y1="395" x2="905" y2="395"/><line x1="360" y1="350" x2="905" y2="350"/><line x1="360" y1="305" x2="905" y2="305"/><line x1="480" y1="265" x2="480" y2="435"/><line x1="630" y1="265" x2="630" y2="435"/><line x1="780" y1="265" x2="780" y2="435"/></g>
+  <g stroke="#222" stroke-width="2"><rect x="410" y="318" width="100" height="80" fill="#d95f02"/><line x1="410" y1="350" x2="510" y2="350"/><rect x="575" y="318" width="100" height="80" fill="#cc79a7"/><line x1="575" y1="355" x2="675" y2="355"/><rect x="735" y="312" width="100" height="74" fill="#0072b2"/><line x1="735" y1="345" x2="835" y2="345"/></g>
+  <rect x="1040" y="265" width="500" height="170" fill="#fff" stroke="#999"/>
+  <g stroke="#e7e7e7"><line x1="1040" y1="395" x2="1540" y2="395"/><line x1="1040" y1="350" x2="1540" y2="350"/><line x1="1040" y1="305" x2="1540" y2="305"/><line x1="1140" y1="265" x2="1140" y2="435"/><line x1="1240" y1="265" x2="1240" y2="435"/><line x1="1340" y1="265" x2="1340" y2="435"/><line x1="1440" y1="265" x2="1440" y2="435"/></g>
+  <g><circle cx="1075" cy="300" r="5" fill="#d95f02"/><circle cx="1160" cy="380" r="5" fill="#d95f02"/><circle cx="1300" cy="330" r="5" fill="#d95f02"/><circle cx="1480" cy="298" r="5" fill="#d95f02"/><path d="M1115 278 L1123 292 L1107 292 Z" fill="#cc79a7"/><path d="M1260 390 L1268 404 L1252 404 Z" fill="#cc79a7"/><path d="M1390 290 L1398 304 L1382 304 Z" fill="#cc79a7"/><rect x="1210" y="295" width="10" height="10" fill="#0072b2"/><rect x="1362" y="360" width="10" height="10" fill="#0072b2"/><rect x="1518" y="318" width="10" height="10" fill="#0072b2"/></g>
+  <rect x="310" y="536" width="1280" height="260" fill="#fff" stroke="#d1d1d1"/>
+  <rect x="310" y="536" width="1280" height="36" fill="#f8f8f8" stroke="#d1d1d1"/><text x="326" y="560" font-family="Arial, sans-serif" font-size="14">Filtered Subject-Level Data</text>
+  <g font-family="Arial, sans-serif" font-size="13"><text x="326" y="612">Show</text><rect x="372" y="596" width="58" height="34" fill="#fff" stroke="#ddd"/><text x="394" y="618">5</text><text x="438" y="612">entries</text><text x="1388" y="612">Search:</text><rect x="1444" y="596" width="120" height="34" fill="#fff" stroke="#ddd"/>
+  <text x="330" y="672" font-weight="700">Unique Subject Identifier</text><text x="560" y="672" font-weight="700">Treatment Group</text><text x="890" y="672" font-weight="700">Total Treatment Duration (Days)</text><text x="1190" y="672" font-weight="700">Baseline Weight (kg)</text><text x="1390" y="672" font-weight="700">Baseline Height (cm)</text>
+  <rect x="322" y="706" width="1240" height="34" fill="#f1f1f1"/><text x="330" y="728">01-701-1015</text><text x="560" y="728">Placebo</text><text x="1070" y="728">182</text><text x="1310" y="728">48</text><text x="1548" y="728" text-anchor="end">18</text>
+  <text x="330" y="768">01-701-1023</text><text x="560" y="768">Placebo</text><text x="1070" y="768">28</text><text x="1310" y="768">84</text><text x="1548" y="768" text-anchor="end">136</text></g>
+</svg>
