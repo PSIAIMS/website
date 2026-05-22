@@ -534,9 +534,7 @@ Generated app code: [basic Shiny app](interactive-outputs/shiny-app-01-basic.txt
 <details>
 <summary><strong>Preview</strong></summary>
 
-![Quarto Dashboard converted to Shiny](interactive-outputs/recipe-4-preview-01-quarto-dashboard.svg){fig-alt="Quarto Dashboard converted to Shiny."}
-
-Quarto Dashboard converted to Shiny
+![Quarto Dashboard converted to Shiny](interactive-outputs/recipe-4-preview-01-quarto-dashboard.png){fig-alt="Quarto Dashboard converted to Shiny."}
 
 </details>
 
@@ -600,9 +598,7 @@ Generated app code: [Shiny app with filters](interactive-outputs/shiny-app-02-fi
 <details>
 <summary><strong>Preview</strong></summary>
 
-![Sidebar Filters Added](interactive-outputs/recipe-4-preview-02-basic-shiny.svg){fig-alt="Sidebar Filters Added."}
-
-Sidebar Filters Added
+![Sidebar Filters Added](interactive-outputs/recipe-4-preview-02-basic-shiny.png){fig-alt="Sidebar Filters Added."}
 
 </details>
 
@@ -674,9 +670,7 @@ Generated app code: [Shiny app with improved filters and downloads](interactive-
 <details>
 <summary><strong>Preview</strong></summary>
 
-![Sidebar Filters Improved and Downloads Added](interactive-outputs/recipe-4-preview-03-filters-downloads.svg){fig-alt="Sidebar Filters Improved and Downloads Added."}
-
-Sidebar FIlters Improved and Downloads Added
+![Sidebar Filters Improved and Downloads Added](interactive-outputs/recipe-4-preview-03-filters-downloads.png){fig-alt="Sidebar Filters Improved and Downloads Added."}
 
 </details>
 
@@ -732,9 +726,7 @@ Generated app code: [polished Shiny app](interactive-outputs/shiny-app-04-polish
 <details>
 <summary><strong>Preview</strong></summary>
 
-![Name and Design Improved](interactive-outputs/recipe-4-preview-04-polished-shiny.svg){fig-alt="Name and Design Improved."}
-
-Name and Design Improved
+![Name and Design Improved](interactive-outputs/recipe-4-preview-04-polished-shiny.png){fig-alt="Name and Design Improved."}
 
 </details>
 
@@ -772,6 +764,13 @@ copy_block(c(
 
 Generated app code: [Shiny Assistant version 1](interactive-outputs/shiny-assistant-01.txt)
 
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Initial Shiny Assistant survival dashboard](interactive-outputs/recipe-5-preview-01.png){fig-alt="Initial Shiny Assistant survival dashboard."}
+
+</details>
+
 ### Prompt 2: Add A Dataset Tab
 
 ```{r}
@@ -782,6 +781,13 @@ copy_block(c(
 ```
 
 Generated app code: [Shiny Assistant version 2](interactive-outputs/shiny-assistant-02.txt)
+
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Dataset tab added to Shiny Assistant survival dashboard](interactive-outputs/recipe-5-preview-02.png){fig-alt="Dataset tab added to Shiny Assistant survival dashboard."}
+
+</details>
 
 ### Prompt 3: Add Zoomable Cards
 
@@ -794,6 +800,13 @@ copy_block(c(
 
 Generated app code: [Shiny Assistant version 3](interactive-outputs/shiny-assistant-03.txt)
 
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Zoomable cards added to Shiny Assistant survival dashboard](interactive-outputs/recipe-5-preview-03.png){fig-alt="Zoomable cards added to Shiny Assistant survival dashboard."}
+
+</details>
+
 ### Prompt 4: Add An Adjusted Cox Model Option
 
 ```{r}
@@ -804,6 +817,13 @@ copy_block(c(
 ```
 
 Generated app code: [Shiny Assistant version 4](interactive-outputs/shiny-assistant-04.txt)
+
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Adjusted Cox model option added to Shiny Assistant survival dashboard](interactive-outputs/recipe-5-preview-04.png){fig-alt="Adjusted Cox model option added to Shiny Assistant survival dashboard."}
+
+</details>
 
 ## Recipe Book 1: Explore teal Apps
 
@@ -827,17 +847,38 @@ This is the smallest useful pattern: load example data, pass it into `teal_data(
 
 Code: [basic teal app](interactive-outputs/teal-app-01.txt)
 
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Basic teal app](interactive-outputs/recipebook-1-preview-01.png){fig-alt="Basic teal app preview."}
+
+</details>
+
 ### Example 2: Pre-Built teal Module
 
 This example uses a pre-built clinical module. The app structure stays simple, but the module gives you a clinical-style output without writing the table logic from scratch.
 
 Code: [pre-built teal app](interactive-outputs/teal-app-02.txt)
 
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Pre-built teal module app](interactive-outputs/recipebook-1-preview-02.png){fig-alt="Pre-built teal module app preview."}
+
+</details>
+
 ### Example 3: Custom teal Module
 
 This example shows the next step: defining a custom module with its own UI and server logic, while still using the standard `teal` application wrapper.
 
 Code: [custom teal app](interactive-outputs/teal-app-03.txt)
+
+<details>
+<summary><strong>Preview</strong></summary>
+
+![Custom teal module app](interactive-outputs/recipebook-1-preview-03.png){fig-alt="Custom teal module app preview."}
+
+</details>
 
 ## Recipe Book 2: Explore AI Coding Tools
 
