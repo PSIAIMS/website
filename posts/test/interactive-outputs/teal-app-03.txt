@@ -1,6 +1,6 @@
 # ---- Robust package setup ----
 
-options(repos = c(CRAN = "https://packagemanager.posit.co/cran/latest"))
+options(repos = c(CRAN = "https://cran.rstudio.com"))
 
 required_packages <- c(
   "teal",
