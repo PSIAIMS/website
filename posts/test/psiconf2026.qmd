@@ -507,6 +507,21 @@ This recipe shows how the same dashboard code can become the starting point for 
 
 Each prompt asks for the full `app.R` code so the result can be copied into RStudio and run as a Shiny app.
 
+<details>
+<summary><strong>Preview the generated apps</strong></summary>
+
+These screenshots show the progression from the original Quarto dashboard to increasingly interactive Shiny versions.
+
+![Original Quarto dashboard](interactive-outputs/recipe-4-preview-01-quarto-dashboard.svg){fig-alt="Original Quarto dashboard with two plots and a subject-level data table."}
+
+![Basic Shiny dashboard](interactive-outputs/recipe-4-preview-02-basic-shiny.svg){fig-alt="Basic Shiny dashboard with sidebar filters, two plots, and a subject-level data table."}
+
+![Shiny dashboard with improved filters and downloads](interactive-outputs/recipe-4-preview-03-filters-downloads.svg){fig-alt="Shiny dashboard with multi-select filters, sliders, download buttons, plots, and a filtered table."}
+
+![Polished clinical subject-level explorer](interactive-outputs/recipe-4-preview-04-polished-shiny.svg){fig-alt="Polished clinical subject-level explorer with dashboard controls, plot cards, and a filtered subject-level data table."}
+
+</details>
+
 ### Prompt 1: Convert The Quarto Dashboard To Shiny
 
 ```{r}
