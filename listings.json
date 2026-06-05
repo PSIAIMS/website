@@ -1,10 +1,16 @@
 [
   {
-    "listing": "/minutes.html",
+    "listing": "/news.html",
     "items": [
-      "/minutes/2024-03-15/index.html",
-      "/minutes/2024-02-16/index.html",
-      "/minutes/2024-01-19/index.html"
+      "/posts/test/psiconf2026.html",
+      "/posts/test/lunchbitesApril2026graphicsbasic1_2.html",
+      "/posts/test/lunchbitesDec2025packagebasics.html",
+      "/posts/test/lunchbitesOct2025debug.html",
+      "/posts/test/lunchbitesSep2025ide.html",
+      "/posts/test/ChgManSDEJul25.html",
+      "/posts/test/CAMIS2023.html",
+      "/posts/test/index.html",
+      "/posts/test/FDApilot3.html"
     ]
   },
   {
@@ -18,16 +24,11 @@
     ]
   },
   {
-    "listing": "/news.html",
+    "listing": "/minutes.html",
     "items": [
-      "/posts/test/psiconf2026.html",
-      "/posts/test/lunchbitesDec2025packagebasics.html",
-      "/posts/test/lunchbitesOct2025debug.html",
-      "/posts/test/lunchbitesSep2025ide.html",
-      "/posts/test/ChgManSDEJul25.html",
-      "/posts/test/CAMIS2023.html",
-      "/posts/test/index.html",
-      "/posts/test/FDApilot3.html"
+      "/minutes/2024-03-15/index.html",
+      "/minutes/2024-02-16/index.html",
+      "/minutes/2024-01-19/index.html"
     ]
   }
 ]
