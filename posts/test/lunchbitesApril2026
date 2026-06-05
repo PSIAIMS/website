@@ -1,0 +1,430 @@
+---
+title: "Open-Source Lunch Bites Webinar - Graphics Basics (Parts 1 & 2)"
+author:
+  - name: PSI AIMS
+    url: https://psiaims.github.io/website/
+
+date: 02-04-2026
+categories: [Lunch Bites]
+draft: false
+---
+
+
+## Overview
+
+These notes cover the first two Graphics Basics sessions (6th March and 2nd April 2026), which introduced the foundations of **data visualisation with ggplot2**: what the package is and how it works, the layered grammar of graphics, core geometric objects, aesthetic mappings, grouping, colours, axes, and theme customisation. The sessions used a small simulated ADSL and ADLB dataset to build plots piece by piece.
+
+---
+
+## Why visualise data?
+
+Before writing a single line of code, it helps to ask three questions:
+
+- What is the **purpose** of the figure?
+- What is the **context** in which it will be seen?
+- Who is the **audience**?
+
+Good figures present data clearly and honestly. The [Information is Beautiful](https://informationisbeautiful.net/visualizations/graphic-continuum/) graphic continuum is a useful reference for thinking about which chart type suits a given data structure.
+
+---
+
+## The ggplot2 package
+
+`ggplot2` is built on the Grammar of Graphics: you provide the data, describe how variables map to visual properties (aesthetics), and choose a geometric representation. The package handles the rest.
+
+A typical plot is assembled in layers:
+
+```{r}
+#| eval: false
+library(ggplot2)
+
+# Core structure
+ggplot(data = my_data, aes(x = var1, y = var2)) +
+  geom_point()
+```
+
+The `+` operator combines layers. The order matters: later layers are drawn on top of earlier ones.
+
+---
+
+## Two golden rules
+
+1. **Start simple** — get a basic plot working before adding anything.
+2. **Build piece by piece** — add one layer or argument at a time and check the result.
+
+This approach makes it much easier to spot where something has gone wrong.
+
+---
+
+## The figure framework
+
+A ggplot2 figure is built from a small set of components:
+
+- **Data** — the data frame being plotted
+- **`aes()`** — aesthetic mappings (which variable goes on which axis, what controls colour, group, linetype, and so on)
+- **Geom** — the geometric object that represents the data (point, line, boxplot, bar, and so on)
+- **Scales** — control axis limits, breaks, labels, and colour palettes
+- **Theme** — controls the overall look: background, grid lines, fonts, legend position
+
+---
+
+## Setting up data
+
+The session used a small simulated subject-level dataset (`dadsl`) and a lab dataset (`dadlb`), created entirely in R without reading any external files.
+
+```{r}
+#| eval: false
+set.seed(123)
+
+n_subj <- 20
+
+dadsl <- data.frame(
+  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),
+  HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),
+  TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
+  TRTDURD  = sample(30:180, n_subj, replace = TRUE)
+)
+
+n_visits <- 5
+
+dadlb <- do.call(
+  rbind,
+  lapply(dadsl$SUBJID, function(id) {
+    data.frame(
+      SUBJID  = id,
+      PARAMCD = "ALT",
+      ADY     = c(1, 7, 14, 28, 56),
+      AVAL    = round(rlnorm(n_visits, meanlog = log(30), sdlog = 0.4), 1)
+    )
+  })
+)
+```
+
+---
+
+## A first plot
+
+Start by picking data and mapping variables to the x and y axes. Nothing is drawn until a geom is added.
+
+```{r}
+#| eval: false
+# Canvas only – no geometric layer yet
+ggplot(data = dadsl, aes(x = WEIGHTBL, y = HEIGHTBL))
+
+# Add a point layer
+ggplot(data = dadsl, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_point()
+```
+
+---
+
+## Geometric layers
+
+Changing the geom changes how the data are represented. Layers can be combined.
+
+```{r}
+#| eval: false
+# Line plot
+ggplot(data = dadsl, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_line()
+
+# Box plot
+ggplot(data = dadsl, aes(x = TRT01P, y = TRTDURD)) +
+  geom_boxplot()
+
+# Combining layers – box plot with individual points on top
+ggplot(data = dadsl, aes(x = TRT01P, y = TRTDURD)) +
+  geom_boxplot() +
+  geom_point()
+
+# Adding a reference line
+ggplot(data = dadsl, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_point() +
+  geom_hline(yintercept = 200)
+```
+
+---
+
+## Moving data and aesthetics into the geom
+
+Aesthetic mappings and data can be placed inside individual geoms rather than in the top-level `ggplot()` call. This is useful when different layers use different datasets.
+
+```{r}
+#| eval: false
+# Data in the geom
+ggplot() +
+  geom_point(data = dadsl, aes(x = TRT01P, y = TRTDURD))
+
+# Different data in each geom
+ggplot() +
+  geom_boxplot(data = dadsl, aes(x = TRT01P, y = TRTDURD)) +
+  geom_point(
+    data = dadsl %>% filter(SUBJID == "SUBJ007"),
+    aes(x = TRT01P, y = 150)
+  )
+```
+
+---
+
+## Making changes at the data level
+
+It is often cleaner to prepare the data before passing it to ggplot2 than to fight the plot into shape after.
+
+```{r}
+#| eval: false
+library(dplyr)
+
+# Create a missing value where height is above 180
+dadsl2 <- dadsl %>%
+  mutate(WEIGHTBL = ifelse(HEIGHTBL > 180, NA, HEIGHTBL))
+
+ggplot(data = dadsl2, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_point()
+
+# Remove the missing row to suppress the warning message
+dadsl3 <- dadsl2 %>%
+  select(WEIGHTBL, HEIGHTBL) %>%
+  filter(!is.na(WEIGHTBL))
+
+ggplot(data = dadsl3, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_point()
+```
+
+---
+
+## Colours, shapes, linetypes, and transparency
+
+Static appearance properties (not mapped to a variable) are set inside the geom as named arguments, outside of `aes()`.
+
+```{r}
+#| eval: false
+# Coloured squares
+ggplot(data = dadsl2, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_point(colour = "red", shape = "square plus", size = 4)
+
+# Custom line colours and types
+ggplot(data = dadsl2, aes(x = WEIGHTBL, y = HEIGHTBL)) +
+  geom_line(colour = "#CD6090", linetype = "longdash", linewidth = 1.5) +
+  geom_hline(yintercept = 200, colour = "#96CDCD", linetype = "dotted", linewidth = 4)
+
+# Transparent fill on a box plot
+ggplot(data = dadsl, aes(x = TRT01P, y = TRTDURD)) +
+  geom_boxplot(fill = "purple", alpha = 0.3)
+```
+
+When an appearance property depends on a variable in the data, it goes inside `aes()` instead.
+
+---
+
+## Grouping
+
+Grouping controls which observations are connected or drawn together.
+
+```{r}
+#| eval: false
+# Fill by treatment group – automatically creates a legend
+ggplot(data = dadsl, aes(x = TRT01P, y = TRTDURD, fill = TRT01P)) +
+  geom_boxplot()
+
+# Prepare a small lab dataset
+dadlb2 <- dadlb %>%
+  filter(SUBJID %in% c("SUBJ001", "SUBJ004", "SUBJ007"))
+
+# Without grouping – all points joined up in visit order
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL)) +
+  geom_line()
+
+# Group by subject – separate lines, but no visual distinction
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL, group = SUBJID)) +
+  geom_line()
+
+# Linetype mapped to subject – distinct lines and a legend
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL, linetype = SUBJID)) +
+  geom_line()
+```
+
+---
+
+## Grouping with manual colours
+
+`scale_colour_manual()` lets you specify exact colours for each group and control the legend title.
+
+```{r}
+#| eval: false
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL, colour = SUBJID)) +
+  geom_line(linewidth = 1.5) +
+  scale_colour_manual(
+    values = c("#0072B2", "#D55E00", "#CC79A7"),
+    name = "Subject"
+  )
+```
+
+---
+
+## Controlling axes
+
+`scale_x_continuous()` and `scale_y_continuous()` control limits, tick positions, axis labels, and the small expansion gap at the edges.
+
+```{r}
+#| eval: false
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL, colour = SUBJID)) +
+  geom_line(linewidth = 1.5) +
+  scale_colour_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name = "Subject") +
+  scale_x_continuous(
+    limits = c(0, 60),
+    breaks = seq(0, 60, 10),
+    expand = c(0.01, 0.01),
+    name = "Study Day"
+  ) +
+  scale_y_continuous(
+    limits = c(10, 70),
+    breaks = seq(10, 70, 10),
+    expand = c(0.01, 0.01),
+    name = "ALT Result"
+  )
+```
+
+For discrete axes, `scale_x_discrete()` allows label replacement without changing the underlying data.
+
+```{r}
+#| eval: false
+ggplot(data = dadsl, aes(x = TRT01P, y = TRTDURD)) +
+  geom_boxplot() +
+  scale_x_discrete(
+    labels = c("Placebo" = "P", "Drug A" = "A"),
+    name = "Treatment"
+  )
+```
+
+---
+
+## Built-in themes
+
+ggplot2 provides several complete themes that change the overall appearance of a plot.
+
+```{r}
+#| eval: false
+theme_bw()
+theme_linedraw()
+theme_light()
+theme_dark()
+theme_minimal()
+theme_classic()
+theme_void()
+theme_test()
+```
+
+Apply them by adding to the plot: `+ theme_bw()`.
+
+---
+
+## Modifying themes
+
+Individual theme elements can be overridden with `theme()`. Changes accumulate on top of whatever base theme is active.
+
+```{r}
+#| eval: false
+ggplot(data = dadlb2, aes(x = ADY, y = AVAL, colour = SUBJID)) +
+  geom_line(linewidth = 1.5) +
+  scale_colour_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name = "Subject") +
+  scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10),
+                     expand = c(0.01, 0.01), name = "Study Day") +
+  scale_y_continuous(limits = c(10, 70), breaks = seq(10, 70, 10),
+                     expand = c(0.01, 0.01), name = "ALT Result") +
+  theme(
+    text = element_text(size = 10),
+    legend.position = "bottom",
+    legend.background = element_blank(),
+    legend.box.background = element_rect(colour = "black"),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
+    plot.margin = unit(c(0.25, 0.75, 0.25, 0.75), "inches")
+  )
+```
+
+---
+
+## Combining plots with patchwork
+
+The `patchwork` package allows multiple ggplot2 figures to be assembled into a single layout.
+
+```{r}
+#| eval: false
+library(patchwork)
+
+f1 <- ggplot(data = dadlb2, aes(x = ADY, y = AVAL, colour = SUBJID)) +
+  geom_line(linewidth = 1.5) +
+  scale_colour_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name = "Subject") +
+  scale_x_continuous(limits = c(0, 60), breaks = seq(0, 60, 10),
+                     expand = c(0.01, 0.01), name = "Study Day") +
+  scale_y_continuous(limits = c(10, 70), breaks = seq(10, 70, 10),
+                     expand = c(0.01, 0.01), name = "ALT Result") +
+  theme(
+    text = element_text(size = 10),
+    legend.position = "bottom",
+    legend.background = element_blank(),
+    legend.box.background = element_rect(colour = "black"),
+    panel.grid.minor.x = element_blank(),
+    panel.grid.minor.y = element_blank()
+  )
+
+f2 <- ggplot() +
+  geom_boxplot(data = dadsl, aes(x = TRT01P, y = TRTDURD))
+
+# Side by side
+f1 + f2
+
+# With relative widths
+f1 + f2 + plot_layout(widths = c(1, 2))
+```
+
+---
+
+## Saving figures
+
+`ggsave()` saves the most recent plot, or a named plot object, to a file. The `ragg` package provides higher-quality PNG output and is worth using for publication or regulatory submissions.
+
+```{r}
+#| eval: false
+# Standard save
+ggsave("f3.png", f3, device = png, width = 9.00, height = 4.75, dpi = 300)
+
+# Higher quality with ragg
+library(ragg)
+ggsave("f3r.png", f3, device = agg_png, width = 9.00, height = 4.75, dpi = 300, scaling = 0.7)
+```
+
+The `scaling` argument in `agg_png` controls the relative size of text and elements — lower values make text larger relative to the plot area.
+
+---
+
+## Graphics basics recap
+
+Key points from the session:
+
+- Ask about purpose, context, and audience before starting a figure
+- ggplot2 builds plots from layers using `+`
+- Start simple and add one element at a time
+- Data and aesthetics can live in `ggplot()` or inside individual geoms
+- Static appearance properties go outside `aes()`; data-driven ones go inside it
+- `scale_*` functions control axes and colour palettes
+- `theme()` adjusts the non-data appearance of a plot
+- `patchwork` combines multiple ggplot2 figures
+- Use `ragg` for high-quality saved output
+
+---
+
+## Resources
+
+### ggplot2
+
+- [ggplot2 documentation](https://ggplot2.tidyverse.org/)
+- [R Graphics with ggplot2](https://r-graphics.org/)
+- [Graphic Design with ggplot2](https://rstudio-conf-2022.github.io/ggplot2-graphic-design/)
+- [Information is Beautiful – graphic continuum](https://informationisbeautiful.net/visualizations/graphic-continuum/)
+- [Graphics principles](https://graphicsprinciples.github.io/)
+
+### patchwork
+
+- [patchwork documentation](https://patchwork.data-imaginist.com/)
