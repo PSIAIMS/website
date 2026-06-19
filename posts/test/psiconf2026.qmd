@@ -126,6 +126,11 @@ copy_file_block <- function(path, language = "r") {
 }
 ```
 
+## Presentation
+
+[Fast, Fresh & Interactive: R Dashboards for Statisticians in 30 Minutes or Less!](https://view.officeapps.live.com/op/view.aspx?src=https://raw.githubusercontent.com/PSIAIMS/website/main/presentations/PSI%20Conference%202026/PSI%20Conference%2016.06.26_16.15-17.30_Martin_Brown.pptx)
+
+
 ## Setup
 ### Package Installation
 
