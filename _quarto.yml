@@ -9,7 +9,7 @@ website:
         text: Home
       - about.qmd
       - why-r.qmd
-      - 02R-tist.qmd
+      - resources_links.qmd
       - rcollaborations.qmd
       - news.qmd
       - blog.qmd
