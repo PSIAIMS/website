@@ -3,10 +3,9 @@ title: "R Resources and Links"
 format: html
 ---
 
-Some intro text here if you want it.
+Select a cluster to explore curated links and resources
 
 ```{=html}
-<title>R Resources in Pharma &amp; Data Science</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
