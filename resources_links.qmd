@@ -240,9 +240,6 @@ Select a cluster to explore curated links and resources
   .badge-purple { background: var(--purple-bg); color: var(--purple-text); }
 </style>
 
-<h1 class="page-title">R Resources in Pharma &amp; Data Science</h1>
-<p class="page-sub">Select a cluster to explore curated links and resources</p>
-
 <div class="layout">
 
   <!-- MAP COLUMN -->
