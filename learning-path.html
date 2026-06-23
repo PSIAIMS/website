@@ -182,6 +182,7 @@ ul.task-list li input[type="checkbox"] {
     --accent-4: #8b6311;
     --accent-4-soft: #f8ecd3;
     --shadow: 0 18px 50px rgba(42, 49, 36, 0.08);
+    --shadow-soft: 0 10px 24px rgba(42, 49, 36, 0.05);
     --radius: 22px;
     --font: "Segoe UI", "Aptos", system-ui, sans-serif;
   }
@@ -225,16 +226,6 @@ ul.task-list li input[type="checkbox"] {
     margin: 0 auto;
   }
 
-  .hero {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: 28px;
-    box-shadow: var(--shadow);
-    padding: 2rem;
-    margin-bottom: 1.4rem;
-    backdrop-filter: blur(10px);
-  }
-
   .eyebrow {
     display: inline-flex;
     align-items: center;
@@ -249,76 +240,19 @@ ul.task-list li input[type="checkbox"] {
     letter-spacing: 0.08em;
   }
 
-  .hero h1 {
+  .page-title {
     font-size: clamp(2rem, 4vw, 3.35rem);
     line-height: 1.02;
-    margin: 0.95rem 0 0.8rem;
+    margin: 0 0 0.8rem;
     max-width: 14ch;
   }
 
-  .hero p.lead {
+  .page-lead {
     font-size: 1.05rem;
     line-height: 1.7;
     color: var(--muted);
     max-width: 74ch;
-    margin: 0 0 1.2rem;
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 2.2fr 1fr;
-    gap: 1rem;
-    align-items: start;
-  }
-
-  .hero-note {
-    background: var(--panel-strong);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1rem 1.05rem;
-  }
-
-  .hero-note h2 {
-    margin: 0 0 0.5rem;
-    font-size: 0.92rem;
-  }
-
-  .hero-note p {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--muted);
-  }
-
-  .summary-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.9rem;
-    margin-top: 1rem;
-  }
-
-  .summary-card {
-    background: var(--panel-strong);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1rem;
-  }
-
-  .summary-card .kicker {
-    display: block;
-    font-size: 0.74rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--subtle);
-    margin-bottom: 0.45rem;
-    font-weight: 700;
-  }
-
-  .summary-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 0.92rem;
-    line-height: 1.55;
+    margin: 0 0 1.3rem;
   }
 
   .journey {
@@ -326,26 +260,26 @@ ul.task-list li input[type="checkbox"] {
     grid-template-columns: 340px minmax(0, 1fr);
     gap: 1rem;
     align-items: start;
-  }
-
-  .journey-nav,
-  .journey-panel-wrap {
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 28px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(10px);
+    overflow: hidden;
   }
 
   .journey-nav {
-    padding: 1.15rem;
+    padding: 1.9rem 1.25rem 1.5rem;
     position: sticky;
     top: 1rem;
+    align-self: start;
+    min-height: 100%;
+    border-right: 1px solid var(--line);
   }
 
   .section-title {
     margin: 0 0 0.35rem;
-    font-size: 0.78rem;
+    font-size: 0.86rem;
     font-weight: 700;
     letter-spacing: 0.09em;
     text-transform: uppercase;
@@ -353,37 +287,57 @@ ul.task-list li input[type="checkbox"] {
   }
 
   .section-copy {
-    margin: 0 0 1rem;
-    font-size: 0.92rem;
+    margin: 0 0 1.35rem;
+    font-size: 0.94rem;
     color: var(--muted);
-    line-height: 1.55;
+    line-height: 1.65;
+    max-width: 18ch;
   }
 
   .stage-list {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 0;
   }
 
   .stage-btn {
     width: 100%;
-    border: 1px solid var(--line);
-    background: var(--panel-strong);
-    border-radius: 20px;
+    border: 0;
+    border-top: 1px solid var(--line);
+    background: transparent;
     text-align: left;
-    padding: 0.95rem;
+    padding: 1rem 0.25rem;
     cursor: pointer;
-    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    transition: background 0.15s ease;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.8rem;
+    align-items: start;
   }
 
   .stage-btn:hover {
-    transform: translateY(-1px);
-    border-color: var(--line-strong);
+    background: rgba(21, 92, 72, 0.04);
   }
 
   .stage-btn.active {
-    background: linear-gradient(135deg, var(--accent-soft), var(--panel-strong));
-    border-color: rgba(21, 92, 72, 0.35);
+    background: linear-gradient(135deg, rgba(21, 92, 72, 0.10), rgba(21, 92, 72, 0.03));
+    border-radius: 18px;
+    margin: 0.55rem 0;
+    padding: 1rem 0.9rem;
+    border-top-color: transparent;
+    box-shadow: inset 0 0 0 1px rgba(21, 92, 72, 0.08);
+  }
+
+  .stage-btn.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 3px;
+    border-radius: 999px;
+    background: var(--accent);
   }
 
   .stage-index {
@@ -397,30 +351,38 @@ ul.task-list li input[type="checkbox"] {
     color: #fff;
     font-size: 0.82rem;
     font-weight: 700;
-    margin-bottom: 0.7rem;
+    margin-top: 0.1rem;
   }
 
   .stage-btn.active .stage-index {
     background: var(--accent-2);
   }
 
+  .stage-copy {
+    display: block;
+  }
+
   .stage-title {
     display: block;
-    font-size: 1rem;
+    font-size: 0.96rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
+    line-height: 1.35;
   }
 
   .stage-sub {
     display: block;
-    font-size: 0.86rem;
+    font-size: 0.82rem;
     color: var(--muted);
-    line-height: 1.45;
+    line-height: 1.5;
   }
 
   .journey-panel-wrap {
-    padding: 1.35rem;
+    padding: 1.85rem 1.7rem 1.55rem;
+    background:
+      radial-gradient(circle at top right, rgba(21, 92, 72, 0.04), transparent 26%),
+      radial-gradient(circle at top left, rgba(165, 68, 38, 0.03), transparent 20%);
   }
 
   .panel {
@@ -437,6 +399,10 @@ ul.task-list li input[type="checkbox"] {
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .panel-head-main {
+    max-width: 72ch;
   }
 
   .pill {
@@ -456,16 +422,23 @@ ul.task-list li input[type="checkbox"] {
 
   .panel h2 {
     margin: 0.6rem 0 0;
-    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
     line-height: 1.1;
+    letter-spacing: -0.03em;
   }
 
   .panel-intro {
     margin: 0 0 1rem;
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.98rem;
+    line-height: 1.55;
     color: var(--muted);
     max-width: 68ch;
+  }
+
+  .panel-rule {
+    height: 1px;
+    background: var(--line);
+    margin: 1rem 0 1.45rem;
   }
 
   .close-btn {
@@ -484,17 +457,29 @@ ul.task-list li input[type="checkbox"] {
     gap: 0.95rem;
   }
 
+  .panel-grid.panel-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .content-card {
-    background: var(--panel-strong);
+    background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,250,245,0.96));
     border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 1rem;
+    border-radius: 22px;
+    padding: 1.15rem;
     min-height: 100%;
+    box-shadow: var(--shadow-soft);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .content-card {
+      background: linear-gradient(180deg, rgba(38, 40, 34, 0.95), rgba(31, 34, 29, 0.98));
+    }
   }
 
   .content-card h3 {
     margin: 0 0 0.55rem;
     font-size: 0.92rem;
+    color: var(--accent);
   }
 
   .content-card p {
@@ -531,6 +516,25 @@ ul.task-list li input[type="checkbox"] {
     line-height: 1.55;
   }
 
+  .icon-badge {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.85rem;
+    background: linear-gradient(135deg, rgba(21, 92, 72, 0.16), rgba(21, 92, 72, 0.06));
+    color: var(--accent);
+    border: 1px solid rgba(21, 92, 72, 0.10);
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .callout-row {
+    margin-top: 1rem;
+  }
+
   .resource-list {
     display: flex;
     flex-direction: column;
@@ -542,10 +546,16 @@ ul.task-list li input[type="checkbox"] {
     text-decoration: none;
     color: inherit;
     border: 1px solid var(--line);
-    background: var(--panel-strong);
+    background: rgba(255,255,255,0.78);
     border-radius: 16px;
     padding: 0.9rem;
     transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .resource-card {
+      background: rgba(35, 37, 33, 0.88);
+    }
   }
 
   .resource-card:hover {
@@ -576,65 +586,33 @@ ul.task-list li input[type="checkbox"] {
 
   .panel-foot {
     margin-top: 1rem;
-    padding: 1rem 1.05rem;
-    border-radius: 20px;
+    padding: 1.05rem 1.1rem;
+    border-radius: 22px;
     background: linear-gradient(135deg, rgba(30, 95, 146, 0.08), rgba(21, 92, 72, 0.08));
     border: 1px solid var(--line);
     color: var(--muted);
     font-size: 0.93rem;
     line-height: 1.65;
+    box-shadow: var(--shadow-soft);
   }
 
   @media (max-width: 980px) {
-    .hero-grid,
     .journey,
-    .panel-grid,
-    .summary-strip {
+    .panel-grid {
       grid-template-columns: 1fr;
     }
 
     .journey-nav {
       position: static;
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
     }
   }
 </style>
 
 <div class="page-shell page-columns page-full">
-  <section class="hero page-columns page-full">
-    <span class="eyebrow">Clinical-trial analysts returning to R</span>
-    <div class="hero-grid page-columns page-full">
-      <div>
-        <h1>Use AI to get back into R faster.</h1>
-        <p class="lead">
-          If you last touched R years ago at university, the fastest route back is not a long course taken in order.
-          It is a guided, applied path: learn enough syntax to recognise what R is doing, use AI to translate what you
-          already know from SAS, SPSS, Excel, or other analysis workflows, then learn from real scripts and real tasks.
-        </p>
-      </div>
-      <aside class="hero-note">
-        <h2 class="anchored">What this page is trying to do</h2>
-        <p>
-          Build confidence first, then capability. You do not need to master R before being useful in phase 1 to phase 4
-          clinical-trial work. You need a workflow that helps you start, understand, debug, and improve.
-        </p>
-      </aside>
-    </div>
-
-    <div class="summary-strip">
-      <div class="summary-card">
-        <span class="kicker">Mindset</span>
-        <p>Do not begin with "learn all of R." Begin with the analysis work you actually need to do.</p>
-      </div>
-      <div class="summary-card">
-        <span class="kicker">AI Role</span>
-        <p>Use AI as a translator, explainer, code reviewer, and debugging partner while you learn in context.</p>
-      </div>
-      <div class="summary-card">
-        <span class="kicker">Audience</span>
-        <p>Designed for people returning to R and working in clinical development, not only health economics.</p>
-      </div>
-    </div>
-  </section>
+  <h1 class="page-title">R Learning Path</h1>
+  <p class="page-lead">Return to R by learning the work you need to do, not every corner of the language.</p>
 
   <section class="journey page-columns page-full">
     <aside class="journey-nav">
@@ -644,38 +622,50 @@ ul.task-list li input[type="checkbox"] {
       <div class="stage-list">
         <button class="stage-btn active" id="btn-orientation" onclick="showStage('orientation')">
           <span class="stage-index">1</span>
-          <span class="stage-title">Orientation</span>
-          <span class="stage-sub">You are translating existing analytical thinking, not starting from zero.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Introduction</span>
+            <span class="stage-sub">Mindset, role, and how this path works.</span>
+          </span>
         </button>
 
         <button class="stage-btn" id="btn-syntax" onclick="showStage('syntax')">
           <span class="stage-index">2</span>
-          <span class="stage-title">Learn Enough Syntax</span>
-          <span class="stage-sub">Recognise data frames, dplyr, ggplot2, pipes, and packages without aiming for mastery yet.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Learn Enough Syntax</span>
+            <span class="stage-sub">Recognise data frames, dplyr, ggplot2, pipes, and packages.</span>
+          </span>
         </button>
 
         <button class="stage-btn" id="btn-ai" onclick="showStage('ai')">
           <span class="stage-index">3</span>
-          <span class="stage-title">Use AI as a Translator</span>
-          <span class="stage-sub">Turn familiar SAS, SPSS, Excel, or analysis ideas into R code and explanations.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Use AI as a Translator</span>
+            <span class="stage-sub">Turn familiar SAS, SPSS, Excel, or analysis ideas into R code.</span>
+          </span>
         </button>
 
         <button class="stage-btn" id="btn-code" onclick="showStage('code')">
           <span class="stage-index">4</span>
-          <span class="stage-title">Learn From Real Code</span>
-          <span class="stage-sub">Study the scripts and package patterns your team actually uses.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Learn from Real Scripts</span>
+            <span class="stage-sub">Read, understand, and improve real clinical-trial R code.</span>
+          </span>
         </button>
 
         <button class="stage-btn" id="btn-workflow" onclick="showStage('workflow')">
           <span class="stage-index">5</span>
-          <span class="stage-title">Build an AI Workflow</span>
-          <span class="stage-sub">Plan in English, generate code, run it, debug it, and ask AI to explain the final version.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Build Your Workflow</span>
+            <span class="stage-sub">Plan, code, debug, and document like a pro.</span>
+          </span>
         </button>
 
         <button class="stage-btn" id="btn-trials" onclick="showStage('trials')">
           <span class="stage-index">6</span>
-          <span class="stage-title">Clinical-Trial Next Steps</span>
-          <span class="stage-sub">Grow into reproducible analysis, reporting, and trial-focused package choices.</span>
+          <span class="stage-copy">
+            <span class="stage-title">Clinical-Trial Next Steps</span>
+            <span class="stage-sub">Grow into reproducible analysis, reporting, and trial-focused tools.</span>
+          </span>
         </button>
       </div>
     </aside>
@@ -683,41 +673,36 @@ ul.task-list li input[type="checkbox"] {
     <div class="journey-panel-wrap">
       <div class="panel active" id="panel-orientation">
         <div class="panel-head">
-          <div>
+          <div class="panel-head-main">
             <span class="pill pill-green">Stage 1</span>
-            <h2 class="anchored">Orientation: start from what you already know</h2>
+            <h2 class="anchored">1. Introduction</h2>
           </div>
           <button class="close-btn" onclick="showStage('orientation')">Reset stage</button>
         </div>
         <p class="panel-intro">
-          The goal is not to become an R expert before you begin. The goal is to make your existing analysis experience useful in a new language and workflow.
+          Mindset, role, and how this path works.
         </p>
-        <div class="panel-grid">
+        <div class="panel-rule"></div>
+        <div class="panel-grid panel-grid-3">
           <div class="content-card">
+            <div class="icon-badge">B</div>
             <h3 class="anchored">Goal</h3>
             <p>Replace the feeling of "I have to relearn everything" with "I already know the analysis, I just need to learn how R expresses it."</p>
           </div>
           <div class="content-card">
-            <h3 class="anchored">What to do</h3>
-            <ul>
-              <li>Accept that returning to R is mostly a translation problem, not a statistics problem.</li>
-              <li>Pick one real task you care about, such as summarising data, creating a plot, or preparing an output table.</li>
-              <li>Use this page as a roadmap, not a syllabus you must finish perfectly.</li>
-            </ul>
+            <div class="icon-badge">AI</div>
+            <h3 class="anchored">AI Role</h3>
+            <p>Use AI as a translator, explainer, code reviewer, and debugging partner while you learn in context.</p>
           </div>
           <div class="content-card">
-            <h3 class="anchored">Ask AI this</h3>
-            <div class="prompt-list">
-              <div class="prompt">"I last used R years ago at university. I already know statistics and clinical-trial analysis. What are the minimum R ideas I need to get productive again?"</div>
-              <div class="prompt">"Help me build a simple learning plan for returning to R when I already understand analysis concepts but not modern R workflows."</div>
-            </div>
-          </div>
-          <div class="content-card">
-            <h3 class="anchored">Why it matters in clinical trials</h3>
-            <p>In phase 1 to phase 4 work, the challenge is rarely the analysis logic alone. The challenge is moving confidently between datasets, summaries, plots, scripts, and reproducible workflows.</p>
+            <div class="icon-badge">U</div>
+            <h3 class="anchored">Audience</h3>
+            <p>Designed for people returning to R and working in clinical development, not only health economics.</p>
           </div>
         </div>
-        <div class="panel-foot">If this stage works, the learner should feel less pressure to "study everything first" and more ready to begin with practical tasks.</div>
+        <div class="callout-row">
+          <div class="panel-foot">If you last touched R years ago at university, the fastest route back is not a long course taken in order. It is a guided, applied path: learn enough syntax to recognise what R is doing, use AI to translate what you already know from SAS, SPSS, Excel, or other analysis workflows, then learn from real scripts and real tasks.</div>
+        </div>
       </div>
 
       <div class="panel" id="panel-syntax">
@@ -731,6 +716,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="panel-intro">
           Spend a short burst of time on the core shapes of modern R code. The aim is recognition and confidence, not deep mastery.
         </p>
+        <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3 class="anchored">Goal</h3>
@@ -786,6 +772,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="panel-intro">
           AI is most useful when you ask it to bridge from what you already know into R code, explanation, and debugging help.
         </p>
+        <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3 class="anchored">Goal</h3>
@@ -838,6 +825,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="panel-intro">
           The most relevant R education often comes from the scripts, packages, and conventions already present in your team.
         </p>
+        <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3 class="anchored">Goal</h3>
@@ -889,6 +877,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="panel-intro">
           Every analysis task can become a learning loop if you use AI consistently at the right points.
         </p>
+        <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3 class="anchored">Goal</h3>
@@ -930,6 +919,7 @@ ul.task-list li input[type="checkbox"] {
         <p class="panel-intro">
           Once the learner can read and adapt code, the next step is to deepen the parts of R that matter most for their role in phase 1 to phase 4 studies.
         </p>
+        <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3 class="anchored">Goal</h3>
