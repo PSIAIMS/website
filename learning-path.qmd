@@ -57,10 +57,7 @@ title-block: false
     margin: 0;
     font-family: var(--font);
     color: var(--text);
-    background:
-      radial-gradient(circle at top left, rgba(21, 92, 72, 0.10), transparent 28%),
-      radial-gradient(circle at top right, rgba(165, 68, 38, 0.08), transparent 24%),
-      linear-gradient(180deg, #fbfaf6 0%, var(--bg) 32%, var(--bg) 100%);
+    background: #ffffff;
     min-height: 100vh;
     padding: 2rem 1rem 3rem;
   }
@@ -477,14 +474,9 @@ title-block: false
 <div class="page-shell">
   <p class="page-lead">Return to R by learning the work you need to do, not every corner of the language.</p>
 
-  <section class="journey">
-    <div class="journey-copy">
-      Start at the top and move stage by stage. You can revisit any stage whenever a real project exposes a gap.
-    </div>
-
     <div class="journey-nav">
       <p class="section-title">Recommended path</p>
-      <p class="section-copy">Move down the path, then return whenever a real project reveals a gap.</p>
+      <p class="section-copy">Start at the top and move stage by stage. You can revisit any stage whenever your work exposes a gap.</p>
 
       <div class="stage-list">
         <button class="stage-btn active" id="btn-orientation" onclick="showStage('orientation')">
@@ -506,8 +498,8 @@ title-block: false
         <button class="stage-btn" id="btn-ai" onclick="showStage('ai')">
           <span class="stage-index">3</span>
           <span class="stage-copy">
-            <span class="stage-title">Use AI as a Translator</span>
-            <span class="stage-sub">Turn familiar SAS, or analysis ideas into R code.</span>
+            <span class="stage-title">Learn Through Relevant Work</span>
+            <span class="stage-sub">Pick a project that matters to you and use AI to learn by doing it.</span>
           </span>
         </button>
 
@@ -522,16 +514,8 @@ title-block: false
         <button class="stage-btn" id="btn-workflow" onclick="showStage('workflow')">
           <span class="stage-index">5</span>
           <span class="stage-copy">
-            <span class="stage-title">Learn Through Relevant Work</span>
-            <span class="stage-sub">Pick a project that matters to you and use AI to learn by doing it.</span>
-          </span>
-        </button>
-
-        <button class="stage-btn" id="btn-trials" onclick="showStage('trials')">
-          <span class="stage-index">6</span>
-          <span class="stage-copy">
-            <span class="stage-title">Choose Your Direction</span>
-            <span class="stage-sub">Follow the analyses, outputs, and areas that are most relevant to your role.</span>
+            <span class="stage-title">Use AI as a Translator</span>
+            <span class="stage-sub">Turn familiar SAS, or analysis ideas into R code.</span>
           </span>
         </button>
       </div>
@@ -564,7 +548,7 @@ title-block: false
           <div class="content-card">
             <div class="icon-badge">U</div>
             <h3>Audience</h3>
-            <p>Designed for people returning to R and working in clinical development, not only health economics.</p>
+            <p>Designed for people either returning to R or coming to R as a newcomer.</p>
           </div>
         </div>
         <div class="callout-row">
@@ -632,116 +616,6 @@ title-block: false
         <div class="panel-head">
           <div>
             <span class="pill pill-coral">Stage 3</span>
-            <h2>Use AI as a translator, not just a search engine</h2>
-          </div>
-          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
-        </div>
-        <p class="panel-intro">
-          AI is most useful when you ask it to bridge from what you already know into R code, explanation, and debugging help.
-        </p>
-        <div class="panel-rule"></div>
-        <div class="panel-grid">
-          <div class="content-card">
-            <h3>Goal</h3>
-            <p>Learn in context by translating familiar analytical tasks into R instead of trying to memorise syntax in isolation.</p>
-          </div>
-          <div class="content-card">
-            <h3>What to do</h3>
-            <ul>
-              <li>Describe the task the way you would describe it in SAS, or plain English.</li>
-              <li>Ask AI to explain code line by line, not only to generate code.</li>
-              <li>When you hit an error, paste the code and error together and ask for diagnosis.</li>
-            </ul>
-          </div>
-          <div class="content-card">
-            <h3>Ask AI this</h3>
-            <div class="prompt-list">
-              <div class="prompt">"I would do this in SAS. How do I do it in R using tidyverse code?"</div>
-              <div class="prompt">"Explain this R code line by line as if I am an analyst new to R."</div>
-              <div class="prompt">"I ran this code and got this error. Tell me what the error means, what probably caused it, and how to fix it."</div>
-              <div class="prompt">"Rewrite this R code in a more beginner-friendly way and explain the packages being used."</div>
-            </div>
-          </div>
-          <div class="content-card">
-            <h3>Recommended resources</h3>
-            <ul>
-              <li>Save good prompts that worked well for translation, explanation, and debugging.</li>
-              <li>Keep asking AI to rewrite dense code in a simpler style until the structure feels familiar.</li>
-              <li>Use this stage alongside real datasets and real scripts, not only toy examples.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="panel-foot">This stage is where learning speed usually jumps. AI lets people learn from real work instead of waiting until they feel fully trained.</div>
-      </div>
-
-      <div class="panel" id="panel-code">
-        <div class="panel-head">
-          <div>
-            <span class="pill pill-green">Stage 4</span>
-            <h2>Learn from the real code your team already uses</h2>
-          </div>
-          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
-        </div>
-        <p class="panel-intro">
-          The most relevant R education often comes from the scripts, packages, and conventions already present in your team, especially when they point toward the kinds of analyses or outputs you are likely to work on yourself.
-        </p>
-        <div class="panel-rule"></div>
-        <div class="panel-grid">
-          <div class="content-card">
-            <h3>Goal</h3>
-            <p>Understand the actual style of R code used around you, and notice which analyses, reports, or tools feel most relevant to your own work.</p>
-          </div>
-          <div class="content-card">
-            <h3>What to do</h3>
-            <ul>
-              <li>Take short sections of shared scripts and study them with AI.</li>
-              <li>Notice the packages, naming patterns, and data-flow style your team prefers.</li>
-              <li>Pay attention to the types of work the code supports, such as meta-analysis, visualisation, dashboards, reporting workflows, or survival analysis.</li>
-              <li>Ask for beginner-friendly rewrites when a script feels too dense.</li>
-            </ul>
-          </div>
-          <div class="content-card">
-            <h3>Ask AI this</h3>
-            <div class="prompt-list">
-              <div class="prompt">"Explain what this code is doing and tell me which R concepts I need to understand first."</div>
-              <div class="prompt">"What packages are being used here and why would a clinical-trial team choose them?"</div>
-              <div class="prompt">"Looking at this script, what kind of analysis or project is this closest to, and would it be a good learning project for me?"</div>
-              <div class="prompt">"Rewrite this in a more beginner-friendly way but keep the same analytical result."</div>
-            </div>
-          </div>
-          <div class="content-card">
-            <h3>Recommended resources</h3>
-            <div class="resource-list">
-              <a class="resource-card" href="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" target="_blank" rel="noopener">
-                <strong>pharmaverse: Intro to R for SAS programmers</strong>
-                <span>Especially useful when the learner already thinks in SAS-style data and reporting tasks.</span>
-                <em>pharmaverse.github.io</em>
-              </a>
-              <a class="resource-card" href="https://gsk-biostatistics.github.io/intro_to_r_and_the_tidyverse_training/" target="_blank" rel="noopener">
-                <strong>GSK training materials</strong>
-                <span>Helpful as a bridge between structured learning and the code patterns seen in practice.</span>
-                <em>gsk-biostatistics.github.io</em>
-              </a>
-              <a class="resource-card" href="https://posit.cloud/learn/recipes" target="_blank" rel="noopener">
-                <strong>Posit Recipes</strong>
-                <span>Bite-sized worked examples that pair well with reading and adapting real scripts.</span>
-                <em>posit.cloud/learn/recipes</em>
-              </a>
-              <a class="resource-card" href="https://posit.co/resources/cheatsheets/" target="_blank" rel="noopener">
-                <strong>Posit cheat sheets</strong>
-                <span>Useful when you are reading team code and need a quick reminder of syntax or function patterns.</span>
-                <em>posit.co/resources/cheatsheets</em>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="panel-foot">This is often where R starts to feel real: the learner can connect tutorial ideas to the scripts, analyses, and outputs their team actually cares about, then choose one of those areas as the next place to learn more deeply.</div>
-      </div>
-
-      <div class="panel" id="panel-workflow">
-        <div class="panel-head">
-          <div>
-            <span class="pill pill-amber">Stage 5</span>
             <h2>Learn through work that actually matters to you</h2>
           </div>
           <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
@@ -783,68 +657,111 @@ title-block: false
         <div class="panel-foot">The long-term aim is not dependence on AI. It is faster understanding, cleaner iteration, and better transfer from one real project to the next.</div>
       </div>
 
-      <div class="panel" id="panel-trials">
+      <div class="panel" id="panel-code">
         <div class="panel-head">
           <div>
-            <span class="pill pill-blue">Stage 6</span>
-            <h2>Choose the directions that fit your role</h2>
+            <span class="pill pill-green">Stage 4</span>
+            <h2>Learn from the real code your team already uses</h2>
           </div>
           <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
         </div>
         <p class="panel-intro">
-          Once you can read and adapt code, the next step is to deepen the parts of R that matter most for your role, your interests, and the kinds of outputs you are likely to create.
+          The most relevant R education often comes from the scripts, packages, and conventions already present in your team, especially when they point toward the kinds of analyses or outputs you are likely to work on yourself.
         </p>
         <div class="panel-rule"></div>
         <div class="panel-grid">
           <div class="content-card">
             <h3>Goal</h3>
-            <p>Move from basic comfort with R into areas of practice that feel genuinely useful, whether that means analysis, visualisation, dashboards, reporting, or reproducible workflows.</p>
+            <p>Understand the actual style of R code used around you, and notice which analyses, reports, or tools feel most relevant to your own work.</p>
           </div>
           <div class="content-card">
-            <h3>Possible directions</h3>
+            <h3>What to do</h3>
             <ul>
-              <li>Meta-analysis or evidence synthesis</li>
-              <li>Survival or time-to-event analysis</li>
-              <li>Repeated measures or longitudinal work</li>
-              <li>Data visualisation and communication</li>
-              <li>Dashboards or interactive tools</li>
-              <li>Tables, listings, figures, and reporting workflows</li>
-              <li>Reproducible pipelines and project structure</li>
+              <li>Take short sections of shared scripts and study them with AI.</li>
+              <li>Notice the packages, naming patterns, and data-flow style your team prefers.</li>
+              <li>Pay attention to the types of work the code supports, such as meta-analysis, visualisation, dashboards, reporting workflows, or survival analysis.</li>
+              <li>Ask for beginner-friendly rewrites when a script feels too dense.</li>
             </ul>
           </div>
           <div class="content-card">
             <h3>Ask AI this</h3>
             <div class="prompt-list">
-              <div class="prompt">"Based on the work I am likely to do, what would be a good next R project for me?"</div>
-              <div class="prompt">"If I want to learn R through meta-analysis, what packages, example tasks, and prompts should I start with?"</div>
-              <div class="prompt">"If I care more about dashboards and communication than modelling, how should I learn R differently?"</div>
-              <div class="prompt">"Show me how this kind of analysis or output could become a reusable R workflow."</div>
+              <div class="prompt">"Explain what this code is doing and tell me which R concepts I need to understand first."</div>
+              <div class="prompt">"What packages are being used here and why would a clinical-trial team choose them?"</div>
+              <div class="prompt">"Looking at this script, what kind of analysis or project is this closest to, and would it be a good learning project for me?"</div>
+              <div class="prompt">"Rewrite this in a more beginner-friendly way but keep the same analytical result."</div>
             </div>
           </div>
           <div class="content-card">
             <h3>Recommended resources</h3>
             <div class="resource-list">
-              <a class="resource-card" href="https://quarto.org/docs/authoring/markdown-basics.html" target="_blank" rel="noopener">
-                <strong>Quarto basics</strong>
-                <span>Useful when your chosen direction involves reports, notes, or shareable outputs.</span>
-                <em>quarto.org</em>
+              <a class="resource-card" href="https://posit.cloud/learn/recipes" target="_blank" rel="noopener">
+                <strong>Posit Recipes</strong>
+                <span>Bite-sized worked examples that pair well with reading and adapting real scripts.</span>
+                <em>posit.cloud/learn/recipes</em>
               </a>
-              <a class="resource-card" href="https://www.tidyverse.org/" target="_blank" rel="noopener">
-                <strong>Tidyverse</strong>
-                <span>A core ecosystem you will keep returning to across many different types of work.</span>
-                <em>tidyverse.org</em>
+              <a class="resource-card" href="https://posit.co/resources/cheatsheets/" target="_blank" rel="noopener">
+                <strong>Posit cheat sheets</strong>
+                <span>Useful when you are reading team code and need a quick reminder of syntax or function patterns.</span>
+                <em>posit.co/resources/cheatsheets</em>
               </a>
             </div>
           </div>
         </div>
-        <div class="panel-foot">The important move here is not picking the "right" topic in the abstract. It is choosing a direction that feels pertinent to your role and using that to drive the next stage of learning.</div>
+        <div class="panel-foot">This is often where R starts to feel real: the learner can connect tutorial ideas to the scripts, analyses, and outputs their team actually cares about, then choose one of those areas as the next place to learn more deeply.</div>
+      </div>
+
+      <div class="panel" id="panel-workflow">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-amber">Stage 5</span>
+            <h2>Use AI as a translator, not just a search engine</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          AI is most useful when you ask it to bridge from what you already know into R code, explanation, and debugging help.
+        </p>
+        <div class="panel-rule"></div>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3>Goal</h3>
+            <p>Learn in context by translating familiar analytical tasks into R instead of trying to memorise syntax in isolation.</p>
+          </div>
+          <div class="content-card">
+            <h3>What to do</h3>
+            <ul>
+              <li>Describe the task the way you would describe it in SAS, or plain English.</li>
+              <li>Ask AI to explain code line by line, not only to generate code.</li>
+              <li>When you hit an error, paste the code and error together and ask for diagnosis.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3>Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"I would do this in SAS. How do I do it in R using tidyverse code?"</div>
+              <div class="prompt">"Explain this R code line by line as if I am an analyst new to R."</div>
+              <div class="prompt">"I ran this code and got this error. Tell me what the error means, what probably caused it, and how to fix it."</div>
+              <div class="prompt">"Rewrite this R code in a more beginner-friendly way and explain the packages being used."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3>Recommended resources</h3>
+            <ul>
+              <li>Save good prompts that worked well for translation, explanation, and debugging.</li>
+              <li>Keep asking AI to rewrite dense code in a simpler style until the structure feels familiar.</li>
+              <li>Use this stage alongside real datasets and real scripts, not only toy examples.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel-foot">This stage is where learning speed usually jumps. AI lets people learn from real work instead of waiting until they feel fully trained.</div>
       </div>
     </div>
   </section>
 </div>
 
 <script>
-const stages = ['orientation', 'syntax', 'ai', 'code', 'workflow', 'trials'];
+const stages = ['orientation', 'syntax', 'ai', 'code', 'workflow'];
 
 function showStage(id) {
   stages.forEach(stage => {
