@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R Learning Path – PSI AIMS SIG Website</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d6c14dc2b5c34d23b3bb7199f61af660.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">PSI AIMS SIG Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./why-r.html"> 
+<span class="menu-text">Why R?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./learning-path.html" aria-current="page"> 
+<span class="menu-text">R Learning Path</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources_links.html"> 
+<span class="menu-text">R Resources and Links</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./rcollaborations.html"> 
+<span class="menu-text">R Collaborations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content page-columns page-full column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">R Learning Path</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Return to R by learning the work you need to do, not every corner of the language.</p>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+
+  :root {
+    --bg: #f6f4ee;
+    --panel: rgba(255,255,255,0.86);
+    --panel-strong: #fffdfa;
+    --text: #1d1f1a;
+    --muted: #65685f;
+    --subtle: #8c8f85;
+    --line: rgba(24, 32, 20, 0.12);
+    --line-strong: rgba(24, 32, 20, 0.22);
+    --accent: #155c48;
+    --accent-soft: #dbeee7;
+    --accent-2: #a54426;
+    --accent-2-soft: #f8e9e2;
+    --accent-3: #1e5f92;
+    --accent-3-soft: #e3eef8;
+    --accent-4: #8b6311;
+    --accent-4-soft: #f8ecd3;
+    --shadow: 0 18px 50px rgba(42, 49, 36, 0.08);
+    --radius: 22px;
+    --font: "Segoe UI", "Aptos", system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1d19;
+      --panel: rgba(34, 37, 32, 0.92);
+      --panel-strong: #242822;
+      --text: #eceadf;
+      --muted: #bcc0b4;
+      --subtle: #8f9388;
+      --line: rgba(255,255,255,0.10);
+      --line-strong: rgba(255,255,255,0.20);
+      --accent: #8ed1b8;
+      --accent-soft: #113e31;
+      --accent-2: #f1a183;
+      --accent-2-soft: #4d1f10;
+      --accent-3: #9bc6ec;
+      --accent-3-soft: #123652;
+      --accent-4: #f0c66a;
+      --accent-4-soft: #493104;
+      --shadow: none;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background:
+      radial-gradient(circle at top left, rgba(21, 92, 72, 0.10), transparent 28%),
+      radial-gradient(circle at top right, rgba(165, 68, 38, 0.08), transparent 24%),
+      linear-gradient(180deg, #fbfaf6 0%, var(--bg) 32%, var(--bg) 100%);
+    min-height: 100vh;
+    padding: 2rem 1rem 3rem;
+  }
+
+  .page-shell {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .hero {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 1.4rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 4vw, 3.35rem);
+    line-height: 1.02;
+    margin: 0.95rem 0 0.8rem;
+    max-width: 14ch;
+  }
+
+  .hero p.lead {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 74ch;
+    margin: 0 0 1.2rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .hero-note {
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1rem 1.05rem;
+  }
+
+  .hero-note h2 {
+    margin: 0 0 0.5rem;
+    font-size: 0.92rem;
+  }
+
+  .hero-note p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .summary-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .summary-card {
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1rem;
+  }
+
+  .summary-card .kicker {
+    display: block;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--subtle);
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+  }
+
+  .summary-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .journey {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .journey-nav,
+  .journey-panel-wrap {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
+  }
+
+  .journey-nav {
+    padding: 1.15rem;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .section-title {
+    margin: 0 0 0.35rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--subtle);
+  }
+
+  .section-copy {
+    margin: 0 0 1rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .stage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .stage-btn {
+    width: 100%;
+    border: 1px solid var(--line);
+    background: var(--panel-strong);
+    border-radius: 20px;
+    text-align: left;
+    padding: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  }
+
+  .stage-btn:hover {
+    transform: translateY(-1px);
+    border-color: var(--line-strong);
+  }
+
+  .stage-btn.active {
+    background: linear-gradient(135deg, var(--accent-soft), var(--panel-strong));
+    border-color: rgba(21, 92, 72, 0.35);
+  }
+
+  .stage-index {
+    display: inline-flex;
+    width: 1.8rem;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+  }
+
+  .stage-btn.active .stage-index {
+    background: var(--accent-2);
+  }
+
+  .stage-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .stage-sub {
+    display: block;
+    font-size: 0.86rem;
+    color: var(--muted);
+    line-height: 1.45;
+  }
+
+  .journey-panel-wrap {
+    padding: 1.35rem;
+  }
+
+  .panel {
+    display: none;
+  }
+
+  .panel.active {
+    display: block;
+  }
+
+  .panel-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pill {
+    display: inline-block;
+    padding: 0.34rem 0.68rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .pill-green { background: var(--accent-soft); color: var(--accent); }
+  .pill-coral { background: var(--accent-2-soft); color: var(--accent-2); }
+  .pill-blue  { background: var(--accent-3-soft); color: var(--accent-3); }
+  .pill-amber { background: var(--accent-4-soft); color: var(--accent-4); }
+
+  .panel h2 {
+    margin: 0.6rem 0 0;
+    font-size: clamp(1.55rem, 3vw, 2.2rem);
+    line-height: 1.1;
+  }
+
+  .panel-intro {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 68ch;
+  }
+
+  .close-btn {
+    border: 1px solid var(--line);
+    background: var(--panel-strong);
+    color: var(--muted);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.84rem;
+  }
+
+  .panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.95rem;
+  }
+
+  .content-card {
+    background: var(--panel-strong);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 1rem;
+    min-height: 100%;
+  }
+
+  .content-card h3 {
+    margin: 0 0 0.55rem;
+    font-size: 0.92rem;
+  }
+
+  .content-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .content-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--muted);
+  }
+
+  .content-card li {
+    margin: 0 0 0.5rem;
+    line-height: 1.55;
+  }
+
+  .prompt-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .prompt {
+    border-left: 4px solid var(--accent);
+    background: rgba(21, 92, 72, 0.06);
+    padding: 0.85rem 0.9rem;
+    border-radius: 0 14px 14px 0;
+    font-size: 0.91rem;
+    color: var(--text);
+    line-height: 1.55;
+  }
+
+  .resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .resource-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--line);
+    background: var(--panel-strong);
+    border-radius: 16px;
+    padding: 0.9rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .resource-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-1px);
+  }
+
+  .resource-card strong {
+    display: block;
+    margin-bottom: 0.18rem;
+    font-size: 0.94rem;
+  }
+
+  .resource-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.87rem;
+    line-height: 1.5;
+  }
+
+  .resource-card em {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--subtle);
+    font-size: 0.75rem;
+    font-style: normal;
+  }
+
+  .panel-foot {
+    margin-top: 1rem;
+    padding: 1rem 1.05rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(30, 95, 146, 0.08), rgba(21, 92, 72, 0.08));
+    border: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 980px) {
+    .hero-grid,
+    .journey,
+    .panel-grid,
+    .summary-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .journey-nav {
+      position: static;
+    }
+  }
+</style>
+
+<div class="page-shell page-columns page-full">
+  <section class="hero page-columns page-full">
+    <span class="eyebrow">Clinical-trial analysts returning to R</span>
+    <div class="hero-grid page-columns page-full">
+      <div>
+        <h1>Use AI to get back into R faster.</h1>
+        <p class="lead">
+          If you last touched R years ago at university, the fastest route back is not a long course taken in order.
+          It is a guided, applied path: learn enough syntax to recognise what R is doing, use AI to translate what you
+          already know from SAS, SPSS, Excel, or other analysis workflows, then learn from real scripts and real tasks.
+        </p>
+      </div>
+      <aside class="hero-note">
+        <h2 class="anchored">What this page is trying to do</h2>
+        <p>
+          Build confidence first, then capability. You do not need to master R before being useful in phase 1 to phase 4
+          clinical-trial work. You need a workflow that helps you start, understand, debug, and improve.
+        </p>
+      </aside>
+    </div>
+
+    <div class="summary-strip">
+      <div class="summary-card">
+        <span class="kicker">Mindset</span>
+        <p>Do not begin with "learn all of R." Begin with the analysis work you actually need to do.</p>
+      </div>
+      <div class="summary-card">
+        <span class="kicker">AI Role</span>
+        <p>Use AI as a translator, explainer, code reviewer, and debugging partner while you learn in context.</p>
+      </div>
+      <div class="summary-card">
+        <span class="kicker">Audience</span>
+        <p>Designed for people returning to R and working in clinical development, not only health economics.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey page-columns page-full">
+    <aside class="journey-nav">
+      <p class="section-title">Recommended path</p>
+      <p class="section-copy">Start at the top and move stage by stage. You can revisit any stage whenever a real project exposes a gap.</p>
+
+      <div class="stage-list">
+        <button class="stage-btn active" id="btn-orientation" onclick="showStage('orientation')">
+          <span class="stage-index">1</span>
+          <span class="stage-title">Orientation</span>
+          <span class="stage-sub">You are translating existing analytical thinking, not starting from zero.</span>
+        </button>
+
+        <button class="stage-btn" id="btn-syntax" onclick="showStage('syntax')">
+          <span class="stage-index">2</span>
+          <span class="stage-title">Learn Enough Syntax</span>
+          <span class="stage-sub">Recognise data frames, dplyr, ggplot2, pipes, and packages without aiming for mastery yet.</span>
+        </button>
+
+        <button class="stage-btn" id="btn-ai" onclick="showStage('ai')">
+          <span class="stage-index">3</span>
+          <span class="stage-title">Use AI as a Translator</span>
+          <span class="stage-sub">Turn familiar SAS, SPSS, Excel, or analysis ideas into R code and explanations.</span>
+        </button>
+
+        <button class="stage-btn" id="btn-code" onclick="showStage('code')">
+          <span class="stage-index">4</span>
+          <span class="stage-title">Learn From Real Code</span>
+          <span class="stage-sub">Study the scripts and package patterns your team actually uses.</span>
+        </button>
+
+        <button class="stage-btn" id="btn-workflow" onclick="showStage('workflow')">
+          <span class="stage-index">5</span>
+          <span class="stage-title">Build an AI Workflow</span>
+          <span class="stage-sub">Plan in English, generate code, run it, debug it, and ask AI to explain the final version.</span>
+        </button>
+
+        <button class="stage-btn" id="btn-trials" onclick="showStage('trials')">
+          <span class="stage-index">6</span>
+          <span class="stage-title">Clinical-Trial Next Steps</span>
+          <span class="stage-sub">Grow into reproducible analysis, reporting, and trial-focused package choices.</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="journey-panel-wrap">
+      <div class="panel active" id="panel-orientation">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-green">Stage 1</span>
+            <h2 class="anchored">Orientation: start from what you already know</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Reset stage</button>
+        </div>
+        <p class="panel-intro">
+          The goal is not to become an R expert before you begin. The goal is to make your existing analysis experience useful in a new language and workflow.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Replace the feeling of "I have to relearn everything" with "I already know the analysis, I just need to learn how R expresses it."</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to do</h3>
+            <ul>
+              <li>Accept that returning to R is mostly a translation problem, not a statistics problem.</li>
+              <li>Pick one real task you care about, such as summarising data, creating a plot, or preparing an output table.</li>
+              <li>Use this page as a roadmap, not a syllabus you must finish perfectly.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"I last used R years ago at university. I already know statistics and clinical-trial analysis. What are the minimum R ideas I need to get productive again?"</div>
+              <div class="prompt">"Help me build a simple learning plan for returning to R when I already understand analysis concepts but not modern R workflows."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Why it matters in clinical trials</h3>
+            <p>In phase 1 to phase 4 work, the challenge is rarely the analysis logic alone. The challenge is moving confidently between datasets, summaries, plots, scripts, and reproducible workflows.</p>
+          </div>
+        </div>
+        <div class="panel-foot">If this stage works, the learner should feel less pressure to "study everything first" and more ready to begin with practical tasks.</div>
+      </div>
+
+      <div class="panel" id="panel-syntax">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-blue">Stage 2</span>
+            <h2 class="anchored">Learn enough syntax to recognise what R is doing</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          Spend a short burst of time on the core shapes of modern R code. The aim is recognition and confidence, not deep mastery.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Become comfortable seeing data frames, verbs like <code>filter()</code> and <code>mutate()</code>, pipes, and basic <code>ggplot2</code> code.</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to do</h3>
+            <ul>
+              <li>Spend one or two days on introductory material only.</li>
+              <li>Focus on data frames, <code>dplyr</code>, <code>ggplot2</code>, pipes, and packages.</li>
+              <li>Do not worry if you cannot write everything from memory.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"Explain data frames, dplyr, ggplot2, and pipes as if I am a clinical-trial analyst returning to R."</div>
+              <div class="prompt">"Show me a tiny example that reads a dataset, filters rows, creates a new variable, and makes a simple plot in R."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Recommended resources</h3>
+            <div class="resource-list">
+              <a class="resource-card" href="https://gsk-biostatistics.github.io/intro_to_r_and_the_tidyverse_training/" target="_blank" rel="noopener">
+                <strong>GSK: Intro to R and the tidyverse</strong>
+                <span>Practical, structured material for getting comfortable with modern R syntax.</span>
+                <em>gsk-biostatistics.github.io</em>
+              </a>
+              <a class="resource-card" href="https://r4ds.hadley.nz/" target="_blank" rel="noopener">
+                <strong>R for Data Science</strong>
+                <span>Use selected sections, not necessarily front-to-back, to recognise common tidyverse patterns.</span>
+                <em>r4ds.hadley.nz</em>
+              </a>
+              <a class="resource-card" href="https://www.youtube.com/watch?v=yZ0bV2Afkjc" target="_blank" rel="noopener">
+                <strong>Introductory video walkthrough</strong>
+                <span>A lightweight way to re-familiarise yourself with what R code looks like in practice.</span>
+                <em>youtube.com</em>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot">If someone can look at a short tidyverse script and roughly follow its shape, this stage has done its job.</div>
+      </div>
+
+      <div class="panel" id="panel-ai">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-coral">Stage 3</span>
+            <h2 class="anchored">Use AI as a translator, not just a search engine</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          AI is most useful when you ask it to bridge from what you already know into R code, explanation, and debugging help.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Learn in context by translating familiar analytical tasks into R instead of trying to memorise syntax in isolation.</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to do</h3>
+            <ul>
+              <li>Describe the task the way you would describe it in SAS, SPSS, Excel, or plain English.</li>
+              <li>Ask AI to explain code line by line, not only to generate code.</li>
+              <li>When you hit an error, paste the code and error together and ask for diagnosis.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"I would do this in SAS. How do I do it in R using tidyverse code?"</div>
+              <div class="prompt">"Explain this R code line by line as if I am an analyst new to R."</div>
+              <div class="prompt">"I ran this code and got this error. Tell me what the error means, what probably caused it, and how to fix it."</div>
+              <div class="prompt">"Rewrite this R code in a more beginner-friendly way and explain the packages being used."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Recommended resources</h3>
+            <div class="resource-list">
+              <a class="resource-card" href="https://posit.cloud/learn/recipes" target="_blank" rel="noopener">
+                <strong>Posit Recipes</strong>
+                <span>Bite-sized examples that pair well with AI because each task is small and concrete.</span>
+                <em>posit.cloud/learn/recipes</em>
+              </a>
+              <a class="resource-card" href="https://posit.co/resources/cheatsheets/" target="_blank" rel="noopener">
+                <strong>Posit cheat sheets</strong>
+                <span>Useful as a quick reference while AI helps interpret and apply the patterns.</span>
+                <em>posit.co/resources/cheatsheets</em>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot">This stage is where learning speed usually jumps. AI lets people learn from real work instead of waiting until they feel fully trained.</div>
+      </div>
+
+      <div class="panel" id="panel-code">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-green">Stage 4</span>
+            <h2 class="anchored">Learn from the real code your team already uses</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          The most relevant R education often comes from the scripts, packages, and conventions already present in your team.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Understand the actual style of R code used around you, not just generic examples from tutorials.</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to do</h3>
+            <ul>
+              <li>Take short sections of shared scripts and study them with AI.</li>
+              <li>Notice the packages, naming patterns, and data-flow style your team prefers.</li>
+              <li>Ask for beginner-friendly rewrites when a script feels too dense.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"Explain what this code is doing and tell me which R concepts I need to understand first."</div>
+              <div class="prompt">"What packages are being used here and why would a clinical-trial team choose them?"</div>
+              <div class="prompt">"Rewrite this in a more beginner-friendly way but keep the same analytical result."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Recommended resources</h3>
+            <div class="resource-list">
+              <a class="resource-card" href="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" target="_blank" rel="noopener">
+                <strong>pharmaverse: Intro to R for SAS programmers</strong>
+                <span>Especially useful when the learner already thinks in SAS-style data and reporting tasks.</span>
+                <em>pharmaverse.github.io</em>
+              </a>
+              <a class="resource-card" href="https://gsk-biostatistics.github.io/intro_to_r_and_the_tidyverse_training/" target="_blank" rel="noopener">
+                <strong>GSK training materials</strong>
+                <span>Helpful as a bridge between structured learning and the code patterns seen in practice.</span>
+                <em>gsk-biostatistics.github.io</em>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot">This is often where R starts to feel real: the learner can connect tutorial ideas to the scripts and outputs their team actually cares about.</div>
+      </div>
+
+      <div class="panel" id="panel-workflow">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-amber">Stage 5</span>
+            <h2 class="anchored">Build a repeatable AI-assisted coding workflow</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          Every analysis task can become a learning loop if you use AI consistently at the right points.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Create a workflow that turns planning, coding, debugging, and explanation into one connected learning cycle.</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to do</h3>
+            <ul>
+              <li>Write the analysis plan in plain English first.</li>
+              <li>Ask AI to generate a first draft of the R code.</li>
+              <li>Run it, inspect the output, then debug with AI when needed.</li>
+              <li>Ask AI to explain the final script after it works.</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"Here is the analysis I need to do. Turn this English plan into tidyverse R code."</div>
+              <div class="prompt">"Here is my current script and output. What should I check next?"</div>
+              <div class="prompt">"Now that this works, explain the final code and point out the R ideas I should remember."</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Clinical-trial relevance</h3>
+            <p>This mirrors real analytical work: define the dataset question, generate code, check summaries and plots, refine, and keep the final script understandable enough to revisit later.</p>
+          </div>
+        </div>
+        <div class="panel-foot">The long-term aim is not dependence on AI. It is faster understanding, cleaner iteration, and better transfer from one task to the next.</div>
+      </div>
+
+      <div class="panel" id="panel-trials">
+        <div class="panel-head">
+          <div>
+            <span class="pill pill-blue">Stage 6</span>
+            <h2 class="anchored">Grow into broader clinical-trial R work</h2>
+          </div>
+          <button class="close-btn" onclick="showStage('orientation')">Back to start</button>
+        </div>
+        <p class="panel-intro">
+          Once the learner can read and adapt code, the next step is to deepen the parts of R that matter most for their role in phase 1 to phase 4 studies.
+        </p>
+        <div class="panel-grid">
+          <div class="content-card">
+            <h3 class="anchored">Goal</h3>
+            <p>Move from basic comfort with R into reproducible analysis, reporting, visualisation, and trial-relevant packages.</p>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">What to learn next</h3>
+            <ul>
+              <li><code>tidyverse</code> for data manipulation and readable scripts</li>
+              <li><code>ggplot2</code> for clear visualisation</li>
+              <li><code>survival</code> and related methods when the analysis calls for time-to-event work</li>
+              <li><code>targets</code> or other reproducible workflows if the team values pipeline structure</li>
+              <li>Quarto for reports and shareable outputs</li>
+            </ul>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Ask AI this</h3>
+            <div class="prompt-list">
+              <div class="prompt">"Based on my work in clinical trials, which R packages should I learn next and in what order?"</div>
+              <div class="prompt">"Show me how this clinical-trial analysis could be made more reproducible in R."</div>
+              <div class="prompt">"What should I learn after dplyr and ggplot2 if I want to create reusable reporting workflows?"</div>
+            </div>
+          </div>
+          <div class="content-card">
+            <h3 class="anchored">Recommended resources</h3>
+            <div class="resource-list">
+              <a class="resource-card" href="https://posit.co/resources/cheatsheets/" target="_blank" rel="noopener">
+                <strong>Posit cheat sheets</strong>
+                <span>Keep these close as you move from learning syntax to building repeatable analysis habits.</span>
+                <em>posit.co/resources/cheatsheets</em>
+              </a>
+              <a class="resource-card" href="https://quarto.org/docs/authoring/markdown-basics.html" target="_blank" rel="noopener">
+                <strong>Quarto basics</strong>
+                <span>Useful when the learner starts turning analysis into reports, notes, and shareable output.</span>
+                <em>quarto.org</em>
+              </a>
+              <a class="resource-card" href="https://www.tidyverse.org/" target="_blank" rel="noopener">
+                <strong>Tidyverse</strong>
+                <span>The modern package ecosystem most learners will keep returning to in daily work.</span>
+                <em>tidyverse.org</em>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-foot">Health economics can still fit here, but this final stage keeps the page broad enough for analysts across the wider clinical-trial space.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const stages = ['orientation', 'syntax', 'ai', 'code', 'workflow', 'trials'];
+
+function showStage(id) {
+  stages.forEach(stage => {
+    document.getElementById('panel-' + stage).classList.remove('active');
+    document.getElementById('btn-' + stage).classList.remove('active');
+  });
+
+  document.getElementById('panel-' + id).classList.add('active');
+  document.getElementById('btn-' + id).classList.add('active');
+}
+</script>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/PSIAIMS\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
