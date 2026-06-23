@@ -1,9 +1,8 @@
 ---
 title: "R Learning Path"
 format: html
+title-block: false
 ---
-
-Return to R by learning the work you need to do, not every corner of the language.
 
 ```{=html}
 <style>
@@ -460,7 +459,7 @@ Return to R by learning the work you need to do, not every corner of the languag
   <p class="page-lead">Return to R by learning the work you need to do, not every corner of the language.</p>
 
   <section class="journey">
-    <aside class="journey-nav">
+    <div class="journey-nav">
       <p class="section-title">Recommended path</p>
       <p class="section-copy">Start at the top and move stage by stage. You can revisit any stage whenever a real project exposes a gap.</p>
 
@@ -513,7 +512,7 @@ Return to R by learning the work you need to do, not every corner of the languag
           </span>
         </button>
       </div>
-    </aside>
+    </div>
 
     <div class="journey-panel-wrap">
       <div class="panel active" id="panel-orientation">
