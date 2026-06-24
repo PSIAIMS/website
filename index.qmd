@@ -44,7 +44,7 @@ The Application and Implementation of Medical Statistics (AIMS) Special Interest
 :::
 
 ::: hex5
- [Resources](https://psiaims.github.io/website/02R-tist.html){.white-color}
+ [Resources](https://psiaims.github.io/website/resources_links.html){.white-color}
 :::
 
 :::
