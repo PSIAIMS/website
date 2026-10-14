@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>ABC-001 | Study oversight – PSI AIMS SIG Website</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-12e706ba51171c6187f66319bf3fc7bc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="../../site_libs/plotly-binding-4.12.1/plotly.js"></script>
+<script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+<link href="../../site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="../../site_libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="../../site_libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+<link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../../site_libs/datatables-binding-0.34.0/datatables.js"></script>
+<link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../site_libs/selectize-0.12.0/selectize.min.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">PSI AIMS SIG Website</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../why-r.html"> 
+<span class="menu-text">Why R?</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../learning-path.html"> 
+<span class="menu-text">R Learning Path</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources_links.html"> 
+<span class="menu-text">R Resources and Links</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../rcollaborations.html"> 
+<span class="menu-text">R Collaborations</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../news.html"> 
+<span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#context" id="toc-context" class="nav-link" data-scroll-target="#context">Context</a></li>
+  <li><a href="#headlines" id="toc-headlines" class="nav-link" data-scroll-target="#headlines">Headlines</a></li>
+  <li><a href="#recruitment" id="toc-recruitment" class="nav-link" data-scroll-target="#recruitment">Recruitment</a></li>
+  </ul></li>
+  <li><a href="#recruitment-1" id="toc-recruitment-1" class="nav-link" data-scroll-target="#recruitment-1">Recruitment</a>
+  <ul class="collapse">
+  <li><a href="#context-1" id="toc-context-1" class="nav-link" data-scroll-target="#context-1">Context</a></li>
+  <li><a href="#cumulative" id="toc-cumulative" class="nav-link" data-scroll-target="#cumulative">Cumulative</a></li>
+  <li><a href="#by-site" id="toc-by-site" class="nav-link" data-scroll-target="#by-site">By site</a></li>
+  </ul></li>
+  <li><a href="#sites" id="toc-sites" class="nav-link" data-scroll-target="#sites">Sites</a>
+  <ul class="collapse">
+  <li><a href="#context-2" id="toc-context-2" class="nav-link" data-scroll-target="#context-2">Context</a></li>
+  <li><a href="#recruitment-2" id="toc-recruitment-2" class="nav-link" data-scroll-target="#recruitment-2">Recruitment</a></li>
+  <li><a href="#site-detail" id="toc-site-detail" class="nav-link" data-scroll-target="#site-detail">Site detail</a></li>
+  </ul></li>
+  <li><a href="#safety" id="toc-safety" class="nav-link" data-scroll-target="#safety">Safety</a>
+  <ul class="collapse">
+  <li><a href="#context-3" id="toc-context-3" class="nav-link" data-scroll-target="#context-3">Context</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#ae-terms" id="toc-ae-terms" class="nav-link" data-scroll-target="#ae-terms">AE terms</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ABC-001 | Study oversight</h1>
+<p class="subtitle lead">Fictional study | Synthetic data | Demonstration only</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<section id="context" class="level2 flow" height="auto">
+<h2 class="flow anchored" height="auto" data-anchor-id="context">Context</h2>
+<div class="card study-context">
+<p><strong>ABC-001 | Data cut: 01 October 2026 | Fictional study | Synthetic data | Demonstration only</strong></p>
+<p>Phase II illustration: Drug A and Placebo. Whole study totals. 186 of 300 target patients are randomised across 10 active sites. Patients with TEAE: 90/180 (50.0%) of the safety population.</p>
+</div>
+</section>
+<section id="headlines" class="level2" height="22%">
+<h2 height="22%" class="anchored" data-anchor-id="headlines">Headlines</h2>
+<div class="cell" content="valuebox" title="Randomised patients" data-icon="people" color="primary">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">value =</span> summary<span class="sc">$</span>metrics<span class="sc">$</span>n_randomised)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$value
+[1] 186</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Active sites" data-icon="buildings" color="primary">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">value =</span> summary<span class="sc">$</span>metrics<span class="sc">$</span>n_active_sites)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$value
+[1] 10</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Active patients" data-icon="person-check" color="primary">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">value =</span> summary<span class="sc">$</span>metrics<span class="sc">$</span>n_active)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$value
+[1] 156</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Patients with serious TEAE" data-icon="clipboard-data" color="primary">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(<span class="at">value =</span> summary<span class="sc">$</span>metrics<span class="sc">$</span>n_serious)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$value
+[1] 6</code></pre>
+</div>
+</div>
+</section>
+<section id="recruitment" class="level2" height="60%">
+<h2 height="60%" class="anchored" data-anchor-id="recruitment">Recruitment</h2>
+<div class="cell" title="Recruitment through selected cut">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_recruitment</span>(summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-c9756b18818f0cc08165" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c9756b18818f0cc08165">{"x":{"data":[{"x":[20574,20575,20576,20577,20578,20579,20580,20581,20582,20583,20584,20585,20586,20587,20588,20589,20590,20591,20592,20593,20594,20595,20596,20597,20598,20599,20600,20601,20602,20603,20604,20605,20606,20607,20608,20609,20610,20611,20612,20613,20614,20615,20616,20617,20618,20619,20620,20621,20622,20623,20624,20625,20626,20627,20628,20629,20630,20631,20632,20633,20634,20635,20636,20637,20638,20639,20640,20641,20642,20643,20644,20645,20646,20647,20648,20649,20650,20651,20652,20653,20654,20655,20656,20657,20658,20659,20660,20661,20662,20663,20664,20665,20666,20667,20668,20669,20670,20671,20672,20673,20674,20675,20676,20677,20678,20679,20680,20681,20682,20683,20684,20685,20686,20687,20688,20689,20690,20691,20692,20693,20694,20695,20696,20697,20698,20699,20700,20701,20702,20703,20704,20705,20706,20707,20708,20709,20710,20711,20712,20713,20714,20715,20716,20717,20718,20719,20720,20721,20722,20723,20724,20725,20726,20727],"y":[0,0,0,0,0,0,0,0,0,0,3,5,8,10,11,12,14,14,15,16,17,19,20,22,22,23,24,25,27,28,29,30,32,32,33,33,34,34,35,36,37,37,38,39,39,39,40,42,44,45,47,48,49,51,51,51,53,54,56,58,59,63,64,66,68,69,71,72,72,75,76,78,78,80,81,84,86,88,89,92,95,98,98,99,99,100,100,104,105,106,109,110,110,110,111,114,115,116,117,120,120,122,124,127,127,128,130,130,131,133,137,137,137,140,144,145,147,149,150,153,154,155,156,159,159,159,159,160,160,161,161,162,162,163,167,167,167,170,170,175,177,177,181,182,183,183,183,185,185,185,186,186,186,186],"text":["01 May 2026<br>Randomised: 0","02 May 2026<br>Randomised: 0","03 May 2026<br>Randomised: 0","04 May 2026<br>Randomised: 0","05 May 2026<br>Randomised: 0","06 May 2026<br>Randomised: 0","07 May 2026<br>Randomised: 0","08 May 2026<br>Randomised: 0","09 May 2026<br>Randomised: 0","10 May 2026<br>Randomised: 0","11 May 2026<br>Randomised: 3","12 May 2026<br>Randomised: 5","13 May 2026<br>Randomised: 8","14 May 2026<br>Randomised: 10","15 May 2026<br>Randomised: 11","16 May 2026<br>Randomised: 12","17 May 2026<br>Randomised: 14","18 May 2026<br>Randomised: 14","19 May 2026<br>Randomised: 15","20 May 2026<br>Randomised: 16","21 May 2026<br>Randomised: 17","22 May 2026<br>Randomised: 19","23 May 2026<br>Randomised: 20","24 May 2026<br>Randomised: 22","25 May 2026<br>Randomised: 22","26 May 2026<br>Randomised: 23","27 May 2026<br>Randomised: 24","28 May 2026<br>Randomised: 25","29 May 2026<br>Randomised: 27","30 May 2026<br>Randomised: 28","31 May 2026<br>Randomised: 29","01 Jun 2026<br>Randomised: 30","02 Jun 2026<br>Randomised: 32","03 Jun 2026<br>Randomised: 32","04 Jun 2026<br>Randomised: 33","05 Jun 2026<br>Randomised: 33","06 Jun 2026<br>Randomised: 34","07 Jun 2026<br>Randomised: 34","08 Jun 2026<br>Randomised: 35","09 Jun 2026<br>Randomised: 36","10 Jun 2026<br>Randomised: 37","11 Jun 2026<br>Randomised: 37","12 Jun 2026<br>Randomised: 38","13 Jun 2026<br>Randomised: 39","14 Jun 2026<br>Randomised: 39","15 Jun 2026<br>Randomised: 39","16 Jun 2026<br>Randomised: 40","17 Jun 2026<br>Randomised: 42","18 Jun 2026<br>Randomised: 44","19 Jun 2026<br>Randomised: 45","20 Jun 2026<br>Randomised: 47","21 Jun 2026<br>Randomised: 48","22 Jun 2026<br>Randomised: 49","23 Jun 2026<br>Randomised: 51","24 Jun 2026<br>Randomised: 51","25 Jun 2026<br>Randomised: 51","26 Jun 2026<br>Randomised: 53","27 Jun 2026<br>Randomised: 54","28 Jun 2026<br>Randomised: 56","29 Jun 2026<br>Randomised: 58","30 Jun 2026<br>Randomised: 59","01 Jul 2026<br>Randomised: 63","02 Jul 2026<br>Randomised: 64","03 Jul 2026<br>Randomised: 66","04 Jul 2026<br>Randomised: 68","05 Jul 2026<br>Randomised: 69","06 Jul 2026<br>Randomised: 71","07 Jul 2026<br>Randomised: 72","08 Jul 2026<br>Randomised: 72","09 Jul 2026<br>Randomised: 75","10 Jul 2026<br>Randomised: 76","11 Jul 2026<br>Randomised: 78","12 Jul 2026<br>Randomised: 78","13 Jul 2026<br>Randomised: 80","14 Jul 2026<br>Randomised: 81","15 Jul 2026<br>Randomised: 84","16 Jul 2026<br>Randomised: 86","17 Jul 2026<br>Randomised: 88","18 Jul 2026<br>Randomised: 89","19 Jul 2026<br>Randomised: 92","20 Jul 2026<br>Randomised: 95","21 Jul 2026<br>Randomised: 98","22 Jul 2026<br>Randomised: 98","23 Jul 2026<br>Randomised: 99","24 Jul 2026<br>Randomised: 99","25 Jul 2026<br>Randomised: 100","26 Jul 2026<br>Randomised: 100","27 Jul 2026<br>Randomised: 104","28 Jul 2026<br>Randomised: 105","29 Jul 2026<br>Randomised: 106","30 Jul 2026<br>Randomised: 109","31 Jul 2026<br>Randomised: 110","01 Aug 2026<br>Randomised: 110","02 Aug 2026<br>Randomised: 110","03 Aug 2026<br>Randomised: 111","04 Aug 2026<br>Randomised: 114","05 Aug 2026<br>Randomised: 115","06 Aug 2026<br>Randomised: 116","07 Aug 2026<br>Randomised: 117","08 Aug 2026<br>Randomised: 120","09 Aug 2026<br>Randomised: 120","10 Aug 2026<br>Randomised: 122","11 Aug 2026<br>Randomised: 124","12 Aug 2026<br>Randomised: 127","13 Aug 2026<br>Randomised: 127","14 Aug 2026<br>Randomised: 128","15 Aug 2026<br>Randomised: 130","16 Aug 2026<br>Randomised: 130","17 Aug 2026<br>Randomised: 131","18 Aug 2026<br>Randomised: 133","19 Aug 2026<br>Randomised: 137","20 Aug 2026<br>Randomised: 137","21 Aug 2026<br>Randomised: 137","22 Aug 2026<br>Randomised: 140","23 Aug 2026<br>Randomised: 144","24 Aug 2026<br>Randomised: 145","25 Aug 2026<br>Randomised: 147","26 Aug 2026<br>Randomised: 149","27 Aug 2026<br>Randomised: 150","28 Aug 2026<br>Randomised: 153","29 Aug 2026<br>Randomised: 154","30 Aug 2026<br>Randomised: 155","31 Aug 2026<br>Randomised: 156","01 Sep 2026<br>Randomised: 159","02 Sep 2026<br>Randomised: 159","03 Sep 2026<br>Randomised: 159","04 Sep 2026<br>Randomised: 159","05 Sep 2026<br>Randomised: 160","06 Sep 2026<br>Randomised: 160","07 Sep 2026<br>Randomised: 161","08 Sep 2026<br>Randomised: 161","09 Sep 2026<br>Randomised: 162","10 Sep 2026<br>Randomised: 162","11 Sep 2026<br>Randomised: 163","12 Sep 2026<br>Randomised: 167","13 Sep 2026<br>Randomised: 167","14 Sep 2026<br>Randomised: 167","15 Sep 2026<br>Randomised: 170","16 Sep 2026<br>Randomised: 170","17 Sep 2026<br>Randomised: 175","18 Sep 2026<br>Randomised: 177","19 Sep 2026<br>Randomised: 177","20 Sep 2026<br>Randomised: 181","21 Sep 2026<br>Randomised: 182","22 Sep 2026<br>Randomised: 183","23 Sep 2026<br>Randomised: 183","24 Sep 2026<br>Randomised: 183","25 Sep 2026<br>Randomised: 185","26 Sep 2026<br>Randomised: 185","27 Sep 2026<br>Randomised: 185","28 Sep 2026<br>Randomised: 186","29 Sep 2026<br>Randomised: 186","30 Sep 2026<br>Randomised: 186","01 Oct 2026<br>Randomised: 186"],"type":"scatter","mode":"lines","line":{"width":4.9133858267716546,"color":"rgba(8,126,139,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":15,"r":21.253632212536321,"b":59.510170195101693,"l":68.011623080116237},"paper_bgcolor":"white","font":{"color":"rgba(0,0,0,1)","family":"Arial, sans-serif","size":15},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[20566.349999999999,20734.650000000001],"tickmode":"array","ticktext":["May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026","Oct 2026"],"tickvals":[20574,20605,20635,20666,20697,20727],"categoryorder":"array","categoryarray":["May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026","Oct 2026"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-9.3000000000000007,195.30000000000001],"tickmode":"array","ticktext":["0","50","100","150"],"tickvals":[0,50,100.00000000000001,150],"categoryorder":"array","categoryarray":["0","50","100","150"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"x","title":{"text":"Cumulative randomised patients","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":17.002905770029056}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"white"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displaylogo":false,"responsive":true,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"1b8e2169f9b1":{"x":{},"y":{},"text":{},"type":"scatter"}},"cur_data":"1b8e2169f9b1","visdat":{"1b8e2169f9b1":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</section>
+<section id="recruitment-1" class="level1">
+<h1>Recruitment</h1>
+<section id="context-1" class="level2 flow" height="auto">
+<h2 class="flow anchored" height="auto" data-anchor-id="context-1">Context</h2>
+<div class="card study-context">
+<p><strong>ABC-001 | Data cut: 01 October 2026 | Fictional study | Synthetic data | Demonstration only</strong></p>
+<p>Fixed total target: 300 patients. Dashed line = <strong>Illustrative recruitment plan</strong>, linear from 1 May to 31 December 2026. It is not a forecast.</p>
+</div>
+</section>
+<section id="cumulative" class="level2" height="50%">
+<h2 height="50%" class="anchored" data-anchor-id="cumulative">Cumulative</h2>
+<div class="cell" title="Actual recruitment and illustrative plan">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_recruitment</span>(summary, <span class="at">show_plan =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-91e0705c6b50179b720f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-91e0705c6b50179b720f">{"x":{"data":[{"x":[20574,20575,20576,20577,20578,20579,20580,20581,20582,20583,20584,20585,20586,20587,20588,20589,20590,20591,20592,20593,20594,20595,20596,20597,20598,20599,20600,20601,20602,20603,20604,20605,20606,20607,20608,20609,20610,20611,20612,20613,20614,20615,20616,20617,20618,20619,20620,20621,20622,20623,20624,20625,20626,20627,20628,20629,20630,20631,20632,20633,20634,20635,20636,20637,20638,20639,20640,20641,20642,20643,20644,20645,20646,20647,20648,20649,20650,20651,20652,20653,20654,20655,20656,20657,20658,20659,20660,20661,20662,20663,20664,20665,20666,20667,20668,20669,20670,20671,20672,20673,20674,20675,20676,20677,20678,20679,20680,20681,20682,20683,20684,20685,20686,20687,20688,20689,20690,20691,20692,20693,20694,20695,20696,20697,20698,20699,20700,20701,20702,20703,20704,20705,20706,20707,20708,20709,20710,20711,20712,20713,20714,20715,20716,20717,20718,20719,20720,20721,20722,20723,20724,20725,20726,20727],"y":[0,0,0,0,0,0,0,0,0,0,3,5,8,10,11,12,14,14,15,16,17,19,20,22,22,23,24,25,27,28,29,30,32,32,33,33,34,34,35,36,37,37,38,39,39,39,40,42,44,45,47,48,49,51,51,51,53,54,56,58,59,63,64,66,68,69,71,72,72,75,76,78,78,80,81,84,86,88,89,92,95,98,98,99,99,100,100,104,105,106,109,110,110,110,111,114,115,116,117,120,120,122,124,127,127,128,130,130,131,133,137,137,137,140,144,145,147,149,150,153,154,155,156,159,159,159,159,160,160,161,161,162,162,163,167,167,167,170,170,175,177,177,181,182,183,183,183,185,185,185,186,186,186,186],"text":["01 May 2026<br>Randomised: 0","02 May 2026<br>Randomised: 0","03 May 2026<br>Randomised: 0","04 May 2026<br>Randomised: 0","05 May 2026<br>Randomised: 0","06 May 2026<br>Randomised: 0","07 May 2026<br>Randomised: 0","08 May 2026<br>Randomised: 0","09 May 2026<br>Randomised: 0","10 May 2026<br>Randomised: 0","11 May 2026<br>Randomised: 3","12 May 2026<br>Randomised: 5","13 May 2026<br>Randomised: 8","14 May 2026<br>Randomised: 10","15 May 2026<br>Randomised: 11","16 May 2026<br>Randomised: 12","17 May 2026<br>Randomised: 14","18 May 2026<br>Randomised: 14","19 May 2026<br>Randomised: 15","20 May 2026<br>Randomised: 16","21 May 2026<br>Randomised: 17","22 May 2026<br>Randomised: 19","23 May 2026<br>Randomised: 20","24 May 2026<br>Randomised: 22","25 May 2026<br>Randomised: 22","26 May 2026<br>Randomised: 23","27 May 2026<br>Randomised: 24","28 May 2026<br>Randomised: 25","29 May 2026<br>Randomised: 27","30 May 2026<br>Randomised: 28","31 May 2026<br>Randomised: 29","01 Jun 2026<br>Randomised: 30","02 Jun 2026<br>Randomised: 32","03 Jun 2026<br>Randomised: 32","04 Jun 2026<br>Randomised: 33","05 Jun 2026<br>Randomised: 33","06 Jun 2026<br>Randomised: 34","07 Jun 2026<br>Randomised: 34","08 Jun 2026<br>Randomised: 35","09 Jun 2026<br>Randomised: 36","10 Jun 2026<br>Randomised: 37","11 Jun 2026<br>Randomised: 37","12 Jun 2026<br>Randomised: 38","13 Jun 2026<br>Randomised: 39","14 Jun 2026<br>Randomised: 39","15 Jun 2026<br>Randomised: 39","16 Jun 2026<br>Randomised: 40","17 Jun 2026<br>Randomised: 42","18 Jun 2026<br>Randomised: 44","19 Jun 2026<br>Randomised: 45","20 Jun 2026<br>Randomised: 47","21 Jun 2026<br>Randomised: 48","22 Jun 2026<br>Randomised: 49","23 Jun 2026<br>Randomised: 51","24 Jun 2026<br>Randomised: 51","25 Jun 2026<br>Randomised: 51","26 Jun 2026<br>Randomised: 53","27 Jun 2026<br>Randomised: 54","28 Jun 2026<br>Randomised: 56","29 Jun 2026<br>Randomised: 58","30 Jun 2026<br>Randomised: 59","01 Jul 2026<br>Randomised: 63","02 Jul 2026<br>Randomised: 64","03 Jul 2026<br>Randomised: 66","04 Jul 2026<br>Randomised: 68","05 Jul 2026<br>Randomised: 69","06 Jul 2026<br>Randomised: 71","07 Jul 2026<br>Randomised: 72","08 Jul 2026<br>Randomised: 72","09 Jul 2026<br>Randomised: 75","10 Jul 2026<br>Randomised: 76","11 Jul 2026<br>Randomised: 78","12 Jul 2026<br>Randomised: 78","13 Jul 2026<br>Randomised: 80","14 Jul 2026<br>Randomised: 81","15 Jul 2026<br>Randomised: 84","16 Jul 2026<br>Randomised: 86","17 Jul 2026<br>Randomised: 88","18 Jul 2026<br>Randomised: 89","19 Jul 2026<br>Randomised: 92","20 Jul 2026<br>Randomised: 95","21 Jul 2026<br>Randomised: 98","22 Jul 2026<br>Randomised: 98","23 Jul 2026<br>Randomised: 99","24 Jul 2026<br>Randomised: 99","25 Jul 2026<br>Randomised: 100","26 Jul 2026<br>Randomised: 100","27 Jul 2026<br>Randomised: 104","28 Jul 2026<br>Randomised: 105","29 Jul 2026<br>Randomised: 106","30 Jul 2026<br>Randomised: 109","31 Jul 2026<br>Randomised: 110","01 Aug 2026<br>Randomised: 110","02 Aug 2026<br>Randomised: 110","03 Aug 2026<br>Randomised: 111","04 Aug 2026<br>Randomised: 114","05 Aug 2026<br>Randomised: 115","06 Aug 2026<br>Randomised: 116","07 Aug 2026<br>Randomised: 117","08 Aug 2026<br>Randomised: 120","09 Aug 2026<br>Randomised: 120","10 Aug 2026<br>Randomised: 122","11 Aug 2026<br>Randomised: 124","12 Aug 2026<br>Randomised: 127","13 Aug 2026<br>Randomised: 127","14 Aug 2026<br>Randomised: 128","15 Aug 2026<br>Randomised: 130","16 Aug 2026<br>Randomised: 130","17 Aug 2026<br>Randomised: 131","18 Aug 2026<br>Randomised: 133","19 Aug 2026<br>Randomised: 137","20 Aug 2026<br>Randomised: 137","21 Aug 2026<br>Randomised: 137","22 Aug 2026<br>Randomised: 140","23 Aug 2026<br>Randomised: 144","24 Aug 2026<br>Randomised: 145","25 Aug 2026<br>Randomised: 147","26 Aug 2026<br>Randomised: 149","27 Aug 2026<br>Randomised: 150","28 Aug 2026<br>Randomised: 153","29 Aug 2026<br>Randomised: 154","30 Aug 2026<br>Randomised: 155","31 Aug 2026<br>Randomised: 156","01 Sep 2026<br>Randomised: 159","02 Sep 2026<br>Randomised: 159","03 Sep 2026<br>Randomised: 159","04 Sep 2026<br>Randomised: 159","05 Sep 2026<br>Randomised: 160","06 Sep 2026<br>Randomised: 160","07 Sep 2026<br>Randomised: 161","08 Sep 2026<br>Randomised: 161","09 Sep 2026<br>Randomised: 162","10 Sep 2026<br>Randomised: 162","11 Sep 2026<br>Randomised: 163","12 Sep 2026<br>Randomised: 167","13 Sep 2026<br>Randomised: 167","14 Sep 2026<br>Randomised: 167","15 Sep 2026<br>Randomised: 170","16 Sep 2026<br>Randomised: 170","17 Sep 2026<br>Randomised: 175","18 Sep 2026<br>Randomised: 177","19 Sep 2026<br>Randomised: 177","20 Sep 2026<br>Randomised: 181","21 Sep 2026<br>Randomised: 182","22 Sep 2026<br>Randomised: 183","23 Sep 2026<br>Randomised: 183","24 Sep 2026<br>Randomised: 183","25 Sep 2026<br>Randomised: 185","26 Sep 2026<br>Randomised: 185","27 Sep 2026<br>Randomised: 185","28 Sep 2026<br>Randomised: 186","29 Sep 2026<br>Randomised: 186","30 Sep 2026<br>Randomised: 186","01 Oct 2026<br>Randomised: 186"],"type":"scatter","mode":"lines","line":{"width":4.9133858267716546,"color":"rgba(8,126,139,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[20574,20575,20576,20577,20578,20579,20580,20581,20582,20583,20584,20585,20586,20587,20588,20589,20590,20591,20592,20593,20594,20595,20596,20597,20598,20599,20600,20601,20602,20603,20604,20605,20606,20607,20608,20609,20610,20611,20612,20613,20614,20615,20616,20617,20618,20619,20620,20621,20622,20623,20624,20625,20626,20627,20628,20629,20630,20631,20632,20633,20634,20635,20636,20637,20638,20639,20640,20641,20642,20643,20644,20645,20646,20647,20648,20649,20650,20651,20652,20653,20654,20655,20656,20657,20658,20659,20660,20661,20662,20663,20664,20665,20666,20667,20668,20669,20670,20671,20672,20673,20674,20675,20676,20677,20678,20679,20680,20681,20682,20683,20684,20685,20686,20687,20688,20689,20690,20691,20692,20693,20694,20695,20696,20697,20698,20699,20700,20701,20702,20703,20704,20705,20706,20707,20708,20709,20710,20711,20712,20713,20714,20715,20716,20717,20718,20719,20720,20721,20722,20723,20724,20725,20726,20727],"y":[0,1.2295081967213115,2.459016393442623,3.6885245901639343,4.918032786885246,6.1475409836065573,7.3770491803278686,8.6065573770491799,9.8360655737704921,11.065573770491802,12.295081967213115,13.524590163934427,14.754098360655737,15.983606557377049,17.21311475409836,18.442622950819672,19.672131147540984,20.901639344262296,22.131147540983605,23.360655737704917,24.590163934426229,25.819672131147541,27.049180327868854,28.278688524590162,29.508196721311474,30.737704918032787,31.967213114754099,33.196721311475407,34.42622950819672,35.655737704918032,36.885245901639344,38.114754098360656,39.344262295081968,40.57377049180328,41.803278688524593,43.032786885245905,44.26229508196721,45.491803278688522,46.721311475409834,47.950819672131146,49.180327868852459,50.409836065573771,51.639344262295083,52.868852459016395,54.098360655737707,55.327868852459019,56.557377049180324,57.786885245901637,59.016393442622949,60.245901639344261,61.475409836065573,62.704918032786885,63.934426229508198,65.163934426229503,66.393442622950815,67.622950819672127,68.852459016393439,70.081967213114751,71.311475409836063,72.540983606557376,73.770491803278688,75,76.229508196721312,77.459016393442624,78.688524590163937,79.918032786885249,81.147540983606561,82.377049180327873,83.606557377049185,84.836065573770497,86.06557377049181,87.295081967213122,88.52459016393442,89.754098360655732,90.983606557377044,92.213114754098356,93.442622950819668,94.672131147540981,95.901639344262293,97.131147540983605,98.360655737704917,99.590163934426229,100.81967213114754,102.04918032786885,103.27868852459017,104.50819672131148,105.73770491803279,106.9672131147541,108.19672131147541,109.42622950819673,110.65573770491804,111.88524590163935,113.11475409836065,114.34426229508196,115.57377049180327,116.80327868852459,118.0327868852459,119.26229508196721,120.49180327868852,121.72131147540983,122.95081967213115,124.18032786885246,125.40983606557377,126.63934426229508,127.8688524590164,129.09836065573771,130.32786885245901,131.55737704918033,132.78688524590163,134.01639344262296,135.24590163934425,136.47540983606558,137.70491803278688,138.9344262295082,140.1639344262295,141.39344262295083,142.62295081967213,143.85245901639345,145.08196721311475,146.31147540983608,147.54098360655738,148.7704918032787,150,151.2295081967213,152.45901639344262,153.68852459016392,154.91803278688525,156.14754098360655,157.37704918032787,158.60655737704917,159.8360655737705,161.0655737704918,162.29508196721312,163.52459016393442,164.75409836065575,165.98360655737704,167.21311475409837,168.44262295081967,169.67213114754099,170.90163934426229,172.13114754098362,173.36065573770492,174.59016393442624,175.81967213114754,177.04918032786884,178.27868852459017,179.50819672131146,180.73770491803279,181.96721311475409,183.19672131147541,184.42622950819671,185.65573770491804,186.88524590163934,188.11475409836066],"text":["01 May 2026<br>Illustrative recruitment plan: 0","02 May 2026<br>Illustrative recruitment plan: 1.2","03 May 2026<br>Illustrative recruitment plan: 2.5","04 May 2026<br>Illustrative recruitment plan: 3.7","05 May 2026<br>Illustrative recruitment plan: 4.9","06 May 2026<br>Illustrative recruitment plan: 6.1","07 May 2026<br>Illustrative recruitment plan: 7.4","08 May 2026<br>Illustrative recruitment plan: 8.6","09 May 2026<br>Illustrative recruitment plan: 9.8","10 May 2026<br>Illustrative recruitment plan: 11.1","11 May 2026<br>Illustrative recruitment plan: 12.3","12 May 2026<br>Illustrative recruitment plan: 13.5","13 May 2026<br>Illustrative recruitment plan: 14.8","14 May 2026<br>Illustrative recruitment plan: 16","15 May 2026<br>Illustrative recruitment plan: 17.2","16 May 2026<br>Illustrative recruitment plan: 18.4","17 May 2026<br>Illustrative recruitment plan: 19.7","18 May 2026<br>Illustrative recruitment plan: 20.9","19 May 2026<br>Illustrative recruitment plan: 22.1","20 May 2026<br>Illustrative recruitment plan: 23.4","21 May 2026<br>Illustrative recruitment plan: 24.6","22 May 2026<br>Illustrative recruitment plan: 25.8","23 May 2026<br>Illustrative recruitment plan: 27","24 May 2026<br>Illustrative recruitment plan: 28.3","25 May 2026<br>Illustrative recruitment plan: 29.5","26 May 2026<br>Illustrative recruitment plan: 30.7","27 May 2026<br>Illustrative recruitment plan: 32","28 May 2026<br>Illustrative recruitment plan: 33.2","29 May 2026<br>Illustrative recruitment plan: 34.4","30 May 2026<br>Illustrative recruitment plan: 35.7","31 May 2026<br>Illustrative recruitment plan: 36.9","01 Jun 2026<br>Illustrative recruitment plan: 38.1","02 Jun 2026<br>Illustrative recruitment plan: 39.3","03 Jun 2026<br>Illustrative recruitment plan: 40.6","04 Jun 2026<br>Illustrative recruitment plan: 41.8","05 Jun 2026<br>Illustrative recruitment plan: 43","06 Jun 2026<br>Illustrative recruitment plan: 44.3","07 Jun 2026<br>Illustrative recruitment plan: 45.5","08 Jun 2026<br>Illustrative recruitment plan: 46.7","09 Jun 2026<br>Illustrative recruitment plan: 48","10 Jun 2026<br>Illustrative recruitment plan: 49.2","11 Jun 2026<br>Illustrative recruitment plan: 50.4","12 Jun 2026<br>Illustrative recruitment plan: 51.6","13 Jun 2026<br>Illustrative recruitment plan: 52.9","14 Jun 2026<br>Illustrative recruitment plan: 54.1","15 Jun 2026<br>Illustrative recruitment plan: 55.3","16 Jun 2026<br>Illustrative recruitment plan: 56.6","17 Jun 2026<br>Illustrative recruitment plan: 57.8","18 Jun 2026<br>Illustrative recruitment plan: 59","19 Jun 2026<br>Illustrative recruitment plan: 60.2","20 Jun 2026<br>Illustrative recruitment plan: 61.5","21 Jun 2026<br>Illustrative recruitment plan: 62.7","22 Jun 2026<br>Illustrative recruitment plan: 63.9","23 Jun 2026<br>Illustrative recruitment plan: 65.2","24 Jun 2026<br>Illustrative recruitment plan: 66.4","25 Jun 2026<br>Illustrative recruitment plan: 67.6","26 Jun 2026<br>Illustrative recruitment plan: 68.9","27 Jun 2026<br>Illustrative recruitment plan: 70.1","28 Jun 2026<br>Illustrative recruitment plan: 71.3","29 Jun 2026<br>Illustrative recruitment plan: 72.5","30 Jun 2026<br>Illustrative recruitment plan: 73.8","01 Jul 2026<br>Illustrative recruitment plan: 75","02 Jul 2026<br>Illustrative recruitment plan: 76.2","03 Jul 2026<br>Illustrative recruitment plan: 77.5","04 Jul 2026<br>Illustrative recruitment plan: 78.7","05 Jul 2026<br>Illustrative recruitment plan: 79.9","06 Jul 2026<br>Illustrative recruitment plan: 81.1","07 Jul 2026<br>Illustrative recruitment plan: 82.4","08 Jul 2026<br>Illustrative recruitment plan: 83.6","09 Jul 2026<br>Illustrative recruitment plan: 84.8","10 Jul 2026<br>Illustrative recruitment plan: 86.1","11 Jul 2026<br>Illustrative recruitment plan: 87.3","12 Jul 2026<br>Illustrative recruitment plan: 88.5","13 Jul 2026<br>Illustrative recruitment plan: 89.8","14 Jul 2026<br>Illustrative recruitment plan: 91","15 Jul 2026<br>Illustrative recruitment plan: 92.2","16 Jul 2026<br>Illustrative recruitment plan: 93.4","17 Jul 2026<br>Illustrative recruitment plan: 94.7","18 Jul 2026<br>Illustrative recruitment plan: 95.9","19 Jul 2026<br>Illustrative recruitment plan: 97.1","20 Jul 2026<br>Illustrative recruitment plan: 98.4","21 Jul 2026<br>Illustrative recruitment plan: 99.6","22 Jul 2026<br>Illustrative recruitment plan: 100.8","23 Jul 2026<br>Illustrative recruitment plan: 102","24 Jul 2026<br>Illustrative recruitment plan: 103.3","25 Jul 2026<br>Illustrative recruitment plan: 104.5","26 Jul 2026<br>Illustrative recruitment plan: 105.7","27 Jul 2026<br>Illustrative recruitment plan: 107","28 Jul 2026<br>Illustrative recruitment plan: 108.2","29 Jul 2026<br>Illustrative recruitment plan: 109.4","30 Jul 2026<br>Illustrative recruitment plan: 110.7","31 Jul 2026<br>Illustrative recruitment plan: 111.9","01 Aug 2026<br>Illustrative recruitment plan: 113.1","02 Aug 2026<br>Illustrative recruitment plan: 114.3","03 Aug 2026<br>Illustrative recruitment plan: 115.6","04 Aug 2026<br>Illustrative recruitment plan: 116.8","05 Aug 2026<br>Illustrative recruitment plan: 118","06 Aug 2026<br>Illustrative recruitment plan: 119.3","07 Aug 2026<br>Illustrative recruitment plan: 120.5","08 Aug 2026<br>Illustrative recruitment plan: 121.7","09 Aug 2026<br>Illustrative recruitment plan: 123","10 Aug 2026<br>Illustrative recruitment plan: 124.2","11 Aug 2026<br>Illustrative recruitment plan: 125.4","12 Aug 2026<br>Illustrative recruitment plan: 126.6","13 Aug 2026<br>Illustrative recruitment plan: 127.9","14 Aug 2026<br>Illustrative recruitment plan: 129.1","15 Aug 2026<br>Illustrative recruitment plan: 130.3","16 Aug 2026<br>Illustrative recruitment plan: 131.6","17 Aug 2026<br>Illustrative recruitment plan: 132.8","18 Aug 2026<br>Illustrative recruitment plan: 134","19 Aug 2026<br>Illustrative recruitment plan: 135.2","20 Aug 2026<br>Illustrative recruitment plan: 136.5","21 Aug 2026<br>Illustrative recruitment plan: 137.7","22 Aug 2026<br>Illustrative recruitment plan: 138.9","23 Aug 2026<br>Illustrative recruitment plan: 140.2","24 Aug 2026<br>Illustrative recruitment plan: 141.4","25 Aug 2026<br>Illustrative recruitment plan: 142.6","26 Aug 2026<br>Illustrative recruitment plan: 143.9","27 Aug 2026<br>Illustrative recruitment plan: 145.1","28 Aug 2026<br>Illustrative recruitment plan: 146.3","29 Aug 2026<br>Illustrative recruitment plan: 147.5","30 Aug 2026<br>Illustrative recruitment plan: 148.8","31 Aug 2026<br>Illustrative recruitment plan: 150","01 Sep 2026<br>Illustrative recruitment plan: 151.2","02 Sep 2026<br>Illustrative recruitment plan: 152.5","03 Sep 2026<br>Illustrative recruitment plan: 153.7","04 Sep 2026<br>Illustrative recruitment plan: 154.9","05 Sep 2026<br>Illustrative recruitment plan: 156.1","06 Sep 2026<br>Illustrative recruitment plan: 157.4","07 Sep 2026<br>Illustrative recruitment plan: 158.6","08 Sep 2026<br>Illustrative recruitment plan: 159.8","09 Sep 2026<br>Illustrative recruitment plan: 161.1","10 Sep 2026<br>Illustrative recruitment plan: 162.3","11 Sep 2026<br>Illustrative recruitment plan: 163.5","12 Sep 2026<br>Illustrative recruitment plan: 164.8","13 Sep 2026<br>Illustrative recruitment plan: 166","14 Sep 2026<br>Illustrative recruitment plan: 167.2","15 Sep 2026<br>Illustrative recruitment plan: 168.4","16 Sep 2026<br>Illustrative recruitment plan: 169.7","17 Sep 2026<br>Illustrative recruitment plan: 170.9","18 Sep 2026<br>Illustrative recruitment plan: 172.1","19 Sep 2026<br>Illustrative recruitment plan: 173.4","20 Sep 2026<br>Illustrative recruitment plan: 174.6","21 Sep 2026<br>Illustrative recruitment plan: 175.8","22 Sep 2026<br>Illustrative recruitment plan: 177","23 Sep 2026<br>Illustrative recruitment plan: 178.3","24 Sep 2026<br>Illustrative recruitment plan: 179.5","25 Sep 2026<br>Illustrative recruitment plan: 180.7","26 Sep 2026<br>Illustrative recruitment plan: 182","27 Sep 2026<br>Illustrative recruitment plan: 183.2","28 Sep 2026<br>Illustrative recruitment plan: 184.4","29 Sep 2026<br>Illustrative recruitment plan: 185.7","30 Sep 2026<br>Illustrative recruitment plan: 186.9","01 Oct 2026<br>Illustrative recruitment plan: 188.1"],"type":"scatter","mode":"lines","line":{"width":3.0236220472440949,"color":"rgba(101,119,134,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":15,"r":21.253632212536321,"b":59.510170195101693,"l":68.011623080116237},"paper_bgcolor":"white","font":{"color":"rgba(0,0,0,1)","family":"Arial, sans-serif","size":15},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[20566.349999999999,20734.650000000001],"tickmode":"array","ticktext":["May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026","Oct 2026"],"tickvals":[20574,20605,20635,20666,20697,20727],"categoryorder":"array","categoryarray":["May 2026","Jun 2026","Jul 2026","Aug 2026","Sep 2026","Oct 2026"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"y","title":{"text":"Date","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-15,315],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100.00000000000001,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"x","title":{"text":"Cumulative randomised patients","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":17.002905770029056}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"white"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displaylogo":false,"responsive":true,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"1b8e70103a7f":{"x":{},"y":{},"text":{},"type":"scatter"},"1b8e7c99b74":{"x":{},"y":{},"text":{}}},"cur_data":"1b8e70103a7f","visdat":{"1b8e70103a7f":["function (y) ","x"],"1b8e7c99b74":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="by-site" class="level2" height="40%">
+<h2 height="40%" class="anchored" data-anchor-id="by-site">By site</h2>
+<div class="cell" title="Actual versus target by site">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sites</span>(summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-8cd283d142d769ea3f3e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-8cd283d142d769ea3f3e">{"x":{"data":[{"orientation":"v","width":[0.64999999999999991,0.65000000000000013,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.64999999999999947,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.64999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0],"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[15,25,21,10,29,16,20,16,16,18,0,0],"text":["Site 101 | UK<br>Active<br>Randomised: 15<br>Target: 25","Site 102 | UK<br>Active<br>Randomised: 25<br>Target: 25","Site 103 | UK<br>Active<br>Randomised: 21<br>Target: 25","Site 104 | USA<br>Active<br>Randomised: 10<br>Target: 25","Site 105 | USA<br>Active<br>Randomised: 29<br>Target: 25","Site 106 | USA<br>Active<br>Randomised: 16<br>Target: 25","Site 107 | Germany<br>Active<br>Randomised: 20<br>Target: 25","Site 108 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 109 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 110 | Spain<br>Active<br>Randomised: 18<br>Target: 25","Site 111 | Spain<br>Planned<br>Randomised: 0<br>Target: 25","Site 112 | Spain<br>Planned<br>Randomised: 0<br>Target: 25"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(8,126,139,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[25,25,25,25,25,25,25,25,25,25,25,25],"text":["Site 101 | UK<br>Active<br>Randomised: 15<br>Target: 25","Site 102 | UK<br>Active<br>Randomised: 25<br>Target: 25","Site 103 | UK<br>Active<br>Randomised: 21<br>Target: 25","Site 104 | USA<br>Active<br>Randomised: 10<br>Target: 25","Site 105 | USA<br>Active<br>Randomised: 29<br>Target: 25","Site 106 | USA<br>Active<br>Randomised: 16<br>Target: 25","Site 107 | Germany<br>Active<br>Randomised: 20<br>Target: 25","Site 108 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 109 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 110 | Spain<br>Active<br>Randomised: 18<br>Target: 25","Site 111 | Spain<br>Planned<br>Randomised: 0<br>Target: 25","Site 112 | Spain<br>Planned<br>Randomised: 0<br>Target: 25"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(33,60,80,1)","opacity":1,"size":13.228346456692915,"symbol":"diamond","line":{"width":1.8897637795275593,"color":"rgba(33,60,80,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":15,"r":21.253632212536321,"b":59.510170195101693,"l":59.510170195101708},"paper_bgcolor":"white","font":{"color":"rgba(0,0,0,1)","family":"Arial, sans-serif","size":15},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,12.6],"tickmode":"array","ticktext":["101","102","103","104","105","106","107","108","109","110","111","112"],"tickvals":[1,2,3,4.0000000000000009,5,6,7.0000000000000009,8,9,10,11,12],"categoryorder":"array","categoryarray":["101","102","103","104","105","106","107","108","109","110","111","112"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"y","title":{"text":"Site (diamond = target)","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.4500000000000002,30.449999999999999],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"x","title":{"text":"Randomised patients","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":17.002905770029056}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"white"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displaylogo":false,"responsive":true,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"1b8e29ae23c0":{"x":{},"y":{},"text":{},"type":"bar"},"1b8e47421ee0":{"x":{},"y":{},"text":{}}},"cur_data":"1b8e29ae23c0","visdat":{"1b8e29ae23c0":["function (y) ","x"],"1b8e47421ee0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</section>
+<section id="sites" class="level1" data-scrolling="true">
+<h1 data-scrolling="true">Sites</h1>
+<section id="context-2" class="level2 flow" height="auto">
+<h2 class="flow anchored" height="auto" data-anchor-id="context-2">Context</h2>
+<div class="card study-context">
+<p><strong>ABC-001 | Data cut: 01 October 2026 | Fictional study | Synthetic data | Demonstration only</strong></p>
+<p>All 12 planned sites are retained, including zero-recruitment sites. Rand. = randomised; Compl. = completed; Disc. = discontinued. TEAE and Ser. TEAE count affected patients. Search, column filters and sorting affect only the table; charts and headline values represent the whole selected cut.</p>
+</div>
+</section>
+<section id="recruitment-2" class="level2" height="320px">
+<h2 height="320px" class="anchored" data-anchor-id="recruitment-2">Recruitment</h2>
+<div class="cell" title="Site recruitment (diamond = target of 25)">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_sites</span>(summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-a3cbf7161a1f29b97ebb" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-a3cbf7161a1f29b97ebb">{"x":{"data":[{"orientation":"v","width":[0.64999999999999991,0.65000000000000013,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.64999999999999947,0.64999999999999858,0.64999999999999858,0.64999999999999858,0.64999999999999858],"base":[0,0,0,0,0,0,0,0,0,0,0,0],"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[15,25,21,10,29,16,20,16,16,18,0,0],"text":["Site 101 | UK<br>Active<br>Randomised: 15<br>Target: 25","Site 102 | UK<br>Active<br>Randomised: 25<br>Target: 25","Site 103 | UK<br>Active<br>Randomised: 21<br>Target: 25","Site 104 | USA<br>Active<br>Randomised: 10<br>Target: 25","Site 105 | USA<br>Active<br>Randomised: 29<br>Target: 25","Site 106 | USA<br>Active<br>Randomised: 16<br>Target: 25","Site 107 | Germany<br>Active<br>Randomised: 20<br>Target: 25","Site 108 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 109 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 110 | Spain<br>Active<br>Randomised: 18<br>Target: 25","Site 111 | Spain<br>Planned<br>Randomised: 0<br>Target: 25","Site 112 | Spain<br>Planned<br>Randomised: 0<br>Target: 25"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(8,126,139,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10,11,12],"y":[25,25,25,25,25,25,25,25,25,25,25,25],"text":["Site 101 | UK<br>Active<br>Randomised: 15<br>Target: 25","Site 102 | UK<br>Active<br>Randomised: 25<br>Target: 25","Site 103 | UK<br>Active<br>Randomised: 21<br>Target: 25","Site 104 | USA<br>Active<br>Randomised: 10<br>Target: 25","Site 105 | USA<br>Active<br>Randomised: 29<br>Target: 25","Site 106 | USA<br>Active<br>Randomised: 16<br>Target: 25","Site 107 | Germany<br>Active<br>Randomised: 20<br>Target: 25","Site 108 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 109 | Germany<br>Active<br>Randomised: 16<br>Target: 25","Site 110 | Spain<br>Active<br>Randomised: 18<br>Target: 25","Site 111 | Spain<br>Planned<br>Randomised: 0<br>Target: 25","Site 112 | Spain<br>Planned<br>Randomised: 0<br>Target: 25"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(33,60,80,1)","opacity":1,"size":13.228346456692915,"symbol":"diamond","line":{"width":1.8897637795275593,"color":"rgba(33,60,80,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":15,"r":21.253632212536321,"b":59.510170195101693,"l":59.510170195101708},"paper_bgcolor":"white","font":{"color":"rgba(0,0,0,1)","family":"Arial, sans-serif","size":15},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,12.6],"tickmode":"array","ticktext":["101","102","103","104","105","106","107","108","109","110","111","112"],"tickvals":[1,2,3,4.0000000000000009,5,6,7.0000000000000009,8,9,10,11,12],"categoryorder":"array","categoryarray":["101","102","103","104","105","106","107","108","109","110","111","112"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"y","title":{"text":"Site (diamond = target)","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.4500000000000002,30.449999999999999],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"x","title":{"text":"Randomised patients","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":17.002905770029056}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"white"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displaylogo":false,"responsive":true,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"1b8e1c9acf3e":{"x":{},"y":{},"text":{},"type":"bar"},"1b8e61648be6":{"x":{},"y":{},"text":{}}},"cur_data":"1b8e1c9acf3e","visdat":{"1b8e1c9acf3e":["function (y) ","x"],"1b8e61648be6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="site-detail" class="level2 flow" height="auto">
+<h2 class="flow anchored" height="auto" data-anchor-id="site-detail">Site detail</h2>
+<div class="card site-detail" title="Site master and patient counts">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">site_table</span>(summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="htmlwidget-54acfe4e365719f88880" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-54acfe4e365719f88880">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\" disabled=\"\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"29\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"24\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"5\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"16\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"integer\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","fillContainer":false,"autoHideNavigation":false,"data":[["101","102","103","104","105","106","107","108","109","110","111","112"],["UK","UK","UK","USA","USA","USA","Germany","Germany","Germany","Spain","Spain","Spain"],["Active","Active","Active","Active","Active","Active","Active","Active","Active","Active","Planned","Planned"],[25,25,25,25,25,25,25,25,25,25,25,25],[15,25,21,10,29,16,20,16,16,18,0,0],[10,22,18,9,24,11,18,13,16,15,0,0],[5,2,3,0,3,4,2,1,0,2,0,0],[0,1,0,1,2,1,0,2,0,1,0,0],[10,16,6,1,12,12,12,8,6,7,0,0],[1,1,1,0,0,1,1,0,0,1,0,0]],"container":"<table class=\"stripe hover row-border\">\n  <thead>\n    <tr>\n      <th>Site<\/th>\n      <th>Country<\/th>\n      <th>Activation<\/th>\n      <th>Target<\/th>\n      <th>Rand.<\/th>\n      <th>Active<\/th>\n      <th>Compl.<\/th>\n      <th>Disc.<\/th>\n      <th>TEAE<\/th>\n      <th>Ser. TEAE<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"lftip","pageLength":12,"lengthMenu":[6,12,24],"bPaginate":true,"paging":true,"lengthChange":true,"info":true,"language":{"info":"Showing _START_ to _END_ of _TOTAL_ entries","infoEmpty":"Showing 0 to 0 of 0 entries","infoFiltered":"(filtered from _MAX_ total entries)"},"scrollX":false,"autoWidth":false,"order":[[0,"asc"]],"columnDefs":[{"className":"dt-right","targets":[3,4,5,6,7,8,9]},{"name":"Site","targets":0},{"name":"Country","targets":1},{"name":"Activation","targets":2},{"name":"Target","targets":3},{"name":"Rand.","targets":4},{"name":"Active","targets":5},{"name":"Compl.","targets":6},{"name":"Disc.","targets":7},{"name":"TEAE","targets":8},{"name":"Ser. TEAE","targets":9}],"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="safety" class="level1">
+<h1>Safety</h1>
+<section id="context-3" class="level2 flow" height="auto">
+<h2 class="flow anchored" height="auto" data-anchor-id="context-3">Context</h2>
+<div class="card study-context">
+<p><strong>ABC-001 | Data cut: 01 October 2026 | Fictional study | Synthetic data | Demonstration only</strong></p>
+<p>TEAE = onset on/after first dose, through the cut, in the safety population. Percentages use the 180 first-dosed patients. Seriousness and severity are independent attributes. These simulated counts do not support treatment comparisons or clinical recommendations.</p>
+</div>
+</section>
+<section id="summary" class="level2" height="35%">
+<h2 height="35%" class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="card" title="Whole study safety summary">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(summary<span class="sc">$</span>safety_table, <span class="at">align =</span> <span class="fu">c</span>(<span class="st">"l"</span>, <span class="st">"r"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Safety population (first dose)</td>
+<td style="text-align: right;">180</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Patients with TEAE / safety N</td>
+<td style="text-align: right;">90/180 (50.0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Patients with serious TEAE / safety N</td>
+<td style="text-align: right;">6/180 (3.3%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serious TEAE events</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Patients discontinued due to AE</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="card" title="Reading these counts">
+<p>22 completed and 8 discontinued patients at this cut. AE discontinuations are a subset of all discontinued patients. A patient may have multiple events and contribute to multiple AE terms; term percentages need not sum to 100. Pre-dose events are excluded from TEAE. The 15 October cut is a <strong>simulated future snapshot</strong> for this demonstration.</p>
+</div>
+</section>
+<section id="ae-terms" class="level2" height="50%">
+<h2 height="50%" class="anchored" data-anchor-id="ae-terms">AE terms</h2>
+<div class="cell" title="TEAE incidence by term (distinct affected patients)">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_terms</span>(summary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-d95d715d7d954c5c6a7f" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-d95d715d7d954c5c6a7f">{"x":{"data":[{"orientation":"v","width":[25,20,19,17,16,16],"base":[5.6749999999999998,4.6749999999999998,3.6749999999999998,2.6749999999999998,0.67500000000000004,1.675],"x":[12.5,10,9.5,8.5,8,8],"y":[0.65000000000000036,0.65000000000000036,0.65000000000000036,0.65000000000000036,0.64999999999999991,0.65000000000000013],"text":["Dizziness<br>Affected patients / safety N: 25/180 (13.9%)","Abdominal pain<br>Affected patients / safety N: 20/180 (11.1%)","Fatigue<br>Affected patients / safety N: 19/180 (10.6%)","Nausea<br>Affected patients / safety N: 17/180 (9.4%)","Headache<br>Affected patients / safety N: 16/180 (8.9%)","Rash<br>Affected patients / safety N: 16/180 (8.9%)"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(8,126,139,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":15,"r":21.253632212536321,"b":59.510170195101693,"l":140.27397260273975},"paper_bgcolor":"white","font":{"color":"rgba(0,0,0,1)","family":"Arial, sans-serif","size":15},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.25,26.25],"tickmode":"array","ticktext":["0","5","10","15","20","25"],"tickvals":[0,5,10,15,20,25],"categoryorder":"array","categoryarray":["0","5","10","15","20","25"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"y","title":{"text":"Distinct affected patients","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,6.5999999999999996],"tickmode":"array","ticktext":["Headache","Rash","Nausea","Fatigue","Abdominal pain","Dizziness"],"tickvals":[1,2,3,3.9999999999999996,5,6],"categoryorder":"array","categoryarray":["Headache","Rash","Nausea","Fatigue","Abdominal pain","Dizziness"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"sans","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(228,235,239,1)","gridwidth":0.96607419147892382,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(33,60,80,1)","family":"sans","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"sans","size":17.002905770029056}},"hovermode":"closest","barmode":"relative","plot_bgcolor":"white"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false,"displaylogo":false,"responsive":true,"modeBarButtonsToRemove":["sendDataToCloud"]},"source":"A","attrs":{"1b8e329ddb69":{"x":{},"y":{},"text":{},"type":"bar"}},"cur_data":"1b8e329ddb69","visdat":{"1b8e329ddb69":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="card" title="Term incidence / safety population">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">nrow</span>(summary<span class="sc">$</span>terms)) {</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(summary<span class="sc">$</span>terms[<span class="fu">c</span>(<span class="st">"AETERM"</span>, <span class="st">"incidence"</span>)],</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"AE term"</span>, <span class="st">"Patients / safety N (%)"</span>))</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"No qualifying TEAEs at this cut."</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">AE term</th>
+<th style="text-align: left;">Patients / safety N (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Dizziness</td>
+<td style="text-align: left;">25/180 (13.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Abdominal pain</td>
+<td style="text-align: left;">20/180 (11.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Fatigue</td>
+<td style="text-align: left;">19/180 (10.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nausea</td>
+<td style="text-align: left;">17/180 (9.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Headache</td>
+<td style="text-align: left;">16/180 (8.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rash</td>
+<td style="text-align: left;">16/180 (8.9%)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/PSIAIMS\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
