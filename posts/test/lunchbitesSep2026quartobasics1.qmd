@@ -1,0 +1,45 @@
+---
+title: "Open-Source Lunch Bites: Quarto Basics"
+description: "A quick introduction to reproducible documents, interactive outputs and dashboards with Quarto."
+date: "2026-09-17"
+categories:
+  - Open Source
+  - Lunch Bites
+  - Quarto
+---
+
+The September **Open-Source Lunch Bites** session introduced **Quarto**, an open-source scientific and technical publishing system from Posit. Quarto provides a practical way to bring **code, analytical output and narrative together in a single reproducible document**.
+
+For analysts and programmers working in the pharmaceutical industry, this can help close the gap between *doing the analysis* and *communicating the analysis*. Rather than running code, exporting results and then manually copying tables, figures or numbers into another application, Quarto allows the analysis and the document that presents it to live together.
+
+## What did we cover?
+
+We started with the basic structure of a `.qmd` file and the three main ingredients:
+
+- **YAML** to configure the output;
+- **Markdown** for narrative and structure; and
+- **code** to perform the analysis and generate results.
+
+From a simple HTML document, the examples then built up to include interactive **Plotly** graphics and **DT** data tables.
+
+We also looked at **Quarto dashboards**. Starting with a simple column layout, the examples progressively added analytical outputs, linked filtering with **Crosstalk**, sidebars, navigation, tabs and custom styling. This provides a useful middle ground for situations where some interactivity is valuable but a full reactive application is unnecessary.
+
+Finally, we looked at a clinical-trial reporting example combining demographics and adverse-event summaries, figures and narrative text. A particularly useful feature is the ability to place **calculated values directly into the narrative**. When the underlying data or analysis changes, re-rendering the document can update the narrative, tables and figures together.
+
+## Three ideas to take away
+
+1. **Integrated** — code, results and narrative can live together.
+2. **Reproducible** — when data or code change, render again to update the output.
+3. **Flexible** — the same general approach can be used for reports, analytical documents, interactive outputs, dashboards, websites, presentations and more.
+
+Quarto does not replace tools such as R, Python, `ggplot2`, Plotly or DT. Instead, it provides a framework in which their outputs can be organised, explained and published.
+
+## Try the examples
+
+The presentation and runnable Quarto examples from the session are available in the PSI AIMS GitHub repository:
+
+**[Open-Source Lunch Bites — Quarto Basics: slides and examples](https://github.com/PSIAIMS/website/tree/main/lunchbites/quarto-basics)**
+
+The examples progress from a first Quarto document through interactive analytical output and several dashboard layouts, so they can also be used as a starting point for experimenting with Quarto yourself.
+
+For more information about Quarto, visit the [Quarto website](https://quarto.org/).
