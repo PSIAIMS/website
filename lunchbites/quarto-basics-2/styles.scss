@@ -1,0 +1,92 @@
+/*-- scss:defaults --*/
+$primary: #17364b;
+$secondary: #087e8b;
+$body-bg: #eef3f6;
+$body-color: #213c50;
+$font-family-sans-serif: "Segoe UI", Arial, sans-serif;
+$font-size-base: 1rem;
+$border-radius: .65rem;
+$card-border-color: #d6e1e7;
+$card-bg: #fff;
+$navbar-bg: #17364b;
+$navbar-fg: #fff;
+
+/*-- scss:rules --*/
+// Quarto card/valuebox selectors are checked against the rendered HTML.
+.quarto-dashboard .card {
+  border-radius: .65rem;
+  border: 1px solid #d6e1e7;
+  box-shadow: 0 3px 12px rgba(23, 54, 75, .07);
+}
+.quarto-dashboard .card-header {
+  background: #fff;
+  border-bottom: 1px solid #e4ebef;
+  color: #17364b;
+  font-weight: 600;
+}
+.quarto-dashboard .study-context {
+  border-left: 5px solid #087e8b;
+  font-size: 1rem;
+}
+.quarto-dashboard .study-context p:last-child { margin-bottom: 0; }
+// Flowing Sites rows should fit their contents rather than stretch into spare space.
+.quarto-dashboard #sites > .bslib-grid {
+  align-content: start;
+  flex: 0 0 auto;
+}
+.quarto-dashboard .valuebox .value-box-value {
+  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+.quarto-dashboard .valuebox .value-box-title { font-weight: 600; }
+.quarto-dashboard a:focus-visible,
+.quarto-dashboard button:focus-visible,
+.quarto-dashboard input:focus-visible,
+.quarto-dashboard select:focus-visible {
+  outline: 3px solid #b76c00;
+  outline-offset: 3px;
+}
+.quarto-dashboard .dataTables_wrapper { font-size: .92rem; }
+// Keep one table for header, filters and body; scroll the card only on narrow screens.
+.quarto-dashboard .site-detail .card-body,
+.quarto-dashboard .site-detail .cell-output-display,
+.quarto-dashboard .site-detail .datatables.html-widget {
+  display: block;
+  height: auto !important;
+}
+.quarto-dashboard .site-detail .card-body { overflow-x: auto; }
+.quarto-dashboard .site-detail .dataTables_wrapper { width: 100%; }
+.quarto-dashboard .site-detail table.dataTable {
+  width: 100% !important;
+  min-width: 850px;
+  margin: .75rem 0;
+}
+.quarto-dashboard .site-detail table.dataTable th,
+.quarto-dashboard .site-detail table.dataTable td {
+  padding: .55rem .65rem;
+  border-bottom: 1px solid #d6e1e7;
+}
+.quarto-dashboard .site-detail table.dataTable th {
+  color: #17364b;
+  white-space: normal;
+}
+// Reserve the right edge of each column heading for DataTables' sorting arrows.
+.quarto-dashboard .site-detail table.dataTable thead > tr:first-child > th {
+  position: relative;
+  padding-right: 2rem;
+}
+.quarto-dashboard .site-detail table.dataTable thead > tr:first-child > th::before,
+.quarto-dashboard .site-detail table.dataTable thead > tr:first-child > th::after {
+  right: .55rem;
+}
+.quarto-dashboard .site-detail .dataTables_filter input,
+.quarto-dashboard .site-detail .dataTables_length select {
+  border: 1px solid #a8bac6;
+  border-radius: .25rem;
+  padding: .3rem .45rem;
+}
+@media (max-width: 900px) {
+  .quarto-dashboard .study-context { font-size: .9rem; }
+  .quarto-dashboard .valuebox .value-box-value { font-size: 2rem; }
+}

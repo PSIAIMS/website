@@ -1,0 +1,20 @@
+project:
+  type: default
+  render:
+    - dashboard.qmd
+  output-dir: _output
+  execute-dir: project
+
+format:
+  dashboard:
+    orientation: rows
+    theme: [cosmo, styles.scss]
+    embed-resources: true
+
+execute:
+  echo: false
+  message: false
+  warning: true
+  cache: false
+  freeze: false
+  error: false

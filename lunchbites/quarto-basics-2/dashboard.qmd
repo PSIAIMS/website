@@ -1,0 +1,168 @@
+---
+title: "ABC-001 | Study oversight"
+subtitle: "Fictional study | Synthetic data | Demonstration only"
+---
+
+```{r}
+#| label: setup
+#| include: false
+source("R/data.R")
+source("R/summaries.R")
+source("R/plots.R")
+inputs <- load_study_data()
+summary <- summarise_study(inputs)
+```
+
+# Overview
+
+## Context {.flow height=auto}
+
+::: {.card .study-context}
+**`r summary$context`**
+
+Phase II illustration: Drug A and Placebo. Whole study totals.
+`r summary$narrative`
+:::
+
+## Headlines {height=22%}
+
+```{r}
+#| content: valuebox
+#| title: "Randomised patients"
+#| icon: people
+#| color: primary
+list(value = summary$metrics$n_randomised)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Active sites"
+#| icon: buildings
+#| color: primary
+list(value = summary$metrics$n_active_sites)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Active patients"
+#| icon: person-check
+#| color: primary
+list(value = summary$metrics$n_active)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Patients with serious TEAE"
+#| icon: clipboard-data
+#| color: primary
+list(value = summary$metrics$n_serious)
+```
+
+## Recruitment {height=60%}
+
+```{r}
+#| title: "Recruitment through selected cut"
+plot_recruitment(summary)
+```
+
+# Recruitment
+
+## Context {.flow height=auto}
+
+::: {.card .study-context}
+**`r summary$context`**
+
+Fixed total target: `r summary$metadata$RECRUITMENT_TARGET` patients.
+Dashed line = **Illustrative recruitment plan**, linear from 1 May to
+`r format(summary$planned_end, "%d %B %Y")`. It is not a forecast.
+:::
+
+## Cumulative {height=50%}
+
+```{r}
+#| title: "Actual recruitment and illustrative plan"
+plot_recruitment(summary, show_plan = TRUE)
+```
+
+## By site {height=40%}
+
+```{r}
+#| title: "Actual versus target by site"
+plot_sites(summary)
+```
+
+# Sites {scrolling=true}
+
+## Context {.flow height=auto}
+
+::: {.card .study-context}
+**`r summary$context`**
+
+All 12 planned sites are retained, including zero-recruitment sites.
+Rand. = randomised; Compl. = completed; Disc. = discontinued.
+TEAE and Ser. TEAE count affected patients. Search, column filters and sorting affect only the table;
+charts and headline values represent the whole selected cut.
+:::
+
+## Recruitment {height=320px}
+
+```{r}
+#| title: "Site recruitment (diamond = target of 25)"
+plot_sites(summary)
+```
+
+## Site detail {.flow height=auto}
+
+::: {.card .site-detail title="Site master and patient counts"}
+```{r}
+site_table(summary)
+```
+:::
+
+# Safety
+
+## Context {.flow height=auto}
+
+::: {.card .study-context}
+**`r summary$context`**
+
+TEAE = onset on/after first dose, through the cut, in the safety population.
+Percentages use the `r summary$metrics$n_safety` first-dosed patients.
+Seriousness and severity are independent attributes. These simulated counts
+do not support treatment comparisons or clinical recommendations.
+:::
+
+## Summary {height=35%}
+
+::: {.card title="Whole study safety summary"}
+```{r}
+knitr::kable(summary$safety_table, align = c("l", "r"))
+```
+:::
+
+::: {.card title="Reading these counts"}
+`r summary$metrics$n_completed` completed and
+`r summary$metrics$n_discontinued` discontinued patients at this cut.
+AE discontinuations are a subset of all discontinued patients.
+A patient may have multiple events and contribute to multiple AE terms;
+term percentages need not sum to 100. Pre-dose events are excluded from TEAE.
+The 15 October cut is a **simulated future snapshot** for this demonstration.
+:::
+
+## AE terms {height=50%}
+
+```{r}
+#| title: "TEAE incidence by term (distinct affected patients)"
+plot_terms(summary)
+```
+
+::: {.card title="Term incidence / safety population"}
+```{r}
+if (nrow(summary$terms)) {
+  knitr::kable(summary$terms[c("AETERM", "incidence")],
+               col.names = c("AE term", "Patients / safety N (%)"))
+} else {
+  cat("No qualifying TEAEs at this cut.")
+}
+```
+:::
