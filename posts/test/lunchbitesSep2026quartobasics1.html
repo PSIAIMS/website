@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="PSI AIMS">
 <meta name="dcterms.date" content="2026-09-17">
 <meta name="description" content="A quick introduction to reproducible documents, interactive outputs and dashboards with Quarto.">
 
@@ -27,6 +28,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -157,6 +193,12 @@ ul.task-list li input[type="checkbox"] {
   
   <div class="quarto-title-meta column-page-left">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>PSI AIMS </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
@@ -180,6 +222,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#what-did-we-cover" id="toc-what-did-we-cover" class="nav-link active" data-scroll-target="#what-did-we-cover">What did we cover?</a></li>
   <li><a href="#three-ideas-to-take-away" id="toc-three-ideas-to-take-away" class="nav-link" data-scroll-target="#three-ideas-to-take-away">Three ideas to take away</a></li>
   <li><a href="#try-the-examples" id="toc-try-the-examples" class="nav-link" data-scroll-target="#try-the-examples">Try the examples</a></li>
+  <li><a href="#this-website-is-built-with-quarto-too" id="toc-this-website-is-built-with-quarto-too" class="nav-link" data-scroll-target="#this-website-is-built-with-quarto-too">This website is built with Quarto too</a>
+  <ul class="collapse">
+  <li><a href="#figures-data-and-the-code-behind-them" id="toc-figures-data-and-the-code-behind-them" class="nav-link" data-scroll-target="#figures-data-and-the-code-behind-them">Figures, data and the code behind them</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -219,8 +265,62 @@ ul.task-list li input[type="checkbox"] {
 <p><strong><a href="https://github.com/PSIAIMS/website/tree/main/lunchbites/quarto-basics">Open-Source Lunch Bites — Quarto Basics: slides and examples</a></strong></p>
 <p>The examples progress from a first Quarto document through interactive analytical output and several dashboard layouts, so they can also be used as a starting point for experimenting with Quarto yourself.</p>
 <p>For more information about Quarto, visit the <a href="https://quarto.org/">Quarto website</a>.</p>
+</section>
+<section id="this-website-is-built-with-quarto-too" class="level2">
+<h2 class="anchored" data-anchor-id="this-website-is-built-with-quarto-too">This website is built with Quarto too</h2>
+<p>The <strong>PSI AIMS website itself</strong> is a practical Quarto example. Rather than one enormous document, it uses several <code>.qmd</code> files for individual pages. This article is another <code>.qmd</code>, placed in <code>posts/</code> so it appears in the News listing.</p>
+<p>The website’s <a href="https://github.com/PSIAIMS/website/blob/main/_quarto.yml"><code>_quarto.yml</code></a> declares a website and controls navigation. Here is a shortened extract:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">website</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span><span class="fu">href</span><span class="kw">:</span><span class="at"> index.qmd</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="fu">text</span><span class="kw">:</span><span class="at"> Home</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> about.qmd</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> news.qmd</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> blog.qmd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The <a href="https://github.com/PSIAIMS/website/blob/main/news.qmd"><code>news.qmd</code></a> file uses a listing to collect posts automatically:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">listing</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">contents</span><span class="kw">:</span><span class="at"> posts</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">sort</span><span class="kw">:</span><span class="at"> </span><span class="st">"date desc"</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> table</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">categories</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="figures-data-and-the-code-behind-them" class="level3">
+<h3 class="anchored" data-anchor-id="figures-data-and-the-code-behind-them">Figures, data and the code behind them</h3>
+<p>A <code>.qmd</code> can include existing figures using a single Markdown line, for example:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="al">![R logo](images/RLogo.png)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The actual website’s <a href="https://github.com/PSIAIMS/website/blob/main/index.qmd"><code>index.qmd</code></a> also references <code>images/RLogo.png</code> (using an HTML image tag). But Quarto goes further: it can <strong>generate</strong> figures and data summaries when a page is rendered. Here are two short examples based on the session’s <a href="https://github.com/PSIAIMS/website/blob/main/lunchbites/quarto-basics/quarto_html_1.qmd"><code>quarto_html_1.qmd</code></a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>::: {.cell-output-display}</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="al">![](lunchbitesSep2026quartobasics1_files/figure-html/unnamed-chunk-1-1.png)</span>{width=672}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>That chunk creates a figure; <code>echo: false</code> hides the code from the published page. Similarly:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">     speed           dist       </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in"> Min.   : 4.0   Min.   :  2.00  </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in"> 1st Qu.:12.0   1st Qu.: 26.00  </span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in"> Median :15.0   Median : 36.00  </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in"> Mean   :15.4   Mean   : 42.98  </span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="in"> 3rd Qu.:19.0   3rd Qu.: 56.00  </span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="in"> Max.   :25.0   Max.   :120.00  </span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This displays a data summary produced by R. <strong>The narrative, figures, data and the code generating them can all live together.</strong> When data or code changes, re-rendering refreshes the output rather than requiring manual copy-and-paste.</p>
+<p>Explore the <a href="https://github.com/PSIAIMS/website">source of this website</a> or try the <a href="https://github.com/PSIAIMS/website/tree/main/lunchbites/quarto-basics">Quarto Basics slides and runnable examples</a>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
