@@ -25,7 +25,7 @@ set.seed(123)
 n_subj <- 20
 
 adsl <- data.frame(
-  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  USUBJID   = sprintf("USUBJ%03d", 1:n_subj),
   WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),   # kg
   HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),  # cm
   TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
@@ -33,7 +33,7 @@ adsl <- data.frame(
 )
 
 adsl2 <- adsl %>% 
-         select(SUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL)
+         select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL)
 
 adsl3 <- adsl2 %>% 
          mutate_if(is.character, as.factor)
