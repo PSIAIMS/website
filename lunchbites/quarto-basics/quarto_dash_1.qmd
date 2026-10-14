@@ -22,7 +22,7 @@ set.seed(123)
 n_subj <- 20
 
 adsl <- data.frame(
-  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  USUBJID   = sprintf("USUBJ%03d", 1:n_subj),
   WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),   # kg
   HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),  # cm
   TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
