@@ -17,10 +17,10 @@ library(plotly)
 library(DT)
 library(crosstalk)
 
-#Read in adsl
+#adsl
 set.seed(123)
 
-## ---- dADSL: Subject-level dataset ----
+## ---- ADSL: Subject-level dataset ----
 
 n_subj <- 20
 
