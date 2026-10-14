@@ -15,8 +15,20 @@ library(plotly)
 library(DT)
 library(crosstalk)
 
-#Read in adsl
-adsl <- read_sas("//wilbtia/wilbtia10/PPD SandboxWIL/R Academy/Databases/Analysis Database/Output/adsl.sas7bdat")
+#adsl
+set.seed(123)
+
+## ---- ADSL: Subject-level dataset ----
+
+n_subj <- 20
+
+adsl <- data.frame(
+  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),   # kg
+  HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),  # cm
+  TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
+  TRTDURD  = sample(30:180, n_subj, replace = TRUE)
+)
 
 adsl2 <- adsl %>% 
          select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL)
