@@ -1,5 +1,6 @@
 ---
 title: "Open-Source Lunch Bites: Quarto Basics"
+author: "PSI AIMS"
 description: "A quick introduction to reproducible documents, interactive outputs and dashboards with Quarto."
 date: "2026-09-17"
 categories:
@@ -43,3 +44,63 @@ The presentation and runnable Quarto examples from the session are available in 
 The examples progress from a first Quarto document through interactive analytical output and several dashboard layouts, so they can also be used as a starting point for experimenting with Quarto yourself.
 
 For more information about Quarto, visit the [Quarto website](https://quarto.org/).
+
+## This website is built with Quarto too
+
+The **PSI AIMS website itself** is a practical Quarto example. Rather than one enormous document, it uses several `.qmd` files for individual pages. This article is another `.qmd`, placed in `posts/` so it appears in the News listing.
+
+The website's [`_quarto.yml`](https://github.com/PSIAIMS/website/blob/main/_quarto.yml) declares a website and controls navigation. Here is a shortened extract:
+
+```yaml
+project:
+  type: website
+
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - news.qmd
+      - blog.qmd
+```
+
+The [`news.qmd`](https://github.com/PSIAIMS/website/blob/main/news.qmd) file uses a listing to collect posts automatically:
+
+```yaml
+listing:
+  contents: posts
+  sort: "date desc"
+  type: table
+  categories: true
+```
+
+### Figures, data and the code behind them
+
+A `.qmd` can include existing figures using a single Markdown line, for example:
+
+```markdown
+![R logo](images/RLogo.png)
+```
+
+The actual website's [`index.qmd`](https://github.com/PSIAIMS/website/blob/main/index.qmd) also references `images/RLogo.png` (using an HTML image tag). But Quarto goes further: it can **generate** figures and data summaries when a page is rendered. Here are two short examples based on the session's [`quarto_html_1.qmd`](https://github.com/PSIAIMS/website/blob/main/lunchbites/quarto-basics/quarto_html_1.qmd):
+
+````markdown
+```{r}
+#| echo: false
+plot(cars)
+```
+````
+
+That chunk creates a figure; `echo: false` hides the code from the published page. Similarly:
+
+````markdown
+```{r}
+#| echo: false
+summary(cars)
+```
+````
+
+This displays a data summary produced by R. **The narrative, figures, data and the code generating them can all live together.** When data or code changes, re-rendering refreshes the output rather than requiring manual copy-and-paste.
+
+Explore the [source of this website](https://github.com/PSIAIMS/website) or try the [Quarto Basics slides and runnable examples](https://github.com/PSIAIMS/website/tree/main/lunchbites/quarto-basics).
