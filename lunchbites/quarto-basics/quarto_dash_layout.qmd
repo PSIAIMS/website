@@ -1,0 +1,36 @@
+---
+title: "Quarto Layout"
+format: dashboard
+orientation: columns
+theme: yeti
+
+---
+
+```{r setup, include=FALSE}
+
+```
+
+## Column {width=60%}
+
+```{r}
+#| title: Data
+
+iris
+
+```
+
+## Column {width=40%}
+
+```{r}
+#| title: Figure 1
+
+mtcars
+
+```
+
+```{r}
+#| title: Figure 2
+
+iris3
+
+```

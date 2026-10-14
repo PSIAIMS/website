@@ -1,0 +1,70 @@
+---
+title: "My Second Doc"
+author: "Martin Brown"
+format: 
+  html:
+    toc: true
+    page-layout: full
+    grid: 
+      body-width: 1600px
+      margin-width: 100px
+
+---
+
+```{r setup, include=FALSE}
+
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+
+
+set.seed(123)
+
+## ---- dADSL: Subject-level dataset ----
+
+n_subj <- 20
+
+adsl <- data.frame(
+  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),   # kg
+  HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),  # cm
+  TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
+  TRTDURD  = sample(30:180, n_subj, replace = TRUE)
+)
+
+```
+
+## Quarto Example 2
+
+### Plotly
+
+Below are plotly output and the datatable from the earlier part of the module:
+
+```{r plotly}
+
+f1 <- ggplot(data = adsl, aes(x=TRT01P,y=TRTDURD,fill=TRT01P)) +
+  geom_boxplot() +
+  scale_x_discrete(name="Treatment Group") +
+  scale_y_continuous(limits=c(0,250), breaks=seq(0,250,50), expand=c(0.05,0.05), name="Treatment Duration") +
+  scale_fill_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name="Treatment Group") +
+  theme_bw()
+
+ggplotly(f1)
+
+```
+
+### Datatable
+
+```{r datatable}
+
+adslm <- adsl %>% 
+         mutate_if(is.character, as.factor)
+
+datatable(adslm,
+          extensions = c('ColReorder'), 
+          rownames = FALSE, filter = 'top',
+          options = list(colReorder = TRUE, lengthMenu = c(18,50,100),
+                         scrollX = FALSE))
+
+```

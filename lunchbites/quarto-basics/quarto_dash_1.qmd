@@ -1,0 +1,71 @@
+---
+title: "Quarto Dashboard"
+format: dashboard
+orientation: columns
+theme: yeti
+
+---
+
+```{r setup, include=FALSE}
+
+library(haven)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+
+#Read in adsl
+adsl <- read_sas("//wilbtia/wilbtia10/PPD SandboxWIL/R Academy/Databases/Analysis Database/Output/adsl.sas7bdat")
+
+```
+
+
+## Column {width=60%}
+
+```{r}
+#| title: Data
+
+adsl2 <- adsl %>% 
+         select(USUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL)
+
+adslm <- adsl2 %>% 
+         mutate_if(is.character, as.factor)
+
+datatable(adslm,
+          extensions = c('ColReorder'), 
+          rownames = FALSE, filter = 'top',
+          options = list(colReorder = TRUE, lengthMenu = c(18,50,100),
+                         scrollX = FALSE))
+
+```
+
+## Column {width=40%}
+
+```{r}
+#| title: Figure 1
+
+f1 <- ggplot(data = adsl, aes(x=TRT01P,y=TRTDURD,fill=TRT01P)) +
+  geom_boxplot() +
+  scale_x_discrete(name="Treatment Group") +
+  scale_y_continuous(limits=c(0,250), breaks=seq(0,250,50), expand=c(0.05,0.05), name="Treatment Duration") +
+  scale_fill_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name="Treatment Group") +
+  theme_bw()
+
+ggplotly(f1)
+
+
+```
+
+```{r}
+#| title: Figure 2
+
+f2 <- ggplot(data = adsl, aes(x=WEIGHTBL,y=HEIGHTBL,shape=TRT01P)) +
+  geom_point() +
+  scale_x_continuous(limits=c(30,110), breaks=seq(30,110,10), name="Baseline Height") +
+  scale_y_continuous(limits=c(130,200), breaks=seq(130,200,10), name="Baseline Weight") +
+  theme_bw()
+
+ggplotly(f2)
+
+
+```

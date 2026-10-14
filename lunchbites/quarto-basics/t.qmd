@@ -1,0 +1,337 @@
+---
+# ============================================================
+#  YAML HEADER  —  This is the first thing to show the audience
+#  Change `format: html` to `format: pdf` or `format: docx`
+#  and re-render. Same source, different output. That's Quarto.
+# ============================================================
+title: "Study XYZ-001: Safety & Demographics Report"
+subtitle: "Integrated Clinical Trial Summary — Example"
+author: "Statistical Programming, Biostatistics"
+date: today                      # automatically inserts today's date
+date-format: "DD MMMM YYYY"
+
+# --- Switch between these three formats during the demo ---
+format: typst                     # try: pdf, typst   or   docx
+
+# format: html
+# html:
+#   embed-resources: true
+#   toc: true
+#   toc-depth: 3
+#   theme: cosmo
+#   code-fold: true              # collapsible code blocks in HTML
+
+# format: pdf
+# pdf:
+#   toc: true
+#   number-sections: true
+#   geometry: margin=2.5cm
+
+# format: docx
+# docx:
+#   toc: true
+#   number-sections: true
+
+# ============================================================
+#  EXECUTION OPTIONS  —  like SAS options at the top of a program
+# ============================================================
+execute:
+  echo: false          # show code (set false to hide — like NOPRINT in SAS)
+  warning: false      # suppress warnings in output
+  message: false      # suppress package load messages
+
+# Optional: run all chunks as if inside one R session (default TRUE)
+# This means objects created early are available later — like a DATA step cascade.
+---
+
+```{r}
+#| label: setup
+#| echo: false        # hide this chunk — just loads packages quietly
+
+# In a real study, these would typically be loaded via a site-wide .Rprofile
+# or a study-level _setup.R sourced at the top of each program.
+
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(knitr)      # kable() — basic tables
+```
+
+# Introduction
+
+This report summarises the **demographics** and **adverse event** profile
+for Study XYZ-001, a Phase II randomised controlled trial comparing
+**Drug A** versus **Placebo** in adult subjects with condition Z.
+
+> **Note for programmers:** This document is a single `.qmd` source file.
+> The tables, figures, and narrative are produced from the same R code
+> every time the document is rendered — no copy-paste from SAS output.
+
+---
+
+# Data
+
+## Create Fictional Datasets
+
+In a real study environment these datasets would be read from SAS transport
+files (`.xpt`) or from a validated ADaM data store on the clinical network.
+Here we create small fictional datasets inline so the example is
+**fully self-contained**.
+
+```{r}
+#| label: create-adsl
+
+# -----------------------------------------------------------------
+# ADSL  —  Subject-Level Analysis Dataset (one row per subject)
+# -----------------------------------------------------------------
+set.seed(42)   # reproducibility — equivalent to SAS options SEED=42
+
+n <- 60
+
+adsl <- tibble(
+  USUBJID = paste0("XYZ-001-", sprintf("%03d", 1:n)),
+  TRT01P  = rep(c("Drug A", "Placebo"), each = n / 2),      # treatment arm
+  AGE     = c(rnorm(n / 2, mean = 52, sd = 11),
+              rnorm(n / 2, mean = 50, sd = 10)) |> round(),
+  SEX     = sample(c("M", "F"), n, replace = TRUE,
+                   prob = c(0.55, 0.45)),
+  RACE    = sample(
+              c("WHITE", "BLACK OR AFRICAN AMERICAN", "ASIAN", "OTHER"),
+              n, replace = TRUE, prob = c(0.65, 0.15, 0.12, 0.08)
+            ),
+  WEIGHTBL = round(rnorm(n, mean = 78, sd = 14), 1),         # kg at baseline
+  SAFFL   = "Y"                                              # safety flag
+)
+
+# Quick sanity check — like PROC FREQ in SAS
+count(adsl, TRT01P)
+```
+
+```{r}
+#| label: create-adae
+
+# -----------------------------------------------------------------
+# ADAE  —  Adverse Event Analysis Dataset (one row per AE per subject)
+# -----------------------------------------------------------------
+ae_terms <- c(
+  "Headache", "Nausea", "Fatigue", "Dizziness",
+  "Rash", "Vomiting", "Insomnia", "Back pain"
+)
+
+# Drug A subjects have slightly higher AE rates (fictional)
+adae <- bind_rows(
+  # Drug A
+  tibble(
+    USUBJID = sample(adsl$USUBJID[adsl$TRT01P == "Drug A"], 45, replace = TRUE),
+    AETERM  = sample(ae_terms, 45, replace = TRUE),
+    AESEV   = sample(c("MILD", "MODERATE", "SEVERE"), 45,
+                     replace = TRUE, prob = c(0.60, 0.30, 0.10)),
+    AEREL   = sample(c("RELATED", "NOT RELATED"), 45,
+                     replace = TRUE, prob = c(0.55, 0.45))
+  ),
+  # Placebo
+  tibble(
+    USUBJID = sample(adsl$USUBJID[adsl$TRT01P == "Placebo"], 30, replace = TRUE),
+    AETERM  = sample(ae_terms, 30, replace = TRUE),
+    AESEV   = sample(c("MILD", "MODERATE", "SEVERE"), 30,
+                     replace = TRUE, prob = c(0.70, 0.25, 0.05)),
+    AEREL   = sample(c("RELATED", "NOT RELATED"), 30,
+                     replace = TRUE, prob = c(0.40, 0.60))
+  )
+) |>
+  left_join(select(adsl, USUBJID, TRT01P), by = "USUBJID")
+
+nrow(adae)
+```
+
+---
+
+# Demographics Summary {#sec-demog}
+
+The table below mirrors what you would produce in SAS with `PROC TABULATE`
+or `PROC REPORT`. Here it is built with `dplyr` and rendered with `kable()`.
+
+```{r}
+#| label: tbl-demog
+#| tbl-cap: "Table 1. Subject Demographics and Baseline Characteristics (Safety Population)"
+
+# Helper: mean (SD) formatter
+mean_sd <- function(x) sprintf("%.1f (%.1f)", mean(x, na.rm = TRUE), sd(x, na.rm = TRUE))
+
+# Helper: n (%) formatter
+n_pct <- function(x, total) sprintf("%d (%.1f%%)", sum(x), 100 * sum(x) / total)
+
+n_by_trt <- count(adsl, TRT01P) |>             # named vector of N per arm
+  { \(d) setNames(d$n, d$TRT01P) }()
+
+demog_rows <- bind_rows(
+  # Age
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = mean_sd(AGE), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "Age (years), mean (SD)", .before = 1),
+
+  # Weight
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = mean_sd(WEIGHTBL), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "Weight at baseline (kg), mean (SD)", .before = 1),
+
+  # Sex
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = n_pct(SEX == "F", n()), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "Female, n (%)", .before = 1),
+
+  # Race — White
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = n_pct(RACE == "WHITE", n()), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "  White, n (%)", .before = 1),
+
+  # Race — Black
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = n_pct(RACE == "BLACK OR AFRICAN AMERICAN", n()), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "  Black or African American, n (%)", .before = 1),
+
+  # Race — Asian
+  adsl |>
+    group_by(TRT01P) |>
+    summarise(value = n_pct(RACE == "ASIAN", n()), .groups = "drop") |>
+    pivot_wider(names_from = TRT01P, values_from = value) |>
+    mutate(Characteristic = "  Asian, n (%)", .before = 1)
+)
+
+kable(
+  demog_rows,
+  col.names = c(
+    "Characteristic",
+    paste0("Drug A (N=", n_by_trt["Drug A"], ")"),
+    paste0("Placebo (N=", n_by_trt["Placebo"], ")")
+  ),
+  align = c("l", "c", "c")
+)
+```
+
+---
+
+# Adverse Events {#sec-ae}
+
+## AE Incidence by Treatment Arm
+
+```{r}
+#| label: tbl-ae-incidence
+#| tbl-cap: "Table 2. Subjects with Any Adverse Event by System Organ Class and Preferred Term"
+
+ae_summary <- adae |>
+  distinct(USUBJID, TRT01P, AETERM) |>       # one row per subject-PT
+  group_by(TRT01P, AETERM) |>
+  summarise(n_subj = n_distinct(USUBJID), .groups = "drop") |>
+  left_join(
+    count(adsl, TRT01P) |> rename(N = n),
+    by = "TRT01P"
+  ) |>
+  mutate(pct = round(100 * n_subj / N, 1),
+         cell = paste0(n_subj, " (", pct, "%)")) |>
+  select(AETERM, TRT01P, cell) |>
+  pivot_wider(names_from = TRT01P, values_from = cell, values_fill = "0 (0.0%)") |>
+  arrange(AETERM)
+
+kable(
+  ae_summary,
+  col.names = c(
+    "Adverse Event (Preferred Term)",
+    paste0("Drug A (N=", n_by_trt["Drug A"], ")"),
+    paste0("Placebo (N=", n_by_trt["Placebo"], ")")
+  ),
+  align = c("l", "c", "c")
+)
+```
+
+## AE Severity Profile
+
+The figure below is produced inline by R — no external image file needed.
+In SAS you would export an ODS Graphics PNG and link it manually.
+Here the plot is part of the reproducible document.
+
+```{r}
+#| label: fig-ae-severity
+#| fig-cap: "Figure 1. Adverse Event Counts by Severity and Treatment Arm"
+#| fig-height: 4
+#| fig-width: 7
+
+adae |>
+  count(TRT01P, AESEV) |>
+  mutate(
+    AESEV = factor(AESEV, levels = c("MILD", "MODERATE", "SEVERE"))
+  ) |>
+  ggplot(aes(x = AESEV, y = n, fill = TRT01P)) +
+  geom_col(position = "dodge", width = 0.6) +
+  scale_fill_manual(values = c("Drug A" = "#2166ac", "Placebo" = "#d1e5f0")) +
+  labs(
+    x = "Severity",
+    y = "Number of AEs",
+    fill = "Treatment",
+    title = "Adverse Events by Severity Grade"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom")
+```
+
+---
+
+# Inline R Values in Narrative Text
+
+One of Quarto's most powerful features for clinical programming:
+values computed in R can be embedded directly in prose.
+
+> A total of **`r nrow(adsl)`** subjects were included in the Safety Population:
+> **`r n_by_trt["Drug A"]`** in the Drug A arm and
+> **`r n_by_trt["Placebo"]`** in the Placebo arm.
+> Across both arms, **`r n_distinct(adae$USUBJID)`** subjects
+> (`r round(100 * n_distinct(adae$USUBJID) / nrow(adsl), 1)`%)
+> experienced at least one adverse event.
+
+If the data change upstream and you re-render, **every number updates automatically**.
+No more manual edits after an unblinding data cut.
+
+---
+
+# Key Takeaways for SAS Programmers
+
+| SAS concept | Quarto / R equivalent |
+|---|---|
+| `ODS RTF` / `ODS PDF` | Change `format:` in YAML header |
+| `%include 'setup.sas'` | `source("_setup.R")` or `library()` |
+| `PROC REPORT` / `PROC TABULATE` | `dplyr` + `kable()` / `gt` / `flextable` |
+| `ODS Graphics` | `ggplot2` — inline, no external file |
+| Hard-coded counts in text | `` `r nrow(adsl)` `` — live inline values |
+| Manual re-run after data cut | `quarto render` — full refresh in one command |
+
+---
+
+# Appendix: Session Info {.appendix}
+
+Good practice: capture the R environment for reproducibility traceability —
+equivalent to logging SAS version and macro versions.
+
+```{r}
+#| label: session-info
+#| echo: false
+
+si <- sessionInfo()
+cat(paste("R version:", si$R.version$version.string), "\n")
+cat(paste("Platform:", si$R.version$platform), "\n")
+cat("Key packages loaded:\n")
+pkgs <- c("dplyr", "ggplot2", "knitr", "tidyr")
+for (p in pkgs) {
+  cat(sprintf("  %s %s\n", p, packageVersion(p)))
+}
+cat(paste("\nRendered:", format(Sys.time(), "%Y-%m-%d %H:%M:%S %Z")))
+```

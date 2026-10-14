@@ -1,0 +1,99 @@
+---
+title: "Quarto Dashboard with Crosstalk, Sidebar, Tab Layout and Theme Update"
+format: 
+  dashboard:
+    theme: 
+      - zephyr
+      - theme.scss
+orientation: columns
+
+---
+
+```{r setup, include=FALSE}
+
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
+library(crosstalk)
+
+#Read in adsl
+set.seed(123)
+
+## ---- dADSL: Subject-level dataset ----
+
+n_subj <- 20
+
+adsl <- data.frame(
+  SUBJID   = sprintf("SUBJ%03d", 1:n_subj),
+  WEIGHTBL = round(rnorm(n_subj, mean = 75, sd = 12), 1),   # kg
+  HEIGHTBL = round(rnorm(n_subj, mean = 170, sd = 10), 1),  # cm
+  TRT01P   = sample(c("Placebo", "Drug A"), n_subj, replace = TRUE),
+  TRTDURD  = sample(30:180, n_subj, replace = TRUE)
+)
+
+adsl2 <- adsl %>% 
+         select(SUBJID, TRT01P, TRTDURD, WEIGHTBL, HEIGHTBL)
+
+adsl3 <- adsl2 %>% 
+         mutate_if(is.character, as.factor)
+
+adsl_ct <- SharedData$new(adsl3)
+
+```
+
+## Sidebar {width=20%}
+
+```{r}
+#| title: Planned Treatment
+#| height: 30%
+
+filter_select("trt", "", adsl_ct, ~ TRT01P)
+
+```
+
+# Data
+
+## Column
+
+```{r}
+datatable(adsl_ct,
+          extensions = c('ColReorder'), 
+          rownames = FALSE, filter = 'top',
+          options = list(colReorder = TRUE, lengthMenu = c(14,10)))
+
+```
+
+# Figures
+
+## Column {.tabset}
+
+```{r}
+#| title: Figure 1
+
+f1 <- ggplot(data = adsl_ct, aes(x=TRT01P,y=TRTDURD,fill=TRT01P)) +
+  geom_boxplot() +
+  scale_x_discrete(name="Treatment Group") +
+  scale_y_continuous(limits=c(0,250), breaks=seq(0,250,50), expand=c(0.05,0.05), name="Treatment Duration") +
+  scale_fill_manual(values = c("#0072B2", "#D55E00", "#CC79A7"), name="Treatment Group") +
+  theme_bw()
+
+ggplotly(f1)
+
+
+```
+
+```{r}
+#| title: Figure 2
+
+f2 <- ggplot(data = adsl_ct, aes(x=WEIGHTBL,y=HEIGHTBL,shape=TRT01P)) +
+  geom_point() +
+  scale_x_continuous(limits=c(30,110), breaks=seq(30,110,10), name="Baseline Height") +
+  scale_y_continuous(limits=c(130,200), breaks=seq(130,200,10), name="Baseline Weight") +
+  theme_bw()
+
+ggplotly(f2)
+
+
+```
+
