@@ -1,5 +1,5 @@
 ---
-title: "Open-Source Lunch Bites: Quarto Basics"
+title: "Open-Source Lunch Bites Webinar: Quarto Basics"
 author: "PSI AIMS"
 description: "A quick introduction to reproducible documents, interactive outputs and dashboards with Quarto."
 date: "2026-09-17"
