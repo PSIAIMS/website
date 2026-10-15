@@ -39,7 +39,7 @@
     "href": "news.html",
     "title": "News",
     "section": "",
-    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 17, 2026\n\n\nOpen-Source Lunch Bites: Quarto Basics\n\n\nPSI AIMS\n\n\n\n\n\n\nJun 16, 2026\n\n\nPSI Conference 2026 Presentation, Code and AI Prompts\n\n\nPSI AIMS\n\n\n\n\n\n\nApr 2, 2026\n\n\nOpen-Source Lunch Bites Webinar - Graphics Basics (Parts 1 & 2)\n\n\nPSI AIMS\n\n\n\n\n\n\nDec 5, 2025\n\n\nOpen-Source Lunch Bites Webinar - Package Basics\n\n\nPSI AIMS\n\n\n\n\n\n\nOct 3, 2025\n\n\nOpen-Source Lunch Bites Webinar - Debugging in R\n\n\nPSI AIMS\n\n\n\n\n\n\nSep 12, 2025\n\n\nOpen-Source Lunch Bites Webinar - IDEs\n\n\nPSI AIMS\n\n\n\n\n\n\nJul 17, 2025\n\n\nOne Day meeting on Change Management in the Transition to Open-Source / R\n\n\nMartin Brown\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
+    "text": "Date\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nOct 15, 2026\n\n\nOpen-Source Lunch Bites Webinar: Quarto Dashboards\n\n\nPSI AIMS\n\n\n\n\n\n\nSep 17, 2026\n\n\nOpen-Source Lunch Bites Webinar: Quarto Basics\n\n\nPSI AIMS\n\n\n\n\n\n\nJun 16, 2026\n\n\nPSI Conference 2026 Presentation, Code and AI Prompts\n\n\nPSI AIMS\n\n\n\n\n\n\nApr 2, 2026\n\n\nOpen-Source Lunch Bites Webinar - Graphics Basics (Parts 1 & 2)\n\n\nPSI AIMS\n\n\n\n\n\n\nDec 5, 2025\n\n\nOpen-Source Lunch Bites Webinar - Package Basics\n\n\nPSI AIMS\n\n\n\n\n\n\nOct 3, 2025\n\n\nOpen-Source Lunch Bites Webinar - Debugging in R\n\n\nPSI AIMS\n\n\n\n\n\n\nSep 12, 2025\n\n\nOpen-Source Lunch Bites Webinar - IDEs\n\n\nPSI AIMS\n\n\n\n\n\n\nJul 17, 2025\n\n\nOne Day meeting on Change Management in the Transition to Open-Source / R\n\n\nMartin Brown\n\n\n\n\n\n\nNov 20, 2023\n\n\n2023: A Year of Progress for PHUSE CAMIS Working Group\n\n\nLyn Taylor\n\n\n\n\n\n\nSep 14, 2023\n\n\nR and FDA Submission\n\n\nMartin Brown\n\n\n\n\n\n\nAug 28, 2023\n\n\nFDA Pilot 3 submission\n\n\nLyn Taylor\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "presentations/PSI Conference 2026/test.html",
@@ -389,7 +389,7 @@
     "href": "posts/test/lunchbitesOct2025debug.html#debugging-other-peoples-code",
     "title": "Open-Source Lunch Bites Webinar - Debugging in R",
     "section": "Debugging Other People’s Code",
-    "text": "Debugging Other People’s Code\nSometimes the problem is inside a function from a package. We can still inspect what is happening.\n\ntest &lt;- rbinom(50, 1, 0.6)\nci_prop_wald(test)\n\n\n\n\n── Wald Confidence Interval without Continuity Correction ──────────────────────\n\n\n• 34 responses out of 50\n\n\n• Estimate: 0.68\n\n\n• 95% Confidence Interval:\n\n\n  (0.5507, 0.8093)\n\n\nNow create an input that is not appropriate for a proportion confidence interval function.\n\nbad_test &lt;- c(\"success\", \"failure\", \"success\")\nci_prop_wald(bad_test)\n\nError in `ci_prop_wald()`:\n! Expecting `x` to be either &lt;logical&gt; or &lt;numeric/integer&gt; coded as 0\n  and 1.\n\n\nThat error tells us the package function received something it could not calculate with. If the error message is not enough, use debugonce() when you want to step through a function the next time it is called.\n\ndebugonce(ci_prop_wald)\nci_prop_wald(bad_test)\n\ndebugonce() is interactive. In a rendered Quarto document it will not print a useful walkthrough. Run it in the console, then use the browser controls to step through the function.\nUse debug() when you want debugging to stay on for every future call.\n\ndebug(ci_prop_wald)\nci_prop_wald(bad_test)\nundebug(ci_prop_wald)\n\nUse undebug() when you are finished, otherwise R will keep opening the debugger whenever that function is called.\nYou can also debug functions from common packages, although this can be noisy because widely used functions may call many other helper functions.\n\ndebug(mutate)\n\nmtcars |&gt;\n  mutate(vroom_index = hp * drat / wt)\n\nundebug(mutate)"
+    "text": "Debugging Other People’s Code\nSometimes the problem is inside a function from a package. We can still inspect what is happening.\n\ntest &lt;- rbinom(50, 1, 0.6)\nci_prop_wald(test)\n\n\n\n\n── Wald Confidence Interval without Continuity Correction ──────────────────────\n\n\n• 29 responses out of 50\n\n\n• Estimate: 0.58\n\n\n• 95% Confidence Interval:\n\n\n  (0.4432, 0.7168)\n\n\nNow create an input that is not appropriate for a proportion confidence interval function.\n\nbad_test &lt;- c(\"success\", \"failure\", \"success\")\nci_prop_wald(bad_test)\n\nError in `ci_prop_wald()`:\n! Expecting `x` to be either &lt;logical&gt; or &lt;numeric/integer&gt; coded as 0\n  and 1.\n\n\nThat error tells us the package function received something it could not calculate with. If the error message is not enough, use debugonce() when you want to step through a function the next time it is called.\n\ndebugonce(ci_prop_wald)\nci_prop_wald(bad_test)\n\ndebugonce() is interactive. In a rendered Quarto document it will not print a useful walkthrough. Run it in the console, then use the browser controls to step through the function.\nUse debug() when you want debugging to stay on for every future call.\n\ndebug(ci_prop_wald)\nci_prop_wald(bad_test)\nundebug(ci_prop_wald)\n\nUse undebug() when you are finished, otherwise R will keep opening the debugger whenever that function is called.\nYou can also debug functions from common packages, although this can be noisy because widely used functions may call many other helper functions.\n\ndebug(mutate)\n\nmtcars |&gt;\n  mutate(vroom_index = hp * drat / wt)\n\nundebug(mutate)"
   },
   {
     "objectID": "posts/test/lunchbitesOct2025debug.html#debugging-workflow",
@@ -411,6 +411,174 @@
     "title": "Open-Source Lunch Bites Webinar - Debugging in R",
     "section": "Resources",
     "text": "Resources\n\nAdvanced R\n\nDebugging chapter\n\n\n\nPosit / RStudio\n\nRStudio IDE debugging support"
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "",
+    "text": "The October Open-Source Lunch Bites session continued our introduction to Quarto by taking a more structured look at dashboards.\nThe central idea was simple:\nRather than putting everything into one large .qmd file, the demonstration used a small Quarto project in which different files have different responsibilities. The example was based on a fictional clinical study using entirely synthetic patient data; the clinical setting provided a realistic use case, while the teaching focus remained the Quarto workflow."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#from-one-file-to-a-small-project",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#from-one-file-to-a-small-project",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "From one file to a small project",
+    "text": "From one file to a small project\n\n\n\n\n\n\n\nPart\nResponsibility\n\n\n\n\ndata/\nSynthetic study data supplied as two different data snapshots\n\n\ndata/current_snapshot.txt\nSelects the snapshot used when the dashboard is rendered\n\n\nR/data.R\nReads and validates the selected data\n\n\nR/summaries.R\nCalculates headline counts, recruitment and safety summaries\n\n\nR/plots.R\nCreates the interactive charts and site table\n\n\ndashboard.qmd\nAssembles the results into the dashboard pages\n\n\n_quarto.yml\nControls project execution, dashboard format and theme\n\n\nstyles.scss\nControls the surrounding appearance, spacing and styling\n\n\n\nThis separation means that dashboard.qmd can concentrate largely on presentation and layout, while data handling, calculations and plotting logic live in reusable R scripts.\nThe finished dashboard contains four pages covering Overview, Recruitment, Sites and Safety, with value boxes, interactive Plotly charts, calculated narrative and a searchable/filterable DT site table."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#same-data-different-appearance",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#same-data-different-appearance",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "Same data, different appearance",
+    "text": "Same data, different appearance\nThe first reveal demonstrated the separation between analytical content and appearance. The dashboard was rendered using the standard cosmo theme and then rendered again with the project’s custom stylesheet added:\ntheme: cosmo\nbecame:\ntheme: [cosmo, styles.scss]\nThe underlying data, calculations and dashboard layout had not changed. Only the shared presentation layer had changed."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#same-dashboard-updated-data",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#same-dashboard-updated-data",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "Same dashboard, updated data",
+    "text": "Same dashboard, updated data\nThe second reveal was the main point of the demonstration. The project contains two synthetic snapshots of the same fictional study. The selected data cut is controlled by one small text file:\nsnapshot_2026-10-01\nChanging this to:\nsnapshot_2026-10-15\nand rendering dashboard.qmd again refreshes the complete dashboard.\n\n\n\n\n\n\n\n\nHeadline\nEarlier cut\nLater cut\n\n\n\n\nRandomised patients\n186\n201\n\n\nActive sites\n10\n12\n\n\nActive patients\n156\n165\n\n\nPatients with serious TEAE\n6\n8\n\n\nPatients with TEAE / safety population\n90/180 (50.0%)\n104/195 (53.3%)\n\n\n\nThe recruitment curves, site summaries, safety denominators, tables and calculated narrative update from the newly selected data at the same time.\nThe analysis, layout and styling were not rewritten. A different data snapshot was selected and the project was rendered again.\nThe later cut is a simulated future snapshot created solely for the demonstration."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#rendered-then-interactive",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#rendered-then-interactive",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "Rendered, then interactive",
+    "text": "Rendered, then interactive\nAn important distinction is that R runs when the dashboard is rendered.\nThe resulting HTML contains the data and outputs needed for browser interactions such as Plotly hover and zoom, and DT searching, filtering and sorting. Those interactions do not rerun the R analysis.\nIf the underlying CSV files change, an already-open dashboard does not automatically change with them: the project is rerendered to incorporate the updated data, and the refreshed HTML then represents the new data cut.\nThis provides useful interactivity without requiring the dashboard to become a full reactive application."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#why-structure-it-this-way",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#why-structure-it-this-way",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "Why structure it this way?",
+    "text": "Why structure it this way?\nFor a small demonstration it would be possible to put everything into one .qmd. Separating the responsibilities makes the workflow easier to understand and maintain:\ndata → calculations → visualisations → dashboard → appearance\nIt also makes the update story much clearer. The same calculations and presentation can be applied consistently to successive data cuts rather than manually updating individual numbers, tables and plots."
+  },
+  {
+    "objectID": "posts/test/lunchbitesOct2026quartobasics2.html#try-the-complete-example",
+    "href": "posts/test/lunchbitesOct2026quartobasics2.html#try-the-complete-example",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Dashboards",
+    "section": "Try the complete example",
+    "text": "Try the complete example\nThe slides, synthetic data, R scripts, Quarto configuration, styling and complete runnable dashboard project are available in the PSI AIMS GitHub repository:\nOpen-Source Lunch Bites — Quarto Basics 2: Structured Dashboard\nThe project is designed to be explored: open dashboard.qmd, look at how the separate pieces are brought together, render the early snapshot, and then switch data/current_snapshot.txt to the later snapshot and render again.\nFor more information on dashboard layouts and cards, see the Quarto dashboard documentation.\n\nOne dashboard, separated responsibilities, repeatable updates."
+  },
+  {
+    "objectID": "posts/test/ChgManSDEJul25.html",
+    "href": "posts/test/ChgManSDEJul25.html",
+    "title": "One Day meeting on Change Management in the Transition to Open-Source / R",
+    "section": "",
+    "text": "This was a very successful event where 70+ people attended to discuss change management issues in Open-Source including training, organisational change and managing during times of big changes, communicating to colleagues and managers, timing and resourcing change. The audience were split across Pharma (46%), CRO (41%), Biotech (4%) and other affiliations including academia. The audience were pretty evenly split between those that used R and open-source tools regularly (49%) and those that used it infrequently or not at all (51%). Our 9 speakers presented on many topics, covering managing change at larger pharma companies where they have already made the move to open-source tools, but also presenting the view from CROs where use of open-source tools is growing but not yet established. Training, support and preparedness for change was a common theme in presentations – being ready for the journey and whatever happens along the way.\nThe audience were very engaged and asked interesting questions many of which we covered as part of a panel discussion. Common themes in questions included resourcing for change when the day job doesn’t allow much additional time and resource to do so; how AI might help with changing from one software and programming language to another; addressing management and IT organisation questions about moving to new systems and the return on investment. At the end of the day, delegates were invited to reflect and think about next steps in group discussion – what is the next action to take within their organisation, what are the “quick wins” or proofs of concept that might convince others within their organistion, and how to “unlock” acceptance of open-source.\nFeedback from delegates was very positive and we will aim to provide some resources for delegates and those that did not attend – the first of which, the presentations from the day, can be found below. PSI AIMS and PhUSE Open Source Technologies for Clinical Data Analysis (OSTCDA) working groups will benefit from this event enormously, having a better understanding of industry needs and looking to provide more support and material in this area. As there also seemed to be support for a follow-on meeting, the obvious next steps for the groups would be to organise more events which could be online or in person.\n\nMike Smith - Pfizer - Change Management\nAndy Nicholls - GSK - From Training to Practice: A shift to Just in Time User Support\nMartin Brown - PPD - Change Management in a Large CRO; Investing for the Future\nKieran Martin - Roche - Getting Ready for submission with R\nStuart Malcolm - Veramed - Planning on R? \u000bRisk, Resources and Realism\nYannick Vandendijck - Johnson & Johnson - SAIL.R – Journey Towards R Software for Statisticians in Johnson & Johnson\nRuhul Amin - AZ - R in Biometrics - AstraZeneca approach to enable R Shiny apps for Drug Project activities\nSebastia Barcelo - Cytel - Navigating Change in a CRO – What I Wish I Knew 5 Years Ago About Transitioning to R\nColin Gillespie - Jumping Rivers - Can I trust this package?"
+  },
+  {
+    "objectID": "posts/test/index.html",
+    "href": "posts/test/index.html",
+    "title": "R and FDA Submission",
+    "section": "",
+    "text": "Check out the following exciting webinar on R and FDA submissions:"
+  },
+  {
+    "objectID": "posts/test/FDApilot3.html",
+    "href": "posts/test/FDApilot3.html",
+    "title": "FDA Pilot 3 submission",
+    "section": "",
+    "text": "The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: https://github.com/RConsortium/submissions-pilot3-adam-to-fda \nThe pilot 3 test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from pilot 3 and tables, listings, figures (TLFs) from pilot 1, analysis data reviewer’s guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the pilot 3 team here: https://rconsortium.github.io/submissions-pilot3-adam/main/index.html.\nSee here for more information about pilot 1, 2, 3 and the future plans for pilot 4."
+  },
+  {
+    "objectID": "02R-tist.html",
+    "href": "02R-tist.html",
+    "title": "Zero to R-tist",
+    "section": "",
+    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PSI AIMS Special Interest Group",
+    "section": "",
+    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html",
+    "href": "posts/test/lunchbitesSep2026quartobasics1.html",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Basics",
+    "section": "",
+    "text": "The September Open-Source Lunch Bites session introduced Quarto, an open-source scientific and technical publishing system from Posit. Quarto provides a practical way to bring code, analytical output and narrative together in a single reproducible document.\nFor analysts and programmers working in the pharmaceutical industry, this can help close the gap between doing the analysis and communicating the analysis. Rather than running code, exporting results and then manually copying tables, figures or numbers into another application, Quarto allows the analysis and the document that presents it to live together."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#what-did-we-cover",
+    "href": "posts/test/lunchbitesSep2026quartobasics1.html#what-did-we-cover",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Basics",
+    "section": "What did we cover?",
+    "text": "What did we cover?\nWe started with the basic structure of a .qmd file and the three main ingredients:\n\nYAML to configure the output;\nMarkdown for narrative and structure; and\ncode to perform the analysis and generate results.\n\nFrom a simple HTML document, the examples then built up to include interactive Plotly graphics and DT data tables.\nWe also looked at Quarto dashboards. Starting with a simple column layout, the examples progressively added analytical outputs, linked filtering with Crosstalk, sidebars, navigation, tabs and custom styling. This provides a useful middle ground for situations where some interactivity is valuable but a full reactive application is unnecessary.\nFinally, we looked at a clinical-trial reporting example combining demographics and adverse-event summaries, figures and narrative text. A particularly useful feature is the ability to place calculated values directly into the narrative. When the underlying data or analysis changes, re-rendering the document can update the narrative, tables and figures together."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#three-ideas-to-take-away",
+    "href": "posts/test/lunchbitesSep2026quartobasics1.html#three-ideas-to-take-away",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Basics",
+    "section": "Three ideas to take away",
+    "text": "Three ideas to take away\n\nIntegrated — code, results and narrative can live together.\nReproducible — when data or code change, render again to update the output.\nFlexible — the same general approach can be used for reports, analytical documents, interactive outputs, dashboards, websites, presentations and more.\n\nQuarto does not replace tools such as R, Python, ggplot2, Plotly or DT. Instead, it provides a framework in which their outputs can be organised, explained and published."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#try-the-examples",
+    "href": "posts/test/lunchbitesSep2026quartobasics1.html#try-the-examples",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Basics",
+    "section": "Try the examples",
+    "text": "Try the examples\nThe presentation and runnable Quarto examples from the session are available in the PSI AIMS GitHub repository:\nOpen-Source Lunch Bites — Quarto Basics: slides and examples\nThe examples progress from a first Quarto document through interactive analytical output and several dashboard layouts, so they can also be used as a starting point for experimenting with Quarto yourself.\nFor more information about Quarto, visit the Quarto website."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#this-website-is-built-with-quarto-too",
+    "href": "posts/test/lunchbitesSep2026quartobasics1.html#this-website-is-built-with-quarto-too",
+    "title": "Open-Source Lunch Bites Webinar: Quarto Basics",
+    "section": "This website is built with Quarto too",
+    "text": "This website is built with Quarto too\nThere is a practical example of Quarto right here: the PSI AIMS website itself. The website is built from multiple .qmd files, and this article is one of them.\nA Quarto page can mix ordinary narrative with analytical output. For example, an interactive Plotly figure can sit directly alongside the text:\n\n\nShow the code\nlibrary(plotly)\n\nplot_ly(\n  data = iris,\n  x = ~Sepal.Length,\n  y = ~Petal.Length,\n  color = ~Species,\n  type = \"scatter\",\n  mode = \"markers\"\n)\n\n\n\n\n\n\nThe output is interactive, while the R code is tucked away until a reader chooses Show the code.\nThe same idea works for data. Here is a small interactive DT table with sorting, paging and column filters:\n\n\nShow the code\nlibrary(DT)\n\ndatatable(\n  iris,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    lengthChange = FALSE\n  )\n)\n\n\n\n\n\n\nSo a single .qmd can contain narrative, figures, interactive data and the code that generates them. When the data or analysis changes, re-rendering the page refreshes the published output rather than requiring results to be copied and pasted manually.\nExplore the Quarto Basics slides and runnable examples, or take a look at the source for the PSI AIMS website."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html",
+    "href": "posts/test/lunchbitesSep2025ide.html",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "",
+    "text": "This session introduced Integrated Development Environments (IDEs) using RStudio as an example."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#overview",
+    "href": "posts/test/lunchbitesSep2025ide.html#overview",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "",
+    "text": "This session introduced Integrated Development Environments (IDEs) using RStudio as an example."
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#why-use-an-ide",
+    "href": "posts/test/lunchbitesSep2025ide.html#why-use-an-ide",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "Why use an IDE?",
+    "text": "Why use an IDE?\n\nProductivity: code editing, execution, debugging in one place\n\nIntegrated tools: plots, packages, help, version control\n\nProject structure: reproducible and organised workflows\n\nSupport: documentation, customization, cross-platform"
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#key-rstudio-components",
+    "href": "posts/test/lunchbitesSep2025ide.html#key-rstudio-components",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "Key RStudio components",
+    "text": "Key RStudio components\n\nSource: write scripts and notebooks\n\nConsole: run code interactively\n\nEnvironment: view objects and data\n\nFiles / Plots / Packages / Help: navigation and outputs"
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#editor-features",
+    "href": "posts/test/lunchbitesSep2025ide.html#editor-features",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "Editor features",
+    "text": "Editor features\n\nSyntax highlighting\n\nCode completion (Tab / Ctrl+Space)\n\nError diagnostics and hover tips\n\nFile outline and navigation"
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#demonstrated-workflow",
+    "href": "posts/test/lunchbitesSep2025ide.html#demonstrated-workflow",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "Demonstrated workflow",
+    "text": "Demonstrated workflow\n\nWriting and running a simple script\n\nRunning code in console vs source\n\nViewing objects in the Environment pane\n\nCreating and viewing plots\n\nAccessing help/documentation"
+  },
+  {
+    "objectID": "posts/test/lunchbitesSep2025ide.html#resources",
+    "href": "posts/test/lunchbitesSep2025ide.html#resources",
+    "title": "Open-Source Lunch Bites Webinar - IDEs",
+    "section": "Resources",
+    "text": "Resources\n\nRStudio IDE Cheatsheet\n\n\n\n\n\nExternal\n\n(https://posit.co/products/open-source/rstudio/)"
   },
   {
     "objectID": "posts/test/lunchbitesDec2025packagebasics.html",
@@ -544,125 +712,6 @@
     "title": "Open-Source Lunch Bites Webinar - Package Basics",
     "section": "Resources",
     "text": "Resources\n\nPSI AIMS\n\nPackage review example\n\n\n\nCRAN\n\nDoseFinding on CRAN\nCRAN Clinical Trials Task View\nCRAN Task Views\nreadr on CRAN\n\n\n\nPackage websites\n\nreadr documentation\nrenv introduction"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html",
-    "href": "posts/test/lunchbitesSep2025ide.html",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "",
-    "text": "This session introduced Integrated Development Environments (IDEs) using RStudio as an example."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#overview",
-    "href": "posts/test/lunchbitesSep2025ide.html#overview",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "",
-    "text": "This session introduced Integrated Development Environments (IDEs) using RStudio as an example."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#why-use-an-ide",
-    "href": "posts/test/lunchbitesSep2025ide.html#why-use-an-ide",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "Why use an IDE?",
-    "text": "Why use an IDE?\n\nProductivity: code editing, execution, debugging in one place\n\nIntegrated tools: plots, packages, help, version control\n\nProject structure: reproducible and organised workflows\n\nSupport: documentation, customization, cross-platform"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#key-rstudio-components",
-    "href": "posts/test/lunchbitesSep2025ide.html#key-rstudio-components",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "Key RStudio components",
-    "text": "Key RStudio components\n\nSource: write scripts and notebooks\n\nConsole: run code interactively\n\nEnvironment: view objects and data\n\nFiles / Plots / Packages / Help: navigation and outputs"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#editor-features",
-    "href": "posts/test/lunchbitesSep2025ide.html#editor-features",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "Editor features",
-    "text": "Editor features\n\nSyntax highlighting\n\nCode completion (Tab / Ctrl+Space)\n\nError diagnostics and hover tips\n\nFile outline and navigation"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#demonstrated-workflow",
-    "href": "posts/test/lunchbitesSep2025ide.html#demonstrated-workflow",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "Demonstrated workflow",
-    "text": "Demonstrated workflow\n\nWriting and running a simple script\n\nRunning code in console vs source\n\nViewing objects in the Environment pane\n\nCreating and viewing plots\n\nAccessing help/documentation"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2025ide.html#resources",
-    "href": "posts/test/lunchbitesSep2025ide.html#resources",
-    "title": "Open-Source Lunch Bites Webinar - IDEs",
-    "section": "Resources",
-    "text": "Resources\n\nRStudio IDE Cheatsheet\n\n\n\n\n\nExternal\n\n(https://posit.co/products/open-source/rstudio/)"
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html",
-    "href": "posts/test/lunchbitesSep2026quartobasics1.html",
-    "title": "Open-Source Lunch Bites: Quarto Basics",
-    "section": "",
-    "text": "The September Open-Source Lunch Bites session introduced Quarto, an open-source scientific and technical publishing system from Posit. Quarto provides a practical way to bring code, analytical output and narrative together in a single reproducible document.\nFor analysts and programmers working in the pharmaceutical industry, this can help close the gap between doing the analysis and communicating the analysis. Rather than running code, exporting results and then manually copying tables, figures or numbers into another application, Quarto allows the analysis and the document that presents it to live together."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#what-did-we-cover",
-    "href": "posts/test/lunchbitesSep2026quartobasics1.html#what-did-we-cover",
-    "title": "Open-Source Lunch Bites: Quarto Basics",
-    "section": "What did we cover?",
-    "text": "What did we cover?\nWe started with the basic structure of a .qmd file and the three main ingredients:\n\nYAML to configure the output;\nMarkdown for narrative and structure; and\ncode to perform the analysis and generate results.\n\nFrom a simple HTML document, the examples then built up to include interactive Plotly graphics and DT data tables.\nWe also looked at Quarto dashboards. Starting with a simple column layout, the examples progressively added analytical outputs, linked filtering with Crosstalk, sidebars, navigation, tabs and custom styling. This provides a useful middle ground for situations where some interactivity is valuable but a full reactive application is unnecessary.\nFinally, we looked at a clinical-trial reporting example combining demographics and adverse-event summaries, figures and narrative text. A particularly useful feature is the ability to place calculated values directly into the narrative. When the underlying data or analysis changes, re-rendering the document can update the narrative, tables and figures together."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#three-ideas-to-take-away",
-    "href": "posts/test/lunchbitesSep2026quartobasics1.html#three-ideas-to-take-away",
-    "title": "Open-Source Lunch Bites: Quarto Basics",
-    "section": "Three ideas to take away",
-    "text": "Three ideas to take away\n\nIntegrated — code, results and narrative can live together.\nReproducible — when data or code change, render again to update the output.\nFlexible — the same general approach can be used for reports, analytical documents, interactive outputs, dashboards, websites, presentations and more.\n\nQuarto does not replace tools such as R, Python, ggplot2, Plotly or DT. Instead, it provides a framework in which their outputs can be organised, explained and published."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#try-the-examples",
-    "href": "posts/test/lunchbitesSep2026quartobasics1.html#try-the-examples",
-    "title": "Open-Source Lunch Bites: Quarto Basics",
-    "section": "Try the examples",
-    "text": "Try the examples\nThe presentation and runnable Quarto examples from the session are available in the PSI AIMS GitHub repository:\nOpen-Source Lunch Bites — Quarto Basics: slides and examples\nThe examples progress from a first Quarto document through interactive analytical output and several dashboard layouts, so they can also be used as a starting point for experimenting with Quarto yourself.\nFor more information about Quarto, visit the Quarto website."
-  },
-  {
-    "objectID": "posts/test/lunchbitesSep2026quartobasics1.html#this-website-is-built-with-quarto-too",
-    "href": "posts/test/lunchbitesSep2026quartobasics1.html#this-website-is-built-with-quarto-too",
-    "title": "Open-Source Lunch Bites: Quarto Basics",
-    "section": "This website is built with Quarto too",
-    "text": "This website is built with Quarto too\nThere is a practical example of Quarto right here: the PSI AIMS website itself. The website is built from multiple .qmd files, and this article is one of them.\nA Quarto page can mix ordinary narrative with analytical output. For example, an interactive Plotly figure can sit directly alongside the text:\n\n\nShow the code\nlibrary(plotly)\n\nplot_ly(\n  data = iris,\n  x = ~Sepal.Length,\n  y = ~Petal.Length,\n  color = ~Species,\n  type = \"scatter\",\n  mode = \"markers\"\n)\n\n\n\n\n\n\nThe output is interactive, while the R code is tucked away until a reader chooses Show the code.\nThe same idea works for data. Here is a small interactive DT table with sorting, paging and column filters:\n\n\nShow the code\nlibrary(DT)\n\ndatatable(\n  iris,\n  filter = \"top\",\n  rownames = FALSE,\n  options = list(\n    pageLength = 5,\n    lengthChange = FALSE\n  )\n)\n\n\n\n\n\n\nSo a single .qmd can contain narrative, figures, interactive data and the code that generates them. When the data or analysis changes, re-rendering the page refreshes the published output rather than requiring results to be copied and pasted manually.\nExplore the Quarto Basics slides and runnable examples, or take a look at the source for the PSI AIMS website."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PSI AIMS Special Interest Group",
-    "section": "",
-    "text": "The Application and Implementation of Medical Statistics (AIMS) Special Interest Group (SIG) objective is to support and contribute to working groups researching the use of R in Pharma such as the R consortium working groups, R validation Hub, other SIGs (Data science/Visualization), PhUSE, Pharmaverse and Transcelerate and share this information with the wider PSI community.\n\n\n\n\nCollaboration\n\n\nNews\n\n\n\n\nWhy R?\n\n\n\n\n\nResources\n\n\n\n\nStatistics\n\n\nPSI and Pharma"
-  },
-  {
-    "objectID": "02R-tist.html",
-    "href": "02R-tist.html",
-    "title": "Zero to R-tist",
-    "section": "",
-    "text": "Substantial free training is available for R. A few links to get you started are provided below\n\nR Studio Starting Links\n\nRStudio Education (Beginners)\nRStudio Education (Intermediates)\nRStudio Education (Experts)\nRStudio Webinars - RStudio\n\nR Studio Cheat sheets\neBooks\n\nAdvanced R - Hadley Wickham\nR Packages - Hadley Wickham\nR for Data Science - Garrett Grolemund, Hadley Wickham.\nbookdown: Authoring Books and Technical Documents with R Markdown - Yihui Xie\nEfficicient R Programming - Colin Gillespie, Robin Lovelace\nquarto\nTidyverse Style Guide\nrOpenSci Package development\nR Packages (2e)\n\nBlogs/ Videos\n\nR-bloggers\nRStudio\nR Views\nYouTube\n\nGuided Learning (NOTE: this is a range of free and paying courses)\n\nposit\nedx courses\ndatacamp\ncoursera\nMOOC"
-  },
-  {
-    "objectID": "posts/test/FDApilot3.html",
-    "href": "posts/test/FDApilot3.html",
-    "title": "FDA Pilot 3 submission",
-    "section": "",
-    "text": "The R Consortium is pleased to announce that on August 28, 2023, the R Submissions Working Group successfully submitted an R-based test submission pilot 3 package through the FDA eCTD gateway! The FDA CDER staff are now able to begin their evaluation process. All submission materials can be found at: https://github.com/RConsortium/submissions-pilot3-adam-to-fda \nThe pilot 3 test submission is an example of an all R submission package following eCTD specifications. These include the installation and loading of the proprietary {pilot3} R package and other open-source R packages, R scripts for the analysis data model (ADaM) datasets from pilot 3 and tables, listings, figures (TLFs) from pilot 1, analysis data reviewer’s guide (adrg), and other required eCTD components. To our knowledge, this is the first publicly available R-based FDA submission package, which includes R scripts to generate ADaM datasets and TLFs. We hope this submission package and our learnings can serve as a good reference for future R-based regulatory submissions from different sponsors. Additional agency feedback will be shared in future communications.  For any future questions, you may contact the pilot 3 team here: https://rconsortium.github.io/submissions-pilot3-adam/main/index.html.\nSee here for more information about pilot 1, 2, 3 and the future plans for pilot 4."
-  },
-  {
-    "objectID": "posts/test/index.html",
-    "href": "posts/test/index.html",
-    "title": "R and FDA Submission",
-    "section": "",
-    "text": "Check out the following exciting webinar on R and FDA submissions:"
-  },
-  {
-    "objectID": "posts/test/ChgManSDEJul25.html",
-    "href": "posts/test/ChgManSDEJul25.html",
-    "title": "One Day meeting on Change Management in the Transition to Open-Source / R",
-    "section": "",
-    "text": "This was a very successful event where 70+ people attended to discuss change management issues in Open-Source including training, organisational change and managing during times of big changes, communicating to colleagues and managers, timing and resourcing change. The audience were split across Pharma (46%), CRO (41%), Biotech (4%) and other affiliations including academia. The audience were pretty evenly split between those that used R and open-source tools regularly (49%) and those that used it infrequently or not at all (51%). Our 9 speakers presented on many topics, covering managing change at larger pharma companies where they have already made the move to open-source tools, but also presenting the view from CROs where use of open-source tools is growing but not yet established. Training, support and preparedness for change was a common theme in presentations – being ready for the journey and whatever happens along the way.\nThe audience were very engaged and asked interesting questions many of which we covered as part of a panel discussion. Common themes in questions included resourcing for change when the day job doesn’t allow much additional time and resource to do so; how AI might help with changing from one software and programming language to another; addressing management and IT organisation questions about moving to new systems and the return on investment. At the end of the day, delegates were invited to reflect and think about next steps in group discussion – what is the next action to take within their organisation, what are the “quick wins” or proofs of concept that might convince others within their organistion, and how to “unlock” acceptance of open-source.\nFeedback from delegates was very positive and we will aim to provide some resources for delegates and those that did not attend – the first of which, the presentations from the day, can be found below. PSI AIMS and PhUSE Open Source Technologies for Clinical Data Analysis (OSTCDA) working groups will benefit from this event enormously, having a better understanding of industry needs and looking to provide more support and material in this area. As there also seemed to be support for a follow-on meeting, the obvious next steps for the groups would be to organise more events which could be online or in person.\n\nMike Smith - Pfizer - Change Management\nAndy Nicholls - GSK - From Training to Practice: A shift to Just in Time User Support\nMartin Brown - PPD - Change Management in a Large CRO; Investing for the Future\nKieran Martin - Roche - Getting Ready for submission with R\nStuart Malcolm - Veramed - Planning on R? \u000bRisk, Resources and Realism\nYannick Vandendijck - Johnson & Johnson - SAIL.R – Journey Towards R Software for Statisticians in Johnson & Johnson\nRuhul Amin - AZ - R in Biometrics - AstraZeneca approach to enable R Shiny apps for Drug Project activities\nSebastia Barcelo - Cytel - Navigating Change in a CRO – What I Wish I Knew 5 Years Ago About Transitioning to R\nColin Gillespie - Jumping Rivers - Can I trust this package?"
   },
   {
     "objectID": "posts/test/psiconf2026.html",
