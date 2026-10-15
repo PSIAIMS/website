@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+
+      - name: Exclude Lunch Bites Quarto sources from website build
+        run: |
+          find lunchbites -type f \( -name "*.qmd" -o -name "_quarto.yml" \) -delete
         
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
