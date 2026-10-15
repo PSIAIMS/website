@@ -1,0 +1,111 @@
+---
+title: "Open-Source Lunch Bites Webinar: Quarto Dashboards"
+author: "PSI AIMS"
+description: "Taking Quarto dashboards further with a modular clinical study example, separated responsibilities and repeatable data updates."
+date: "2026-10-15"
+categories:
+  - Open Source
+  - Lunch Bites
+  - Quarto
+---
+
+The October **Open-Source Lunch Bites** session continued our introduction to Quarto by taking a more structured look at dashboards.
+
+The central idea was simple:
+
+> **Separate data, calculations, layout and appearance. Select updated data and rerender to refresh the dashboard consistently.**
+
+Rather than putting everything into one large `.qmd` file, the demonstration used a small Quarto project in which different files have different responsibilities. The example was based on a fictional clinical study using entirely synthetic patient data; the clinical setting provided a realistic use case, while the teaching focus remained the Quarto workflow.
+
+## From one file to a small project
+
+| Part | Responsibility |
+|---|---|
+| `data/` | Synthetic study data supplied as two different data snapshots |
+| `data/current_snapshot.txt` | Selects the snapshot used when the dashboard is rendered |
+| `R/data.R` | Reads and validates the selected data |
+| `R/summaries.R` | Calculates headline counts, recruitment and safety summaries |
+| `R/plots.R` | Creates the interactive charts and site table |
+| `dashboard.qmd` | Assembles the results into the dashboard pages |
+| `_quarto.yml` | Controls project execution, dashboard format and theme |
+| `styles.scss` | Controls the surrounding appearance, spacing and styling |
+
+This separation means that `dashboard.qmd` can concentrate largely on **presentation and layout**, while data handling, calculations and plotting logic live in reusable R scripts.
+
+The finished dashboard contains four pages covering **Overview, Recruitment, Sites and Safety**, with value boxes, interactive Plotly charts, calculated narrative and a searchable/filterable DT site table.
+
+## Same data, different appearance
+
+The first reveal demonstrated the separation between analytical content and appearance. The dashboard was rendered using the standard `cosmo` theme and then rendered again with the project's custom stylesheet added:
+
+```yaml
+theme: cosmo
+```
+
+became:
+
+```yaml
+theme: [cosmo, styles.scss]
+```
+
+The underlying data, calculations and dashboard layout had not changed. Only the shared presentation layer had changed.
+
+## Same dashboard, updated data
+
+The second reveal was the main point of the demonstration. The project contains two synthetic snapshots of the same fictional study. The selected data cut is controlled by one small text file:
+
+```text
+snapshot_2026-10-01
+```
+
+Changing this to:
+
+```text
+snapshot_2026-10-15
+```
+
+and rendering `dashboard.qmd` again refreshes the complete dashboard.
+
+| Headline | Earlier cut | Later cut |
+|---|---:|---:|
+| Randomised patients | 186 | 201 |
+| Active sites | 10 | 12 |
+| Active patients | 156 | 165 |
+| Patients with serious TEAE | 6 | 8 |
+| Patients with TEAE / safety population | 90/180 (50.0%) | 104/195 (53.3%) |
+
+The recruitment curves, site summaries, safety denominators, tables and calculated narrative update from the newly selected data at the same time.
+
+**The analysis, layout and styling were not rewritten.** A different data snapshot was selected and the project was rendered again.
+
+The later cut is a simulated future snapshot created solely for the demonstration.
+
+## Rendered, then interactive
+
+An important distinction is that **R runs when the dashboard is rendered**.
+
+The resulting HTML contains the data and outputs needed for browser interactions such as Plotly hover and zoom, and DT searching, filtering and sorting. Those interactions do not rerun the R analysis.
+
+If the underlying CSV files change, an already-open dashboard does not automatically change with them: the project is **rerendered** to incorporate the updated data, and the refreshed HTML then represents the new data cut.
+
+This provides useful interactivity without requiring the dashboard to become a full reactive application.
+
+## Why structure it this way?
+
+For a small demonstration it would be possible to put everything into one `.qmd`. Separating the responsibilities makes the workflow easier to understand and maintain:
+
+**data → calculations → visualisations → dashboard → appearance**
+
+It also makes the update story much clearer. The same calculations and presentation can be applied consistently to successive data cuts rather than manually updating individual numbers, tables and plots.
+
+## Try the complete example
+
+The **slides, synthetic data, R scripts, Quarto configuration, styling and complete runnable dashboard project** are available in the PSI AIMS GitHub repository:
+
+**[Open-Source Lunch Bites — Quarto Basics 2: Structured Dashboard](https://github.com/PSIAIMS/website/tree/main/lunchbites/quarto-basics-2)**
+
+The project is designed to be explored: open `dashboard.qmd`, look at how the separate pieces are brought together, render the early snapshot, and then switch `data/current_snapshot.txt` to the later snapshot and render again.
+
+For more information on dashboard layouts and cards, see the [Quarto dashboard documentation](https://quarto.org/docs/dashboards/).
+
+> **One dashboard, separated responsibilities, repeatable updates.**
